@@ -39,3 +39,6 @@ Thumbs.db
 /.idea/modules.xml
 /.idea/software-product-development.iml
 /.idea/vcs.xml
+/.hugo_build.lock
+/.idea/.gitignore
+/.idea/software-product-development-blog.iml
