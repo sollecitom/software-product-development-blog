@@ -37,7 +37,6 @@ twitter = "sollecitom"
 
 [params]
 tagline = "Thoughts and software and product development"
-description = "Description"
 #images = [""] #This is used for opengraph/twitter cards.
 customCSS = []  #Optional Customised CSS
 #favicon = ""
