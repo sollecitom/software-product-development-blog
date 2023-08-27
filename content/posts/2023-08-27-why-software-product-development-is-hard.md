@@ -7,3 +7,19 @@ draft: true
 ---
 
 Hello!
+
+- Demand is not easy to see
+- Long feedback loops
+- Not about building many things, but about continuously evolve the same thing
+- Every time you do some work, the product and the system change
+- Collaborative
+- The industry moves fast
+    - Trends
+    - Technologies
+    - Competition
+- Abundance of (mis)information
+    - Consultancies
+    - Books
+    - Videos
+    - Frameworks
+    - Methodologies
