@@ -2,7 +2,25 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Software Product Development Pills'
 copyright = "Copyright &copy; 2023 - Michele Sollecito"
+canonifyURLs = true
+paginate = 3
+summaryLength = 30
+enableEmoji = true
 theme = 'hugo-kiera'
+
+# uncomment to enable the Tags link on the main toolbar
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags"
+weight = 1
+
+# uncomment to enable the Categories link on the main toolbar
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories"
+weight = -1
 
 # Note: to disable a social network icon delete or comment out the corresponding line
 [author]
