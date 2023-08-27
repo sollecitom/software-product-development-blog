@@ -1,9 +1,9 @@
 ---
 title: "Confessions of a TDD fanboy"
-date: 2023-08-06T16:00
 categories: [ "technical practices", "agile" ]
 tags: [ "test-driven development", "design", "object-oriented programming" ]
-published: true
+date: 2023-08-06T16:00:00
+draft: false
 ---
 
 Test-Driven Development (TDD) is arguably one of the most polarizing and misunderstood approaches in software development. It's love it or hate it.

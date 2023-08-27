@@ -1,8 +1,9 @@
 ---
 title: "Management by Objectives is wishful thinking"
-date: 2023-07-09T19:00
 categories: ["management", "systems-thinking"]
 tags: ["goals", "management", "objectives", "KPIs", "OKRs"]
+date: 2023-07-09T19:00:00
+draft: false
 ---
 
 "This quarter we want revenue up by 10%" - but is it really that simple? Or is Management by Objectives a travesty? 

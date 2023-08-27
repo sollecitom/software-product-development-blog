@@ -1,8 +1,9 @@
 ---
 title: "Demand, capacity, outputs, outcomes, and impact"
-date: 2023-07-15T12:00
 categories: ["management", "systems-thinking", "business"]
 tags: ["demand", "management", "capacity", "queues", "output", "impact", "outcomes"]
+date: 2023-07-15T12:00:00
+draft: false
 ---
 
 "This year we want to double the number of developers!"

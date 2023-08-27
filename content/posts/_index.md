@@ -1,3 +1,5 @@
-title = 'Blog'
-menu = "blog"
-meta = "true"
++++
+title = "Posts"
+menu = "main"
+weight = "10"
++++

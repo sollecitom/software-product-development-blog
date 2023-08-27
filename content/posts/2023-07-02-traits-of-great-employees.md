@@ -1,8 +1,9 @@
 ---
 title: "Traits of great employees"
-date: 2023-07-02T14:00
 categories: ["people", "management", "recruitment"]
 tags: ["people", "management", "hiring", "interviews"]
+date: 2023-07-02T14:00:00
+draft: false
 ---
 
 Companies always talk about wanting to hire A players and great talent. But what does great talent mean? How can you tell whether somebody will be great at your company? 
