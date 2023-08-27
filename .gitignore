@@ -42,3 +42,4 @@ Thumbs.db
 /.hugo_build.lock
 /.idea/.gitignore
 /.idea/software-product-development-blog.iml
+/.idea/kotlinc.xml
