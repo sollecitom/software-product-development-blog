@@ -6,8 +6,6 @@ date: 2023-08-06T19:33:00
 draft: true
 ---
 
-Hello!
-
 - Demand is not easy to see
 - Long feedback loops
 - Not about building many things, but about continuously evolve the same thing
