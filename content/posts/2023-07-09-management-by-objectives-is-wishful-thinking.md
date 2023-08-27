@@ -7,7 +7,6 @@ published: true
 ---
 
 "This quarter we want revenue up by 10%" - but is it really that simple? Or is Management by Objectives a travesty? 
-<!--end_excerpt-->
 
 There are 2 ways of managing.
 

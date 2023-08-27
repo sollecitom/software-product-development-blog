@@ -7,7 +7,6 @@ published: true
 ---
 
 I'm sure you have encountered plenty of toxic people at work. Let's look at some of the most dangerous kinds: lifers, and politicians.
-<!--end_excerpt-->
 
 Toxic employees come in all shapes and sorts. Some are relatively innocuous, while others can kill a company if not addressed. The more obvious it is that somebody is toxic at work, the less dangerous they usually are.
 

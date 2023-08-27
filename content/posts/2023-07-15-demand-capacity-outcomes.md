@@ -11,7 +11,6 @@ published: true
 "We can't put UX/UI and QA in each team, it's inefficient!"
 
 Sigh, if only reality was so simple. I wonder when screaming your ignorance and incompetence to the world will start getting frowned upon.
-<!--end_excerpt-->
 
 # The problem
 

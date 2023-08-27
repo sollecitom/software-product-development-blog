@@ -7,7 +7,6 @@ published: true
 ---
 
 Companies always talk about wanting to hire A players and great talent. But what does great talent mean? How can you tell whether somebody will be great at your company? 
-<!--end_excerpt-->
 
 Companies employ people. In collaborative knowledge work, like software product development, employees are the most important asset for any company. So it's only natural that companies try hard to secure the best talent. And yet many companies don't ask themselves what great talent means.
 

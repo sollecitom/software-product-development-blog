@@ -9,7 +9,6 @@ published: true
 Test-Driven Development (TDD) is arguably one of the most polarizing and misunderstood approaches in software development. It's love it or hate it.
 
 Let's have a look at TDD and why it provokes such strong reactions. This is going to piss some people off...
-<!--end_excerpt-->
 
 # So what is Test-Driven Development?
 

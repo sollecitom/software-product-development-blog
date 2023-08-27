@@ -7,7 +7,6 @@ published: true
 ---
 
 We often use different words for what we know, like in data-engineering, information systems, and knowledge workers. But do we really understand their meaning and implications? 
-<!--end_excerpt-->
 
 ### So what are these categories?
 

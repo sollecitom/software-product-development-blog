@@ -17,7 +17,6 @@ Scaling doesn't mean becoming bigger and bigger, kind of the opposite of that.
 _What about microservices though? Aren't those kind of modules? Don't they allow to re-use code?_
 
 Nope. They don't. That's why very few companies can re-use the capabilities they develop and achieve scaling.
-<!--end_excerpt-->
 
 # What “scaling” means
 
