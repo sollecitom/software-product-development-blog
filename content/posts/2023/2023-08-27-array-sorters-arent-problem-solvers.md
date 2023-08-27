@@ -20,6 +20,8 @@ An exercise is always devoid of context, static, and timeless. It's something yo
 
 Problems are a different story. An example of a problem might be "why do we keep producing so many bugs, irrespective of all our efforts and of how much the CEO cares about this?" Problems are messy, and always come with a lot of context, ambiguity, and related problems. It's not clear whether a candidate solution will work, or whether a solution exists at all.
 
+Successful problem-solving requires finding the right solution to the right problem. We fail more often because we solve the wrong problem than because we get the wrong solution to the right problem. Our ability to solve problem is limited by our conception of what is feasible.
+
 Analysis works well for exercises:
 
 1. You break down the exercise into its constituting parts.
