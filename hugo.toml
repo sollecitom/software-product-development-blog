@@ -39,6 +39,7 @@ twitter = "sollecitom"
 tagline = "Thoughts and software and product development"
 #images = [""] #This is used for opengraph/twitter cards.
 customCSS = []  #Optional Customised CSS
+#disqusShortname = "software-product-development-sollecitom"
 #favicon = ""
 #utterancesRepo = "username/repository"
 #utterancesIssueTerm = "pathname"
