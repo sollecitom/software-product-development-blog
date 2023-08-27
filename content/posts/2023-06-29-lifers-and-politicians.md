@@ -3,7 +3,7 @@ title: "Lifers and politicians"
 categories: ["management"]
 tags: ["people", "toxicity", "employees"]
 date: 2023-06-29T15:00:00
-published: true
+draft: false
 ---
 
 I'm sure you have encountered plenty of toxic people at work. Let's look at some of the most dangerous kinds: lifers, and politicians.

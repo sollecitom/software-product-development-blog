@@ -3,7 +3,7 @@ title: "To modularize or not to modularize, that is the question!"
 categories: ["architecture", "systems-thinking"]
 tags: ["modularity", "scaling", "reuse", "asymmetries", "architecture"]
 date: 2023-07-21T17:30:00
-published: true
+draft: false
 ---
 
 _Why are we talking about modules?_

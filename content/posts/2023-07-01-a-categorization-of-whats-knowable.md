@@ -3,7 +3,7 @@ title: "A categorization of what's knowable"
 categories: ["systems-thinking"]
 tags: ["knowledge", "information"]
 date: 2023-07-01T10:30:00
-published: true
+draft: false
 ---
 
 We often use different words for what we know, like in data-engineering, information systems, and knowledge workers. But do we really understand their meaning and implications? 
