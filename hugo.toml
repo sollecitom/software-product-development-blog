@@ -1,4 +1,33 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Software Product Development Pills'
+copyright = "Copyright &copy; 2023 - Michele Sollecito"
 theme = 'hugo-kiera'
+
+# Note: to disable a social network icon delete or comment out the corresponding line
+[author]
+name = "Michele Sollecito"
+github = "sollecitom"
+#gitlab = "username"
+linkedin = "michelesollecito"
+#facebook = "username"
+twitter = "sollecitom"
+#instagram = "username"
+#stackoverflow = "username"
+#youtube = "user/username" # or channel/channelname
+#devto = "username"
+
+[params]
+tagline = "Thoughts and software and product development"
+description = "Description"
+#images = [""] #This is used for opengraph/twitter cards.
+customCSS = []  #Optional Customised CSS
+#favicon = ""
+#utterancesRepo = "username/repository"
+#utterancesIssueTerm = "pathname"
+#homepageLength = 10
+#commentAutoload = true  #This mean reader don't need click, disqus comment autoload
+#mathjax = true #Enable display of mathematics using mathjax (LaTeX syntax)
+#katex = true #Enable display of mathematics using katex (Faster LaTeX rendering)
+#google_fonts = ["Staatliches"] # Adds additional google fonts
+#disableDarkModeCSS = false # disables css style for users using dark-mode
