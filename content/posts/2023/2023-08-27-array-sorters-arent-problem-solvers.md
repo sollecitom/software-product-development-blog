@@ -42,7 +42,7 @@ Redesigning and changing a system are problems themselves, so you never know wha
 
 So what's the big deal? Well, it's that array sorters are not problem solvers. And being able to sort an array in 20 minutes, or implementing Timsort by hand on a whiteboard, says absolutely nothing about your ability to solve problems. If anything, people who obsess over exercises tend not to do so well with problems.
 
-No company ever went bust because their development team couldn't sort an array. No customer refused to renew their subscription to a company's product because people couldn't invert a binary tree. In comparison, plenty of companies died because they could solve the social dynamics between their founders, or because they allowed entropy to grow too much and ended up having to run just to stand still.
+No company ever went bust because their development team couldn't sort an array. No customer refused to renew their subscription to a company's product because people couldn't invert a binary tree. In comparison, plenty of companies died because they could not solve the social dynamics between their founders, or because they allowed entropy to grow too much and ended up having to run just to stand still.
 
 Why do companies insist with exercises then? Because in a world that loves pre-canned, microwavable solutions, understanding and wisdom are often dismissed as wanting to overcomplicate things. Because you cannot appreciate things you don't understand, and understanding and wisdom are an exception.
 
