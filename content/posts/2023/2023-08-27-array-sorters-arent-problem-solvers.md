@@ -2,7 +2,7 @@
 title: "Array sorters aren't problem solvers"
 categories: [ "systems-thinking" ]
 tags: [ "problem-solving", "problems", "exercises" ]
-date: 2023-08-06T21:30:00
+date: 2023-08-27T21:30:00
 draft: false
 ---
 
