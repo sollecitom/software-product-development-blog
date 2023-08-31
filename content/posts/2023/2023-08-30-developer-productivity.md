@@ -15,21 +15,38 @@ So who's right? Who's wrong? And why? To answer that we'll have to think a bit.
 
 ## A framework to think about developer productivity
 
-In order to reason about measuring developer productivity, we should, first of all, clarify a few points.
+In order to reason about measuring developer productivity, we should, first of all, ask ourselves a few questions.
 
 1. What is developer productivity? What's its operational definition?
 2. Is the productivity of a software developer intrinsic to the person? Completely? Partially? Not at all?
-3. Assuming you could measure the productivity of a software product developer, and that it depended on the person entirely, would this be useful? How? To who?
+3. Assuming you could measure the productivity of a software product developer, would this be useful? To who? How?
 
 As always, we start with why.
 
-### Imagine you could have it all
+### Imagine you could know it all
 
-TODO imagine you could measure the productivity of a software product developer, what would you do with this information? Would it help? Who?
+Let's assume you could know a productivity score for a developer, on a comforting 0-100 scale. Now, what would you do with this information? Well, it really depends on what your role within the company is.
+
+- If you're a developer, and could know this score somehow, you could use it as an indicator, to experiment with different things and see what works to improve it.
+- As a manager, you could use this score to understand the consequences of your actions, and determine who needs coaching and attention.
+- As a CTO or head of department, you could keep an eye of the average score across various teams, to get feedback on your hiring policies and training efforts.
+
+There's nothing intrinsically wrong with metrics, but they can easily be abused.
+
+- As a developer, you could use your higher score to feel entitled to special treatment. To expect that your opinion would carry more weight, compared to the one of others with a lower score.
+- If you're a manager, you could use this score blindly to promote and fire, without looking into why it might differ across people, and without asking yourself whether the person might enjoy or even do well in the new role.
+- As a CTO, you could use this score to do away with having to trust your managers with your employees' performance. Or you could assign a target average score as a goal to a manager for their area or team.s
+- And if you're a CEO, you could use this score to keep your CTO in check, or assign targets as goals.
 
 ### Is the productivity of a developer an intrinsic trait?
 
-TODO does productivity intrinsically belong to a person? Or is it largely influenced by the environment e.g. the team, the ways of working, the processes, the manager, and the company?
+Let's assume you could flatten all nuances and measure developer productivity on a 0-100 scale. Now, what would this depend on?
+
+Some people immediately associate the productivity of an employee to the merits or defects of that employee. Like if it was an intrinsic trait, something they're responsible for.
+
+But does productivity really belong to the employee? Or is it largely influenced by the environment. By the team, the ways of working, the salary and benefits, the processes, the manager, and the company?
+
+TODO
 
 ### Developer productivity: an operational definition
 
