@@ -2,8 +2,8 @@
 title: "Array sorters aren't problem solvers"
 categories: [ "systems-thinking" ]
 tags: [ "problem-solving", "problems", "exercises" ]
-date: 2023-08-06T21:30:00
-draft: true
+date: 2023-08-27T21:30:00
+draft: false
 ---
 
 ## The evergreen problem-solving
@@ -19,6 +19,8 @@ So what's wrong with these questions? Are these not problems? Not at all, they'r
 An exercise is always devoid of context, static, and timeless. It's something you can analyse and work on in isolation, and it's immediately obvious whether a potential solution works for an exercise.
 
 Problems are a different story. An example of a problem might be "why do we keep producing so many bugs, irrespective of all our efforts and of how much the CEO cares about this?" Problems are messy, and always come with a lot of context, ambiguity, and related problems. It's not clear whether a candidate solution will work, or whether a solution exists at all.
+
+Successful problem-solving requires finding the right solution to the right problem. We fail more often because we solve the wrong problem than because we get the wrong solution to the right problem. Our ability to solve problem is limited by our conception of what is feasible.
 
 Analysis works well for exercises:
 
@@ -40,7 +42,7 @@ Redesigning and changing a system are problems themselves, so you never know wha
 
 So what's the big deal? Well, it's that array sorters are not problem solvers. And being able to sort an array in 20 minutes, or implementing Timsort by hand on a whiteboard, says absolutely nothing about your ability to solve problems. If anything, people who obsess over exercises tend not to do so well with problems.
 
-No company ever went bust because their development team couldn't sort an array. No customer refused to renew their subscription to a company's product because people couldn't invert a binary tree. In comparison, plenty of companies died because they could solve the social dynamics between their founders, or because they allowed entropy to grow too much and ended up having to run just to stand still.
+No company ever went bust because their development team couldn't sort an array. No customer refused to renew their subscription to a company's product because people couldn't invert a binary tree. In comparison, plenty of companies died because they could not solve the social dynamics between their founders, or because they allowed entropy to grow too much and ended up having to run just to stand still.
 
 Why do companies insist with exercises then? Because in a world that loves pre-canned, microwavable solutions, understanding and wisdom are often dismissed as wanting to overcomplicate things. Because you cannot appreciate things you don't understand, and understanding and wisdom are an exception.
 
