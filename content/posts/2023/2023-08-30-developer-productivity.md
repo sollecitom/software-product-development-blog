@@ -44,7 +44,7 @@ Let's assume you could flatten all nuances and measure developer productivity on
 
 Some people immediately associate the productivity of an employee to the merits or defects of that employee. Like if it was an intrinsic trait, something they're responsible for.
 
-But does productivity really belong to the employee? Or is it largely influenced by the environment. By the team, the ways of working, the salary and benefits, the processes, the manager, and the company?
+But does productivity really belong to the employee? Or is it largely influenced by the environment. By the team, the ways of working, the salary and benefits, the technologies, the state of the codebase, the processes, the manager, and the company?
 
 TODO
 
