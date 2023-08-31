@@ -2,7 +2,7 @@
 title: "Developer productivity: what's all the fuss about?"
 categories: [ "systems-thinking" ]
 tags: [ "productivity", "data", "measurements" ]
-date: 2023-08-31T10:30:00
+date: 2023-08-31T09:30:00
 draft: false
 ---
 
