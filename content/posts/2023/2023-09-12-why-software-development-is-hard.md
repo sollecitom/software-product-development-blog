@@ -3,7 +3,7 @@ title: "Why software development is hard"
 categories: [ "systems-thinking" ]
 tags: [ "complexity", "software-development" ]
 date: 2023-09-12T11:00:00
-draft: true
+draft: false
 ---
 
 We always hear that software development is hard, and that a very high percentage of all software projects fail. But have you ever wondered why software development is so hard?
