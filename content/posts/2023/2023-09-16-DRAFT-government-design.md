@@ -36,4 +36,34 @@ This document contains 3 sections:
 
 ## Exercise
 
+### A government is a system
+
+- A government is a social system.
+- Its containing system is its country.
+- A country is made of the following sub-systems:
+    - People (composition, number, average age, genetics).
+    - Government.
+    - Geography (resources, climate, neighboring countries).
+    - History (culture, past events, cuisine, language, etc.).
+- The people, government, geography, and history of a country are interdependent.
+- The effectiveness of a system is never the sum of its parts, but the product of their interactions.
+- Q: could the effectiveness of a government stay the same across different containing systems? A: no.
+- Q: is there even a point in doing an idealised system design exercise for a government, without fixing the containing environment? A: I believe there is, because tactics and details would change, but purpose and principles would stay the same.
+
+### The identity of a government
+
+- In social systems, people and teams change over time.
+- The way people think determines how they behave, and people are influenced by the existing way of thinking.
+- Q: how do we define the identity of a government? When is a government not the same government anymore? A: a government is the same as long as its purpose and in its belief system remain the same.
+
+### Continuity: a pre-requisite for achieving outcomes
+
+- If a government is substituted by a different government with a separate purpose or belief system, then its work will be undone.
+- This happens because people do what they think is best, so if your definition of best differed from the one of your predecessors, you'd undo their work by doing what you believe it's best.
+- As a result, continuity of a government's identity is a pre-requisite for achieving outcomes. Alternating different purposes and beliefs every few years prevents anything good from ever being achieved.
+- Q: does this mean that the same government should ideally persist through the ages? A: yes, the alternative is unlikely to produce anything good.
+- Q: how do you keep a government that doesn't change accountable of its conduct to its people?
+- Q: how do you avoid the risk of stagnation is its belief system, if it's important that it doesn't change?
+- Q: how do you decide who's part of the government, and who is not?
+
 TODO
