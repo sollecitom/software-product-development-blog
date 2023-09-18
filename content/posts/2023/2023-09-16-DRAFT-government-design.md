@@ -70,3 +70,13 @@ This document contains 3 sections:
 
 - Q: what is the purpose of a government? A: it is to ensure that its People thrive.
 - Q: who are a government's People: the law-abiding citizens of the Country the government is a subsystem of.
+- Q: what does "to thrive" mean in this context? A: it means living life to its fullest, including:
+    - Remaining in good health.
+    - Having shelter and security.
+    - Possessing a functional understanding of the world.
+    - Being able to raise a family.
+    - Meeting their needs to explore and live other places, being able to travel, nationally and internationally.
+    - Fulfilling their yearning for purpose by meaningfully contributing to society through work:
+        - Something they're good at.
+        - Something the society needs.
+        - Something they enjoy.
