@@ -62,8 +62,11 @@ This document contains 3 sections:
 - This happens because people do what they think is best, so if your definition of best differed from the one of your predecessors, you'd undo their work by doing what you believe it's best.
 - As a result, continuity of a government's identity is a pre-requisite for achieving outcomes. Alternating different purposes and beliefs every few years prevents anything good from ever being achieved.
 - Q: does this mean that the same government should ideally persist through the ages? A: yes, the alternative is unlikely to produce anything good.
-- Q: how do you keep a government that doesn't change accountable of its conduct to its people?
-- Q: how do you avoid the risk of stagnation is its belief system, if it's important that it doesn't change?
+- Q: how do you keep a government that doesn't change accountable of its conduct to its people? Q: can another body keep the government accountable? A: No, as one would end up controlling the other.
+- Q: how do you avoid the risk of stagnation in its belief system, if it's important that it doesn't change? A: the belief system can and should change and evolve, but not fundamentally.
 - Q: how do you decide who's part of the government, and who is not?
 
-TODO
+### The purpose of a government
+
+- Q: what is the purpose of a government? A: it is to ensure that its People thrive.
+- Q: who are a government's People: the law-abiding citizens of the Country the government is a subsystem of.
