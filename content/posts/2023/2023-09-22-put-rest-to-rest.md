@@ -6,8 +6,6 @@ date: 2023-09-22T07:00:00
 draft: false
 ---
 
-# REST is a popular mistake
-
 REST is still going strong these days, with many companies structuring their HTTP API based on its principles. And yet, I think that REST is a fundamental mistake, that it caused a lot of damage and pain, and that people should just stop creating RESTful HTTP APIs.
 
 A bold statement, isn't it? Let's dig a little bit deeper to understand the problem, and an alternative.
