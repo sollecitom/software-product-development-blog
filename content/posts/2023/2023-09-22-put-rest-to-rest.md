@@ -32,10 +32,6 @@ Some folks claim that REST introduces the following benefits:
 1. It's simple, and easy to understand. You can perform the same actions on all resources, so you don't need to learn the details of a specific API to use it.
 2. The API is usable via a browser.
 
-# The problem with REST?
-
-So what's the problem with REST anyway?
-
 ## I don't lack experience with it
 
 First of all, a brief recap of my experience here. I started my back-end development career in a company that was using SOAP as its API style. I quickly graduated to REST, and then went on to use it for 12 years. My job has primarily been developing and evolving software products that use HTTP APIs extensively.
@@ -43,6 +39,10 @@ First of all, a brief recap of my experience here. I started my back-end develop
 I was a big REST enthusiast, and I even used HATEOAS principles when building HTTP APIs. I came to question the whole REST idea only recently.
 
 This doesn't mean you need to take my word for it, I'm just saying that this is not about me being unfamiliar with REST.
+
+# The problem with REST?
+
+So what's the problem with REST anyway?
 
 ## Its benefits are bollocks
 
