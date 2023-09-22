@@ -87,6 +87,10 @@ Also, a RESTful API is forced to represent the same business concepts with the s
 
 And if you rename your business concepts, you need to version your API.
 
+What about the way REST advocates to use HTTP status codes? So when a student with given ID doesn't exist, a RESTful API returns the `404` HTTP status code.
+
+This also sucks, because HTTP status codes are about the HTTP protocol, not your business semantics. The `404 Not Found` status code indicates that a path doesn't exist. If you use it to say that a student doesn't exist, these two get mixed up. If a client invokes the wrong path by mistake, there's no telling whether it's due to a protocol error or to a nonexistent student.
+
 # The alternative
 
 So what can we do instead? Should we go back to SOAP, with its verbosity? Well, not really. And I'm not talking about `gRPC` either.
@@ -112,6 +116,10 @@ And you get batching capabilities for free:
 `POST` on `/commands { "commands": [ { "type": "enlist-student", "version": 1, "data": { "firstname": "Bruce", "lastname": "Wayne", "joining-date": "2023-09-22" } }, { "type": "report-student-lastname-change", "version": 1, "data": { "student-id": "123", "new-lastname": "Kent" } } ] }`.
 
 Batching commands and/or queries can have tremendous throughput implications, when applicable.
+
+Last, your semantics can better differentiate between HTTP protocol errors and application level results.
+
+When a requested student is nonexistent, your API can return `200 OK` HTTP status code with a `{ "user": null, "message": "No user exists with the specified ID" }` response body.
 
 # Parting words
 
