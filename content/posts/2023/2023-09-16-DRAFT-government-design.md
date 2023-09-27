@@ -84,4 +84,15 @@ This document contains 3 sections:
 
 ## Some beliefs about people
 
+- A country is a system, and its people are a subsystem. Each person is, in turn, a part of the people of a country.
+- For a system to be effective, the parts need to not be optimised in isolation. The goal is to optimise the whole, not the parts.
+- This means that what's best for the whole must come before what's best for a part.
+- Q: does this mean that there's no place for the will of the individual in an ideal society? A: no, it doesn't. A government's purpose is the well being of its people, so negating the desires and needs of the people would never work. Also, people behave very differently when their needs are fully met, and people's collective behaviour has a huge influence on the effectiveness of a society.
+- Q: where's the boundary then? What do you encourage or discourage? A: a government needs to meet the needs of its people, not their desires or their preferred ways of getting those needs met. When someone purposely prevents somebody else's needs to be met by pursuing their desires, they're working against society, so this needs to be discouraged.
+- Under the right circumstances, and with the right education, most people behave well as part of society.
+- Some people might need repeated corrections to develop a right belief system and behaviour.
+- There are people around the world who, simply put, don't seek to do the right thing, but purse their own desires, regardless what. Usually this is because of their background of experiences, it's not that they're intrinsically evil or something. Nonetheless, an effective government must deal with these people so that they don't disrupt its society and country.
+
+## Operating principles
+
 
