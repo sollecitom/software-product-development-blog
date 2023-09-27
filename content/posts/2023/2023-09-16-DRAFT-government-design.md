@@ -115,3 +115,11 @@ This document contains 3 sections:
 
 ## Principles about various government aspects
 
+- The government should classify things according to the following scale, and act towards them according to their classification:
+  - Essential - provided by the government without any private alternative allowed.
+    - Water, essential food, essential medicines, essential supplements, etc.
+    - Electricity, rubbish collection and disposal, gas, etc.
+    - Essential transportation e.g. trains, domestic flights, underground, etc.
+    - Currency e.g. storage and withdrawal, transfers.
+    - Information e.g. news, internet connectivity, etc.
+    - Education, at least the universal minimum program.
