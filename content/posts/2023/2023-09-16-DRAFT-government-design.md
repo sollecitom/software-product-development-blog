@@ -78,5 +78,5 @@ This document contains 3 sections:
     - Meeting their needs to explore and live other places, being able to travel, nationally and internationally.
     - Fulfilling their yearning for purpose by meaningfully contributing to society through work:
         - Something they're good at.
-        - Something the society needs.
+        - Something society needs.
         - Something they enjoy.
