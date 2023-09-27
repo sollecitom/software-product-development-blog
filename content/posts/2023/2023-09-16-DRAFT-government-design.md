@@ -10,9 +10,9 @@ draft: true
 
 Well, I have. I think it makes for a terrific system design exercise. It's both crazy and fun.
 
-## Context
+# Context
 
-### The brief
+## The brief
 
 The goal of the exercise is to come up with a description of how an effective government would operate. Pretty simple, uh?
 
@@ -20,7 +20,7 @@ This is an idealised system design exercise, meaning that you should let your im
 
 The only constraint is that things should be at least theoretically feasible. No imaginary technology, no assumptions that people and other states would behave any differently then they do today.
 
-### Structure of this document
+## Structure of this document
 
 This document contains 3 sections:
 
@@ -28,15 +28,15 @@ This document contains 3 sections:
 2. A possible operating model for such a government: principles, practices, and challenges.
 3. A redesign of the UK government, with changes that would be introduced, etc.
 
-### Notes before we begin
+## Notes before we begin
 
 1. These are my own personal ideas. When I say "ideal", I mean "ideal, in my own opinion".
 2. I change my own ideas often. I'm playing here, but I don't want to offend anybody with this exercise. So if you find something that doesn't resonate with you, feel free to let me know, but don't assume I hate you or anything.
 3. This is an exercise that lends itself to countless interpretations, yielding dramatically different results even across people from a similar background. I'd love to read your version of an idealised system design for a government. So why don't you try this? Even better, you could do it before reading the rest of this post, leading to comparing ideas after you're done.
 
-## Exercise
+# Exercise
 
-### A government is a system
+## A government is a system
 
 - A government is a social system.
 - Its containing system is its country.
@@ -50,13 +50,13 @@ This document contains 3 sections:
 - Q: could the effectiveness of a government stay the same across different containing systems? A: no.
 - Q: is there even a point in doing an idealised system design exercise for a government, without fixing the containing environment? A: I believe there is, because tactics and details would change, but purpose and principles would stay the same.
 
-### The identity of a government
+## The identity of a government
 
 - In social systems, people and teams change over time.
 - The way people think determines how they behave, and people are influenced by the existing way of thinking.
 - Q: how do we define the identity of a government? When is a government not the same government anymore? A: a government is the same as long as its purpose and its belief system remain the same.
 
-### Continuity: a pre-requisite for achieving outcomes
+## Continuity: a pre-requisite for achieving outcomes
 
 - If a government is substituted by a different government with a separate purpose or belief system, then its work will be undone.
 - This happens because people do what they think is best, so if your definition of best differed from the one of your predecessors, you'd undo their work by doing what you believe it's best.
@@ -66,7 +66,7 @@ This document contains 3 sections:
 - Q: how do you avoid the risk of stagnation in its belief system, if it's important that it doesn't change? A: the belief system can and should change and evolve, but not fundamentally.
 - Q: how do you decide who's part of the government, and who is not?
 
-### The purpose of a government
+## The purpose of a government
 
 - Q: what is the purpose of a government? A: it is to ensure that its People thrive.
 - Q: who are a government's People: the law-abiding citizens of the Country the government is a subsystem of.
