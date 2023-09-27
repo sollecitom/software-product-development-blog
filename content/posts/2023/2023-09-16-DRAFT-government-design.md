@@ -110,3 +110,8 @@ This document contains 3 sections:
 - It's important to discourage competition and conflicting interests within a circle.
 - Competition among circles on the same level should also be discouraged. Innovations and performance should be recognised, but this shouldn't penalise less effective circles.
 - A circle that's doing well should be helping circles that do less well improve. It's key that this should be requested by the struggling circle, rather than mandated from a higher level circle. Encouragement is needed, but enforcement shouldn't be necessary.
+- Separating responsibilities within a circle is a bad idea. This can easily create conflicts and competition within the circle itself.
+- Instead, a circle should be co-responsible for its area of management, across all functions, including coming up with laws and regulations, making plans and executing on those plans, arbitrating over disputes, policing, educating, etc.
+
+## Principles about various government aspects
+
