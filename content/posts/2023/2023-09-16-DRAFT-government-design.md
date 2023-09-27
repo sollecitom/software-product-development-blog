@@ -115,11 +115,38 @@ This document contains 3 sections:
 
 ## Principles about various government aspects
 
-- The government should classify things according to the following scale, and act towards them according to their classification:
-  - Essential - provided by the government without any private alternative allowed.
-    - Water, essential food, essential medicines, essential supplements, etc.
-    - Electricity, rubbish collection and disposal, gas, etc.
-    - Essential transportation e.g. trains, domestic flights, underground, etc.
-    - Currency e.g. storage and withdrawal, transfers.
-    - Information e.g. news, internet connectivity, etc.
-    - Education, at least the universal minimum program.
+### Classification of products and resources
+
+- The government should classify products and services according to the following scale, and act according to their classification:
+    - Controlled - provided by the government without any private alternative allowed.
+    - Essential - provided by the government, but private alternatives are allowed.
+    - Encouraged - not provided by the government, but the government encourages private companies to provide these.
+    - Neutral - not provided, discouraged, or encouraged by the government. Private companies can provide these.
+    - Discouraged - not provided by the government, not outlawed, but private companies are discouraged to provide these.
+    - Outlawed - not provided by the government, and private companies are not allowed to provide these either.
+
+#### Controlled
+
+Controlled products and services are exclusively provided by the government. The rationale is that private interests would inevitably damage the interests of the collective if allowed to get near these products or services.
+
+Controlled products and services tend to include the most essential things, and products or services that could cause harm to society when uncontrolled. Some examples include:
+
+- Water, including treatment, packaging, and distribution.
+- Essential food: all whole foods (meat, fish, vegetables, fruits, eggs, milk, yogurt), bread, pasta, rice, etc.
+- Medicines. This means private medicine producers or vendors are not allowed.
+- Healthcare, including dental, but excluding cosmetic treatments. This means that private healthcare providers are not allowed.
+- Essential vitamins and supplements in general.
+- Electricity, gas, and all energy-related resources. Production, packaging, and distribution.
+- Rubbish collection, disposal, and recycling.
+- Essential transportation, including all domestic flights and trains, underground, buses, etc.
+- Currency: emission, storage and withdrawal, transfers. This means that private providers of basic financial services are not allowed.
+- Information and communications: content, distribution, and access. This includes essential news (e.g. excluding sports, etc.), internet connectivity, phone lines, and search engines.
+- Essential education: universal minimal education. This includes university, meaning that private education is only allowed for subjects not deemed essential.
+- Lottery and all forms of gambling. These are not outright prohibited, as they might entertain when controlled, but no private providers are allowed.
+- Drugs. Not sure whether these should be banned altogether or severely controlled, but in any case private interests should be kept away from them.
+
+#### Essential
+
+Essential products and services are provided by the government, but private alternatives are allowed, provided they meet some criteria.
+
+- TODO (social media, peer-to-peer communication apps, Cloud providers, phone manufacturing, etc.)
