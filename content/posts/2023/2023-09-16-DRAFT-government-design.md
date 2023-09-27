@@ -54,7 +54,7 @@ This document contains 3 sections:
 
 - In social systems, people and teams change over time.
 - The way people think determines how they behave, and people are influenced by the existing way of thinking.
-- Q: how do we define the identity of a government? When is a government not the same government anymore? A: a government is the same as long as its purpose and in its belief system remain the same.
+- Q: how do we define the identity of a government? When is a government not the same government anymore? A: a government is the same as long as its purpose and its belief system remain the same.
 
 ### Continuity: a pre-requisite for achieving outcomes
 
