@@ -31,7 +31,7 @@ This document contains 3 sections:
 ### Notes before we begin
 
 1. These are my own personal ideas. When I say "ideal", I mean "ideal, in my own opinion".
-2. I change my own ideas often. I'm playing here, but I don't want to offend anybody with this exercise. So if you find something that doesn't resonate with you, feel free to let me know, but assume I hate you or anything.
+2. I change my own ideas often. I'm playing here, but I don't want to offend anybody with this exercise. So if you find something that doesn't resonate with you, feel free to let me know, but don't assume I hate you or anything.
 3. This is an exercise that lends itself to countless interpretations, yielding dramatically different results even across people from a similar background. I'd love to read your version of an idealised system design for a government. So why don't you try this? Even better, you could do it before reading the rest of this post, leading to comparing ideas after you're done.
 
 ## Exercise
