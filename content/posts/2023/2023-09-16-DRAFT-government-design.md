@@ -80,3 +80,8 @@ This document contains 3 sections:
         - Something they're good at.
         - Something society needs.
         - Something they enjoy.
+- Q: so why have a government at all? What happens if you don't have one? A: without a government people wouldn't have the incentives to focus on things that don't benefit them directly, including everything that spans longer than their lifetime. Collective human knowledge wouldn't have developed without governments. Also, without a well-functioning government, some people would harm other people to satisfy their individual desires, without anything deterring them.
+
+## Some beliefs about people
+
+
