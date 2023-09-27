@@ -93,6 +93,20 @@ This document contains 3 sections:
 - Some people might need repeated corrections to develop a right belief system and behaviour.
 - There are people around the world who, simply put, don't seek to do the right thing, but purse their own desires, regardless what. Usually this is because of their background of experiences, it's not that they're intrinsically evil or something. Nonetheless, an effective government must deal with these people so that they don't disrupt its society and country.
 
-## Operating principles
+## Government organisational principles
 
-
+- A government must ensure that its people do the right thing, and that they do the thing right.
+- Of the two, doing the right thing is tremendously more important.
+- Doing this requires knowing what the right thing is (including changes over time), how to do things right, and being able to influence people's behaviour.
+- A government must make doing the right thing as convenient and beneficial to the individual as possible, and make doing the wrong thing as inconvenient and detrimental to the individual as possible.
+- If this is done well, drastic interventions are rarely needed.
+- A government needs information about what's happening in order to perform its role effectively.
+- The only way to achieve this is to bring the decision making as close as possible to where the information is gathered.
+- Knowing how to do the thing right requires constant experimentation.
+- Standardising an approach guarantees that a better one won't be discovered and adopted in a timely enough manner to be effective.
+- So, a government should avoid centralising the decision making at the top, and having local breaches enforce decisions made far away from the context.
+- Instead, a government should organise itself in circles, in an outside-in fashion. Local circles are responsible for governing their local communities, and can experiment with different approaches. Moving inside, larger circles govern provinces to ensure the interests of a local community don't harm the needs of the province. Till the core of the government, which ensures the interests of a region won't harm the needs of the nation.
+- Based on their operating level, circles have different focus, scope, and time horizon.
+- It's important to discourage competition and conflicting interests within a circle.
+- Competition among circles on the same level should also be discouraged. Innovations and performance should be recognised, but this shouldn't penalise less effective circles.
+- A circle that's doing well should be helping circles that do less well improve. It's key that this should be requested by the struggling circle, rather than mandated from a higher level circle. Encouragement is needed, but enforcement shouldn't be necessary.
