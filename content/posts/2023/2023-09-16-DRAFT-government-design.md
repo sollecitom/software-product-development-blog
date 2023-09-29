@@ -149,4 +149,4 @@ Controlled products and services tend to include the most essential things, and 
 
 Essential products and services are provided by the government, but private alternatives are allowed, provided they meet some criteria.
 
-- TODO (social media, peer-to-peer communication apps, Cloud providers, phone manufacturing, etc.)
+- TODO (social media, peer-to-peer communication apps, Cloud providers, phone manufacturing, houses, etc.)
