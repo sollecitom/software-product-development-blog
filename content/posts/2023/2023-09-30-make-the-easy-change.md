@@ -24,4 +24,13 @@ You're a good developer, so you start thinking, but then you remember you read s
 
 After all why bother doing more than the strictly necessary?
 
-You create an HTTP endpoint that accepts a `POST` on `/orders`, without any further order-related information, and you process each of them by charging $14 and by initiating the delivery of 2 t-shirts of the 1 size and colour you support.
+You create an HTTP endpoint that accepts a `POST` on `/orders`, without any further order-related information, and you process each of them by charging $14 and by initiating the delivery of 2 t-shirts of the 1 size and colour you support. You add a test (before or after), and you're done.
+
+#### Outcomes
+
+You haven't wasted any time making choices explicit, modelling your domain, writing serialization logic, making things modular and decoupled, reasoning about where information comes from, or making bad decisions about using doubles for money amounts.
+Sounds great uh?
+
+You delivered on the requirements, made the customers happy, and saved time you could have spent gold-plating the implementation. Aced it, OKRs met, mission accomplished. You got closer to that promotion for sure.
+
+TODO
