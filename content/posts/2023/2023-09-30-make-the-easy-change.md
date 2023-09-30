@@ -33,7 +33,19 @@ You delivered on the requirements, made the customers happy, and saved time you 
 
 In my opinion doing what's described above is borderline criminal. In most companies this should be a red flag indicating you have no idea what you're doing.
 
-TODO 
+By not identifying circumstantial conditions and temporary constraints you created a liability for your organisation.
+
+But could we not evolve the code later, when needed? Isn't Agile about delaying decisions after all?
+
+Agile is about delaying decision till when delaying them further would be irresponsible. Here we're way past that point.
+
+The problem is that the cost of doing things changes during the lifecycle of a project. And those fools that hired you aren't aware that you traded off a few hours for a much higher risk and effort down the line.
+
+With any luck, the requirements will evolve quickly enough that you'll feel naive, you'll undo the damage, but nothing too bad will happen.
+
+In a much less forgiving scenario, your company will thrive for quite a while before requiring changes that your implementation doesn't support. Imagine going on for a year or so under the same requirements. You build UIs, logging, monitoring, metrics, alerts, an inventory system, and more. All while keeping everything implicit as above.
+
+When your requirements will expand, the effort, risk, and cost will be obscene. At best
 
 ## YAGNI done right
 
