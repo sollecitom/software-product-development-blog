@@ -45,9 +45,13 @@ With any luck, the requirements will evolve quickly enough that you'll feel naiv
 
 In a much less forgiving scenario, your company will thrive for quite a while before requiring changes that your implementation doesn't support. Imagine going on for a year or so under the same requirements. You build UIs, logging, monitoring, metrics, alerts, an inventory system, and more. All while keeping everything implicit as above.
 
-When your requirements will expand, the effort, risk, and cost will be obscene. At best
+When your requirements will expand, the effort, risk, and cost will be obscene. If your company will need those changes quickly, it might be a big problem. The company might not even survive.
 
 ## YAGNI done right
 
-TODO
+What's the alternative then? It's YAGNI, but done right.
+
+You model enough, without imagining future requirements that you ain't going to need.
+
+But isn't this what we did above, leading to catastrophe and all?
 
