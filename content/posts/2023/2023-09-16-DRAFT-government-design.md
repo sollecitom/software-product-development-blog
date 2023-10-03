@@ -101,10 +101,10 @@ This document contains 3 sections:
 - A government must make doing the right thing as convenient and beneficial to the individual as possible, and make doing the wrong thing as inconvenient and detrimental to the individual as possible.
 - If this is done well, drastic interventions are rarely needed.
 - A government needs information about what's happening in order to perform its role effectively.
-- The only way to achieve this is to bring the decision making as close as possible to where the information is gathered.
+- The only way to achieve this is to bring the decision-making as close as possible to where the information is gathered.
 - Knowing how to do the thing right requires constant experimentation.
 - Standardising an approach guarantees that a better one won't be discovered and adopted in a timely enough manner to be effective.
-- So, a government should avoid centralising the decision making at the top, and having local breaches enforce decisions made far away from the context.
+- So, a government should avoid centralising the decision-making at the top, and having local breaches enforce decisions made far away from the context.
 - Instead, a government should organise itself in circles, in an outside-in fashion. Local circles are responsible for governing their local communities, and can experiment with different approaches. Moving inside, larger circles govern provinces to ensure the interests of a local community don't harm the needs of the province. Till the core of the government, which ensures the interests of a region won't harm the needs of the nation.
 - Based on their operating level, circles have different focus, scope, and time horizon.
 - It's important to discourage competition and conflicting interests within a circle.
@@ -114,6 +114,24 @@ This document contains 3 sections:
 - Instead, a circle should be co-responsible for its area of management, across all functions, including coming up with laws and regulations, making plans and executing on those plans, arbitrating over disputes, policing, educating, etc.
 
 ## Principles about various government aspects
+
+### Systemic and cross-cutting approach
+
+- Circles organise the government in terms of jurisdiction and level of focus.
+- Each circle is headed by a single person.
+- Within a circle there's no division of responsibility for various aspects like healthcare, education, infrastructure, etc.
+- Desired outcomes inform the design of vertical aspects e.g. wanting to distribute clean and safe drinkable water informs how water production, large-scale distribution, and endpoint distribution are designed overall.
+- Desired outcomes inform the design of horizontal aspects e.g. wanting to prevent crime informs how education, healthcare, entertainment, infrastructure, policing, and justice work.
+- Systems are design to prevent problems from manifesting in the first place, rather than to accept them and fight them.
+- Systems are still equipped to deal with problems, but high levels of undesired outcomes are highly undesired, even when kept under control.
+    - As an example, a government in need of many prisons is doing things wrong.
+
+### High-level goals
+
+The government aims at fully meeting the needs of its people and its Country. This includes:
+
+- People should know how the world works, what's happening, and what happened.
+- Everybody should have access to the essential resources they need: housing, food, water, energy, information, TODO ---
 
 ### Classification of products and resources
 
@@ -139,7 +157,7 @@ Controlled products and services tend to include the most essential things, and 
 - Electricity, gas, and all energy-related resources. Production, packaging, and distribution.
 - Rubbish collection, disposal, and recycling.
 - Essential transportation, including all domestic flights and trains, underground, buses, etc.
-- Currency: emission, storage and withdrawal, transfers. This means that private providers of basic financial services are not allowed.
+- Currency: emission, storage, withdrawal, transfers, lending, and borrowing. This means that private providers of basic financial services are not allowed.
 - Information and communications: content, distribution, and access. This includes essential news (e.g. excluding sports, etc.), internet connectivity, phone lines, and search engines.
 - Essential education: universal minimal education. This includes university, meaning that private education is only allowed for subjects not deemed essential.
 - Lottery and all forms of gambling. These are not outright prohibited, as they might entertain when controlled, but no private providers are allowed.
@@ -215,4 +233,10 @@ Outlawed services and products are not provided by the government, and no privat
 
 ### Policies for government-provided services and products
 
-TODO stuff that works well over choice
+Whenever the government provides products and services, the following principles apply:
+
+- The services and products are organised and produced according to their demand.
+- Quality and affordability are heavily prioritised over range of selection. Affordability here is considered over time, so durable products and services that fully meet the needs are preferred.
+
+The government should offer services and products that are high-quality and are affordable. People don't want choice, but things they can afford and work well.
+
