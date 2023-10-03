@@ -132,7 +132,7 @@ Controlled products and services are exclusively provided by the government. The
 Controlled products and services tend to include the most essential things, and products or services that could cause harm to society when uncontrolled. Some examples include:
 
 - Water, including treatment, packaging, and distribution.
-- Essential food: all whole foods (meat, fish, vegetables, fruits, eggs, milk, yogurt), bread, pasta, rice, etc.
+- Essential food: production and distribution of all whole foods (meat, fish, vegetables, fruits, eggs, milk, yogurt), bread, pasta, rice, etc.
 - Medicines. This means private medicine producers or vendors are not allowed.
 - Healthcare, including dental, but excluding cosmetic treatments. This means that private healthcare providers are not allowed.
 - Essential vitamins and supplements in general.
@@ -144,9 +144,75 @@ Controlled products and services tend to include the most essential things, and 
 - Essential education: universal minimal education. This includes university, meaning that private education is only allowed for subjects not deemed essential.
 - Lottery and all forms of gambling. These are not outright prohibited, as they might entertain when controlled, but no private providers are allowed.
 - Drugs. Not sure whether these should be banned altogether or severely controlled, but in any case private interests should be kept away from them.
+- All public infrastructure (roads, cables, bridges, etc.).
+
+As an example, allowing private interests to produce and sell essential food would create a conflict. A producer and seller of apples would want to make the apple as sellable and as profitable as possible. These objectives go directly against the interests of the consumers. It'd mean that apples would become sweeter, get more harmful substances on them, etc.
 
 #### Essential
 
 Essential products and services are provided by the government, but private alternatives are allowed, provided they meet some criteria.
 
-- TODO (social media, peer-to-peer communication apps, Cloud providers, phone manufacturing, houses, etc.)
+- Social media.
+- Peer-to-peer communication apps.
+- Cloud providers.
+- Phones, digital book readers, digital note takers.
+- Digital libraries (everything except fiction).
+- Houses.
+- Hair dressers.
+- Essential clothes.
+- Essential accessories and tools.
+- Essential physical training services, including gyms (flexibility, weight lifting), martial arts academies, swimming pools, etc.
+- Essential mental well-being services, including counselling, and meditation.
+- House repairs.
+- Specialised and/or advanced education for essential areas.
+- Essential weapons and ammunition.
+
+The criteria the government would enforce should prevent private interests from damaging the interest of the people and the Country.
+
+Whenever a private company would provide a significantly better service compared to the government, the government would eventually adopt this as part of their core offering. The company would be invited by the government to run the service, and to scale it to be nationwide. In this sense, the interests of the company wouldn't be harmed.
+
+#### Encouraged
+
+Encouraged products and services are not provided by the government, and private companies are encouraged, provided they meet some criteria. Companies that don't meet these criteria are prohibited from offering these products and services.
+
+The government encourages private providers of these vendors and services by significantly reducing their tax duties.
+
+- Theatres.
+- Comedy clubs.
+- Cinemas.
+- Digital libraries (fiction).
+- Specialised and/or advanced education for non-essential areas.
+- Social clubs.
+- Tourism agencies.
+- Holiday organisers.
+
+#### Neutral
+
+The government doesn't provide or encourage these products and services. Private companies that do so must still adhere to guidelines and regulations.
+
+- Non-essential clothes.
+- Non-essential surgery (e.g. cosmetic).
+- Non-essential accessories and tools.
+- Restaurants.
+- Sex services.
+- Go-karts, mud races, etc.
+- Video games.
+- Non-essential weapons and ammunition.
+
+#### Discouraged
+
+Discouraged products and services are not provided by the government, and private companies that offer them are discouraged with a higher tax rate.
+
+- Harmful foods (e.g. highly processed, alcohol, high in sugar, etc.).
+
+#### Outlawed
+
+Outlawed services and products are not provided by the government, and no private companies are allowed to provide these either. Consumption and possession are also outlawed.
+
+- Cigarettes, cigars, vaping, etc.
+- Drugs of any kind: marijuana, cocaine, amphetamines, opioids, etc.
+- Forbidden weapons and ammunition.
+
+### Policies for government-provided services and products
+
+TODO
