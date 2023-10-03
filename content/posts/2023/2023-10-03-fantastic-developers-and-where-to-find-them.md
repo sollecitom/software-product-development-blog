@@ -50,6 +50,10 @@ TODO
 
 TODO (no strong/controversial opinions on socials)
 
+#### Puts up with our nonsense
+
+TODO (works under pressure, deals well with tight deadlines, used to matrix management, writes PRDs, loves OKRs, etc.)
+
 ### Overall
 
 A boring, loyal all-rounder who's competent enough to do what they're told, but not competent enough to need convincing. They never raise their voice, get along well with everybody, respect the process, and are reasonable.
