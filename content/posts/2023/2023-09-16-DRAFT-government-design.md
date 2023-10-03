@@ -215,4 +215,4 @@ Outlawed services and products are not provided by the government, and no privat
 
 ### Policies for government-provided services and products
 
-TODO
+TODO stuff that works well over choice
