@@ -36,4 +36,4 @@ Before we dig deeper into why I believe you don't need metrics to manage, a few 
 
 > The process of associating numbers with physical quantities and phenomena.
 
-The word "quantitative" is important here.
+TODO
