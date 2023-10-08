@@ -36,4 +36,14 @@ Before we dig deeper into why I believe you don't need metrics to manage, a few 
 
 > The process of associating numbers with physical quantities and phenomena.
 
-TODO
+Measurements concern themselves with quantities. Not every type of feedback is quantitative. Keep this in mind, because it'll be important in a bit.
+
+### Management
+
+> The process of dealing with or controlling processes, things, or people.
+
+I argue that management is exclusively about processes, but let's not diverge. Management is about steering something to produce desired outcomes.
+
+### Moron
+
+> 
