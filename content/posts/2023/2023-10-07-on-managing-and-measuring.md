@@ -69,3 +69,26 @@ I'm originally from Italy, so it's time to talk about pasta.
 ### The "right" amount of salt in a pasta dish
 
 TODO
+
+## Back to software product development
+
+TODO
+
+Software product development is incredibly more complex than cooking some pasta.
+
+There are entire dimensions of added complexity, including:
+
+1. It's done in teams, working together.
+2. The subject is far removed from the realm of common sense and experiences.
+    - An untrained person knows nothing about it.
+    - Good and bad products and software are not immediately recognizable, unlike food.
+3. It's much longer term.
+    - You don't often get to start from scratch
+    - Software products and systems get continuously evolved and adapted to new requirements.
+    - What you did in the past influences and limits what you can do in the future.
+4. The landscape changes continuously.
+    - After tomatoes made their way to Europe, the recipe for pasta with fish and tomato sauce stayed virtually unchanged. Even the tools are roughly the same.
+    - In software, things change continuously. Entire paradigms appear and force everybody to shift. Cloud providers, containers, orchestrators, infrastructure as code, etc.
+5. The scale of the system is much larger.
+    - The recipe for pasta with fish and tomato sauce might involve 10 ingredients or so.
+    - A software product might involve 10s or 1000s of systems, features, and moving parts.
