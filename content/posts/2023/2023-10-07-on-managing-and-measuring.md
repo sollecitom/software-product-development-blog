@@ -6,7 +6,7 @@ date: 2023-10-07T05:00:00
 draft: true
 ---
 
-Metrics and indicators are amazing, when used appropriately. But problems arise when people either:
+Metrics and indicators are amazing when used appropriately. But problems arise when people either:
 
 1. Use metrics as targets. I wrote a [post about this](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-07-09-management-by-objectives-is-wishful-thinking/), so I'm not going to explain why this is the case again.
 2. Focus exclusively on things that can be measured, while neglecting things that cannot.
@@ -18,7 +18,7 @@ Today I want to challenge the last point, that you need metrics in order to mana
 
 ## The trend
 
-The obsession companies have with metrics is getting worse. "OKRs", "KPIs", "data-driven" are on everyone's mouth. Companies even go as far as creating roles, teams, and departments responsible for defining and tracking metrics, across the whole company.
+The obsession companies have with metrics is getting worse. "OKRs", "KPIs", "data-driven" are on everyone's mouth. Companies even go as far as creating roles, teams, and departments responsible for defining and tracking metrics across the whole company.
 
 This creates a lot of problems, and when people bring these up, complaining about this obsessing behaviour and its consequences, the usual weaponized quote is that "you cannot manage what you cannot measure".
 
@@ -30,7 +30,7 @@ On the contrary, I propose the following 3M Rule of Management:
 
 ## A bit of theory
 
-Before we dig deeper into why I believe you don't need metrics to manage, a few definitions.
+Before we dig deeper into why I believe you don't need metrics to manage, let's go over a few definitions.
 
 ### Measurement
 
@@ -46,4 +46,26 @@ I argue that management is exclusively about processes, but let's not diverge. M
 
 ### Moron
 
-> 
+> Silly or unwise; showing poor judgment or little intelligence.
+
+With the word "moron", I mean someone that struggles with boilerplate and routine activities.
+
+## A counter-example
+
+If it was true that "you cannot manage what you cannot measure", we'd be hard-pressed to find examples of people successfully managing without metrics.
+
+And if we could easily find examples where normal people could successfully manage without measurements, then it'd imply that a person not capable of managing what they cannot measure would be a moron.
+
+I hope everybody would recognize that people spend their entire life managing things they cannot measure. Some make pretty good examples:
+
+- Relationships with other people, including spouses or partners, children, parents, siblings, co-workers, friends, etc.
+- Eating and drinking.
+- Dressing yourself according to the weather.
+
+But I want to give a longer explanation of how nonsensical this notion that you cannot manage what you cannot measure is, to clear all doubts.
+
+I'm originally from Italy, so it's time to talk about pasta.
+
+### The "right" amount of salt in a pasta dish
+
+TODO
