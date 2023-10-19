@@ -130,8 +130,11 @@ This document contains 3 sections:
 
 The government aims at fully meeting the needs of its people and its Country. This includes:
 
+- Everybody should have access to the essential resources they need: housing, food, water, energy, information, etc.
+- Citizens should be in excellent health, both mentally and physically.
 - People should know how the world works, what's happening, and what happened.
-- Everybody should have access to the essential resources they need: housing, food, water, energy, information, TODO ---
+- The Country should be self-sufficient, without the need to import or export anything from or to other Countries.
+- The success of the government is measured by the welfare of the least privileged people, and by how narrow the gap is between the folks doing worst and the ones doing best.
 
 ### Classification of products and resources
 
@@ -240,3 +243,4 @@ Whenever the government provides products and services, the following principles
 
 The government should offer services and products that are high-quality and are affordable. People don't want choice, but things they can afford and work well.
 
+TODO

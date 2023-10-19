@@ -26,7 +26,7 @@ This inevitably introduces problems, and when people bring these up and complain
 
 On the contrary, I propose the following 3M Rule of Management:
 
-> "If you cannot Manage what you cannot Measure, then you're a Moron."
+> "If you cannot Manage what you cannot Measure, then you're a Muppet."
 
 ## A bit of theory
 
@@ -44,17 +44,17 @@ Measurements concern themselves with quantities. Not every type of feedback is q
 
 I'd argue that management is exclusively about processes, but let's not diverge. Management is about steering something to produce desired outcomes.
 
-### Moron
+### Muppet
 
 > Silly or unwise; showing poor judgment or little intelligence.
 
-With the word "moron", I mean someone that struggles with boilerplate and routine activities.
+With the word "muppet", I mean someone that struggles with boilerplate and routine activities.
 
 ## A counter-example
 
 If it was true that "you cannot manage what you cannot measure", we'd be hard-pressed to find examples of people successfully managing without measurements.
 
-And if we could effortlessly find examples of normal people successfully managing without measurements, then it'd imply that a person not capable of managing what they cannot measure would be a moron.
+And if we could effortlessly find examples of normal people successfully managing without measurements, then it'd imply that a person not capable of managing what they cannot measure would be a muppet.
 
 I hope it's clear that people spend their entire life managing things they cannot measure. Some examples include:
 
@@ -123,3 +123,9 @@ There are entire dimensions of added complexity, including:
 5. The scale of the system is much larger.
     - The recipe for pasta with fish and tomato sauce might involve 10 ingredients or so.
     - A software product might involve 10s or 1000s of systems, features, and moving parts.
+
+## Final words
+
+It turns out that you can indeed manage what you cannot measure, and do it all the time.
+
+So shall we stop misusing this quote to push this craziness for metrics further, uh?
