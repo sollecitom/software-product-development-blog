@@ -1,12 +1,10 @@
 ---
-title: "Don't hire product managers!"
+title: "The product manager role is a mistake"
 categories: [ "product-management" ]
 tags: [ "product-management", "management", "product-development", "startups" ]
 date: 2023-10-21T05:00:00
 draft: false
 ---
-
-I know many companies that hired product managers and then put them in charge. In all cases, the results have been disastrous. Is there anything wrong, though, with hiring product managers? Absolutely not. In theory, at least. In practice, you're likely going to do this wrong and jeopardize any future your company might have.
 
 # The popular model
 
