@@ -1,5 +1,5 @@
 ---
-title: "What's wrong with product managers?"
+title: "What's wrong with hiring product managers?"
 categories: [ "product-management" ]
 tags: [ "product-management", "management", "product-development", "startups" ]
 date: 2023-10-21T05:00:00
