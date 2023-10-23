@@ -257,6 +257,7 @@ Whenever the government provides products and services, the following principles
     - Cleaning
     - Cooking
     - Recycling
+    - DIY (plumbing, electronics, woodwork, etc.)
     - Swimming (till proficient)
     - Climbing
     - Survival (starting fires, hunting, makeshift gear, finding food, etc.)
