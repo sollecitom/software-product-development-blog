@@ -273,6 +273,8 @@ Whenever the government provides products and services, the following principles
     - Debate
     - History
     - Geography
+    - Law
+    - Linguistics
 - Some subjects are introduced after a few years (e.g., fighting, and survival), others fade after a while (e.g., reading, cleaning, and recycling), while others continue throughout (e.g., maths and physics).
 - There are no scores or rankings.
 - Nobody can fail a year.
@@ -315,5 +317,17 @@ TODO
 TODO
 
 #### Science
+
+TODO
+
+### Justice and law
+
+TODO
+
+### Population control
+
+TODO
+
+### Immigration
 
 TODO
