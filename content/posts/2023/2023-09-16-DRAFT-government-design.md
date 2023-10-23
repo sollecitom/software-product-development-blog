@@ -279,7 +279,7 @@ Whenever the government provides products and services, the following principles
 - Part-time education pushes those skills a person is gifted at to extreme levels, pending existing demand for those skills at that time.
 - Teaching is provided by groups of various experts, working together in related subjects e.g., maths and physics; survival, climbing, and swimming; various fighting aspects; history and geography, etc.
 - Teachers are periodically inspected and evaluated based on how well the students are doing.
-- No sports are included during learning hours.
+- No sports are included during school.
 
 ### Self-sufficiency
 
