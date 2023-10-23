@@ -80,36 +80,36 @@ This document contains 3 sections:
         - Something they're good at.
         - Something society needs.
         - Something they enjoy.
-- Q: so why have a government at all? What happens if you don't have one? A: without a government people wouldn't have the incentives to focus on things that don't benefit them directly, including everything that spans longer than their lifetime. Collective human knowledge wouldn't have developed without governments. Also, without a well-functioning government, some people would harm other people to satisfy their individual desires, without anything deterring them.
+- Q: so why have a government at all? What happens if you don't have one? A: without a government, people wouldn't have the incentives to focus on things that don't benefit them directly, including everything that spans longer than their lifetime. Collective human knowledge wouldn't have developed without governments. Also, without a well-functioning government, some people would harm other people to satisfy their individual desires, without anything deterring them.
 
 ## Some beliefs about people
 
 - A country is a system, and its people are a subsystem. Each person is, in turn, a part of the people of a country.
-- For a system to be effective, the parts need to not be optimised in isolation. The goal is to optimise the whole, not the parts.
+- For a system to be effective, the parts need to not be optimised in isolation. The goal is to optimize the whole, not the parts.
 - This means that what's best for the whole must come before what's best for a part.
-- Q: does this mean that there's no place for the will of the individual in an ideal society? A: no, it doesn't. A government's purpose is the well being of its people, so negating the desires and needs of the people would never work. Also, people behave very differently when their needs are fully met, and people's collective behaviour has a huge influence on the effectiveness of a society.
+- Q: does this mean that there's no place for the will of the individual in an ideal society? A: no, it doesn't. A government's purpose is the well-being of its people, so negating the desires and needs of the people would never work. Also, people behave very differently when their needs are fully met, and people's collective behaviour has a huge influence on the effectiveness of a society.
 - Q: where's the boundary then? What do you encourage or discourage? A: a government needs to meet the needs of its people, not their desires or their preferred ways of getting those needs met. When someone purposely prevents somebody else's needs to be met by pursuing their desires, they're working against society, so this needs to be discouraged.
 - Under the right circumstances, and with the right education, most people behave well as part of society.
-- Some people might need repeated corrections to develop a right belief system and behaviour.
-- There are people around the world who, simply put, don't seek to do the right thing, but purse their own desires, regardless what. Usually this is because of their background of experiences, it's not that they're intrinsically evil or something. Nonetheless, an effective government must deal with these people so that they don't disrupt its society and country.
+- Some people might need repeated corrections to develop a right belief system and behavior.
+- There are people around the world who, simply put, don't seek to do the right thing, but purse their own desires, regardless of what. Usually this is because of their background of experiences, it's not that they're intrinsically evil or something. Nonetheless, an effective government must deal with these people so that they don't disrupt its society and country.
 
-## Government organisational principles
+## Government organizational principles
 
 - A government must ensure that its people do the right thing, and that they do the thing right.
 - Of the two, doing the right thing is tremendously more important.
 - Doing this requires knowing what the right thing is (including changes over time), how to do things right, and being able to influence people's behaviour.
 - A government must make doing the right thing as convenient and beneficial to the individual as possible, and make doing the wrong thing as inconvenient and detrimental to the individual as possible.
 - If this is done well, drastic interventions are rarely needed.
-- A government needs information about what's happening in order to perform its role effectively.
+- A government needs information about what's happening to perform its role effectively.
 - The only way to achieve this is to bring the decision-making as close as possible to where the information is gathered.
 - Knowing how to do the thing right requires constant experimentation.
 - Standardising an approach guarantees that a better one won't be discovered and adopted in a timely enough manner to be effective.
-- So, a government should avoid centralising the decision-making at the top, and having local breaches enforce decisions made far away from the context.
-- Instead, a government should organise itself in circles, in an outside-in fashion. Local circles are responsible for governing their local communities, and can experiment with different approaches. Moving inside, larger circles govern provinces to ensure the interests of a local community don't harm the needs of the province. Till the core of the government, which ensures the interests of a region won't harm the needs of the nation.
+- So, a government should avoid centralizing the decision-making at the top, and having local breaches enforce decisions made far away from the context.
+- Instead, a government should organize itself in circles, in an outside-in fashion. Local circles are responsible for governing their local communities, and can experiment with different approaches. Moving inside, larger circles govern provinces to ensure the interests of a local community don't harm the needs of the province. Till the core of the government, which ensures the interests of a region won't harm the needs of the nation.
 - Based on their operating level, circles have different focus, scope, and time horizon.
 - It's important to discourage competition and conflicting interests within a circle.
-- Competition among circles on the same level should also be discouraged. Innovations and performance should be recognised, but this shouldn't penalise less effective circles.
-- A circle that's doing well should be helping circles that do less well improve. It's key that this should be requested by the struggling circle, rather than mandated from a higher level circle. Encouragement is needed, but enforcement shouldn't be necessary.
+- Competition among circles on the same level should also be discouraged. Innovations and performance should be recognized, but this shouldn't penalize less effective circles.
+- A circle doing well should be helping circles that do less well improve. It's key that this should be requested by the struggling circle, rather than mandated from a higher level circle. Encouragement is needed, but enforcement shouldn't be necessary.
 - Separating responsibilities within a circle is a bad idea. This can easily create conflicts and competition within the circle itself.
 - Instead, a circle should be co-responsible for its area of management, across all functions, including coming up with laws and regulations, making plans and executing on those plans, arbitrating over disputes, policing, educating, etc.
 
@@ -117,12 +117,12 @@ This document contains 3 sections:
 
 ### Systemic and cross-cutting approach
 
-- Circles organise the government in terms of jurisdiction and level of focus.
+- Circles organize the government in terms of jurisdiction and level of focus.
 - Each circle is headed by a single person.
-- Within a circle there's no division of responsibility for various aspects like healthcare, education, infrastructure, etc.
+- Within a circle, there's no division of responsibility for various aspects like healthcare, education, infrastructure, etc.
 - Desired outcomes inform the design of vertical aspects e.g. wanting to distribute clean and safe drinkable water informs how water production, large-scale distribution, and endpoint distribution are designed overall.
 - Desired outcomes inform the design of horizontal aspects e.g. wanting to prevent crime informs how education, healthcare, entertainment, infrastructure, policing, and justice work.
-- Systems are design to prevent problems from manifesting in the first place, rather than to accept them and fight them.
+- Systems are designed to prevent problems from manifesting in the first place, rather than to accept them and fight them.
 - Systems are still equipped to deal with problems, but high levels of undesired outcomes are highly undesired, even when kept under control.
     - As an example, a government in need of many prisons is doing things wrong.
 
@@ -139,16 +139,16 @@ The government aims at fully meeting the needs of its people and its Country. Th
 ### Classification of products and resources
 
 - The government should classify products and services according to the following scale, and act according to their classification:
-    - Controlled - provided by the government without any private alternative allowed.
-    - Essential - provided by the government, but private alternatives are allowed.
-    - Encouraged - not provided by the government, but the government encourages private companies to provide these.
-    - Neutral - not provided, discouraged, or encouraged by the government. Private companies can provide these.
-    - Discouraged - not provided by the government, not outlawed, but private companies are discouraged to provide these.
-    - Outlawed - not provided by the government, and private companies are not allowed to provide these either.
+    - Controlled: provided by the government without any private alternative allowed.
+    - Essential: provided by the government, but private alternatives are allowed.
+    - Encouraged: not provided by the government, but the government encourages private companies to provide these.
+    - Neutral: not provided, discouraged, or encouraged by the government. Private companies can provide these.
+    - Discouraged: not provided by the government, not outlawed, but private companies are discouraged to provide these.
+    - Outlawed: not provided by the government, and private companies are not allowed to provide these either.
 
 #### Controlled
 
-Controlled products and services are exclusively provided by the government. The rationale is that private interests would inevitably damage the interests of the collective if allowed to get near these products or services.
+The government exclusively provides controlled products and services. The rationale is that private interests would inevitably damage the interests of the collective if allowed to get near these products or services.
 
 Controlled products and services tend to include the most essential things, and products or services that could cause harm to society when uncontrolled. Some examples include:
 
@@ -183,7 +183,7 @@ Essential products and services are provided by the government, but private alte
 - Essential clothes.
 - Essential accessories and tools.
 - Essential physical training services, including gyms (flexibility, weight lifting), martial arts academies, swimming pools, etc.
-- Essential mental well-being services, including counselling, and meditation.
+- Essential mental well-being services, including counseling, and meditation.
 - House repairs.
 - Specialised and/or advanced education for essential areas.
 - Essential weapons and ammunition.
@@ -224,7 +224,7 @@ The government doesn't provide or encourage these products and services. Private
 
 Discouraged products and services are not provided by the government, and private companies that offer them are discouraged with a higher tax rate.
 
-- Harmful foods (e.g. highly processed, alcohol, high in sugar, etc.).
+- Harmful foods e.g., highly processed, alcohol, high in sugar, etc.
 
 #### Outlawed
 
@@ -238,8 +238,8 @@ Outlawed services and products are not provided by the government, and no privat
 
 Whenever the government provides products and services, the following principles apply:
 
-- The services and products are organised and produced according to their demand.
-- Quality and affordability are heavily prioritised over range of selection. Affordability here is considered over time, so durable products and services that fully meet the needs are preferred.
+- The services and products are organized and produced according to their demand.
+- Quality and affordability are heavily prioritized over the range of selection. Affordability here is considered over time, so durable products and services that fully meet the needs are preferred.
 
 The government should offer services and products that are high-quality and are affordable. People don't want choice, but things they can afford and work well.
 
