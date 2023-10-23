@@ -180,6 +180,7 @@ Essential products and services are provided by the government, but private alte
 - Digital libraries (everything except fiction).
 - Houses.
 - Hair dressers.
+- Childcare.
 - Essential clothes.
 - Essential accessories and tools.
 - Essential physical training services, including gyms (flexibility, weight lifting), martial arts academies, swimming pools, etc.
@@ -240,7 +241,77 @@ Whenever the government provides products and services, the following principles
 
 - The services and products are organized and produced according to their demand.
 - Quality and affordability are heavily prioritized over the range of selection. Affordability here is considered over time, so durable products and services that fully meet the needs are preferred.
+- The government should offer services and products that are high-quality and are affordable. People don't want choice, but things they can afford and work well.
+- The government should not over-produce goods. This means that makers and factories should be setup to produce a wide range of products, as opposed to large-scale production of a few item types. 
 
-The government should offer services and products that are high-quality and are affordable. People don't want choice, but things they can afford and work well.
+### Education
+
+- The goal of education is to maximize the potential of every citizen.
+- Schools should identify the strengths of each student, and then encourage them, to bring out curiosity and desire to learn.
+- Education should equip everybody with the knowledge and skill they need to thrive.
+- Mandatory education is full-time from age 5 to age 16. From age 17 to age 25, education is part-time, and people are required to both work and study.
+- Education is both free and mandatory.
+- Full-time education includes essential life skills, how the world works, critical thinking, and what happened in the world, including:
+    - Reading
+    - Writing
+    - Cleaning
+    - Cooking
+    - Recycling
+    - Swimming (till proficient)
+    - Climbing
+    - Survival (starting fires, hunting, makeshift gear, finding food, etc.)
+    - Fighting (hand-to-hand, stick, knife, firearms, etc.)
+    - Maths
+    - Physics
+    - Biology
+    - Anatomy
+    - Chemistry
+    - Philosophy
+    - Systems thinking
+    - Psychology
+    - Debate
+    - History
+    - Geography
+- Some subjects are introduced after a few years (e.g., fighting, and survival), others fade after a while (e.g., reading, cleaning, and recycling), while others continue throughout (e.g., maths and physics).
+- There are no scores or rankings.
+- Nobody can fail a year.
+- The goal is to achieve a functional level of proficiency in all subjects, and a great degree of skill in those subjects the student is gifted at.
+- Part-time education pushes those skills a person is gifted at to extreme levels, pending existing demand for those skills at that time.
+- Teaching is provided by groups of various experts, working together in related subjects e.g., maths and physics; survival, climbing, and swimming; various fighting aspects; history and geography, etc.
+- Teachers are periodically inspected and evaluated based on how well the students are doing.
+
+### Self-sufficiency
+
+TODO
+
+### Infrastructure
+
+TODO
+
+### Health
+
+TODO
+
+### Research
+
+TODO
+
+#### Genetics
+
+TODO
+
+#### Military
+
+TODO
+
+#### Medicine
+
+TODO
+
+#### Engineering
+
+TODO
+
+#### Science
 
 TODO
