@@ -24,6 +24,10 @@ TODO talk about
     - equipment
     - cross-functional
     - mixed strengths
+    - dependencies
+      - eliminate rather than facilitate
+    - empowered
+      - outside-in management
 - people outside the teams
   - managers
     - rotating
@@ -35,8 +39,17 @@ TODO talk about
       - libraries
       - platforms
       - tooling
+  - executive
+    - responsibilities
+    - 1 and only 1
 - work
   - pull-based
   - work-in-progress limits
   - different queues
   - TODO
+- tribes
+  - when and if
+    - Over 50pp
+  - 1 per product
+  - independent
+  - people outside the tribes
