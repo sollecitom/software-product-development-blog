@@ -61,7 +61,7 @@ Next up is introducing frameworks and roles for everything. You get a career pro
 
 Meetings also tend to explode in number: status reports, alignment talks, 1:1s, staff meetings, strategy discussions, context-setting talks, release go/no-go meetings, project reports, etc.
 
-As a final nail in the coffin, they hire a ton of bad people. People are hired based on whether they'd represent no treat, so any trace of greatness pretty much guarantees a rejection. The ideal hire becomes a mindless all-rounder, who semi-competently does everything they're told, without any dissent or care for quality. They need hordes of them, to hide among the pack, and so that there are always people to blame. The number of product managers, in particular, skyrockets. A whole hierarchy of PMs, one or more in each team and on each aspect, all behaving the same.
+As a final nail in the coffin, they hire a ton of bad people. People are hired based on whether they'd represent no threat, so any trace of greatness pretty much guarantees a rejection. The ideal hire becomes a mindless all-rounder, who semi-competently does everything they're told, without any dissent or care for quality. They need hordes of them, to hide among the pack, and so that there are always people to blame. The number of product managers, in particular, skyrockets. A whole hierarchy of PMs, one or more in each team and on each aspect, all behaving the same.
 
 ## The damage
 
