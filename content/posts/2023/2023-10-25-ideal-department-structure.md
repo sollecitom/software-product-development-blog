@@ -2,7 +2,7 @@
 title: "An ideal software product development department"
 categories: [ "company-structure" ]
 tags: [ "organization-structure", "management", "product-development", "startups", "teams" ]
-date: 2023-10-301T05:00:00
+date: 2023-10-30T05:00:00
 draft: true
 ---
 
