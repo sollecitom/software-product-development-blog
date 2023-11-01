@@ -11,7 +11,7 @@ draft: false
 Software product companies aren't usually started by people with a strong background in building software products. Those who most likely end up founding businesses are good at getting funding, and at understanding their target industry. They've been in their industry for a long time, know their industry inside out, convinced themselves this means they can do it, and used their relationships and skills to get the money necessary to start a company.
 These people tend to lead everything personally, and a lot could be said about the damage domain experts cause to their own companies when they lead things. Somebody already did it though, and they did it so well that there's no point in me doing a worse job.
 
-Sometimes, though, they acknowledge the danger they represent, and hire somebody in charge of making decisions. Often, they think "We don't want to be a service organization, but a product company. Product companies are product-led, hence product managers should be in charge."
+Sometimes, though, they acknowledge the danger they represent, and hire somebody in charge of making decisions. Often, they think "We don't want to be a service organization, but a product company. Product companies are product-led, hence product managers should be in charge." (This is a terrible misunderstanding, but a popular one: product-led does not mean having PMs in charge.)
 
 So they go and hire a career product manager, and have them make all decisions. Whenever somebody objects to this idea, the usual answer is that "all great companies work like this: Amazon, Apple, Tesla, etc.".
 
