@@ -73,6 +73,8 @@ Think about the factors that are commonly cited as the root cause of burnout, an
 4. Poor self-care. Isn't there a lot more awareness these days? Mental health days off, coaching sponsored by companies, paid gyms, and private healthcare? 
 5. Juggling many things at once. Do you think this got worse over the past 20 years?
 
+TODO rephrase the above (summary only, the explain things got much better compared to 20 years ago)
+
 So why has burnout continued to rise, even when its stated root causes have improved?
 
 I believe the reason lies in a fundamental lack of understanding of why burnout happens, resulting in an inability to see what the actual root causes are, and how to address the problem.
@@ -88,3 +90,4 @@ TODO
 - companies think it's about employees, and are worried because of productivity
 - types of burnout: frenetic, under-challenged, worn-out
 - it's all about "when you feel", never "why you feel"
+- add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, and telling the company what to do
