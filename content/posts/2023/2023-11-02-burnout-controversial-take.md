@@ -30,7 +30,7 @@ How can you tell if you might be experiencing job burnout? Ask yourself:
 Common explanations for job burnout include:
 
 1. If you work long hours or have an excessive workload.
-2. When a job is monotonous or chaotic, you need constant energy to remain focused, which can lead to fatigue and job burnout.
+2. When a job is chaotic, you need constant energy to remain focused, which can lead to fatigue and job burnout.
 3. Lack of rewards and acknowledgement. If you don't get recognized and compensated enough for your efforts. 
 4. Poor self-care: not taking care of yourself outside of work.
 5. Juggling many things at once: work, family, study, etc.
@@ -65,6 +65,16 @@ And it's getting worse, year-on-year burnout grows at about a rate of 5% to 8%.
 
 So why is burnout on the rise, despite the increasing efforts companies put to address it? And despite the fact that working conditions are generally getting better?
 
+Think about the factors that are commonly cited as the root cause of burnout:
+
+1. If you work long hours or have an excessive workload.
+2. When a job is chaotic, you need constant energy to remain focused, which can lead to fatigue and job burnout.
+3. Lack of rewards and acknowledgement. If you don't get recognized and compensated enough for your efforts.
+4. Poor self-care: not taking care of yourself outside of work.
+5. Juggling many things at once: work, family, study, etc.
+
+I believe the reason lies in a fundamental lack of understanding of why burnout happens, resulting in an inability to see the root causes of the problem and to address it.
+
 
 
 TODO
@@ -72,4 +82,3 @@ TODO
 - companies think it's about employees, and are worried because of productivity
 - types of burnout: frenetic, under-challenged, worn-out
 - it's all about "when you feel", never "why you feel"
-- 
