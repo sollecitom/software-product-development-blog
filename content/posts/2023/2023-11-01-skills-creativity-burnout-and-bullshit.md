@@ -37,7 +37,7 @@ Common explanations for job burnout include:
 
 # A burnout epidemic
 
-TODO
+Job burnout is an epidemic. I don't want to go into this at length, but here are a few bullet points that convey the pervasiveness of the problem:
 
 - American Psychological Association: 3 in 5 workers reported experiencing negative mental and physical impacts due to work-related stress. 26% noted a lack of interest, motivation, or energy, 32% reported emotional exhaustion, and 44% noted high levels of physical fatigue.
 - Indeed: more than half (52%) of workers reported feeling burned out, there is a disconnect between the age groups.
@@ -45,6 +45,8 @@ TODO
 - Mental Health UK: 46% of workers felt ‘more prone to extreme levels of stress’ compared to the year before, while a massive 1 in 5 reported feeling ‘unable to manage stress and pressure in the workplace.’
 - McKinsey Health: a quarter of employees experienced burnout symptoms.
 - Mental Health America: 75% of employees experienced burnout.
+
+And it's getting worse TODO
 
 # Why everybody talks about it
 
