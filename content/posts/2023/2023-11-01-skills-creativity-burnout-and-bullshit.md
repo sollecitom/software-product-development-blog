@@ -35,6 +35,17 @@ Common explanations for job burnout include:
 4. Poor self-care: not taking care of yourself outside of work.
 5. Juggling many things at once: work, family, study, etc.
 
+# A burnout epidemic
+
+TODO
+
+- American Psychological Association: 3 in 5 workers reported experiencing negative mental and physical impacts due to work-related stress. 26% noted a lack of interest, motivation, or energy, 32% reported emotional exhaustion, and 44% noted high levels of physical fatigue.
+- Indeed: more than half (52%) of workers reported feeling burned out, there is a disconnect between the age groups.
+- Deloitte: 77% of workers have experienced burnout at their current job.
+- Mental Health UK: 46% of workers felt ‘more prone to extreme levels of stress’ compared to the year before, while a massive 1 in 5 reported feeling ‘unable to manage stress and pressure in the workplace.’
+- McKinsey Health: a quarter of employees experienced burnout symptoms.
+- Mental Health America: 75% of employees experienced burnout.
+
 # Why everybody talks about it
 
 TODO
