@@ -90,4 +90,4 @@ TODO
 - companies think it's about employees, and are worried because of productivity
 - types of burnout: frenetic, under-challenged, worn-out
 - it's all about "when you feel", never "why you feel"
-- add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, and telling the company what to do
+- add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, telling the company what to do, and shaping both the work and how the work works
