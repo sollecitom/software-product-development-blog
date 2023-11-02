@@ -40,3 +40,6 @@ Common explanations for job burnout include:
 TODO
 
 - companies think it's about employees, and are worried because of productivity
+- types of burnout: frenetic, under-challenged, worn-out
+- it's all about "when you feel", never "why you feel"
+- 
