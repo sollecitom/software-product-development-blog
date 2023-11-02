@@ -61,21 +61,23 @@ And yet, job burnout is an epidemic. I don't want to go into this at length, but
 
 And it's getting worse, year-on-year burnout grows at about a rate of 5% to 8%.
 
-# The problem
+# The popular model doesn't seem to work
 
 So why is burnout on the rise, despite the increasing efforts companies put to address it? And despite the fact that working conditions are generally getting better?
 
-Think about the factors that are commonly cited as the root cause of burnout:
+Think about the factors that are commonly cited as the root cause of burnout, and look at their trend in the software development industry, over the past two decades:
 
-1. If you work long hours or have an excessive workload.
-2. When a job is chaotic, you need constant energy to remain focused, which can lead to fatigue and job burnout.
-3. Lack of rewards and acknowledgement. If you don't get recognized and compensated enough for your efforts.
-4. Poor self-care: not taking care of yourself outside of work.
-5. Juggling many things at once: work, family, study, etc.
+1. Working long hours and excessive workloads. Haven't working hours been shrinking?
+2. Unstructured work without clear goals. Hasn't work actually become more structured?
+3. Lack of rewards and acknowledgement. Haven't companies been more and more careful with incentives, recognition, and bonuses? 
+4. Poor self-care. Isn't there a lot more awareness these days? Mental health days off, coaching sponsored by companies, paid gyms, and private healthcare? 
+5. Juggling many things at once. Do you think this got worse over the past 20 years?
 
-I believe the reason lies in a fundamental lack of understanding of why burnout happens, resulting in an inability to see the root causes of the problem and to address it.
+So why has burnout continued to rise, even when its stated root causes have improved?
 
+I believe the reason lies in a fundamental lack of understanding of why burnout happens, resulting in an inability to see what the actual root causes are, and how to address the problem.
 
+# The hearth of the problem
 
 TODO
 
