@@ -1,5 +1,5 @@
 ---
-title: "Skills, creativity, burnout, and bullshit"
+title: "Burnout: a controversial take"
 categories: [ "productivity" ]
 tags: [ "morale", "management", "productivity", "burnout", "people" ]
 date: 2023-11-01T05:00:00
@@ -35,9 +35,22 @@ Common explanations for job burnout include:
 4. Poor self-care: not taking care of yourself outside of work.
 5. Juggling many things at once: work, family, study, etc.
 
+# Why everybody talks about it
+
+It's perhaps unsurprising that job burnout is getting a lot of attention. Everybody talks about it.
+
+Companies offer stress management courses, coaching, more holidays, etc.
+
+However, the reason why they seem to care is purely pragmatic:
+
+1. Burned-out employees are 2.6 times more likely to be actively seeking a different job.
+2. Burnout syndrome accounts for a large part of all occupational illness cases.
+3. Burned-out workers are way more likely to take a sick day.
+4. A report by Gallup and Workhuman discovered turnover and lost productivity due to employee burnout cost businesses around $322bn globally, with the cost of voluntary turnover due to burnout alone being 15% to 20% of the payroll budget each year.
+
 # A burnout epidemic
 
-Job burnout is an epidemic. I don't want to go into this at length, but here are a few bullet points that convey the pervasiveness of the problem:
+And yet, job burnout is an epidemic. I don't want to go into this at length, but here are a few bullet points that convey the pervasiveness of the problem:
 
 - American Psychological Association: 3 in 5 workers reported experiencing negative mental and physical impacts due to work-related stress. 26% noted a lack of interest, motivation, or energy, 32% reported emotional exhaustion, and 44% noted high levels of physical fatigue.
 - Indeed: more than half (52%) of workers reported feeling burned out, there is a disconnect between the age groups.
@@ -46,9 +59,13 @@ Job burnout is an epidemic. I don't want to go into this at length, but here are
 - McKinsey Health: a quarter of employees experienced burnout symptoms.
 - Mental Health America: 75% of employees experienced burnout.
 
-And it's getting worse TODO
+And it's getting worse, year-on-year burnout grows at about a rate of 5% to 8%.
 
-# Why everybody talks about it
+# The problem
+
+So why is burnout on the rise, despite the increasing efforts companies put to address it? And despite the fact that working conditions are generally getting better?
+
+
 
 TODO
 
