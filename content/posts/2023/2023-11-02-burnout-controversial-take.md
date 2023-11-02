@@ -79,6 +79,10 @@ I believe the reason lies in a fundamental lack of understanding of why burnout 
 
 # The hearth of the problem
 
+Companies are worried because of the loss in productivity and the voluntary attrition. They fundamentally believe that job burnout has to do with the employees, and how they poorly manage the stress they think is intrinsic to the work.
+
+So all the remedies so far have been directed at helping employees cope with the stress. Coaching, counselling, mental health days off, more holidays, more breaks, less weekly hours, more flexibility, TODO
+
 TODO
 
 - companies think it's about employees, and are worried because of productivity
