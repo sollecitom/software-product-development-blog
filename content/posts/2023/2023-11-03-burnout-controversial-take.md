@@ -97,7 +97,13 @@ What if a state of continuous stress wasn't intrinsic to work, and was somehow w
 
 The problem has to do with the needs people have, in regard to their work. Needs that aren't met by companies.
 
+People need to exercise their skills and understanding to contribute with something positive to their community. This is a basic human need.
 
+Some folks find ways of meeting this need outside their main job. It's somewhat acceptable, and these people are the few ones that tend to be protected from job burnout, to an extent. It's still pretty miserable, as they cannot love their job, and only see it as a way of getting a paycheck. As a company with aspirations, you shouldn't want these folks anyway.
+
+For most other people, though, work is the only way of getting this fundamental need met. After all, most people work and commute for roughly two thirds of their waking hours. 
+
+ 
 
 TODO
 
