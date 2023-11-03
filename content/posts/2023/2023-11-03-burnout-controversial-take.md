@@ -95,7 +95,7 @@ Never about what the company should do to tackle this continuous stress at the s
 
 What if a state of continuous stress wasn't intrinsic to work, and was somehow worse these days, compared to 20 years ago?
 
-The problem has to do with the needs people have, in regard to their work. Needs that aren't met by their employers.
+The problem has to do with the needs people have, in regard to their work. Needs that aren't met by companies.
 
 
 
