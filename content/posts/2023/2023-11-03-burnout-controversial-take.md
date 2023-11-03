@@ -91,7 +91,13 @@ Companies fundamentally believe that job burnout has to do with the employees, a
 
 Never about what the company should do to tackle this continuous stress at the source. Not about changing how the work works, so that stress isn't an intrinsic condition, and so that it doesn't eventually cause burnout in every employee.
 
-# The more probable causes of job burnout
+# The more probable cause of job burnout
+
+What if a state of continuous stress wasn't intrinsic to work, and was somehow worse these days, compared to 20 years ago?
+
+The problem has to do with the needs people have, in regard to their work. Needs that aren't met by their employers.
+
+
 
 TODO
 
