@@ -2,7 +2,7 @@
 title: "Burnout: a controversial take"
 categories: [ "productivity" ]
 tags: [ "morale", "management", "productivity", "burnout", "people" ]
-date: 2023-11-01T05:00:00
+date: 2023-11-03T05:00:00
 draft: true
 ---
 
@@ -67,13 +67,15 @@ So why is burnout on the rise, despite the increasing efforts companies put to a
 
 Think about the factors that are commonly cited as the root cause of burnout, and look at their trend in the software development industry, over the past two decades:
 
-1. Working long hours and excessive workloads. Haven't working hours been shrinking?
-2. Unstructured work without clear goals. Hasn't work actually become more structured?
-3. Lack of rewards and acknowledgement. Haven't companies been more and more careful with incentives, recognition, and bonuses? 
-4. Poor self-care. Isn't there a lot more awareness these days? Mental health days off, coaching sponsored by companies, paid gyms, and private healthcare? 
-5. Juggling many things at once. Do you think this got worse over the past 20 years?
+1. Working long hours and excessive workloads.
+2. Unstructured work without clear goals.
+3. Lack of rewards and acknowledgement. 
+4. Poor self-care. 
+5. Juggling many things at once.
 
-TODO rephrase the above (summary only, the explain things got much better compared to 20 years ago)
+Do you see what's odd here? Haven't all these things improved, compared to 20 years ago? 
+
+Aren't we all working fewer hours per week? Hasn't work become more structured? Aren't companies more thoughtful about incentives, recognition, and bonuses? Or aren't people getting more support with mental health days off, paid gyms, and private healthcare? And do we think people have to juggle more than they used to juggle 20 years ago?
 
 So why has burnout continued to rise, even when its stated root causes have improved?
 
@@ -81,13 +83,17 @@ I believe the reason lies in a fundamental lack of understanding of why burnout 
 
 # The hearth of the problem
 
-Companies are worried because of the loss in productivity and the voluntary attrition. They fundamentally believe that job burnout has to do with the employees, and how they poorly manage the stress they think is intrinsic to the work.
+Companies are worried because of the loss in productivity and the voluntary attrition. So they offer coaching, counselling, mental health days off, more holidays, more breaks, less weekly hours, more flexibility, helplines, and awareness programs.
 
-So all the remedies so far have been directed at helping employees cope with the stress. Coaching, counselling, mental health days off, more holidays, more breaks, less weekly hours, more flexibility, TODO
+But what do all these support approaches have in common? They are all directed at helping employees cope with the stress. It's always "when you feel like this, this thing could help". 
+
+Companies fundamentally believe that job burnout has to do with the employees, and how they poorly manage the stress they see as intrinsic to the work. So it's all about what the company should do about the employees.
+
+Never about what the company should do to tackle this continuous stress at the source. Not about changing how the work works, so that stress isn't an intrinsic condition, and so that it doesn't eventually cause burnout in every employee.
+
+# The more probable causes of job burnout
 
 TODO
 
-- companies think it's about employees, and are worried because of productivity
 - types of burnout: frenetic, under-challenged, worn-out
-- it's all about "when you feel", never "why you feel"
 - add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, telling the company what to do, and shaping both the work and how the work works
