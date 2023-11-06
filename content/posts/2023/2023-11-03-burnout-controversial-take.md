@@ -81,9 +81,9 @@ So why has burnout continued to rise, even when its stated root causes have impr
 
 I believe the reason lies in a fundamental lack of understanding of why burnout happens, resulting in an inability to see what the actual root causes are, and how to address the problem.
 
-# The hearth of the problem
+# Companies don't get it
 
-Companies are worried because of the loss in productivity and the voluntary attrition. So they offer coaching, counselling, mental health days off, more holidays, more breaks, less weekly hours, more flexibility, helplines, and awareness programs.
+Companies are worried because of the loss in productivity and the voluntary attrition. So they offer coaching, counseling, mental health days off, more holidays, more breaks, less weekly hours, more flexibility, helplines, and awareness programs.
 
 But what do all these support approaches have in common? They are all directed at helping employees cope with the stress. It's always "when you feel like this, this thing could help". 
 
@@ -91,11 +91,15 @@ Companies fundamentally believe that job burnout has to do with the employees, a
 
 Never about what the company should do to tackle this continuous stress at the source. Not about changing how the work works, so that stress isn't an intrinsic condition, and so that it doesn't eventually cause burnout in every employee.
 
-# The more probable cause of job burnout
+# The heart of the problem
 
 What if a state of continuous stress wasn't intrinsic to work, and was somehow worse these days, compared to 20 years ago?
 
-The problem has to do with the needs people have, in regard to their work. Needs that aren't met by companies.
+At the heart of the problem, there must be a fundamental human need that is not met.
+
+I believe that job burnout is a consequence of the need for self-actualization not getting met. People yearn to fully exercise their capabilities in pursuit of something meaningful.
+
+And, simply put, this is becoming increasingly rarer and harder, across many professions, and definitely in software product development.
 
 People need to exercise their skills and understanding to contribute with something positive to their community. This is a basic human need.
 
@@ -115,7 +119,5 @@ Others, having been robbed of their intrinsic motivation, try to achieve self-ac
 
 And last, some other folks abandon all hope that doing meaningful work is even possible. They get angry and things and people, hate their job, their company, and their co-workers, and stop caring about anything really. This last type of burned-out people tend to stay in the company, as they're disillusioned enough not to believe it could be better anywhere else. As a company with aspirations, you also shouldn't want these people.
 
-# What takes away meaning and pride from work
-
-
+- types of burnout: frenetic, under-challenged, worn-out
 - add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, telling the company what to do, and shaping both the work and how the work works
