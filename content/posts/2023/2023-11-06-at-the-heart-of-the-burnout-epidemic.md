@@ -6,7 +6,7 @@ date: 2023-11-06T05:00:00
 draft: false
 ---
 
-These days we're coping with a job burnout epidemic. Everybody speaks about it, there's a lot of awareness, and yet things have been getting worse and worse every year. So what have we been missing?
+These days we're dealing with a job burnout epidemic. Everybody speaks about it, there's a lot of awareness, and yet things have been getting worse and worse every year. So what have we been missing?
 
 Curious? I'm going to offer a contrarian take, as usual. So buckle up and keep reading.
 
