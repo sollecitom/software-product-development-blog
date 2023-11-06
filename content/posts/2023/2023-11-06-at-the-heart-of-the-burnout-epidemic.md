@@ -129,8 +129,10 @@ Teamwork has lost its meaning. Nowadays, it does not mean working together with 
 
 Overall, people find themselves doing work that doesn't challenge or excite them, with people they don't trust, following plans and decisions made by managers they don't respect.
 
-# Extrinsic incentives make it worse
+# Parting words
 
-TODO
+Job burnout is an epidemic, and it's getting worse. Companies believe that stress is intrinsic to work, so they offer coping mechanisms and support. Instead, it's how these days the work works that creates this perpetual condition of stress, by not meeting the self-actualization human need.
 
-- add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, telling the company what to do, and shaping both the work and how the work works
+The impact this has is tremendous. Companies worry about productivity, or how quickly and efficiently people do what they're told. They don't realize that burnout damages contribution the most. Burned-out people don't actively shape the work and how the work works, so companies cannot tap into the collective skills and intelligence of their employees.
+
+So if you run or are employed by a company and see people burning out at work, don't assume it's normal, don't offer stress management help, but have a hard look at how the work works.
