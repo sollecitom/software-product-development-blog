@@ -1,6 +1,6 @@
 ---
-title: "Burnout: a controversial take"
-categories: [ "productivity" ]
+title: "At the heart of the burnout epidemic"
+categories: [ "psychology" ]
 tags: [ "morale", "management", "productivity", "burnout", "people" ]
 date: 2023-11-03T05:00:00
 draft: true
@@ -99,15 +99,11 @@ At the heart of the problem, there must be a fundamental human need that is not 
 
 I believe that job burnout is a consequence of the need for self-actualization not getting met. People yearn to fully exercise their capabilities in pursuit of something meaningful.
 
-And, simply put, this is becoming increasingly rarer and harder, across many professions, and definitely in software product development.
-
-People need to exercise their skills and understanding to contribute with something positive to their community. This is a basic human need.
-
 Some folks find ways of meeting this need outside their main job. It's somewhat acceptable, and these people are the few ones that tend to be protected from job burnout, to an extent. It's still pretty miserable, as they cannot love their job, and only see it as a way of getting a paycheck. As a company with aspirations, you shouldn't want these folks anyway.
 
-For most other people, though, work is the only way of getting this fundamental need met. After all, most people work and commute for roughly two thirds of their waking hours. 
+For most other people, though, work is the only way of getting this fundamental need met. After all, most people work and commute for roughly two thirds of their waking hours.
 
-In a nutshell, people need to achieve self-actualization through work. 
+In a nutshell, people need to achieve self-actualization through work.
 
 # Various coping mechanisms
 
@@ -118,6 +114,19 @@ Some folks feel under-challenged, not capable of fully leveraging their skills, 
 Others, having been robbed of their intrinsic motivation, try to achieve self-actualization through recognition (bonuses, career advancement, etc.). They work hard, play the game, and do anything to advance. They also hate their job, but gain satisfaction from being recognised. They inevitably either run out of steam at some point, or leave the company for a promotion elsewhere. These people are also not good for a company.
 
 And last, some other folks abandon all hope that doing meaningful work is even possible. They get angry and things and people, hate their job, their company, and their co-workers, and stop caring about anything really. This last type of burned-out people tend to stay in the company, as they're disillusioned enough not to believe it could be better anywhere else. As a company with aspirations, you also shouldn't want these people.
+
+There are three components that must co-exist, for this need to be met:
+
+1. The work must be in pursuit of something meaningful.
+2. The person must feel their work contributes to advancing the company towards the meaningful objective.
+3. The work must exercise the person fully, stretch their limits and, as a consequence, develop them.
+
+They're all are important, and all are suffering more and more these days. Finding a job where these aspects co-exist is becoming increasingly harder, across many professions, and definitely in software product development.
+
+About the meaning of work, it's increasingly rare for companies to aim at greatness, to tackle important problems, to advance society and the human condition.
+
+
+TODO
 
 - types of burnout: frenetic, under-challenged, worn-out
 - add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, telling the company what to do, and shaping both the work and how the work works
