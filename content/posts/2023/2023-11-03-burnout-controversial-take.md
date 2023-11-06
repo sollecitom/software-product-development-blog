@@ -93,29 +93,27 @@ Never about what the company should do to tackle this continuous stress at the s
 
 # The heart of the problem
 
-What if a state of continuous stress wasn't intrinsic to work, and was somehow worse these days, compared to 20 years ago?
-
-At the heart of the problem, there must be a fundamental human need that is not met.
+What if a state of continuous stress wasn't intrinsic to work, and was somehow worse these days, compared to 20 years ago? At the heart of the problem, there must be a fundamental human need that is not met.
 
 I believe that job burnout is a consequence of the need for self-actualization not getting met. People yearn to fully exercise their capabilities in pursuit of something meaningful.
 
-Some folks find ways of meeting this need outside their main job. It's somewhat acceptable, and these people are the few ones that tend to be protected from job burnout, to an extent. It's still pretty miserable, as they cannot love their job, and only see it as a way of getting a paycheck. As a company with aspirations, you shouldn't want these folks anyway.
+Some folks find ways of meeting this need outside their main job. It's somewhat acceptable, and these people are the few ones that tend to be protected from job burnout, to an extent. It's still pretty miserable, as they cannot bring themselves to love their job, and only see it as a way of getting a paycheck. As a company with aspirations, you shouldn't want these folks anyway.
 
 For most other people, though, work is the only way of getting this fundamental need met. After all, most people work and commute for roughly two thirds of their waking hours.
 
-In a nutshell, people need to achieve self-actualization through work.
-
 # Various coping mechanisms
 
-When this need is not met, people inevitably suffer, and enter a state of perpetual stress. This can wreak havoc on people's mind, leading to various kinds of coping mechanisms.
+When this need is not met, people inevitably suffer and enter a state of perpetual stress. This can wreak havoc on a person's mind, leading to various kinds of coping mechanisms.
 
 Some folks feel under-challenged, not capable of fully leveraging their skills, to stretch, and to reach further proficiency levels. They resent their job, and leave as soon as they find something they feel would be more challenging.
 
 Others, having been robbed of their intrinsic motivation, try to achieve self-actualization through recognition (bonuses, career advancement, etc.). They work hard, play the game, and do anything to advance. They also hate their job, but gain satisfaction from being recognised. They inevitably either run out of steam at some point, or leave the company for a promotion elsewhere. These people are also not good for a company.
 
-And last, some other folks abandon all hope that doing meaningful work is even possible. They get angry and things and people, hate their job, their company, and their co-workers, and stop caring about anything really. This last type of burned-out people tend to stay in the company, as they're disillusioned enough not to believe it could be better anywhere else. As a company with aspirations, you also shouldn't want these people.
+And last, some other folks abandon all hopes that doing meaningful work is even possible. They get angry and things and people, hate their job, their company, and their co-workers, and stop caring about anything really. This last type of burned-out people tend to stay in the company, as they're disillusioned enough not to believe it could be better anywhere else. As a company with aspirations, you also shouldn't want these people.
 
-There are three components that must co-exist, for this need to be met:
+# What's preventing self-actualization at work
+
+There are three components that must co-exist, for the need for self-actualization to be met:
 
 1. The work must be in pursuit of something meaningful.
 2. The person must feel their work contributes to advancing the company towards the meaningful objective.
@@ -123,8 +121,9 @@ There are three components that must co-exist, for this need to be met:
 
 They're all are important, and all are suffering more and more these days. Finding a job where these aspects co-exist is becoming increasingly harder, across many professions, and definitely in software product development.
 
-About the meaning of work, it's increasingly rare for companies to aim at greatness, to tackle important problems, to advance society and the human condition.
+About the meaning of work, it's rarer and rarer for companies to aim at greatness, to tackle important problems, and to advance society and the human condition.
 
+ 
 
 TODO
 
