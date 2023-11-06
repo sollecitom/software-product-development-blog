@@ -31,7 +31,7 @@ Common explanations for job burnout include:
 
 1. If you work long hours or have an excessive workload.
 2. When a job is chaotic, you need constant energy to remain focused, which can lead to fatigue and job burnout.
-3. Lack of rewards and acknowledgement. If you don't get recognized and compensated enough for your efforts. 
+3. Lack of rewards and acknowledgement. If you don't get recognized and compensated enough for your efforts.
 4. Poor self-care: not taking care of yourself outside of work.
 5. Juggling many things at once: work, family, study, etc.
 
@@ -69,11 +69,11 @@ Think about the factors that are commonly cited as the root cause of burnout, an
 
 1. Working long hours and excessive workloads.
 2. Unstructured work without clear goals.
-3. Lack of rewards and acknowledgement. 
-4. Poor self-care. 
+3. Lack of rewards and acknowledgement.
+4. Poor self-care.
 5. Juggling many things at once.
 
-Do you see what's odd here? Haven't all these things improved, compared to 20 years ago? 
+Do you see what's odd here? Haven't all these things improved, compared to 20 years ago?
 
 Aren't we all working fewer hours per week? Hasn't work become more structured? Aren't companies more thoughtful about incentives, recognition, and bonuses? Or aren't people getting more support with mental health days off, paid gyms, and private healthcare? And do we think people have to juggle more than they used to juggle 20 years ago?
 
@@ -85,7 +85,7 @@ I believe the reason lies in a fundamental lack of understanding of why burnout 
 
 Companies are worried because of the loss in productivity and the voluntary attrition. So they offer coaching, counseling, mental health days off, more holidays, more breaks, less weekly hours, more flexibility, helplines, and awareness programs.
 
-But what do all these support approaches have in common? They are all directed at helping employees cope with the stress. It's always "when you feel like this, this thing could help". 
+But what do all these support approaches have in common? They are all directed at helping employees cope with the stress. It's always "when you feel like this, this thing could help".
 
 Companies fundamentally believe that job burnout has to do with the employees, and how they poorly manage the stress they see as intrinsic to the work. So it's all about what the company should do about the employees.
 
@@ -116,16 +116,21 @@ And last, some other folks abandon all hopes that doing meaningful work is even 
 There are three components that must co-exist, for the need for self-actualization to be met:
 
 1. The work must be in pursuit of something meaningful.
-2. The person must feel their work contributes to advancing the company towards the meaningful objective.
-3. The work must exercise the person fully, stretch their limits and, as a consequence, develop them.
+2. The work must exercise the person fully, stretch their limits and, as a consequence, develop them.
+3. The person must feel their work contributes to advancing the company towards the meaningful objective.
 
 They're all are important, and all are suffering more and more these days. Finding a job where these aspects co-exist is becoming increasingly harder, across many professions, and definitely in software product development.
 
 About the meaning of work, it's rarer and rarer for companies to aim at greatness, to tackle important problems, and to advance society and the human condition.
 
- 
+The division of labor is increasingly restricting the limits of employees' contribution. Companies are more and more divided into people who think and decide, people who operate and manage, and people who do without questions. There's also a widespread intentional push for mediocrity and good enough; the days when excellence was encouraged or even expected are long gone.
+
+Teamwork has lost its meaning. Nowadays, it does not mean working together with others towards a shared goal. It's about working individually, but exclusively in one area of the domain or business others also work in.
+
+Overall, people find themselves doing work that doesn't challenge or excite them, with people they don't trust, following plans and decisions made by managers they don't respect.
+
+# Extrinsic incentives make it worse
 
 TODO
 
-- types of burnout: frenetic, under-challenged, worn-out
 - add that the actual impact of burnout is a lot worse, as banks think of productivity as people doing what they're told quickly and efficiently, as opposed to people bringing their whole self into work, telling the company what to do, and shaping both the work and how the work works
