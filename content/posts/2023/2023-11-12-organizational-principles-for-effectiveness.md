@@ -31,11 +31,38 @@ Like any model, these principles have specific applicability boundaries. They're
 
 # Principles
 
-## The company is structured outside-in
+## Outside-in organization
 
-People work across different levels. Activities range from being closest to the customers, to the innermost level. The time horizons tend to widen as the levels get further from the customers.
+Employees work across different levels. Activities range from being closest to the customers, to the innermost level. The time horizons tend to widen as the levels get further from the customers.
 
 The inner levels support the outer levels. It's about coordination, not command or management. The outer levels can pull help from the inner levels, but the decision-making stays with the people working as close as possible with the customers.
 
 The opposite of this is the traditional top-down organization, where each level controls and manages the level below.
 
+## The team as the unit of work allocation
+
+Work is carried over by teams, rather than by individuals. This means that nothing is allocated to a specific one person.
+
+A team is a group of people working together towards the same goal. Sharing a goal is not enough, people need to collaborate synchronously towards achieving it. Ensemble programming is a great example of a practice that embodies this principle.
+
+##### TODO
+
+- Evolutionary approach (set-based approach and different ways, over standardization and efficiency)
+- Size of a team
+- Composition of a team (cross-function, cross-strength)
+- Salaries and incentives
+- Executives
+- Learning on the job
+- Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
+- Titles and promotions
+- Pull-based work
+- Work-in-progress limits (1 per team at a time)
+- Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making)
+- Teams are leaderless
+- Initiative queues
+- Nobody manages people (for holidays, etc.)
+- People align vertically (within the value stream, rather than within their function)
+- Products, not projects
+  - No budgets (allocate money when and if needed, never freeze it)
+  - No estimates (build first and sell second, never tell customers when things will get done)
+- Teams own the way they work (hiring, firing, onboarding, practices)
