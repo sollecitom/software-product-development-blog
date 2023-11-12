@@ -52,6 +52,7 @@ A team is a group of people working together towards the same goal. Sharing a go
 - Composition of a team (cross-function, cross-strength)
 - Salaries and incentives
 - Executives
+- Releases happen every day (Fridays included)
 - Learning on the job
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
