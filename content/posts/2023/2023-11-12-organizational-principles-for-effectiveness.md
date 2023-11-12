@@ -57,7 +57,7 @@ A team is a group of people working together towards the same goal. Sharing a go
 - Titles and promotions
 - Pull-based work
 - Work-in-progress limits (1 per team at a time)
-- Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making)
+- Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
 - Teams are leaderless
 - Initiative queues
 - Nobody manages people (for holidays, etc.)
@@ -66,3 +66,7 @@ A team is a group of people working together towards the same goal. Sharing a go
   - No budgets (allocate money when and if needed, never freeze it)
   - No estimates (build first and sell second, never tell customers when things will get done)
 - Teams own the way they work (hiring, firing, onboarding, practices)
+- Collective code ownership
+- Collective product ownership
+- Initiative DRIs (direct responsible individuals)
+- 
