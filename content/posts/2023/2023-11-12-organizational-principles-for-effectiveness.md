@@ -57,6 +57,8 @@ A team is a group of people working together towards the same goal. Sharing a go
 - Titles and promotions
 - Pull-based work
 - Work-in-progress limits (1 per team at a time)
+- Exactly one environment (production, with internal tenants and users)
+- Continuous delivery (integration, delivery, and deployment)
 - Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
 - Teams are leaderless
 - Initiative queues
