@@ -69,4 +69,4 @@ A team is a group of people working together towards the same goal. Sharing a go
 - Collective code ownership
 - Collective product ownership
 - Initiative DRIs (direct responsible individuals)
-- TODO
+- Cross-function training (for developers: finance, marketing, product management, design, sales, business, domain expertise; for others: similar including programming)
