@@ -69,4 +69,4 @@ A team is a group of people working together towards the same goal. Sharing a go
 - Collective code ownership
 - Collective product ownership
 - Initiative DRIs (direct responsible individuals)
-- 
+- TODO
