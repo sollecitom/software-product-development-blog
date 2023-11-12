@@ -31,3 +31,11 @@ Like any model, these principles have specific applicability boundaries. They're
 
 # Principles
 
+## The company is structured outside-in
+
+People work across different levels. Activities range from being closest to the customers, to the innermost level. The time horizons tend to widen as the levels get further from the customers.
+
+The inner levels support the outer levels. It's about coordination, not command or management. The outer levels can pull help from the inner levels, but the decision-making stays with the people working as close as possible with the customers.
+
+The opposite of this is the traditional top-down organization, where each level controls and manages the level below.
+
