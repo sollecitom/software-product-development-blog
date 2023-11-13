@@ -167,10 +167,20 @@ Meetings should be avoided, and replaced by continuous synchronous collaboration
 
 The design goal is for every team member to have access to all the information.
 
+## Nobody manages anybody
+
+Somebody ultimately must be responsible to identify and root out bad actors and bad hires - more about this below - but nobody manages anybody. People can have 1:1s with whoever they feel like, as part of the learning time.
+
+Nobody approves anybody's holidays. Purchases and expenses happen automatically, within a team-level ample budget. Smart credit cards e.g., Pleo should be used to ensure control and visibility.
+
+The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the top executives and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
+
+## No titles and promotions
+
+TODO
+
 ##### TODO
 
-- Nobody manages people (for holidays, etc.)
-- No meetings
 - Titles and promotions
 - Salaries and incentives
 - Committees to fire people
