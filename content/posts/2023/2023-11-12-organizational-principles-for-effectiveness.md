@@ -89,9 +89,22 @@ Tribes are purposed mini-companies within the larger company. Everything works t
 
 The design goal is to eliminate any dependencies across Tribes.
 
+## Evolutionary approach to development
+
+Important decisions and initiatives should be de-risked by leveraging a set-based approach. Different teams should work in parallel on the same decision or initiative, without any contact between them, except for checking they're not converging towards the same solution.
+
+The importance of the work determines the number of teams working towards the same goal in parallel. At the end, the different solutions produced can be compared across multiple dimension, and a higher-quality decision or solution is adopted.
+
+This is a commonplace practice in collaborative knowledge work (policymaking, city planning, vaccine development, science research, etc.), and in opposition to the standardization and efficiency factories obsess about.
+
+## Vertically-aligned people
+
+People should be associated to vertically product organizations (tribes), as opposed to horizontal function-specific ones. So, as an example, a Java back-end engineer in the "Everyday Spending" tribe would be a product developer within the "Everyday Spending" tribe, rather than a Java developer, or a back-end engineer.
+
+Horizontal structures can exist, but none can be across the vertical structures, only contained within them. So, if the "Savings" tribe decides to adopt a "back-end" chapter to try and coordinate the continuous learning in that area, they're free to do so, but that organization only lives within that tribe, never across tribes.
+
 ##### TODO
 
-- Evolutionary approach (set-based approach and different ways, over standardization and efficiency)
 - Salaries and incentives
 - Executives
 - Releases happen every day (Fridays included)
@@ -102,7 +115,8 @@ The design goal is to eliminate any dependencies across Tribes.
 - Exactly one environment (production, with internal tenants and users)
 - Continuous delivery (integration, delivery, and deployment)
 - Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
-- Initiative queues
+- Committees to fire people
+- Vigorous learning on the job
 - Nobody manages people (for holidays, etc.)
 - People align vertically (within the value stream, rather than within their function)
 - Products, not projects
