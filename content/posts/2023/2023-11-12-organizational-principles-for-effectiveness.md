@@ -108,7 +108,7 @@ Horizontal structures can exist, but none can be across the vertical structures,
 - Salaries and incentives
 - Executives
 - Releases happen every day (Fridays included)
-- Learning on the job
+- Vigorous learning on the job
 - Continuous collaboration
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
@@ -116,7 +116,6 @@ Horizontal structures can exist, but none can be across the vertical structures,
 - Continuous delivery (integration, delivery, and deployment)
 - Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
 - Committees to fire people
-- Vigorous learning on the job
 - Nobody manages people (for holidays, etc.)
 - People align vertically (within the value stream, rather than within their function)
 - Products, not projects
