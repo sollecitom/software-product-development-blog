@@ -161,6 +161,12 @@ Experts are always available for advice, even when a team is working on an initi
 
 This applies to experts of all sort, including architecture, product discovery, product observability, security, marketing, compliance, legal, etc.
 
+## The teams own the way they work
+
+Each team is responsible for the way they work. This includes hiring, firing - more on this below - onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate initiatives aimed at cross-pollinating what's working among the teams, but the teams remain responsible for how they work.
+
+If a team routinely misbehave or causes trouble, a mechanism - more on this below - is eventually triggered, and the team is dissolved. 
+
 ## No meetings
 
 Meetings should be avoided, and replaced by continuous synchronous collaboration. Cross-functional ensemble programming is a good way of avoiding meetings. When somebody wants to know something from a team, they join the team's ensemble and have a chat.
@@ -175,16 +181,33 @@ Nobody approves anybody's holidays. Purchases and expenses happen automatically,
 
 The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the top executives and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
 
-## No titles and promotions
+## No roles and promotions
 
-TODO
+Apart from executives and cross-function leads, everybody should formally be a "product developer". Titles can specify the tribe, or whether somebody is an expert at something, but this should have no impact in terms of compensation, benefits, or treatment.
+
+Seniority roles should also not appear in any form. Promotions shouldn't happen. People should only change role when they want to, and when it's needed by the company. In any case, compensation should exclusively be a function of the years of experience the person has, their main skills, their location, and the tenure within the company.
+
+This is in opposition to career ladders and progression frameworks.
+
+## Profit-sharing schemes
+
+No person or team should receive a bonus, since their contribution matters way less that how the work works. Individual or team bonuses foster internal competition within the company, and that's to be avoided.
+
+The whole company should participate in a profit-sharing scheme, distributed according to a person's years of experience, primary skills, and tenure in the company.
+
+This is in opposition to individual-performance-related bonuses.
+
+## No performance reviews
+
+No performance reviews should happen. This applies to both teams and individuals. There should be mechanisms to fire bad actors and bad hires - as described below - but these involve a collective and subjective decision.
+
+Nobody gets normally reviewed in terms of performance. People are not compared, as they're not equivalent. Teams are compared, with the only goal of collectively improve the ways of working across the teams.
 
 ##### TODO
 
-- Titles and promotions
-- Salaries and incentives
-- Committees to fire people
+- Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
 - Executives
+- No individual or team performance review
 - Releases happen every day (Fridays included)
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Exactly one environment (production, with internal tenants and users)
