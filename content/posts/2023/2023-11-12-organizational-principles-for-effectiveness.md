@@ -55,6 +55,8 @@ About backgrounds, you want a mix of old and young, senior and more junior, acad
 
 I believe teams of four or five people can achieve the requirements above, without splitting into more than one team. People are not interchangeable, and the same person will complement a team and not fit in others. Hire for the specific skills/strengths/personality/background you need in a specific team.
 
+The design goal is to eliminate any dependencies across teams.
+
 ## Work-in-progress limits
 
 Each team should be working on only one initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product or technical initiatives do. So a team is always improving various things, but only working on a significant piece of work at a time.
@@ -79,12 +81,19 @@ This works well with equivalent teams capable of working on anything needed, so 
 
 This is in opposition to deciding what's next for each team or area, leading to inflexibility in work allocation.
 
+## Tribes as smaller companies
+
+A company should behave as a whole until it reaches the critical number of 50 developers (roughly 10 teams). At that moment, the company should adopt Tribes to coordinate the work better.
+
+Tribes are purposed mini-companies within the larger company. Everything works the same, except for the fact that everything stays within a Tribe (teams, initiative queues, prioritization, etc.). Tribes should focus on end-to-end vertical slices of the business, not on a given function.
+
+The design goal is to eliminate any dependencies across Tribes.
+
 ##### TODO
 
 - Evolutionary approach (set-based approach and different ways, over standardization and efficiency)
 - Salaries and incentives
 - Executives
-- Tribes
 - Releases happen every day (Fridays included)
 - Learning on the job
 - Continuous collaboration
