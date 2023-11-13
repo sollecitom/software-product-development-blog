@@ -51,15 +51,27 @@ Teams should be as small as possible, while still qualifying as a team. A team m
 
 To do so, teams should be cross-functional and staff people with different backgrounds and strengths.
 
-About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of personalities, you need shapers, fixers, and explorers. When it comes to specialties, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
+About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of personalities, you need shapers, fixers, and explorers. When it comes to skills, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
 
-I believe teams of four or five people can achieve the requirements above, without splitting into more than one team.
+I believe teams of four or five people can achieve the requirements above, without splitting into more than one team. People are not interchangeable, and the same person will complement a team and not fit in others. Hire for the specific skills/strengths/personality/background you need in a specific team.
 
 ## Work-in-progress limits
 
 Each team should be working on only one initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product or technical initiatives do. So a team is always improving various things, but only working on a significant piece of work at a time.
 
-## Pull-based work
+## Pull-based just-in-time work
+
+The teams should pull work when they become available. As a team finishes working on an initiative, they should pull the next initiative and start working on it. This means that teams cannot get overwhelmed by work pushed on them. Information about upcoming work shouldn't reach a team until that team has finished the current initiative. 
+
+## Pull-based information
+
+Information should also be pull-based, made available when and if a team or a person needs it. Documentation, expertise, advice, support, etc. should all be accessible when needed by anybody.
+
+## Leaderless teams
+
+A team should be a group of equals who are great at different things. Nobody should be the designated leader of the team. Seniority shouldn't formally matter. The team can self-organize in terms of representation when dealing with stakeholders, but nobody should be allowed to represent indefinitely.
+
+## Initiative queues
 
 TODO
 
@@ -70,12 +82,12 @@ TODO
 - Executives
 - Releases happen every day (Fridays included)
 - Learning on the job
+- Continuous collaboration
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
 - Exactly one environment (production, with internal tenants and users)
 - Continuous delivery (integration, delivery, and deployment)
 - Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
-- Teams are leaderless
 - Initiative queues
 - Nobody manages people (for holidays, etc.)
 - People align vertically (within the value stream, rather than within their function)
