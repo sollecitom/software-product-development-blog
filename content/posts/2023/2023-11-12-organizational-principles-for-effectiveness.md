@@ -73,13 +73,18 @@ A team should be a group of equals who are great at different things. Nobody sho
 
 ## Company-wide initiative queues
 
-TODO
+A company should organize and prioritize work initiatives using company-wide queues. This means that prioritization should happen across areas, rather than within each area.
+
+This works well with equivalent teams capable of working on anything needed, so that the company can focus on whatever is needed.
+
+This is in opposition to deciding what's next for each team or area, leading to inflexibility in work allocation.
 
 ##### TODO
 
 - Evolutionary approach (set-based approach and different ways, over standardization and efficiency)
 - Salaries and incentives
 - Executives
+- Tribes
 - Releases happen every day (Fridays included)
 - Learning on the job
 - Continuous collaboration
