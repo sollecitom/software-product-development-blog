@@ -71,7 +71,7 @@ Information should also be pull-based, made available when and if a team or a pe
 
 A team should be a group of equals who are great at different things. Nobody should be the designated leader of the team. Seniority shouldn't formally matter. The team can self-organize in terms of representation when dealing with stakeholders, but nobody should be allowed to represent indefinitely.
 
-## Initiative queues
+## Company-wide initiative queues
 
 TODO
 
