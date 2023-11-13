@@ -117,7 +117,6 @@ This holds true even across tribes. It's natural that the tribes will tend to wo
 
 ##### TODO
 
-- Collective product ownership
 - Salaries and incentives
 - Executives
 - Releases happen every day (Fridays included)
