@@ -103,6 +103,12 @@ People should be associated to vertically product organizations (tribes), as opp
 
 Horizontal structures can exist, but none can be across the vertical structures, only contained within them. So, if the "Savings" tribe decides to adopt a "back-end" chapter to try and coordinate the continuous learning in that area, they're free to do so, but that organization only lives within that tribe, never across tribes.
 
+## Collective code ownership
+
+The teams collectively own the whole codebase of the company. No team or person "owns" any part of the codebase. Nobody needs to ask permission to anybody else to access and modify any code.
+
+This holds true even across tribes. It's natural that some teams and tribes will focus more on specific areas, but this changes nothing about this point.
+
 ##### TODO
 
 - Salaries and incentives
