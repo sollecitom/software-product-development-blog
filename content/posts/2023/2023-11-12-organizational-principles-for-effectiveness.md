@@ -81,6 +81,14 @@ This works well with equivalent teams capable of working on anything needed, so 
 
 This is in opposition to deciding what's next for each team or area, leading to inflexibility in work allocation.
 
+## Direct Responsible Individuals for initiatives
+
+Each initiative should have a Direct Responsible Individual (DRI), who's in charge of coordinating the work, escalating risks and issues, and outline dependencies. The DRI is not responsible for the outcomes, and it's not the ultimate decision-maker.
+
+When decisions are of medium importance, the DRI might make a call, but anybody can decide to escalate to senior management.
+
+Being a DRI is not a job, and it's always a temporary engagement. The rule is that if you just finished an initiative you were DRI for, you're not going to be DRI in the next initiative you work on. A DRI is nominated autonomously by the team that commits to an initiative.
+
 ## Tribes as smaller companies
 
 A company should behave as a whole until it reaches the critical number of 50 developers (roughly 10 teams). At that moment, the company should adopt Tribes to coordinate the work better.
@@ -131,7 +139,7 @@ Cross-function training for developers should include finance, marketing, produc
 - Executives
 - Releases happen every day (Fridays included)
 - Vigorous learning on the job
-- Continuous collaboration
+- Continuous collaboration (across functions, with initiatives' sponsors, with experts)
 - No meetings
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
@@ -145,4 +153,3 @@ Cross-function training for developers should include finance, marketing, produc
     - No budgets (allocate money when and if needed, never freeze it)
     - No estimates (build first and sell second, never tell customers when things will get done)
 - Teams own the way they work (hiring, firing, onboarding, practices)
-- Initiative DRIs (direct responsible individuals)
