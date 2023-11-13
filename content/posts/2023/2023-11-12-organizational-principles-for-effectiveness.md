@@ -113,6 +113,8 @@ People should be associated to vertically product organizations (tribes), as opp
 
 Horizontal structures can exist, but none can be across the vertical structures, only contained within them. So, if the "Savings" tribe decides to adopt a "back-end" chapter to try and coordinate the continuous learning in that area, they're free to do so, but that organization only lives within that tribe, never across tribes.
 
+This means that anybody in a tribe reports to the tribe lead, a cross-functional lead, regardless of their own area of expertise. So if a lawyer works within the "Savings" tribe, they report into the "Head of Savings", not the "Head of Legal".
+
 ## Collective code ownership
 
 The teams collectively own the whole codebase of the company. No team or person "owns" any part of the codebase. Nobody needs to ask permission to anybody else to access and modify any code.
@@ -153,21 +155,30 @@ Every time a product initiative is part of a value stream, that value stream's P
 
 Experts coordinate the work for their technical value streams. A security expert will act as sponsor for all technical initiatives living under the security value stream. In terms of collaboration with the teams, they behave like product managers do. As usual, the teams remain responsible for the decision-making, while the sponsor acts as stakeholder and advisor.
 
+## Experts are available as advisors
+
+Experts are always available for advice, even when a team is working on an initiative outside of that person's (technical) value stream. If a team needs help, the team calls in the expert, who joins the team for as long as the team deems necessary.
+
+This applies to experts of all sort, including architecture, product discovery, product observability, security, marketing, compliance, legal, etc.
+
+## No meetings
+
+Meetings should be avoided, and replaced by continuous synchronous collaboration. Cross-functional ensemble programming is a good way of avoiding meetings. When somebody wants to know something from a team, they join the team's ensemble and have a chat.
+
+The design goal is for every team member to have access to all the information.
+
 ##### TODO
 
+- Nobody manages people (for holidays, etc.)
+- No meetings
+- Titles and promotions
 - Salaries and incentives
+- Committees to fire people
 - Executives
 - Releases happen every day (Fridays included)
-- Vigorous learning on the job
-- No meetings
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
-- Titles and promotions
 - Exactly one environment (production, with internal tenants and users)
 - Continuous delivery (integration, delivery, and deployment)
-- Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
-- Committees to fire people
-- Nobody manages people (for holidays, etc.)
-- People align vertically (within the value stream, rather than within their function)
 - Products, not projects
     - No budgets (allocate money when and if needed, never freeze it)
     - No estimates (build first and sell second, never tell customers when things will get done)
