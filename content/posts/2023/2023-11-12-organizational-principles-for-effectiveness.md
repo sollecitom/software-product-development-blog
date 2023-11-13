@@ -111,6 +111,7 @@ This holds true even across tribes. It's natural that some teams and tribes will
 
 ##### TODO
 
+- Collective product ownership
 - Salaries and incentives
 - Executives
 - Releases happen every day (Fridays included)
@@ -128,7 +129,5 @@ This holds true even across tribes. It's natural that some teams and tribes will
   - No budgets (allocate money when and if needed, never freeze it)
   - No estimates (build first and sell second, never tell customers when things will get done)
 - Teams own the way they work (hiring, firing, onboarding, practices)
-- Collective code ownership
-- Collective product ownership
 - Initiative DRIs (direct responsible individuals)
 - Cross-function training (for developers: finance, marketing, product management, design, sales, business, domain expertise; for others: similar including programming)
