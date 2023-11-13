@@ -206,7 +206,7 @@ Nobody gets normally reviewed in terms of performance. People are not compared, 
 ##### TODO
 
 - Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
-- Executives
+- Executives, managers, experts, and cross-functional leads
 - No individual or team performance review
 - Releases happen every day (Fridays included)
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
