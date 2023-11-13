@@ -109,6 +109,12 @@ The teams collectively own the whole codebase of the company. No team or person 
 
 This holds true even across tribes. It's natural that some teams and tribes will focus more on specific areas, but this changes nothing about this point.
 
+## Collective product ownership
+
+The teams collectively own the product and the features. No team or person "owns" an area of the product.
+
+This holds true even across tribes. It's natural that the tribes will tend to work on separate areas of the product, and this is encouraged, but a tribe should never have to ask permission to another tribe to implement or modify a feature.
+
 ##### TODO
 
 - Collective product ownership
