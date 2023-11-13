@@ -63,7 +63,7 @@ Each team should be working on only one initiative at a time. So the number of t
 
 ## Pull-based just-in-time work
 
-The teams should pull work when they become available. As a team finishes working on an initiative, they should pull the next initiative and start working on it. This means that teams cannot get overwhelmed by work pushed on them. Information about upcoming work shouldn't reach a team until that team has finished the current initiative. 
+The teams should pull work when they become available. As a team finishes working on an initiative, they should pull the next initiative and start working on it. This means that teams cannot get overwhelmed by work pushed on them. Information about upcoming work shouldn't reach a team until that team has finished the current initiative.
 
 ## Pull-based information
 
@@ -115,6 +115,16 @@ The teams collectively own the product and the features. No team or person "owns
 
 This holds true even across tribes. It's natural that the tribes will tend to work on separate areas of the product, and this is encouraged, but a tribe should never have to ask permission to another tribe to implement or modify a feature.
 
+## Vigorous learning on the job
+
+Vigorous learning should happen as part of the job. Function-specific and cross-function training should both be organized by the company for all employees. Training should be coordinated by both internal and external experts, and can include doing actual work outside of someone's main role.
+
+Training should involve theory and practice, and occur during working hours. Training should be mandatory for everybody, across all the provided subjects.
+
+Cross-function training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge (e.g., industry-specific things). For other functions, it should be similar, and include software development.
+
+20% of working hours is the minimum that's effective, so that's 1.5 hours a day or 1 day a week.
+
 ##### TODO
 
 - Salaries and incentives
@@ -122,6 +132,7 @@ This holds true even across tribes. It's natural that the tribes will tend to wo
 - Releases happen every day (Fridays included)
 - Vigorous learning on the job
 - Continuous collaboration
+- No meetings
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
 - Exactly one environment (production, with internal tenants and users)
@@ -131,8 +142,7 @@ This holds true even across tribes. It's natural that the tribes will tend to wo
 - Nobody manages people (for holidays, etc.)
 - People align vertically (within the value stream, rather than within their function)
 - Products, not projects
-  - No budgets (allocate money when and if needed, never freeze it)
-  - No estimates (build first and sell second, never tell customers when things will get done)
+    - No budgets (allocate money when and if needed, never freeze it)
+    - No estimates (build first and sell second, never tell customers when things will get done)
 - Teams own the way they work (hiring, firing, onboarding, practices)
 - Initiative DRIs (direct responsible individuals)
-- Cross-function training (for developers: finance, marketing, product management, design, sales, business, domain expertise; for others: similar including programming)
