@@ -35,7 +35,9 @@ Like any model, these principles have specific applicability boundaries. They're
 
 Employees work across different levels. Activities range from being closest to the customers, to the innermost level. The time horizons tend to widen as the levels get further from the customers.
 
-The inner levels support the outer levels. It's about coordination, not command or management. The outer levels can pull help from the inner levels, but the decision-making stays with the people working as close as possible with the customers.
+The inner levels support the outer levels. It's about coordination, not command and control. The outer levels can pull help from the inner levels, but the decision-making stays with the people working as close as possible with the customers.
+
+The people that work in the inner levels tend to manage how the work works, and shepherd long-term initiatives and changes.
 
 The opposite of this is the traditional top-down organization, where each level controls and manages the level below.
 
@@ -133,13 +135,30 @@ Cross-function training for developers should include finance, marketing, produc
 
 20% of working hours is the minimum that's effective, so that's 1.5 hours a day or 1 day a week.
 
+## Continuous collaboration
+
+The teams continuously collaborate, within the team, and with sponsors, experts, inner level managers, and executives. The preferred way of collaboration is synchronous. Whoever liaises with the team joins the team for the duration of the engagement.
+
+From first principles, fully remote co-located teams can hardly ever be as effective as physically co-located teams. It does not mean it's not feasible to run a fully remote team, but inherently the collaboration, even when done perfectly, will be less effective than a perfectly structured in-person equivalent. This might be compensated by other factors. Nonetheless, physically co-located teams remain the preference.
+
+When a team commits to work on an initiative, they engage with that initiative's sponsor. This close collaboration lasts for the entire duration of the work, and terminates when the team pulls another initiative sponsored by another person.
+
+## Product managers stay with the value stream
+
+Product managers are not part of the teams, but focus on a value stream. Each value stream can have one or more dedicated product managers. A product manager can coordinate the work for more than one value stream, even if they're ideally single-threaded.
+
+Every time a product initiative is part of a value stream, that value stream's PM is the sponsor for the initiative. The team working on the initiative will work closely with them for the duration of the engagement. The teams remain responsible for the decision-making, while the sponsor acts as stakeholder and advisor.
+
+## Experts stay within the technical value stream
+
+Experts coordinate the work for their technical value streams. A security expert will act as sponsor for all technical initiatives living under the security value stream. In terms of collaboration with the teams, they behave like product managers do. As usual, the teams remain responsible for the decision-making, while the sponsor acts as stakeholder and advisor.
+
 ##### TODO
 
 - Salaries and incentives
 - Executives
 - Releases happen every day (Fridays included)
 - Vigorous learning on the job
-- Continuous collaboration (across functions, with initiatives' sponsors, with experts)
 - No meetings
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
