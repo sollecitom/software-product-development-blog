@@ -45,19 +45,33 @@ Work is carried over by teams, rather than by individuals. This means that nothi
 
 A team is a group of people working together towards the same goal. Sharing a goal is not enough, people need to collaborate synchronously towards achieving it. Ensemble programming is a great example of a practice that embodies this principle.
 
+## Small equivalent teams
+
+Teams should be as small as possible, while still qualifying as a team. A team must abstract who's doing what, be capable of doing any work, and be resilient to absences.
+
+To do so, teams should be cross-functional and staff people with different backgrounds and strengths.
+
+About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of personalities, you need shapers, fixers, and explorers. When it comes to specialties, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
+
+I believe teams of four or five people can achieve the requirements above, without splitting into more than one team.
+
+## Work-in-progress limits
+
+Each team should be working on only one initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product or technical initiatives do. So a team is always improving various things, but only working on a significant piece of work at a time.
+
+## Pull-based work
+
+TODO
+
 ##### TODO
 
 - Evolutionary approach (set-based approach and different ways, over standardization and efficiency)
-- Size of a team
-- Composition of a team (cross-function, cross-strength)
 - Salaries and incentives
 - Executives
 - Releases happen every day (Fridays included)
 - Learning on the job
 - Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
 - Titles and promotions
-- Pull-based work
-- Work-in-progress limits (1 per team at a time)
 - Exactly one environment (production, with internal tenants and users)
 - Continuous delivery (integration, delivery, and deployment)
 - Experts are available as advisors (the team calls experts to help them; the teams keep the decision-making) (architecture, product discovery, product observability, etc.)
