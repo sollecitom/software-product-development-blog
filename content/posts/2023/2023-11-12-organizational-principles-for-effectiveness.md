@@ -251,11 +251,17 @@ Apart from product developers (of all sorts, backgrounds, calibre, specialty, et
 
 1. Cross-functional lead (CFL): responsible to coordinate and shepherd a tribe. People with different skills, seniority, or expertise align to the cross-functional lead of the tribe they're in. A cross-functional lead e.g., "Cross-Functional Lead, Savings", can come from any background, even if experience in software development and product management are both heavily recommended.
 2. Function lead (FL): responsible to coordinate work and initiatives within their function. People within that function liaise with the function lead, but are aligned to the cross-functional lead of the tribe they're in. A function lead should be a very senior member of their function. As an example, a "Function Lead, Legal" role should be a very senior corporate solicitor; legal experts in the various tribes all align to their tribe's CFL, but liaise with the Legal FL as well.
-3. Managers: managers are coordinators and shepherds of processes, and work at inner levels in the outside-in organization. Nobody manages people, only processes. Specifically, managers coordinate the continuous improvement of the processes they focus on, liaising with CFLs, FLs, and product developers. A manager should be intimate with the way the work their process aims at improving works. As an example, a software development manager should be intimate with how software development works. This typically means they must have a strong background in software development.
-4. CEO: TODO
-5. Founders: TODO
+3. Managers: coordinators and shepherds of processes, and work at inner levels in the outside-in organization. Nobody manages people, only processes. Specifically, managers coordinate the continuous improvement of the processes they focus on, liaising with CFLs, FLs, and product developers. A manager should be intimate with the way the work their process aims at improving works. As an example, a software development manager should be intimate with how software development works. This typically means they must have a strong background in software development.
+4. Founders or CEO: responsible to protect the system of work, and to come up with and continuously repeat the vision and the mission, so everybody is aligned.
+
+## One-way decisions must be reviewed and can be vetoed
+
+For two-way decisions, those who can easily be reverted, there's no need to seek validation outside a team.
+
+Some decisions, though, are one-way, meaning there's no easy way to undo them, and the consequences might be significant. For these decisions, the teams must present their reasoning and conclusions to the cross-functional lead involved, and the relevant the function leads. During this presentation, the CFL and the FLs can veto the decision made by the team, explaining why they disagree and what negative consequences the company would risk. The team can disagree and escalate this to founders and/or the CEO.
+
+There are many kinds of one-way decisions, and the teams need to receive coaching to identify them correctly. Firing people is a great example of something that it's always one-way, and must thus be presented to a CFL and the relevant FLs before a team can move forward.
 
 ##### TODO
 
 - Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
-- Function leads, managers, experts, and cross-functional leads
