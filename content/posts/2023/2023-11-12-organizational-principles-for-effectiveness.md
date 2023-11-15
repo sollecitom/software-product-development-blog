@@ -264,6 +264,10 @@ In any case, CFLs, FLs, founders, and CEO shouldn't make a decision themselves, 
 
 There are many kinds of one-way decisions, and the teams need to receive coaching to identify them correctly. Firing people is a great example of something that it's always one-way, and must thus be presented to a CFL and the relevant FLs before a team can move forward.
 
+## How bad actors and bad hires get removed
+
+TODO 
+
 ##### TODO
 
 - Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
