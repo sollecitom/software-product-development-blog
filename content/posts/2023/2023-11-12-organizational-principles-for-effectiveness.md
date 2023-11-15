@@ -53,9 +53,9 @@ Teams should be as small as possible, while still qualifying as a team. A team m
 
 To do so, teams should be cross-functional and staff people with different backgrounds and strengths.
 
-About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of personalities, you need shapers, fixers, and explorers. When it comes to skills, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
+About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of archetypes, you need shapers, fixers, and explorers. You also want both starters and finishers. When it comes to skills, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
 
-I believe teams of four or five people can achieve the requirements above, without splitting into more than one team. People are not interchangeable, and the same person will complement a team and not fit in others. Hire for the specific skills/strengths/personality/background you need in a specific team.
+I believe teams of five people can achieve the requirements above, without internally splitting into more than one team. People are not interchangeable, and the same person will complement a team and not fit in others. Hire for the specific skills, strengths, archetype, personality, and background you need in a given team.
 
 The design goal is to eliminate any dependencies across teams.
 
@@ -168,6 +168,8 @@ This applies to experts of all sorts, including architecture, product discovery,
 ## The teams own the way they work
 
 Each team is responsible for the way they work. This includes hiring, firing (more on this below), onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate initiatives aimed at cross-pollinating what's working among the teams, but the teams remain responsible for how they work.
+
+The only constraint is that any way the team decides to work should respect these principles.
 
 If a team routinely misbehaves or causes trouble, a mechanism (more on this below) is eventually triggered, and the team is dissolved. 
 
