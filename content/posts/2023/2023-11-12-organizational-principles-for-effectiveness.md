@@ -245,6 +245,10 @@ The company should set goals, in terms of qualitative improved user behaviour on
 
 This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an excellent way of running a product company. Mind that in such an organization, budget is allocated fluidly based on demand, rather than be frozen in large chunks upfront. It's the teams and the goals that get funded, not the ideas, the steps, or the tasks.
 
+## Employing great people
+
+TODO
+
 ## Roles
 
 Apart from product developers (of all sorts, backgrounds, calibre, specialty, etc.), the only possible roles are:
@@ -267,6 +271,15 @@ There are many kinds of one-way decisions, and the teams need to receive coachin
 ## How under-performing teams are addressed
 
 TODO
+- Identifying: self-reported, spotted by anybody.
+- The team tries to identify and fix the problem. This variation can be normal, or special. If special, it can be temporary or not. If temporary, it might have to do with people (holidays, under-performance, etc.). If not, it's probably about how the team works and/or its composition. If it's not a new team, then changes in the ways of working likely the cause. If it's a new team, it could be the ways of working, the forming phase, or about not having the right mix and calibre of people.
+  - If the fix entails one-way decisions, the team seeks the usual presentation process.
+  - After a period, the team asks the person who spotted the problem to assess whether the problem is fixed.
+- If not fixed, the problem is escalated to management.
+- Managers review how the team is operating, the people, the ways of working, etc.
+  - This happens by having 1 or 2 managers embedded within the team, for a duration.
+  - The managers refrain from improving things at first, focusing on observing and taking notes only.
+  - TODO
 
 ## How under-performing employees are addressed
 
