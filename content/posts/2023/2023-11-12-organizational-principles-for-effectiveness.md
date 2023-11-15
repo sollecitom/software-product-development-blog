@@ -49,9 +49,7 @@ A team is a group of people working together towards the same goal. Sharing a go
 
 ## Small equivalent teams
 
-Teams should be as small as possible, while still qualifying as a team. A team must abstract who's doing what, be capable of doing any work, and be resilient to absences.
-
-To do so, teams should be cross-functional and staff people with different backgrounds and strengths.
+Teams should be as small as possible, while still qualifying as a team. A team must abstract who's doing what, be capable of doing any work, and be resilient to absences. To do so, teams should be cross-functional and staff people with different backgrounds and strengths.
 
 About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of archetypes, you need shapers, fixers, and explorers. You also want both starters and finishers. When it comes to skills, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
 
@@ -95,7 +93,9 @@ Being a DRI is not a job, and it's always a temporary engagement. The rule is th
 
 A company should behave as a whole until it reaches the critical number of 50 developers (roughly 10 teams). At that moment, the company should adopt Tribes to coordinate the work better.
 
-Tribes are purposed mini-companies within the larger company. Everything works the same, except for the fact that everything stays within a Tribe (teams, initiative queues, prioritization, etc.). Tribes should focus on end-to-end vertical slices of the business, not on a given function.
+Tribes are purposed mini-companies within the larger company. Everything works the same, except for the fact that everything stays within a tribe (teams, initiative queues, prioritization, etc.). Tribes should focus on end-to-end vertical slices of the business, not on a given function.
+
+When a tribe becomes too big, and has ten or more teams, it can create nested tribes within itself. Each nested tribe relates to the parent tribe in the same way the parent tribe relates to the company. 
 
 The design goal is to eliminate any dependencies across Tribes.
 
@@ -187,11 +187,11 @@ Nobody approves anybody's holidays. Purchases and expenses happen automatically,
 
 The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the founders and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
 
-## No roles and promotions
+## No seniority roles, specific titles, and promotions
 
-Apart from cross-functional leads and function leads, everybody should formally be a "product developer". Titles can specify the tribe, or whether somebody is an expert at something, but this should have no impact in terms of compensation, benefits, or treatment.
+Everybody working in the outer level, close to the customers, should be a "product developer". Titles can reflect somebody's tribe, but this should have no impact in terms of compensation, benefits, or treatment. A title might be "Product developer, Everyday Spending".
 
-Seniority roles should also not appear in any form. Promotions shouldn't happen. People should only change role when they want to, and when it's needed by the company. In any case, compensation should exclusively be a function of the years of experience the person has, their main skills, their location, and the tenure within the company.
+Seniority titles should also not appear in any form. No senior, lead, staff, principle anything. Promotions should also not happen. People should only change role when they want to, and when it's needed by the company. In any case, compensation should exclusively be a function of the years of experience the person has, their main skills, their location, and their tenure within the company.
 
 This is in opposition to career ladders and progression frameworks.
 
@@ -244,6 +244,16 @@ No need for deadlines, as the company should sell only what's already built. Not
 The company should set goals, in terms of qualitative improved user behaviour on the product, and the teams should produce ideas to reach these goals. The assumptions behind each idea should be validated, using the existing data, or using product discovery techniques. The most promising idea, based on the data, should be attempted first. This does not mean the whole idea should be built, but only an initial step, to gain further validation that the idea will work out. If the initial step is working well in the hands of customers, then a second small step should be attempted. Every task should be associated with a step.
 
 This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an excellent way of running a product company. Mind that in such an organization, budget is allocated fluidly based on demand, rather than be frozen in large chunks upfront. It's the teams and the goals that get funded, not the ideas, the steps, or the tasks.
+
+## Roles
+
+Apart from product developers (of all sorts, backgrounds, calibre, specialty, etc.), the only possible roles are:
+
+1. Cross-functional lead (CFL): responsible to coordinate and shepherd a tribe. People with different skills, seniority, or expertise align to the cross-functional lead of the tribe they're in. A cross-functional lead e.g., "Cross-Functional Lead, Savings", can come from any background, even if experience in software development and product management are both heavily recommended.
+2. Function lead (FL): responsible to coordinate work and initiatives within their function. People within that function liaise with the function lead, but are aligned to the cross-functional lead of the tribe they're in. A function lead should be a very senior member of their function. As an example, a "Function Lead, Legal" role should be a very senior corporate solicitor; legal experts in the various tribes all align to their tribe's CFL, but liaise with the Legal FL as well.
+3. Managers: managers are coordinators and shepherds of processes, and work at inner levels in the outside-in organization. Nobody manages people, only processes. Specifically, managers coordinate the continuous improvement of the processes they focus on, liaising with CFLs, FLs, and product developers. A manager should be intimate with the way the work their process aims at improving works. As an example, a software development manager should be intimate with how software development works. This typically means they must have a strong background in software development.
+4. CEO: TODO
+5. Founders: TODO
 
 ##### TODO
 
