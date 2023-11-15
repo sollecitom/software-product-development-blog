@@ -260,6 +260,8 @@ For two-way decisions, those who can easily be reverted, there's no need to seek
 
 Some decisions, though, are one-way, meaning there's no easy way to undo them, and the consequences might be significant. For these decisions, the teams must present their reasoning and conclusions to the cross-functional lead involved, and the relevant the function leads. During this presentation, the CFL and the FLs can veto the decision made by the team, explaining why they disagree and what negative consequences the company would risk. The team can disagree and escalate this to founders and/or the CEO.
 
+In any case, CFLs, FLs, founders, and CEO shouldn't make a decision themselves, but let the team come up with an alternative decision, to be reviewed once again.
+
 There are many kinds of one-way decisions, and the teams need to receive coaching to identify them correctly. Firing people is a great example of something that it's always one-way, and must thus be presented to a CFL and the relevant FLs before a team can move forward.
 
 ##### TODO
