@@ -41,7 +41,7 @@ The people that work in the inner levels tend to manage how the work works, and 
 
 The opposite of this is the traditional top-down organization, where each level controls and manages the level below.
 
-## The team as the unit of work allocation
+## The unit of work allocation is a team
 
 Work is carried over by teams, rather than by individuals. This means that nothing is allocated to a specific one person.
 
@@ -99,6 +99,10 @@ Tribes are purposed mini-companies within the larger company. Everything works t
 
 The design goal is to eliminate any dependencies across Tribes.
 
+## People who work together sit close to each other
+
+People in a team should sit together. Teams belonging to the same tribe should also be near each other. Experts should move around to the team that needs their expertise.
+
 ## Evolutionary approach to development
 
 Important decisions and initiatives should be de-risked by leveraging a set-based approach. Different teams should work in parallel on the same decision or initiative, without any contact between them, except for checking they're not converging towards the same solution.
@@ -109,7 +113,7 @@ This is a commonplace practice in collaborative knowledge work (policymaking, ci
 
 ## Vertically-aligned people
 
-People should be associated to vertically product organizations (tribes), as opposed to horizontal function-specific ones. So, as an example, a Java back-end engineer in the "Everyday Spending" tribe would be a product developer within the "Everyday Spending" tribe, rather than a Java developer, or a back-end engineer.
+People should be associated with vertical product organizations (tribes), as opposed to horizontal function-specific ones. So, as an example, a Java back-end engineer in the "Everyday Spending" tribe would be a product developer within the "Everyday Spending" tribe, rather than a Java developer, or a back-end engineer.
 
 Horizontal structures can exist, but none can be across the vertical structures, only contained within them. So, if the "Savings" tribe decides to adopt a "back-end" chapter to try and coordinate the continuous learning in that area, they're free to do so, but that organization only lives within that tribe, never across tribes.
 
@@ -133,7 +137,7 @@ Vigorous learning should happen as part of the job. Function-specific and cross-
 
 Training should involve theory and practice, and occur during working hours. Training should be mandatory for everybody, across all the provided subjects.
 
-Cross-function training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge (e.g., industry-specific things). For other functions, it should be similar, and include software development.
+Cross-function training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge, e.g., industry-specific things. For other functions, it should be similar, and include software development.
 
 20% of working hours is the minimum that's effective, so that's 1.5 hours a day or 1 day a week.
 
@@ -159,25 +163,25 @@ Experts coordinate the work for their technical value streams. A security expert
 
 Experts are always available for advice, even when a team is working on an initiative outside of that person's (technical) value stream. If a team needs help, the team calls in the expert, who joins the team for as long as the team deems necessary.
 
-This applies to experts of all sort, including architecture, product discovery, product observability, security, marketing, compliance, legal, etc.
+This applies to experts of all sorts, including architecture, product discovery, product observability, security, marketing, compliance, legal, etc.
 
 ## The teams own the way they work
 
-Each team is responsible for the way they work. This includes hiring, firing - more on this below - onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate initiatives aimed at cross-pollinating what's working among the teams, but the teams remain responsible for how they work.
+Each team is responsible for the way they work. This includes hiring, firing (more on this below), onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate initiatives aimed at cross-pollinating what's working among the teams, but the teams remain responsible for how they work.
 
-If a team routinely misbehave or causes trouble, a mechanism - more on this below - is eventually triggered, and the team is dissolved. 
+If a team routinely misbehaves or causes trouble, a mechanism (more on this below) is eventually triggered, and the team is dissolved. 
 
 ## No meetings
 
-Meetings should be avoided, and replaced by continuous synchronous collaboration. Cross-functional ensemble programming is a good way of avoiding meetings. When somebody wants to know something from a team, they join the team's ensemble and have a chat.
+Meetings should be avoided and replaced by continuous synchronous collaboration. Cross-functional ensemble programming is a good way of avoiding meetings. When somebody wants to know something from a team, they join the team's ensemble and have a chat.
 
 The design goal is for every team member to have access to all the information.
 
 ## Nobody manages anybody
 
-Somebody ultimately must be responsible to identify and root out bad actors and bad hires - more about this below - but nobody manages anybody. People can have 1:1s with whoever they feel like, as part of the learning time.
+Somebody ultimately must be responsible to identify and root out bad actors and bad hires (more about this below), but nobody manages anybody. People can have 1:1s with whoever they feel like, as part of the learning time.
 
-Nobody approves anybody's holidays. Purchases and expenses happen automatically, within a team-level ample budget. Smart credit cards e.g., Pleo should be used to ensure control and visibility.
+Nobody approves anybody's holidays. Purchases and expenses happen automatically, within a team-level ample budget. Smart credit cards, e.g., Pleo should be used to ensure control and visibility.
 
 The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the top executives and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
 
@@ -199,20 +203,40 @@ This is in opposition to individual-performance-related bonuses.
 
 ## No performance reviews
 
-No performance reviews should happen. This applies to both teams and individuals. There should be mechanisms to fire bad actors and bad hires - as described below - but these involve a collective and subjective decision.
+No performance reviews should happen. This applies to both teams and individuals. There should be mechanisms to fire bad actors and bad hires, as described below, but these involve a collective and subjective decision.
 
-Nobody gets normally reviewed in terms of performance. People are not compared, as they're not equivalent. Teams are compared, with the only goal of collectively improve the ways of working across the teams.
+Nobody gets normally reviewed in terms of performance. People are not compared, as they're not equivalent. Teams are compared, with the only goal of collectively improving the ways of working across the teams.
+
+## No feature branches
+
+No other branch that the main branch should ever be used. Each team should push small increments directly to the remote main branch, after having run all tests locally. Whenever the main branch gets broken, the team should stop what they're doing and fix it forward, rather than rolling back.
+
+Locally, the code should go from a working state to another working state, incrementally and iteratively, rather than be allowed to become broken before being fixed again.
+
+## Releases happen every day
+
+Releases should happen continuously, every day, without coordination, in an uneventful way. Each commit that's pushed to the main branch should be automatically built, tested, packaged, and deployed. People shouldn't even be aware of when the code is being released. Product releases that need sales or marketing support should be enabled with feature flags after they were already released in the dark, with all the communications and campaigns they might need.
+
+Avoiding releases after a specific hour, or on specific days, e.g., on Fridays is a red flag. Any coordinated release approach e.g., code freezes, tags, "keeping an eye on it" is also a red flag.
+
+## Only production
+
+Production should be the only permanent environment. People should use internal tenants and users for exploratory testing, smoke tests, live demos, etc.
+
+Changes so dangerous than they are impossible to feature-flag or blue/green should be rare. In those cases, an ephemeral detached copy of the production environment should be created with infrastructure as code, and the dangerous changes or the intense testing can happen there.
+
+Having dev, test, or staging environments is a red flag.
+
+## Sustainable pace
+
+Working hours should include 5 hours a day of collaborative work, plus 2 hours of learning activities. Holidays should be unlimited, with a minimum of 25 days a year plus the national holidays.
+
+People should have flexibility in terms of working from home and working hours, but the expectation is that, on most days, during core hours, the whole team is synchronously working together in the same physical location.
 
 ##### TODO
 
 - Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
 - Executives, managers, experts, and cross-functional leads
-- No individual or team performance review
-- Releases happen every day (Fridays included)
-- Working hours (5 hours a day of collaborative work, plus learning activities; unlimited holidays, minimum 30 a year + national holidays)
-- Exactly one environment (production, with internal tenants and users)
-- Continuous delivery (integration, delivery, and deployment)
 - Products, not projects
     - No budgets (allocate money when and if needed, never freeze it)
     - No estimates (build first and sell second, never tell customers when things will get done)
-- Teams own the way they work (hiring, firing, onboarding, practices)
