@@ -37,7 +37,7 @@ Employees work across different levels. Activities range from being closest to t
 
 The inner levels support the outer levels. It's about coordination, not command and control. The outer levels can pull help from the inner levels, but the decision-making stays with the people working as close as possible with the customers.
 
-The people that work in the inner levels tend to manage how the work works, and shepherd long-term initiatives and changes.
+The people that work in the inner levels tend to manage how the work works, and shepherd long-term goals, initiatives, and changes.
 
 The opposite of this is the traditional top-down organization, where each level controls and manages the level below.
 
@@ -61,7 +61,7 @@ The design goal is to eliminate any dependencies across teams.
 
 ## Work-in-progress limits
 
-Each team should be working on only one initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product or technical initiatives do. So a team is always improving various things, but only working on a significant piece of work at a time.
+Each team should be working on only one initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product goals or technical initiatives do. So a team is always improving various things, but only working on a significant piece of work at a time.
 
 ## Pull-based just-in-time work
 
@@ -77,7 +77,7 @@ A team should be a group of equals who are great at different things. Nobody sho
 
 ## Company-wide initiative queues
 
-A company should organize and prioritize work initiatives using company-wide queues. This means that prioritization should happen across areas, rather than within each area.
+A company should organize and prioritize goals and work initiatives using company-wide queues. This means that prioritization should happen across areas, rather than within each area.
 
 This works well with equivalent teams capable of working on anything needed, so that the company can focus on whatever is needed.
 
@@ -167,7 +167,7 @@ This applies to experts of all sorts, including architecture, product discovery,
 
 ## The teams own the way they work
 
-Each team is responsible for the way they work. This includes hiring, firing (more on this below), onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate initiatives aimed at cross-pollinating what's working among the teams, but the teams remain responsible for how they work.
+Each team is responsible for the way they work. This includes hiring, firing (more on this below), onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate processes and activities to facilitate the adoption of what's working among the teams, but the teams remain responsible for how they work.
 
 The only constraint is that any way the team decides to work should respect these principles.
 
@@ -235,10 +235,17 @@ Working hours should include 5 hours a day of collaborative work, plus 2 hours o
 
 People should have flexibility in terms of working from home and working hours, but the expectation is that, on most days, during core hours, the whole team is synchronously working together in the same physical location.
 
+## Products, not projects
+
+The company should avoid projects, and work on products. The difference is that work on products is continuous, without start and end date, or without a specific customer in mind.
+
+No need for deadlines, as the company should sell only what's already built. Not much need for estimates either, as initiatives should be funded based on the value they're producing and the pace they're progressing at.
+
+The company should set goals, in terms of qualitative improved user behaviour on the product, and the teams should produce ideas to reach these goals. The assumptions behind each idea should be validated, using the existing data, or using product discovery techniques. The most promising idea, based on the data, should be attempted first. This does not mean the whole idea should be built, but only an initial step, to gain further validation that the idea will work out. If the initial step is working well in the hands of customers, then a second small step should be attempted. Every task should be associated with a step.
+
+This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an excellent way of running a product company. Mind that in such an organization, budget is allocated fluidly based on demand, rather than be frozen in large chunks upfront. It's the teams and the goals that get funded, not the ideas, the steps, or the tasks.
+
 ##### TODO
 
 - Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
 - Function leads, managers, experts, and cross-functional leads
-- Products, not projects
-    - No budgets (allocate money when and if needed, never freeze it)
-    - No estimates (build first and sell second, never tell customers when things will get done)
