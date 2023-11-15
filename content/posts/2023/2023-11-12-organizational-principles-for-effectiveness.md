@@ -143,7 +143,7 @@ Cross-function training for developers should include finance, marketing, produc
 
 ## Continuous collaboration
 
-The teams continuously collaborate, within the team, and with sponsors, experts, inner level managers, and executives. The preferred way of collaboration is synchronous. Whoever liaises with the team joins the team for the duration of the engagement.
+The teams continuously collaborate, within the team, and with sponsors, experts, inner level managers, cross-functional leads, and function leads. The preferred way of collaboration is synchronous. Whoever liaises with the team joins the team for the duration of the engagement.
 
 From first principles, fully remote co-located teams can hardly ever be as effective as physically co-located teams. It does not mean it's not feasible to run a fully remote team, but inherently the collaboration, even when done perfectly, will be less effective than a perfectly structured in-person equivalent. This might be compensated by other factors. Nonetheless, physically co-located teams remain the preference.
 
@@ -185,11 +185,11 @@ Somebody ultimately must be responsible to identify and root out bad actors and 
 
 Nobody approves anybody's holidays. Purchases and expenses happen automatically, within a team-level ample budget. Smart credit cards, e.g., Pleo should be used to ensure control and visibility.
 
-The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the top executives and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
+The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the founders and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
 
 ## No roles and promotions
 
-Apart from executives and cross-function leads, everybody should formally be a "product developer". Titles can specify the tribe, or whether somebody is an expert at something, but this should have no impact in terms of compensation, benefits, or treatment.
+Apart from cross-functional leads and function leads, everybody should formally be a "product developer". Titles can specify the tribe, or whether somebody is an expert at something, but this should have no impact in terms of compensation, benefits, or treatment.
 
 Seniority roles should also not appear in any form. Promotions shouldn't happen. People should only change role when they want to, and when it's needed by the company. In any case, compensation should exclusively be a function of the years of experience the person has, their main skills, their location, and the tenure within the company.
 
@@ -238,7 +238,7 @@ People should have flexibility in terms of working from home and working hours, 
 ##### TODO
 
 - Bad actors and bad hires get fired (how? by who? when? after trying what? how do people get fired? how do teams get dissolved?)
-- Executives, managers, experts, and cross-functional leads
+- Function leads, managers, experts, and cross-functional leads
 - Products, not projects
     - No budgets (allocate money when and if needed, never freeze it)
     - No estimates (build first and sell second, never tell customers when things will get done)
