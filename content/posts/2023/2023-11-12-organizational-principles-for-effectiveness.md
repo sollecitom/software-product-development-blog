@@ -258,6 +258,8 @@ Apart from product developers (of all sorts, backgrounds, calibre, specialty, et
 3. Managers: coordinators and shepherds of processes, and work at inner levels in the outside-in organization. Nobody manages people, only processes. Specifically, managers coordinate the continuous improvement of the processes they focus on, liaising with CFLs, FLs, and product developers. A manager should be intimate with the way the work their process aims at improving works. As an example, a software development manager should be intimate with how software development works. This typically means they must have a strong background in software development.
 4. Founders or CEO: responsible to protect the system of work, and to come up with and continuously repeat the vision and the mission, so everybody is aligned.
 
+It's important to stress again the fact that nobody is managed by anybody. Formally, every employee reports to the CEO. CFLs, FLs, and managers coordinate the work of those teams closest to the customers, but this is nothing more than coordination. Managers are not subordinated to CFLs or FLs, it's just a different focus. So thinking about CFLs and FLs as directors, under the executives, and above management is incorrect here.
+
 ## One-way decisions must be reviewed and can be vetoed
 
 For two-way decisions, those who can easily be reverted, there's no need to seek validation outside a team.
@@ -290,40 +292,9 @@ When it comes to people, skills can be learned most of the time. However, someti
 
 In both cases, this is a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual.
 
+If the person who's under-performing is a CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
+
 ## Bad behaviour is addressed
-
-TODO
-
-## Under-performing teams are addressed
-
-TODO
-- Identifying: self-reported, spotted by anybody.
-- The team tries to identify and fix the problem. This variation can be normal, or special. If special, it can be temporary or not. If temporary, it might have to do with people (holidays, under-performance, etc.). If not, it's probably about how the team works and/or its composition. If it's not a new team, then changes in the ways of working likely the cause. If it's a new team, it could be the ways of working, the forming phase, or about not having the right mix and calibre of people.
-  - If the fix entails one-way decisions, the team seeks the usual presentation process.
-  - After a period, the team asks the person who spotted the problem to assess whether the problem is fixed.
-- If not fixed, the problem is escalated to management.
-- Managers review how the team is operating, the people, the ways of working, etc.
-  - This happens by having 1 or 2 managers embedded within the team, for a duration.
-  - The managers refrain from improving things at first, focusing on observing and taking notes only.
-  - TODO
-
-## Under-performing employees are addressed
-
-TODO
-- Identifying: self-reported, spotted by anybody.
-- The person tries to identify and fix the problem. This variation can be normal, or special. If special, it can be temporary or not. If temporary, it might have to do with external factors. If it's not a new person, then changes in the ways of working likely the cause. If it's a new person, it could be the ways of working, the learning phase, or about not having the right skills.
-  - If the fix entails one-way decisions, the person seeks the usual presentation process.
-  - After a period, the person asks the person who spotted the problem to assess whether the problem is fixed.
-- If not fixed, the problem is escalated to management.
-- Managers review how the person is operating, etc.
-  - This happens by having 1 or 2 managers embedded within the team the person is in, for a duration.
-  - The managers refrain from improving things at first, focusing on observing and taking notes only.
-
-## Misbehaving teams are addresses
-
-TODO
-
-## Misbehaving employees are addressed
 
 TODO
 
