@@ -195,53 +195,59 @@ This is in opposition to career ladders and progression frameworks.
 
 ## Profit-sharing schemes
 
-No person or team should receive a bonus, since their contribution matters way less that how the work works. Individual or team bonuses foster internal competition within the company, and that's to be avoided.
+No person or team should receive a bonus. Individual or team bonuses foster internal competition, and that's to be avoided.
 
 The whole company should participate in a profit-sharing scheme, distributed according to a person's years of experience, primary skills, and tenure in the company.
 
-This is in opposition to individual-performance-related bonuses.
+This is in opposition to individual performance-related bonuses.
 
 ## No performance reviews
 
-No performance reviews should happen. This applies to both teams and individuals. There should be mechanisms to fire bad actors and bad hires, as described below, but these involve a collective and subjective decision.
+No performance reviews should occur, for neither teams nor individuals. There should be mechanisms to address bad actors and under-performance, as described below, but these are triggered as soon as the problem is spotted, not quarterly or at the end of the year.
 
-Nobody gets normally reviewed in terms of performance. People are not compared, as they're not equivalent. Teams are compared, with the only goal of collectively improving the ways of working across the teams.
+People are not compared, as they're not equivalent. Teams might occasionally be compared, with the only goal of collectively improving the ways of working across the teams.
 
-## No feature branches
+## Continuous Integration
 
-No other branch that the main branch should ever be used. Each team should push small increments directly to the remote main branch, after having run all tests locally. Whenever the main branch gets broken, the team should stop what they're doing and fix it forward, rather than rolling back.
+No other branch that the main branch should ever be used. Each team should push small increments directly to the remote main branch, after running all tests locally. Whenever the main branch gets broken, the team should stop what they're doing and fix it forward, rather than rolling the changes back.
 
-Locally, the code should go from a working state to another working state, incrementally and iteratively, rather than be allowed to become broken before being fixed again.
+Locally, the code should go from working state to working state, incrementally and iteratively, rather than be allowed to become broken before getting eventually fixed.
 
-## Releases happen every day
+## Continuous Delivery (even on Fridays)
 
-Releases should happen continuously, every day, without coordination, in an uneventful way. Each commit that's pushed to the main branch should be automatically built, tested, packaged, and deployed. People shouldn't even be aware of when the code is being released. Product releases that need sales or marketing support should be enabled with feature flags after they were already released in the dark, with all the communications and campaigns they might need.
+Deployments should happen continuously, every day, without coordination, in an uneventful way. Each commit that's pushed to the main branch should be automatically built, tested, packaged, inspected, and deployed. People shouldn't even be aware of when the code is being deployed. Changes that require sales or marketing work should be enabled with feature flags after they were already released in the dark, with all the communications and campaigns they might need.
 
-Avoiding releases after a specific hour, or on specific days, e.g., on Fridays is a red flag. Any coordinated release approach e.g., code freezes, tags, "keeping an eye on it" is also a red flag.
+Avoiding deployments after a specific hour, or on specific days, e.g., on Fridays is a red flag. Any coordinated release approach e.g., code freezes, tags, or "keeping an eye on it", is also a red flag.
+
+## The only manual testing is exploratory
+
+No regression testing should ever be performed manually. Manual testing should be strictly exploratory. Teams should be encouraged to routinely perform exploratory testing.
+
+A cross-functional team dedicated to exploratory testing isn't a bad idea, but exploratory testing should leave outside the software product lifecycle. In particular, manual testing as part of the release process is a red flag.
 
 ## Only production
 
-Production should be the only permanent environment. People should use internal tenants and users for exploratory testing, smoke tests, live demos, etc.
+Production should be the only permanent environment. People should use internal tenants and users for exploratory testing, smoke tests, and live demos, directly in production.
 
-Changes so dangerous than they are impossible to feature-flag or blue/green should be rare. In those cases, an ephemeral detached copy of the production environment should be created with infrastructure as code, and the dangerous changes or the intense testing can happen there.
+Changes so dangerous than they are impossible to feature-flag or rolled out using a blue/green approach should be rare. In those cases, an ephemeral clone of the production environment should be created with infrastructure as code, and the dangerous changes or the intense testing can happen there.
 
 Having dev, test, or staging environments is a red flag.
 
 ## Sustainable pace
 
-Working hours should include 5 hours a day of collaborative work, plus 2 hours of learning activities. Holidays should be unlimited, with a minimum of 25 days a year plus the national holidays.
+Working hours should include 5 hours a day of collaborative work, plus 2 hours of learning activities. Holidays should be unlimited, with a minimum of 21 days a year plus the national holidays (typically 9 days). Holidays booked past the 21 days minimum should not be recorded.
 
-People should have flexibility in terms of working from home and working hours, but the expectation is that, on most days, during core hours, the whole team is synchronously working together in the same physical location.
+People should have flexibility in terms of working from home and working hours, but the expectation is that, on most days, during core hours, the whole team is synchronously working together in the same location.
 
 ## Products, not projects
 
-The company should avoid projects, and work on products. The difference is that work on products is continuous, without start and end date, or without a specific customer in mind.
+The company should avoid projects, and work on products instead. The difference is that the work on products is continuous, without start and end dates, and with no specific customer in mind.
 
-No need for deadlines, as the company should sell only what's already built. Not much need for estimates either, as initiatives should be funded based on the value they're producing and the pace they're progressing at.
+There's also no need for deadlines, as the company should only sell what's already built. Estimates become unnecessary as well, as the initiatives should be funded based on the value they're producing and the pace they're progressing at.
 
-The company should set goals, in terms of qualitative improved user behaviour on the product, and the teams should produce ideas to reach these goals. The assumptions behind each idea should be validated, using the existing data, or using product discovery techniques. The most promising idea, based on the data, should be attempted first. This does not mean the whole idea should be built, but only an initial step, to gain further validation that the idea will work out. If the initial step is working well in the hands of customers, then a second small step should be attempted. Every task should be associated with a step.
+The company should set goals, expressed as qualitatively improved user behaviour, and the teams should produce ideas to reach these goals. The assumptions behind each idea should be validated, using the existing data, or through product discovery techniques. The most promising idea, based on the evidence, should be attempted first. This does not mean the whole idea should be built, only an initial step, to gain further validation that the idea will work out. If the initial step is working well in the hands of the customers, then a second small step should be attempted. Every task should be associated with a step.
 
-This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an excellent way of running a product company. Mind that in such an organization, budget is allocated fluidly based on demand, rather than be frozen in large chunks upfront. It's the teams and the goals that get funded, not the ideas, the steps, or the tasks.
+This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an excellent way of running a product company. Mind that, in such an organization, funds get allocated fluidly based on demand, rather than being frozen upfront in large amounts. It's the teams and the goals that get funded, not the ideas, the steps, or the tasks.
 
 ## Employing great people
 
