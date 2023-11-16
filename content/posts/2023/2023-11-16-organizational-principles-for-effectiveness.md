@@ -2,8 +2,8 @@
 title: "Organizational principles for effective software product development"
 categories: [ "management" ]
 tags: [ "system-thinking", "management", "effectiveness", "startups", "organization-design" ]
-date: 2023-11-12T05:00:00
-draft: true
+date: 2023-11-16T05:00:00
+draft: false
 ---
 
 I often rant about what I feel is wrong with an approach, practice, or system. Today, instead, I want to describe some principles that an effective software product development company should adopt.
