@@ -12,8 +12,6 @@ Why principles? Wouldn't a detailed description of how things should work be mor
 
 Also, reality is multifaceted and nuanced. Everything depends on everything. Prescriptive approaches don't cope well with dynamic situations. Principles, on the other hand, allow you to deal with uncertainty.
 
-In hindsight, this blog post turned out to be longer and much harder to write than I originally imagined, so get ready for a rabbit tunnel.
-
 # How to use these principles
 
 You can use these principles to design how a company operates. While you're designing, check whether the system violates any of the principles. If it does, design an alternative one that doesn't.
@@ -359,3 +357,11 @@ If the decision is deemed founded by management and validated by the review boar
 Whenever the investigation impacts a team, rather than a person, the disciplinary action should affect all the team members that were aware. The managers should investigate who was aware and include this as part of the decision that gets validated by the review board.
 
 Everytime bad behavior results in a person getting fired or a team getting disbanded, an email should be sent to the whole company, explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors and reinforce the message that bad behavior is not tolerated.
+
+# Parting words
+
+In hindsight, this blog post turned out to be longer and much harder to write than I originally imagined.
+
+What are your thoughts about these principles? Do you see eye to eye with me about them? Which ones give you an emotional response, either positive or negative? How many of these does your company adopt? Why?
+
+As always, let me know your thoughts on LinkedIn or Medium!
