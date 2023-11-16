@@ -278,51 +278,52 @@ There are many kinds of one-way door decisions, and the teams need to be trained
 
 ## Transparency and access to information
 
-TODO most things accessible by everybody.
+Most information should be accessible to everybody. This should include salaries, and even information employees could exploit to misbehave e.g., to commit insider trading. The damage lack of transparency causes is worse than any risks deriving from sharing dangerous information.
+
+There should only be a few exceptions, including information that would paint a person under a bad light, and personal information e.g., health conditions, etc.
 
 ## Vigorous learning on the job
 
-Vigorous learning should happen as part of the job. Function-specific and cross-function training should both be organized by the company for all employees. Training should be coordinated by both internal and external experts, and can include doing actual work outside of someone's main role.
+Vigorous learning should happen as part of the job. Function-specific and cross-functional training should both be organized by the company for all employees. Training should be coordinated by both internal and external experts, and should include doing actual work outside of someone's main function.
 
-Training should involve theory and practice, and occur during working hours. Training should be mandatory for everybody, across all the provided subjects.
+Training should involve theory and practice, and occur during working hours. Participation should be mandatory for everybody.
 
-Cross-function training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge, e.g., industry-specific things. For other functions, it should be similar, and include software development.
+Cross-functional training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge, e.g., industry-specific concepts. For other functions, it should be similar, and include software development.
 
 20% of working hours is the minimum that's effective, so that's 1.5 hours a day or 1 day a week.
 
 ## Under-performance is addressed
 
-A person or a team might sometimes under-perform. This can be noticed by anybody, including the person or team themselves. At first, the subject should try to diagnose and fix the problem on their own, asking help to anybody they deem might help them.
+A person or a team might sometimes under-perform. This can be noticed by anybody, including the person or team themselves. At first, the subject should try to diagnose and fix the problem on their own, asking anybody for help.
 
-This variation of performance can be normal, or special. If it's normal, then there's no point in addressing anything, as things tend to fluctuate anyway. You can tell whether a measurement is within normal variation by using control charts, but a subjective assessment is usually enough.
+A variation of performance can be normal, or special. If it's normal, then there's no point in addressing anything, as things tend to fluctuate anyway. You can tell whether a measurement is within due to normal causes of variation by using control charts, but a subjective assessment is usually enough.
 
-If the performance variation is deemed special, though, it remains to be seen whether it's a temporary condition. If temporary, it might have to do with some external conditions: maybe a new joiner joined the team and the equilibrium will be restored soon, or a family situation is distressing a person, etc. The important thing in this case is identifying probable causes, and monitoring how the situation evolves.
+When the performance variation is deemed special, though, it remains to be seen whether it's a temporary. If temporary, it might have to do with some external conditions: maybe a new joiner joined the team and the equilibrium will be restored soon, or a family situation is distressing a person, etc. The important thing in this case is identifying the probable causes, and monitoring how the situation evolves.
 
-If it's not a temporary condition, or no probable causes have been identified, it's probably a result of the ways of working. Are the current ways of working new? Will the situation take care of itself? What's working less effectively? Identifying the systemic pulls that might be causing the under-performance is important.
+If it's not a temporary condition, or no probable causes have been identified, it's probably the result of the ways of working. Did any recent changes to the ways of working occur? Will the situation take care of itself? What's working less effectively? Identifying the systemic pulls that might be causing the under-performance is important.
 
-If the person or team think they addressed the situation, they should ask the person who spotted the problem (might be themselves as well) if they agree that the problem has been addressed. If the answer is no, this should be escalated to management.
+In case the person or team thinks they addressed the situation, they should ask the person who originally spotted the problem (could be themselves) whether they agree that the problem has been addressed effectively. If the answer is no, this should be escalated to management.
 
-Managers should review what's happening by joining the relevant team for a duration. The time this take varies, but it's usually not short. Two weeks at a minimum for a person, and at least a month for a team. While embedded in the team, two managers will immerse themselves with everything the team does.
+Whenever the person or team failed at addressing the situation on their own, managers should review what's happening by joining the relevant team for a duration. The time this takes varies, but it's rarely short. 2 weeks at a minimum for a person, and at least 1 month for a team. While embedded in the team, 2 managers will immerse themselves with everything the team does.
 
 In a first phase, the managers will simply observe and take notes, with the occasional question. In a second phase, the managers might suggest improvements or other actions.
 
-About teams, if no other action fixes the problem, the managers can decide to disband the team, merging each person into different teams.
+If no other action fixes the problem, the managers can decide to disband a team, merging each person into a different team. When it comes to people, skills gaps can be addressed most of the time, and alternative jobs can be tried within the same company. However, sometimes a person's belief system makes them incompatible with the working principles described here, or even with software product development in general. In this case, the managers can decide to terminate that person's employment.
 
-When it comes to people, skills can be learned most of the time, and alternative jobs can be tried within the same company. However, sometimes a person's belief system makes them incompatible with the working principles described here, or even with software product development in general. In this case, the managers can decide to terminate that person's employment.
+In all cases, this is always a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual. If the CFL and the FLs veto the decision, as usual, the managers can decide to escalate to the founders and/or the CEO.
 
-In all cases, this is always a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual.
+Whenever the person who's under-performing is:
 
-If the person who's under-performing is:
-
-1. A CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
-2. A founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then people will have to live with that. That's why boards are important.
+1. A CFL or a FL, the procedure is identical, apart from the fact that the decision made by the 2 managers will be presented to the founders and/or CEO instead.
+2. A manager, the procedure is identical, but different managers are involved.
+3. A founder or CEO, the procedure is identical, apart from the fact that the decision made by the 2 managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then the employees will have to live with that. That's why boards are important.
 
 If the person who reported the problem:
 
-1. Would be part of the group the managers' decision is presented to, then this is escalated to an inner level instead.
-2. Is a manager, or if it's the manager who is reported to be under-performing, the procedure is identical, but different managers are involved.
+1. Would be part of the group the decision is presented to, then this is escalated to an inner level instead.
+2. Is a manager, the procedure is identical, but different managers are involved.
 
-Everytime under-performance results in a person being fired or a team being disbanded, an email should be sent to the whole company explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors. 
+If under-performance results in a person being fired or a team being disbanded, an email is sent to the whole company explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors. 
 
 ## Bad behaviour is addressed
 
