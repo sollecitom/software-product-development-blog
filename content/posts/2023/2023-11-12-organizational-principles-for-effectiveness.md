@@ -318,43 +318,44 @@ Whenever the person who's under-performing is:
 2. A manager, the procedure is identical, but different managers are involved.
 3. A founder or CEO, the procedure is identical, apart from the fact that the decision made by the 2 managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then the employees will have to live with that. That's why boards are important.
 
-If the person who reported the problem:
+If the person who reported the problem is:
 
-1. Would be part of the group the decision is presented to, then this is escalated to an inner level instead.
-2. Is a manager, the procedure is identical, but different managers are involved.
+1. Part of the group the decision would be presented to, then this is escalated to an inner level instead.
+2. A manager, the procedure is identical, but different managers are involved.
 
-If under-performance results in a person being fired or a team being disbanded, an email is sent to the whole company explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors. 
+Whenever under-performance results in a person getting fired or a team getting disbanded, an email is sent to the whole company, explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors. 
 
 ## Bad behaviour is addressed
 
-Bad behaviour is different from under-performance, and it's important to address it differently. A person or a team are bad actors when they damage others or the company with their actions, and they do so consciously.
+Bad behaviour differs from under-performance, so it's important to address it differently. People or teams are bad actors when they damage others or the company with their actions, and they do so consciously.
 
-The system of work and the incentives can hugely influence everybody's behavior in this sense. And yet, when facing the same systemic pulls, some people decide to do the right thing, while others easily give in and become bad actors. So, while under-performance is usually something fixable, and the company has a duty to try the best it can to address it, bad behavior is a different story.
+The system of work, especially the incentives, greatly influences everybody's behavior. And yet, when facing the same systemic pulls, some people decide to do the right thing, regardless the cost, while others easily give in and become bad actors. So, while under-performance is usually something fixable, and the company has a duty to try its best to address it, bad behavior is a different story.
 
-It's important to stress again that being aware of the damage they cause is a key requirement for somebody to qualify as a bad actor. Also, realizing it after doesn't count, so if somebody that something bad, then realizes it caused damage, and reports it, they're not bad actors. But if they do that intentionally, or even if they decide to cover it up after realizing, they need to be rooted out.
+It's important to stress again that being aware of the damage they cause is a key requirement for somebody to qualify as a bad actor. Also, if somebody did something bad, then realized it, and reported it, they're not bad actors. But if they did that while understanding the consequences, or if they decided to cover it up after realizing it, they need to be rooted out.
 
-Bad actors are a fundamental threat to companies. While truly malicious actors are rare, selfish and toxic behaviors are quite common, can destroy morale and culture, and spread like mold when not addressed.
+Bad actors are a fundamental threat to companies. While truly malicious actors are rare, selfish and toxic behaviors are quite common, can destroy morale and culture, and spread like mold when left unaddressed.
 
-The self-identification part of the process doesn't apply here, for otherwise it wouldn't be bad behavior. Anybody can report they feel that a person or a team has a toxic or selfish behavior. Reporting should not happen anonymously, but management should keep the identity of the person who reported it secret. This is an exception to the default transparency for all things, aimed at creating a safe space to have these conversations. It's also imperative that, whenever an escalation is deemed unfounded, the reporter isn't negatively impacted. If the reviewers suspect that the reporter acted maliciously in the first place, though, the reporter should also be investigated as a potential bad actor.
+Anybody can report that they feel a person or a team behaved badly. Reporting should never happen anonymously, but management should keep the identity of the reporter a secret. This is an exception to the default transparency for all things, aimed at creating a safe space for these conversations. It's also imperative that, whenever an escalation is deemed unfounded, the reporter isn't negatively impacted. If the investigators suspect that the reporter acted maliciously in the first place, though, the reporter should also be investigated as a potential bad actor.
 
-The investigation is conducted by two managers, who review the information reported, interview people in private, collect the anecdotes and evidence in a file, and finally talk to the person being investigated.
+The investigation is conducted by 2 managers, who review the information reported, interview relevant people in private, collect the anecdotes and evidence in a file, and eventually speak to the person under investigation.
 
-The person is informed of the investigation only if the initial anecdotes and evidence substantiate the claim. If that happens, before making a decision, the two managers speak with the person being investigated, in private. They explain what the claim was, without mentioning who opened it, explain how the process was run, and expose the anecdotes and evidence collected, striving not to reveal the names of the people interviewed. The person being investigated can then explain their reasoning, behavior, and version of the story. The two managers make a decision, and then, if the claim is deemed founded, proceed to seek validation from people at an inner level, because these are always one-way decisions.
+The person is informed of the investigation only if the initial anecdotes and evidence substantiate the claim. If that happens, before making a decision, the 2 managers speak with the subject of the investigation, in private. They explain what the claim is, without mentioning who the reporter is, explain how the process was run, and expose the anecdotes and evidence collected, striving not to reveal the names of the people interviewed. The person being investigated can then explain their reasoning, behavior, and version of the story. The 2 managers make a decision and, if the claim is deemed founded, proceed to seek validation from people at an inner level, as these are always one-way door decisions.
 
-Whenever revealing anecdotes or evidence might betray the source, the managers should tell the person investigated anyway, as their right to explain themselves takes precedence over the attempt to keep all the involved people anonymous.
+Whenever revealing anecdotes or evidence would betray their source, the managers should tell the person being investigated anyway, as their right to explain themselves takes precedence over the keeping all the people involved anonymous.
 
-If the person who's being investigated as a bad actor is:
+If the person under investigation is:
 
-1. A CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
-2. A founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then people will have to live with that. That's why boards are important.
+1. A CFL or a FL, the procedure is identical, apart from the fact that the decision made by the 2 managers will be presented to the founders and/or CEO instead.
+2. A manager, the procedure is identical, but different managers are involved.
+3. A founder or CEO, the procedure is identical, apart from the fact that the decision made by the 2 managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is a bad actor, then the employees will have to live with that. That's why boards are important.
 
-If the person who reported the problem:
+If the person who reported the problem is:
 
-1. Would be part of the group the managers' decision is presented to, then this is escalated to an inner level instead.
-2. Is a manager, or if it's the manager who is reported to be a bad actor, the procedure is identical, but different managers are involved.
+1. Part of the group the decision would be presented to, then this is escalated to an inner level instead.
+2. A manager, then the procedure is identical, but different managers are involved.
 
-If the decision to accept the claim is validated, the person being investigated is subjected to disciplinary action. In most cases, this should be termination of employment, as minor cases like a one-time off hoarding of candies should be dismissed by the managers in the first place.
+If the decision is deemed founded by management and validated by the review board, the person under investigation receives disciplinary action. In most cases, this should be termination of employment, as minor cases like a one-time hoarding of candies should be dismissed by the managers in the first place.
 
-Whenever the investigation impacts a team, rather than a person, the disciplinary action should affect all the team members that were aware, determined by the managers, and part of the decision that gets reviewed and validated by the people at inner levels.
+Whenever the investigation impacts a team, rather than a person, the disciplinary action should affect all the team members that were aware. The managers should investigate who was aware and include this as part of the decision that gets validated by the review board.
 
-Everytime bad behavior results in a person being fired or a team being disbanded, an email should be sent to the whole company explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors and reinforce the message that bad behavior is not tolerated.
+Everytime bad behavior results in a person getting fired or a team getting disbanded, an email should be sent to the whole company, explaining what happened, who made the decision, and what the reasoning was. This is to avoid rumors and reinforce the message that bad behavior is not tolerated.
