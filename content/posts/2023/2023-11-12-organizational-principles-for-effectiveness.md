@@ -43,23 +43,25 @@ The opposite of this model is the traditional top-down structure, where each lev
 
 ## The unit of work allocation is a team
 
-Work is carried over by teams, rather than by individuals. This means that nothing is allocated to a specific one person.
+Work is carried over by teams, rather than by individuals. This means that there are no individual tasks or assignments.
 
 A team is a group of people working together towards the same goal. Sharing a goal is not enough, people need to collaborate synchronously towards achieving it. Ensemble programming is a great example of a practice that embodies this principle.
 
 ## Small equivalent teams
 
-Teams should be as small as possible, while still qualifying as a team. A team must abstract who's doing what, be capable of doing any work, and be resilient to absences. To do so, teams should be cross-functional and staff people with different backgrounds and strengths.
+Teams should be as small as possible, while still qualifying as a team. A team must abstract who's doing what, be capable of doing any work, and be resilient to absences. To achieve this, teams should be cross-functional and staff people with different backgrounds and strengths.
 
-About backgrounds, you want a mix of old and young, senior and more junior, academic and self-taught, genders, etc. In terms of archetypes, you need shapers, fixers, and explorers. You also want both starters and finishers. When it comes to skills, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
+You want a mix of old and young, senior and junior, academic and self-taught, genders, etc. You also need shapers, fixers, and explorers. A team should also include both starters and finishers. About skills, you should at least cover web development, user experience, distributed systems, codebase structure, Cloud infrastructure, databases, product discovery, scripting, observability, and code maintainability.
 
-I believe teams of five people can achieve the requirements above, without internally splitting into more than one team. People are not interchangeable, and the same person will complement a team and not fit in others. Hire for the specific skills, strengths, archetype, personality, and background you need in a given team.
+People are not interchangeable, and the same person might complement a team while not being a good fit in others. Hire for the specific skills, strengths, archetype, personality, and background you need in a given team.
 
-The design goal is to eliminate any dependencies across teams.
+I believe that 5 team members is the sweet spot in most cases. You can get the necessary diversity, are resilient to 1 or 2 absences, and you don't get so many people that they inevitably need to work on more than 1 thing at a time.
+
+The design goal here is to eliminate any cross-team dependencies.
 
 ## Work-in-progress limits
 
-Each team should be working on only one initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product goals or technical initiatives do. So a team is always improving various things, but only working on a significant piece of work at a time.
+Each team should be working on only 1 initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product goals or technical initiatives do. A team is always improving various things, but only working on 1 significant piece of work at a time.
 
 ## Pull-based just-in-time work
 
