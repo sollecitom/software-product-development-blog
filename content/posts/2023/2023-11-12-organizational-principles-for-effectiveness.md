@@ -121,51 +121,41 @@ This is a frequent practice in collaborative knowledge work (policymaking, city 
 
 ## Vertically-aligned people
 
-People should be associated with vertical product organizations (tribes), as opposed to horizontal function-specific ones. So, as an example, a Java back-end engineer in the "Everyday Spending" tribe would be a product developer within the "Everyday Spending" tribe, rather than a Java developer, or a back-end engineer.
+People should be associated with their vertical product organization, their tribe, as opposed to their horizontal function-specific one. As an example, a Java back-end engineer in the "Everyday Spending" tribe would be a product developer within the "Everyday Spending" tribe, rather than a Java developer, or a back-end engineer.
 
 Horizontal structures can exist, but none can be across the vertical structures, only contained within them. So, if the "Savings" tribe decides to adopt a "back-end" chapter to try and coordinate the continuous learning in that area, they're free to do so, but that organization only lives within that tribe, never across tribes.
 
-This means that anybody in a tribe reports to the tribe lead, a cross-functional lead, regardless of their own area of expertise. So if a lawyer works within the "Savings" tribe, they report into the "Head of Savings", not the "Head of Legal".
+This means that anybody in a tribe is aligned to the cross-functional lead for that tribe, regardless of their own area of expertise. So if a lawyer works within the "Savings" tribe, they work under the remit of the "Head of Savings", not of the "Head of Legal".
 
 ## Collective code ownership
 
-The teams collectively own the whole codebase of the company. No team or person "owns" any part of the codebase. Nobody needs to ask permission to anybody else to access and modify any code.
+The teams collectively own the whole codebase of the company. No team or person owns any part of the codebase. Nobody needs to ask permission to anybody else to access and modify any code.
 
 This holds true even across tribes. It's natural that some teams and tribes will focus more on specific areas, but this changes nothing about this point.
 
 ## Collective product ownership
 
-The teams collectively own the product and the features. No team or person "owns" an area of the product.
+The teams collectively own the product and the features. No team or person owns an area of the product.
 
 This holds true even across tribes. It's natural that the tribes will tend to work on separate areas of the product, and this is encouraged, but a tribe should never have to ask permission to another tribe to implement or modify a feature.
 
-## Vigorous learning on the job
-
-Vigorous learning should happen as part of the job. Function-specific and cross-function training should both be organized by the company for all employees. Training should be coordinated by both internal and external experts, and can include doing actual work outside of someone's main role.
-
-Training should involve theory and practice, and occur during working hours. Training should be mandatory for everybody, across all the provided subjects.
-
-Cross-function training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge, e.g., industry-specific things. For other functions, it should be similar, and include software development.
-
-20% of working hours is the minimum that's effective, so that's 1.5 hours a day or 1 day a week.
-
 ## Continuous collaboration
 
-The teams continuously collaborate, within the team, and with sponsors, experts, inner level managers, cross-functional leads, and function leads. The preferred way of collaboration is synchronous. Whoever liaises with the team joins the team for the duration of the engagement.
+The teams continuously collaborate, both within the team and with sponsors, experts, managers, cross-functional leads, and function leads. The preferred way of collaboration is synchronous. Whoever liaises with a team joins that team for the duration of the engagement.
 
-From first principles, fully remote co-located teams can hardly ever be as effective as physically co-located teams. It does not mean it's not feasible to run a fully remote team, but inherently the collaboration, even when done perfectly, will be less effective than a perfectly structured in-person equivalent. This might be compensated by other factors. Nonetheless, physically co-located teams remain the preference.
+From first principles, fully remote teams can hardly ever be as effective as physically co-located teams. It does not mean that running a fully remote team is not feasible, but the collaboration, even when done perfectly, will inherently be less effective than a perfectly-structured in-person equivalent. This might be compensated by other factors. Nonetheless, physically co-located teams remain the preference. If a company prefers to work remotely, a team should enlist members that are geographically near to each other in terms of timezone. Hybrid teams should be avoided.
 
-When a team commits to work on an initiative, they engage with that initiative's sponsor. This close collaboration lasts for the entire duration of the work, and terminates when the team pulls another initiative sponsored by another person.
+When a team commits to work on an initiative, they engage with that initiative's sponsor. This close collaboration lasts for the entire duration of the work, and terminates when the team pulls another initiative that is sponsored by another person.
 
 ## Product managers stay with the value stream
 
-Product managers are not part of the teams, but focus on a value stream. Each value stream can have one or more dedicated product managers. A product manager can coordinate the work for more than one value stream, even if they're ideally single-threaded.
+Product management experts are not part of the teams, but focus on a value stream. Each value stream can have one or more dedicated product managers. A product manager can coordinate the work for more than 1 value stream, even if they're ideally single-threaded.
 
 Every time a product initiative is part of a value stream, that value stream's PM is the sponsor for the initiative. The team working on the initiative will work closely with them for the duration of the engagement. The teams remain responsible for the decision-making, while the sponsor acts as stakeholder and advisor.
 
 ## Experts stay within the technical value stream
 
-Experts coordinate the work for their technical value streams. A security expert will act as sponsor for all technical initiatives living under the security value stream. In terms of collaboration with the teams, they behave like product managers do. As usual, the teams remain responsible for the decision-making, while the sponsor acts as stakeholder and advisor.
+Experts coordinate the work for their technical value streams. A security expert will act as sponsor for all the technical initiatives part of the security value stream. In terms of collaboration with the teams, they behave like product managers do. As usual, the teams remain responsible for the decision-making, while the sponsor acts as stakeholder and advisor.
 
 ## Experts are available as advisors
 
@@ -175,11 +165,11 @@ This applies to experts of all sorts, including architecture, product discovery,
 
 ## The teams own the way they work
 
-Each team is responsible for the way they work. This includes hiring, firing (more on this below), onboarding, training, and the processes and tools the team uses. Managers working at inner levels can coordinate processes and activities to facilitate the adoption of what's working among the teams, but the teams remain responsible for how they work.
+The teams are responsible for the way they work. This includes hiring, firing (more on this below), onboarding, training, and the processes and tools the team uses. Managers can coordinate processes and activities to facilitate the adoption of what's working well in specific teams, but the teams remain responsible for how they work.
 
 The only constraint is that any way the team decides to work should respect these principles.
 
-If a team routinely misbehaves or causes trouble, a mechanism (more on this below) is eventually triggered, and the team is dissolved. 
+If a team routinely misbehaves or causes trouble, a mechanism (more on this below) is eventually triggered, and the team is disbanded. 
 
 ## No meetings
 
@@ -281,6 +271,16 @@ There are many kinds of one-way decisions, and the teams need to receive coachin
 ## Transparency and access to information
 
 TODO most things accessible by everybody.
+
+## Vigorous learning on the job
+
+Vigorous learning should happen as part of the job. Function-specific and cross-function training should both be organized by the company for all employees. Training should be coordinated by both internal and external experts, and can include doing actual work outside of someone's main role.
+
+Training should involve theory and practice, and occur during working hours. Training should be mandatory for everybody, across all the provided subjects.
+
+Cross-function training for developers should include finance, marketing, product management, design, sales, business, and domain knowledge, e.g., industry-specific things. For other functions, it should be similar, and include software development.
+
+20% of working hours is the minimum that's effective, so that's 1.5 hours a day or 1 day a week.
 
 ## Under-performance is addressed
 
