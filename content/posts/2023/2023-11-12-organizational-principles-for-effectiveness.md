@@ -29,6 +29,8 @@ Like any model, these principles have specific applicability boundaries. They're
 1. There's a willingness to strive for excellence. If a company is content with merely doing okay, some of these will sound extreme or dangerous.
 2. The results are placed before what's convenient for some people. Keeping people with their comfort zone, supporting the existing control structures, and feeding people's ego are non-goals.
 
+This list is also incomplete. So if I don't mention a specific good principle you have in mind, it doesn't mean I'm saying it's not important.
+
 # Principles
 
 ## Outside-in structure
@@ -57,7 +59,7 @@ People are not interchangeable, and the same person might complement a team whil
 
 I believe that 5 team members is the sweet spot in most cases. You can get the necessary diversity, are resilient to 1 or 2 absences, and you don't get so many people that they inevitably need to work on more than 1 thing at a time.
 
-The design goal here is to eliminate any cross-team dependencies.
+The design goal here is to eliminate cross-team dependencies.
 
 ## Work-in-progress limits
 
@@ -73,49 +75,49 @@ This means that teams cannot get overwhelmed by having work pushed on them. Info
 
 ## Pull-based information
 
-Information should also be pull-based, made available when and if a team or a person needs it. Documentation, expertise, advice, support, etc. should all be accessible when needed by anybody.
+Documentation, expertise, advice, support, and other types of information should also be pull-based, and made available when somebody needs it.
 
 ## Leaderless teams
 
-A team should be a group of equals who are great at different things. Nobody should be the designated leader of the team. Seniority shouldn't formally matter. The team can self-organize in terms of representation when dealing with stakeholders, but nobody should be allowed to represent indefinitely.
+A team should be a group of equals who are great at different things. Nobody should be the designated leader of the team. Seniority shouldn't formally matter. The team can self-organize in terms of representation when dealing with stakeholders, but nobody should be allowed to represent the team formally or indefinitely.
 
 ## Company-wide initiative queues
 
-A company should organize and prioritize goals and work initiatives using company-wide queues. This means that prioritization should happen across areas, rather than within each area.
+A company should organize and prioritize goals and initiatives using company-wide queues. This means that prioritization should happen across areas, rather than within each area.
 
-This works well with equivalent teams capable of working on anything needed, so that the company can focus on whatever is needed.
+This works well with equivalent teams capable of working on anything, so that the company can focus on whatever is needed.
 
-This is in opposition to deciding what's next for each team or area, leading to inflexibility in work allocation.
+This is in opposition to deciding what's next for each team or area, leading to inflexible work allocation and suboptimal ability to focus.
 
 ## Direct Responsible Individuals for initiatives
 
-Each initiative should have a Direct Responsible Individual (DRI), who's in charge of coordinating the work, escalating risks and issues, and outline dependencies. The DRI is not responsible for the outcomes, and it's not the ultimate decision-maker.
+Each initiative should have a Direct Responsible Individual (DRI), who's in charge of coordinating the work, escalating risks and issues, and outlining dependencies. The DRI is not responsible for the outcomes, and is also not a decision-maker.
 
-When decisions are of medium importance, the DRI might make a call, but anybody can decide to escalate to senior management.
+When decisions are of medium importance, the DRI might make a call, but anybody can decide to escalate the decision to people who work in inner levels.
 
-Being a DRI is not a job, and it's always a temporary engagement. The rule is that if you just finished an initiative you were DRI for, you're not going to be DRI in the next initiative you work on. A DRI is nominated autonomously by the team that commits to an initiative.
+Being a DRI is not a job, and it's always a temporary engagement. The rule is that if an initiative you were DRI for just ended, you're not going to be DRI in the next initiative you work on. The DRI is nominated autonomously by the team that commits to an initiative.
 
 ## Tribes as smaller companies
 
-A company should behave as a whole until it reaches the critical number of 50 developers (roughly 10 teams). At that moment, the company should adopt Tribes to coordinate the work better.
+A company should behave as a whole, until it reaches the critical number of 50 developers, roughly 10 teams. At that moment, the company should adopt tribes to coordinate the work better.
 
-Tribes are purposed mini-companies within the larger company. Everything works the same, except for the fact that everything stays within a tribe (teams, initiative queues, prioritization, etc.). Tribes should focus on end-to-end vertical slices of the business, not on a given function.
+Tribes are like mini-companies within the wider company. The principles apply in the same way, except for the fact that everything stays within a tribe (teams, initiative queues, prioritization, etc.). Tribes should focus on end-to-end vertical slices of the business, not on a given function.
 
-When a tribe becomes too big, and has ten or more teams, it can create nested tribes within itself. Each nested tribe relates to the parent tribe in the same way the parent tribe relates to the company. 
+When a tribe becomes too big, and has 10 or more teams, it should create nested tribes within itself. Each nested tribe relates to the parent tribe in the same way the parent tribe relates to the company. 
 
-The design goal is to eliminate any dependencies across Tribes.
+The design goal here is to eliminate cross-tribe dependencies.
 
 ## People who work together sit close to each other
 
-People in a team should sit together. Teams belonging to the same tribe should also be near each other. Experts should move around to the team that needs their expertise.
+People in a team should sit together. Teams that belong to the same tribe should also be near each other. Experts should go to the team that needs their expertise, and be there for the duration of the engagement.
 
 ## Evolutionary approach to development
 
-Important decisions and initiatives should be de-risked by leveraging a set-based approach. Different teams should work in parallel on the same decision or initiative, without any contact between them, except for checking they're not converging towards the same solution.
+Important decisions and initiatives should be de-risked by leveraging a set-based approach. Different teams should work in parallel towards the same goal, or on the same initiative, without any contact between them, except checking they're not converging towards the same solution.
 
-The importance of the work determines the number of teams working towards the same goal in parallel. At the end, the different solutions produced can be compared across multiple dimension, and a higher-quality decision or solution is adopted.
+The importance of the initiative determines the number of teams working on it in parallel. At the end, the different solutions produced can be compared across multiple dimension, and a higher-quality decision or solution is reached.
 
-This is a commonplace practice in collaborative knowledge work (policymaking, city planning, vaccine development, science research, etc.), and in opposition to the standardization and efficiency factories obsess about.
+This is a frequent practice in collaborative knowledge work (policymaking, city planning, vaccine development, scientific research, etc.), and in opposition to the standardization and efficiency factories obsess about.
 
 ## Vertically-aligned people
 
