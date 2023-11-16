@@ -61,11 +61,15 @@ The design goal here is to eliminate any cross-team dependencies.
 
 ## Work-in-progress limits
 
-Each team should be working on only 1 initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product goals or technical initiatives do. A team is always improving various things, but only working on 1 significant piece of work at a time.
+Each team should be working on only 1 initiative at a time. So the number of teams you have is the degree of parallelism you get. Not everything counts as an item though, only high-level product goals or technical initiatives do.
+
+A team is always improving various things, but only working on 1 significant piece of work at a time.
 
 ## Pull-based just-in-time work
 
-The teams should pull work when they become available. As a team finishes working on an initiative, they should pull the next initiative and start working on it. This means that teams cannot get overwhelmed by work pushed on them. Information about upcoming work shouldn't reach a team until that team has finished the current initiative.
+The teams should pull work when they finish their previous work. As a team finishes working, they should pull the next initiative or goal and start working on it.
+
+This means that teams cannot get overwhelmed by having work pushed on them. Information about upcoming work shouldn't reach a team until that team has finished their current initiative.
 
 ## Pull-based information
 
