@@ -179,17 +179,17 @@ The design goal is that every team member should have access to all the informat
 
 ## Nobody manages anybody
 
-Somebody ultimately must be responsible to identify and root out bad actors and bad hires (more about this below), but nobody manages anybody. People can have 1:1s with whoever they feel like, as part of the learning time.
+Somebody ultimately must be responsible for identifying and addressing bad actors and under-performers (more about this below), but nobody should manage anybody.
 
-Nobody approves anybody's holidays. Purchases and expenses happen automatically, within a team-level ample budget. Smart credit cards, e.g., Pleo should be used to ensure control and visibility.
+Nobody approves anybody's holidays, and nobody approves purchases and expenses either. Smart credit cards, e.g., Pleo should be used to ensure control and visibility. Anybody should be able to stand in front of their team or the founders and explain why an expense was in the best interest of the company. Not being able to justify it should result in termination of employment.
 
-The design goal here is freedom and responsibility. Anybody should be able to stand in front of their team or the founders and explain why an expense was in the best interest of the company. Failure to do so should result in termination of employment.
+The design goal here is freedom and responsibility.
 
-## No seniority roles, specific titles, and promotions
+## No seniority designations, specific titles, or promotions
 
-Everybody working in the outer level, close to the customers, should be a "product developer". Titles can reflect somebody's tribe, but this should have no impact in terms of compensation, benefits, or treatment. A title might be "Product developer, Everyday Spending".
+Everybody working in the outer level, close to the customers, should be a "product developer". Titles can reflect somebody's tribe, but this should have no impact in terms of compensation, benefits, or treatment. A title might look like "Product developer, Everyday Spending".
 
-Seniority titles should also not appear in any form. No senior, lead, staff, principle anything. Promotions should also not happen. People should only change role when they want to, and when it's needed by the company. In any case, compensation should exclusively be a function of the years of experience the person has, their main skills, their location, and their tenure within the company.
+Seniority designations should also not appear in any form. No senior, lead, staff, or principle anything. Promotions should also not happen. People should only change role when they want to, and when it's needed by the company. In any case, compensation should exclusively be a function of the years of experience the person has, their main skills, their location, and their tenure within the company.
 
 This is in opposition to career ladders and progression frameworks.
 
