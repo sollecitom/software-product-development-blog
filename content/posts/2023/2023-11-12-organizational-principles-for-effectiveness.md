@@ -296,6 +296,10 @@ If the person who's under-performing is a CFL or a FL, the procedure is identica
 
 If the person who's under-performing is a founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then people will have to live with that. That's why boards are important.
 
+If the person who reported the problem in the first place would be part of the group the managers' decision is presented to, then this is escalated to an inner level instead.
+
+If the person who reported the problem is a manager, or if it's the manager who is reported to be under-performing, the procedure is identical, but different managers are involved.
+
 ## Bad behaviour is addressed
 
 TODO
