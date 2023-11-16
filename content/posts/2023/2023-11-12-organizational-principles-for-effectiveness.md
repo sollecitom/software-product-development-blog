@@ -247,7 +247,7 @@ This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an
 
 ## Employing great people
 
-TODO
+TODO striving to identify, hire, train, grow, and retain the best people.
 
 ## Roles
 
@@ -269,6 +269,10 @@ Some decisions, though, are one-way, meaning there's no easy way to undo them, a
 In any case, CFLs, FLs, founders, and CEO shouldn't make a decision themselves, but let the team come up with an alternative decision, to be reviewed once again.
 
 There are many kinds of one-way decisions, and the teams need to receive coaching to identify them correctly. Firing people is a great example of something that it's always one-way, and must thus be presented to a CFL and the relevant FLs before a team can move forward.
+
+## Transparency and access to information
+
+TODO most things accessible by everybody.
 
 ## Under-performance is addressed
 
@@ -304,7 +308,17 @@ If the person who reported the problem:
 
 ## Bad behaviour is addressed
 
-TODO
+Bad behaviour is different from under-performance, and it's important to address it differently. A person or a team are bad actors when they damage others or the company with their actions, and they do so consciously.
+
+The system of work and the incentives can hugely influence everybody's behavior in this sense. And yet, when facing the same systemic pulls, some people decide to do the right thing, while others easily give in and become bad actors. So, while under-performance is usually something fixable, and the company has a duty to try the best it can to address it, bad behavior is a different story.
+
+It's important to stress again that being aware of the damage they cause is a key requirement for somebody to qualify as a bad actor. Also, realizing it after doesn't count, so if somebody that something bad, then realizes it caused damage, and reports it, they're not bad actors. But if they do that intentionally, or even if they decide to cover it up after realizing, they need to be rooted out.
+
+Bad actors are a fundamental threat to companies. While truly malicious actors are rare, selfish and toxic behaviors are quite common, can destroy morale and culture, and spread like mold when not addressed.
+
+The self-identification part of the process doesn't apply here, for otherwise it wouldn't be bad behavior. Anybody can report they feel that a person or a team has a toxic or selfish behavior. Reporting should not happen anonymously, but management should keep the identity of the person who reported it secret. This is an exception to the default transparency for all things, aimed at creating a safe space to have these conversations. It's also imperative that, whenever an escalation is deemed unfounded, the reporter isn't negatively impacted. If the reviewers suspect that the reporter acted maliciously in the first place, though, the reporter should also be investigated as a potential bad actor.
+
+TODO how the investigation and the resolution work.
 
 ##### TODO
 
