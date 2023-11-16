@@ -294,7 +294,7 @@ In both cases, this is a one-way decision, so it should be presented to the CFL 
 
 If the person who's under-performing is a CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
 
-If the person who's under-performing is a founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company.
+If the person who's under-performing is a founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then people will have to live with that. That's why boards are important.
 
 ## Bad behaviour is addressed
 
