@@ -268,7 +268,33 @@ In any case, CFLs, FLs, founders, and CEO shouldn't make a decision themselves, 
 
 There are many kinds of one-way decisions, and the teams need to receive coaching to identify them correctly. Firing people is a great example of something that it's always one-way, and must thus be presented to a CFL and the relevant FLs before a team can move forward.
 
-## How under-performing teams are addressed
+## Under-performance is addressed
+
+A person or a team might sometimes under-perform. This can be noticed by anybody, including the person or team themselves. At first, the subject should try to diagnose and fix the problem on their own, asking help to anybody they deem might help them.
+
+This variation of performance can be normal, or special. If it's normal, then there's no point in addressing anything, as things tend to fluctuate anyway. You can tell whether a measurement is within normal variation by using control charts, but a subjective assessment is usually enough.
+
+If the performance variation is deemed special, though, it remains to be seen whether it's a temporary condition. If temporary, it might have to do with some external conditions: maybe a new joiner joined the team and the equilibrium will be restored soon, or a family situation is distressing a person, etc. The important thing in this case is identifying probable causes, and monitoring how the situation evolves.
+
+If it's not a temporary condition, or no probable causes have been identified, it's probably a result of the ways of working. Are the current ways of working new? Will the situation take care of itself? What's working less effectively? Identifying the systemic pulls that might be causing the under-performance is important.
+
+If the person or team think they addressed the situation, they should ask the person who spotted the problem (might be themselves as well) if they agree that the problem has been addressed. If the answer is no, this should be escalated to management.
+
+Managers should review what's happening by joining the relevant team for a duration. The time this take varies, but it's usually not short. Two weeks at a minimum for a person, and at least a month for a team. While embedded in the team, two managers will immerse themselves with everything the team does.
+
+In a first phase, the managers will simply observe and take notes, with the occasional question. In a second phase, the managers might suggest improvements or other actions.
+
+About teams, if no other action fixes the problem, the managers can decide to disband the team, merging each person into different teams.
+
+When it comes to people, skills can be learned most of the time. However, sometimes a person's belief system makes them incompatible with the working principles described here, or even with software product development in general. In this case, the managers can decide to terminate that person's employment.
+
+In both cases, this is a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual.
+
+## Bad behaviour is addressed
+
+TODO
+
+## Under-performing teams are addressed
 
 TODO
 - Identifying: self-reported, spotted by anybody.
@@ -281,15 +307,23 @@ TODO
   - The managers refrain from improving things at first, focusing on observing and taking notes only.
   - TODO
 
-## How under-performing employees are addressed
+## Under-performing employees are addressed
+
+TODO
+- Identifying: self-reported, spotted by anybody.
+- The person tries to identify and fix the problem. This variation can be normal, or special. If special, it can be temporary or not. If temporary, it might have to do with external factors. If it's not a new person, then changes in the ways of working likely the cause. If it's a new person, it could be the ways of working, the learning phase, or about not having the right skills.
+  - If the fix entails one-way decisions, the person seeks the usual presentation process.
+  - After a period, the person asks the person who spotted the problem to assess whether the problem is fixed.
+- If not fixed, the problem is escalated to management.
+- Managers review how the person is operating, etc.
+  - This happens by having 1 or 2 managers embedded within the team the person is in, for a duration.
+  - The managers refrain from improving things at first, focusing on observing and taking notes only.
+
+## Misbehaving teams are addresses
 
 TODO
 
-## How misbehaving teams are addresses
-
-TODO
-
-## How misbehaving employees are addressed
+## Misbehaving employees are addressed
 
 TODO
 
