@@ -288,9 +288,9 @@ In a first phase, the managers will simply observe and take notes, with the occa
 
 About teams, if no other action fixes the problem, the managers can decide to disband the team, merging each person into different teams.
 
-When it comes to people, skills can be learned most of the time. However, sometimes a person's belief system makes them incompatible with the working principles described here, or even with software product development in general. In this case, the managers can decide to terminate that person's employment.
+When it comes to people, skills can be learned most of the time, and alternative jobs can be tried within the same company. However, sometimes a person's belief system makes them incompatible with the working principles described here, or even with software product development in general. In this case, the managers can decide to terminate that person's employment.
 
-In both cases, this is a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual.
+In all cases, this is always a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual.
 
 If the person who's under-performing is a CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
 
