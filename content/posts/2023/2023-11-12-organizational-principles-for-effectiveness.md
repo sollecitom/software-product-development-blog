@@ -292,13 +292,15 @@ When it comes to people, skills can be learned most of the time, and alternative
 
 In all cases, this is always a one-way decision, so it should be presented to the CFL for that area, and to the relevant FLs, as usual.
 
-If the person who's under-performing is a CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
+If the person who's under-performing is:
 
-If the person who's under-performing is a founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then people will have to live with that. That's why boards are important.
+1. A CFL or a FL, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the founders and/or CEO instead.
+2. founder or CEO, the procedure is identical, apart from the fact that the decision made by the two managers will be presented to the board of the company. If there's no board, and it's a fully-owned private company, and the founder and CEO is under-performing, then people will have to live with that. That's why boards are important.
 
-If the person who reported the problem in the first place would be part of the group the managers' decision is presented to, then this is escalated to an inner level instead.
+If the person who reported the problem:
 
-If the person who reported the problem is a manager, or if it's the manager who is reported to be under-performing, the procedure is identical, but different managers are involved.
+1. Would be part of the group the managers' decision is presented to, then this is escalated to an inner level instead.
+2. Is a manager, or if it's the manager who is reported to be under-performing, the procedure is identical, but different managers are involved.
 
 ## Bad behaviour is addressed
 
