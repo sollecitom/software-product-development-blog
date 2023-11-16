@@ -175,7 +175,7 @@ If a team routinely misbehaves or causes trouble, a mechanism (more on this belo
 
 Meetings should be avoided and replaced by continuous synchronous collaboration. Cross-functional ensemble programming is a good way of avoiding meetings. When somebody wants to know something from a team, they join the team's ensemble and have a chat.
 
-The design goal is for every team member to have access to all the information.
+The design goal is that every team member should have access to all the information.
 
 ## Nobody manages anybody
 
