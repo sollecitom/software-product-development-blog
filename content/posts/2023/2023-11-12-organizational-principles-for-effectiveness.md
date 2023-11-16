@@ -31,15 +31,15 @@ Like any model, these principles have specific applicability boundaries. They're
 
 # Principles
 
-## Outside-in organization
+## Outside-in structure
 
-Employees work across different levels. Activities range from being closest to the customers, to the innermost level. The time horizons tend to widen as the levels get further from the customers.
+Employees work as part of different levels. Activities range from being closest to the customers, to the innermost level. The time horizons tend to widen as the levels get further from the customers.
 
 The inner levels support the outer levels. It's about coordination, not command and control. The outer levels can pull help from the inner levels, but the decision-making stays with the people working as close as possible with the customers.
 
 The people that work in the inner levels tend to manage how the work works, and shepherd long-term goals, initiatives, and changes.
 
-The opposite of this is the traditional top-down organization, where each level controls and manages the level below.
+The opposite of this model is the traditional top-down structure, where each level controls the level below it.
 
 ## The unit of work allocation is a team
 
