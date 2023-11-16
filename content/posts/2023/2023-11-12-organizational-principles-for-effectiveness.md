@@ -251,28 +251,30 @@ This is, in a nutshell, the GIST framework codified by Itamar Gilad, and it's an
 
 ## Employing great people
 
-TODO striving to identify, hire, train, grow, and retain the best people.
+The company should strive to ensure it employs great people. This should be reflected across many aspects, including salaries, benefits, but also on-the-job training. The acquired capabilities and the teams are the most important assets of a company, so they must be protected at all costs.
 
 ## Roles
 
-Apart from product developers (of all sorts, backgrounds, calibre, specialty, etc.), the only possible roles are:
+Apart from product developers (of all sorts, backgrounds, calibre, specialty, etc.), the only other roles are:
 
-1. Cross-functional lead (CFL): responsible to coordinate and shepherd a tribe. People with different skills, seniority, or expertise align to the cross-functional lead of the tribe they're in. A cross-functional lead e.g., "Cross-Functional Lead, Savings", can come from any background, even if experience in software development and product management are both heavily recommended. CFLs choose the product goals the teams commit to try and achieve.
-2. Function lead (FL): responsible to coordinate work and initiatives within their function. People within that function liaise with the function lead, but are aligned to the cross-functional lead of the tribe they're in. A function lead should be a very senior member of their function. As an example, a "Function Lead, Legal" role should be a very senior corporate solicitor; legal experts in the various tribes all align to their tribe's CFL, but liaise with the Legal FL as well. FLs choose the technical goals the teams commit to try and achieve. 
-3. Managers: coordinators and shepherds of processes, and work at inner levels in the outside-in organization. Nobody manages people, only processes. Specifically, managers coordinate the continuous improvement of the processes they focus on, liaising with CFLs, FLs, and product developers. A manager should be intimate with the way the work their process aims at improving works. As an example, a software development manager should be intimate with how software development works. This typically means they must have a strong background in software development.
-4. Founders or CEO: responsible to protect the system of work, and to come up with and continuously repeat the vision and the mission, so everybody is aligned.
+1. Cross-Functional Leads (CFLs): responsible to coordinate and shepherd a tribe. People with different skills, seniority, or expertise align to the cross-functional lead of the tribe they're in. A cross-functional lead e.g., "Cross-Functional Lead, Savings", can come from any background, even if experience in software development and product management are both heavily recommended. CFLs propose the product goals the company prioritizes.
+2. Function Leads (FLs): responsible to coordinate work and initiatives within their function. People within that function liaise with the function lead, but are aligned to the cross-functional lead of the tribe they're in. A function lead should be a very senior member of their function. As an example, the "Function Lead, Legal" should be a very senior corporate solicitor. Using the same example, legal experts in the various tribes would all align to their tribe's CFL, but liaise with the Legal FL as well. FLs propose the technical goals the company prioritizes. 
+3. Managers: coordinators and shepherds of processes. Nobody manages people, only processes. Specifically, managers coordinate the continuous improvement of the processes they focus on, liaising with CFLs, FLs, and product developers. A manager should be intimate with the way the work their process aims at improving works. As an example, a software development manager should be intimate with how software development works, meaning that, in this example, that manager would have to have a strong background in software development.
+4. Founders or CEO: responsible to protect the system of work, and to come up with and continuously repeat the vision and the mission, so that everybody aligns.
 
-It's important to stress again the fact that nobody is managed by anybody. Formally, every employee reports to the CEO. CFLs, FLs, and managers coordinate the work of those teams closest to the customers, but this is nothing more than coordination. Managers are not subordinated to CFLs or FLs, it's just a different focus. So thinking about CFLs and FLs as directors, under the executives, and above management is incorrect here.
+It's important to stress again the fact that nobody is managed by anybody. If required, every employee formally reports to the CEO. CFLs, FLs, and managers coordinate the work of those teams closest to the customers, but this is nothing more than coordination. Managers are not subordinated to CFLs or FLs, it's just a different focus. So thinking about CFLs and FLs as directors, under the executives, and above management is incorrect here.
 
-## One-way decisions must be reviewed and can be vetoed
+## One-way door decisions are reviewed and can be vetoed
 
-For two-way decisions, those who can easily be reverted, there's no need to seek validation outside a team.
+Most decision can be easily reverted. These 2-way door decisions are made autonomously by the teams.
 
-Some decisions, though, are one-way, meaning there's no easy way to undo them, and the consequences might be significant. For these decisions, the teams must present their reasoning and conclusions to the cross-functional lead involved, and the relevant the function leads. During this presentation, the CFL and the FLs can veto the decision made by the team, explaining why they disagree and what negative consequences the company would risk. The team can disagree and escalate this to founders and/or the CEO.
+Some decisions, though, are more like one-way doors, meaning there's no easy way to revert them, and their consequences can be significant. The teams must present their reasoning and conclusions to people in an inner circle, whenever they make a one-way door decision. The reviewers can veto the decision, explaining their reasoning, but cannot force a decision. The review board includes the relevant cross-functional lead and function leads.
 
-In any case, CFLs, FLs, founders, and CEO shouldn't make a decision themselves, but let the team come up with an alternative decision, to be reviewed once again.
+If a team disagrees with the review board, they can escalate this further to the founders and/or the CEO.
 
-There are many kinds of one-way decisions, and the teams need to receive coaching to identify them correctly. Firing people is a great example of something that it's always one-way, and must thus be presented to a CFL and the relevant FLs before a team can move forward.
+In any case, whenever a decision is vetoed, the team must make a different decision, and repeat the process. CFLs, FLs, founders, and CEO shouldn't make the decision themselves.
+
+There are many kinds of one-way door decisions, and the teams need to be trained to identify them correctly. Firing people is a great example of something that is always a one-way door, and must thus be presented for review before a team can move forward.
 
 ## Transparency and access to information
 
