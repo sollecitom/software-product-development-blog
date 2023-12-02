@@ -14,7 +14,11 @@ Far too often, what companies have in mind is:
 
 A lapdog, ready to comply with anything the company throws at them, content with scraps, making no fuss, and posing no threat. Sit down, roll over, good boy, have a biscuit.
 
-TODO
+So why are companies keen on lapdogs? Who would want to hire a mediocre, boring, flat pushover? It usually means that the hiring manager is also a lapdog, or a leech.
+
+A leech? Why are we talking about animals now? It turns out that the employees in a company can be categorized as wolves, lapdogs, and leeches. As it always goes with models, these are approximations useful to understand certain aspects, but that's the limit of their applicability.
+
+TODO wolves, leeches, and lapdogs
 
 - leeches love mediocrity
 - having them work on their own, not as teams (better control)
