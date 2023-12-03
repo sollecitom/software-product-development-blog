@@ -72,6 +72,9 @@ TODO (scope)
 - JSON (camelCase vs snake_case vs kebab-case)
 - Server-pushed notifications across channels (MQTT vs websockets, vs commercial)
 - Asynchronous request-reply to serve synchronous requests (with NATS)
+- Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
+- Accessibility (regression testing using Wave, Axe, and Pa11y, https://opensource.com/article/23/2/automated-accessibility-testing)
+- TODO
 
 TODOs
 - Change the lousy title
