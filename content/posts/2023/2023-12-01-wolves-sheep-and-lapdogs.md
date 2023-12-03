@@ -16,7 +16,10 @@ A lapdog, ready to comply with anything the company throws at them, content with
 
 So why are companies keen on lapdogs? Who would want to hire a mediocre, boring, flat pushover? It usually means that the hiring manager is also a lapdog, or a leech.
 
-A leech? Why are we talking about animals now? It turns out that the employees in a company can be categorized as wolves, lapdogs, and leeches. As it always goes with models, these are approximations useful to understand certain aspects, but that's the limit of their applicability.
+A leech? Why are we talking about animals now? It turns out that the employees in a company can be categorized as wolves, lapdogs, and leeches. 
+
+Also, while the names might sound harsh, these are just models, and people aren't born one way or another. People choose to behave one way or another, and they can change, even if this happens rarely. As it always goes with models, these are approximations useful to understand certain aspects, but that's the limit of their applicability.
+
 
 TODO wolves, leeches, and lapdogs
 
