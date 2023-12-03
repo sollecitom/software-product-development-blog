@@ -47,7 +47,7 @@ TODO (scope)
 - Tenancy model (with nestable containers)
 - 1 environment: production (internal tenants vs external tenants)
 - Cloud provider (GCP vs AWS vs Azure, vs more than 1 active-passive, vs more than 1 active-active)
-- Regions: 1 vs active-passive vs active-active
+- Regions and AZs: 1 vs active-passive vs active-active, 3 AZs
 - Build reports and alerts
 - Auto-update of dependency versions (scheduled, with testing, etc.)
 - Architecture (orchestration vs choreography, state snapshot vs stored state as the source of truth)
