@@ -70,9 +70,19 @@ Wolves dislike and have no respect for lapdogs, but they don't usually actively 
 
 ## Wolves -> Leeches
 
-Wolves hate leeches, but they don't go out of their way to initiate conflict with them. They clash in the same cases they clash with lapdogs, but the skirmishes are much more intense, and get triggered quicker.
+Wolves hate leeches, but they don't go out of their way to initiate conflict with them.
 
+They clash in the same cases they clash with lapdogs, but the skirmishes are much more intense, and get triggered quicker.
 
+## Lapdogs -> Lapdogs
+
+Lapdogs live well with other lapdogs, even if they mildly compete among them for scraps and attention. In any case, it's a silent squabble, as lapdogs dread the anger of their masters.
+
+Even when they band together, lapdogs don't tend to form strong bonds among themselves. Groups of lapdogs are usually quiet, with everybody grinding in isolation. Their passions tend to live outside of work, so they mostly discuss about politics, football, etc.
+
+## Lapdogs -> Wolves
+
+Lapdogs are afraid of wolves --- TODO
 
 -- TODO as managers
 
