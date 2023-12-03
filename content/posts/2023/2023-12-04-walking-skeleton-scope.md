@@ -93,6 +93,7 @@ TODO (scope)
 - Data tweaks (compression, dynamic resizing of images, CDNs)
 - Object storage (pre-signed upload and download links, quarantine buckets, hash-based duplication checks if the size matches, PII handling with either tagging and deleting or template + encrypted data, etc.)
 - Semantic instrumentation (what, how, why a user is doing things)
+- TODO
 
 TODOs
 - Change the lousy title
