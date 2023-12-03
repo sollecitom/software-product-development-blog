@@ -41,7 +41,7 @@ TODO (scope)
 - API style (REST vs RPC vs GraphQL)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
 - Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
-- Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks)
+- Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks, front-end, back-end, mobile)
 - Alerts (external ping, unavailability, sagas with timeouts, disk space, etc.)
 - Consumption-based billing + base tier
 - Tenancy model (with nestable containers)
@@ -87,7 +87,9 @@ TODO (scope)
 - Build tool (Gradle, vs Maven, vs others)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
 - Restarting message consumers with the same local cluster ID
-- TODO
+- Packaging (OCI images vs native images e.g., Graal or kotlin native, image repositories)
+- Runtime optimizations (garbage collector and options, memory, etc.)
+- Data migrations (as part of releases, framework, before the new instances come up, during the release, after the old instances are gone, using sidecars)
 
 TODOs
 - Change the lousy title
