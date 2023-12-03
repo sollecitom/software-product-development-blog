@@ -90,6 +90,9 @@ TODO (scope)
 - Packaging (OCI images vs native images e.g., Graal or kotlin native, image repositories)
 - Runtime optimizations (garbage collector and options, memory, etc.)
 - Data migrations (as part of releases, framework, before the new instances come up, during the release, after the old instances are gone, using sidecars)
+- Data tweaks (compression, dynamic resizing of images, CDNs)
+- Object storage (pre-signed upload and download links, quarantine buckets, hash-based duplication checks if the size matches, PII handling with either tagging and deleting or template + encrypted data, etc.)
+- TODO
 
 TODOs
 - Change the lousy title
