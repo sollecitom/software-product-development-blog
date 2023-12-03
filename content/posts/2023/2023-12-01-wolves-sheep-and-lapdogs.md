@@ -14,12 +14,15 @@ Far too often, what companies have in mind is:
 
 A lapdog, ready to comply with anything the company throws at them, content with scraps, making no fuss, and posing no threat. Sit down, roll over, good boy, have a biscuit.
 
-So why are companies keen on lapdogs? Who would want to hire a mediocre, boring, flat pushover? It usually means that the hiring manager is also a lapdog, or a leech.
+So why are companies keen on lapdogs? Who would want to hire a mediocre, boring, flat pushover? It usually means that the hiring manager is also a lapdog, or a leech, rather than a wolf.
 
-A leech? Why are we talking about animals now? It turns out that the employees in a company can be categorized as wolves, lapdogs, and leeches. 
+Why are we talking about animals now? It turns out that the employees in a company are either wolves, lapdogs, or leeches. 
 
-Also, while the names might sound harsh, these are just models, and people aren't born one way or another. People choose to behave one way or another, and they can change, even if this happens rarely. As it always goes with models, these are approximations useful to understand certain aspects, but that's the limit of their applicability.
+> Note: While the names might sound harsh, these are just models. Also, People aren't born one way or another, but choose how to behave, and this can change, even if this happens rarely. As it always goes with models, these are approximations useful to understand certain aspects, but that's the limit of their applicability.
 
+# The three archetypes
+
+## Wolves
 
 TODO wolves, leeches, and lapdogs
 
