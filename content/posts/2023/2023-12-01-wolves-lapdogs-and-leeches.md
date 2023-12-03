@@ -78,12 +78,55 @@ They clash in the same cases they clash with lapdogs, but the skirmishes are muc
 
 Lapdogs live well with other lapdogs, even if they mildly compete among them for scraps and attention. In any case, it's a silent squabble, as lapdogs dread the anger of their masters.
 
-Even when they band together, lapdogs don't tend to form strong bonds among themselves. Groups of lapdogs are usually quiet, with everybody grinding in isolation. Their passions tend to live outside of work, so they mostly discuss about politics, football, etc.
+Even when they band together, lapdogs don't tend to form strong bonds among themselves. Groups of lapdogs are usually quiet, with everybody grinding in isolation. Their passions tend to live outside of work, so they mostly discuss politics, football, etc.
 
 ## Lapdogs -> Wolves
 
-Lapdogs are afraid of wolves --- TODO (pretending to be a wolf to feel okay with themselves, a sheep in wolf's clothes)
+Lapdogs are afraid of wolves, as they fear their incompetence will be either called out explicitly, or exposed by the staggering difference of results the wolves produce. 
 
+A typical defense tactic is to claim that the wolves do better because they break the sacred rules they religiously follow. Another frequent one is carving an area exclusively for themselves, so that they can claim special circumstances apply there. Every approach that works can easily be dismissed on the basis that it might work elsewhere, but that it could never work in their domain.
+
+Lapdogs secretly hate their job and envy wolves, their freedom, their competence, and their team dynamics. Wolves are everything they wish they were, and they spend a lot of time trying to convince themselves they are indeed wolves.
+
+## Lapdogs -> Leeches
+
+Lapdogs readily recognize leeches as their natural masters. They're eager to please, in exchange for scraps and a pat on the head. The implicit agreement is that lapdogs will do whatever leeches tell them to, in exchange for the promise of a quiet and comfortable life.
+
+They dread a clash with anyone with power, so they wag their tail and do whatever they're told, even when it affects them and their peers negatively. In these cases, lapdogs will go as far as sacrificing other lapdogs to the leech, typically to shield them from blame or embarrassment.
+
+## Leeches -> Lapdogs
+
+Leeches love lapdogs, as they allow them to hide their incompetence and schemes, and pose no threat whatsoever. All leeches have to do is play nice, with the occasional cruel demonstration of power, and lapdogs will enlist to their own private army.
+
+## Leeches -> Wolves
+
+Leeches hate wolves and will actively try to get rid of them, as they pose a threat. Leeches will try everything: foster disagreement within a team, badmouth the team, try to claim their credit, try to blame them for their own failures, etc.
+
+Leeches secretly envy wolves, just like lapdogs do. But unlike lapdogs, leeches know well the game they play.
+
+## Leeches -> Leeches
+
+Leeches behave with other leeches based on the difference in power wielded. A leech will actively serve another if they have no chance to prevail yet. But they'll try to gain enough power to eventually backstab their master.
+
+A more established leech will gladly work with less powerful leeches, as long as they're not a threat yet, because they can use them to advance their own agendas, just like they use lapdogs. The tradeoff is that lapdogs are safer, while other leeches are more useful.
+
+## Wolves as executives/directors/managers 
+
+A wolf in a position of power is usually a great force multiplier. They rally people with their vision and passion, get rid of lapdogs and leeches, and push everybody to give it all and accomplish amazing things.
+
+They're often tremendous, both intimidating and inspiring, and are usually hands-on, because they're still motivated by having fun while solving hard problems with other great people.
+
+## Lapdogs as executives/directors/managers
+
+A lapdog in a position of power is usually a lackey put there to keep things quiet. They tend to pretend they're something they're not, a sheep in wolf's clothing, but they know nobody respects them.
+
+Sometimes their insecurity and fear of being called out is so crippling that they end up behaving like babies, pushing arbitrary rules and initiatives on people, to try and demonstrate to themselves that they actually matter.
+
+## Leeches as executives/directors/managers
+
+A leech in a position of power is a calamity, even if it's unfortunately quite common. -- TODO
+
+## Leeches as executives/directors/managers
 -- TODO as managers
 
 # What companies should aim for
@@ -101,3 +144,6 @@ TODO wolves, leeches, and lapdogs
 - Wolves hate lapdogs
 - Lapdogs get hired by other lapdogs, or by sheep that play politics
 - Sheep fear wolves the most
+- Lapdogs and leeches love bureaucracy
+- The typical game is a leech initiating something, giving it to a lapdog to champion, and then either claiming the credit or giving the blame.
+- Since lapdogs are attracted to the competent and the powerful, leeches easily win them over, since wolves shun them. 
