@@ -80,6 +80,14 @@ TODO (scope)
 - Client-side SDK (yes vs no, domain-driven style vs service style, test extensions, whether to give it to customers)
 - CORS
 - Monitoring (CPU, memory, open connections, etc.)
+- Product instrumentation and attribution (Amplitude for both, vs Amplitude/Pendo/many for instrumentation and Split for attribution, vs home-made)
+- Front-end modularity (components, micro-frontends)
+- Code storage (monorepo vs multiple repositories, for what)
+- Build pipelines (GitOps e.g., GitHub actions vs build server e.g., TeamCity or Concourse, which handle cascading builds well, signing builds, knowing which version is in production)
+- Build tool (Gradle, vs Maven, vs others)
+- Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
+- Restarting message consumers with the same local cluster ID
+- TODO
 
 TODOs
 - Change the lousy title
