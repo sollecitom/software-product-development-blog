@@ -1,0 +1,65 @@
+---
+title: "Walking skeleton, what is it about?"
+categories: [ "software-development" ]
+tags: [ "system-thinking", "architecture", "effectiveness", "startups", "platform-engineering" ]
+date: 2023-12-04T05:00:00
+draft: true
+---
+
+TODO
+- What is a walking skeleton
+- Why it matters
+  - You create a system that works, but does nothing, and then add behavior to it
+  - The parts are interdependent, so you need to build them together, not one by one
+- What happens if you don't do this?
+  - Most companies experience a sharp increase in the cost of change, as they progress, which is often fatal
+- When should you do it?
+  - Either in the beginning, if you can, or after finding PMF, when you re-write
+- Scope
+  - (plenty)
+
+TODO (scope)
+- Tracing (correlation, who, when, how, where from)
+- Features and product modules (representation in the code, who has enabled what, how do you know)
+- Authentication
+- Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation)
+- Circuit breakers and bulk-heads (if needed)
+- Test strategy (contract, integration, service tests, smoke tests)
+- Performance tests
+- Security build scanning (secret leakage prevention, etc.)
+- Configuration management (environment, files, properties, config maps, rotation, etc.)
+- Thread pools (connections to databases, etc.)
+- Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
+- Messaging (authorization, ACLs, auto-scaling, partitioning, etc.)
+- Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
+- Event propagation (Pulsar)
+- Event storage (Pulsar vs EventStore vs Postgres)
+- CQRS
+- Auditability
+  - Commands and queries as events
+- API style (REST vs RPC vs GraphQL)
+- Auto-scaling (CPU-based for endpoints, queue-based for event processors)
+- Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
+- Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks)
+- Alerts (external ping, unavailability, sagas with timeouts)
+- Consumption-based billing + base tier
+- Tenancy model (with nestable containers)
+- 1 environment: production (internal tenants vs external tenants)
+- Cloud provider (GCP vs AWS vs Azure, vs more than 1 active-passive, vs more than 1 active-active)
+- Regions: 1 vs active-passive vs active-active
+- Build reports and alerts
+- Auto-update of dependency versions (scheduled, with testing, etc.)
+- Architecture (orchestration vs choreography, state snapshot vs stored state as the source of truth)
+- Configuration drift management
+- Zero-trust security
+- Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
+- GDPR and PII data handling (per-end-user symmetric encryption keys, with the data encrypted as part of the events)
+- Integration events (company-wide schemata and registry of topics)
+- Data engineering (OLAP database, pipeline, etc.)
+- Local scripts (1 command to do an operation e.g., build and test, so that you don't need to know the right commands)
+- Idempotency (throughout, with 3rd-party providers, etc.)
+- ID generation (ULIDs, TSIDs, partitioned, etc.)
+
+TODOs
+- Change the lousy title
+- Find an image if you can
