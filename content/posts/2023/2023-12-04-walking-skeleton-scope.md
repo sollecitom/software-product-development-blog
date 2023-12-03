@@ -22,7 +22,8 @@ TODO (scope)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
 - Authentication
-- Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation)
+- Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation, OPA)
+- Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
 - Circuit breakers and bulk-heads (if needed)
 - Test strategy (contract, integration, service tests, smoke tests)
 - Performance tests
@@ -30,10 +31,10 @@ TODO (scope)
 - Configuration management (environment, files, properties, config maps, rotation, etc.)
 - Thread pools (connections to databases, etc.)
 - Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
-- Messaging (authorization, ACLs, auto-scaling, partitioning, etc.)
+- Messaging (authorization, ACLs, custom authorizer with OPA, auto-scaling, partitioning, etc.)
 - Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
 - Event propagation (Pulsar)
-- Event storage (Pulsar vs EventStore vs Postgres)
+- Event storage (Pulsar with Tier Storage vs EventStore vs Postgres)
 - CQRS
 - Auditability
   - Commands and queries as events
@@ -41,7 +42,7 @@ TODO (scope)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
 - Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
 - Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks)
-- Alerts (external ping, unavailability, sagas with timeouts)
+- Alerts (external ping, unavailability, sagas with timeouts, disk space, etc.)
 - Consumption-based billing + base tier
 - Tenancy model (with nestable containers)
 - 1 environment: production (internal tenants vs external tenants)
@@ -52,6 +53,8 @@ TODO (scope)
 - Architecture (orchestration vs choreography, state snapshot vs stored state as the source of truth)
 - Configuration drift management
 - Zero-trust security
+- Querying events manually (authorization, auditability, etc.)
+- Back-office (tenant management, enabling features and modules, event-driven)
 - Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
 - GDPR and PII data handling (per-end-user symmetric encryption keys, with the data encrypted as part of the events)
 - Integration events (company-wide schemata and registry of topics)
