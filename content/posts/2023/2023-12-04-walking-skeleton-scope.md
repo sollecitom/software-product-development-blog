@@ -21,7 +21,7 @@ TODO
 TODO (scope)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
-- Authentication
+- Authentication (login challenge, SSO, IDP federation, allowing or disallowing email aliases, etc.)
 - Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation, OPA)
 - Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
 - Circuit breakers and bulk-heads (if needed)
@@ -65,6 +65,13 @@ TODO (scope)
 - Currency (how to model, what to do, based on fundamental units)
 - Certificates management (rotation, issuing, certificate authorities, injection, etc.)
 - ID generation (ULIDs, TSIDs, partitioned, etc.)
+- Data segregation and replication (by tenant, across geographies for data residency regulations)
+- Encryption (symmetric AES and SHA-256/SHA-512 for hashing, BouncyCastle, runtime algorithm choice vs static, FIPS vs non-FIPS, post-quantum e.g., Dilithium and Kyber)
+- Password storage (salting, peppering, algorithm (not SHA) but Argon2)
+- Personal Access Tokens and API Keys generation (Argon2 algorithm, encoded client-side session ID, encoded from and to instants)
+- JSON (camelCase vs snake_case vs kebab-case)
+- Server-pushed notifications across channels (MQTT vs websockets, vs commercial)
+- Asynchronous request-reply to serve synchronous requests (with NATS)
 
 TODOs
 - Change the lousy title
