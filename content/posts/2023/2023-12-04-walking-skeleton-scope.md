@@ -42,7 +42,7 @@ TODO (scope)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
 - Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
 - Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks, front-end, back-end, mobile)
-- Alerts (external ping, unavailability, sagas with timeouts, disk space, etc.)
+- Alerts (external ping, unavailability, sagas with timeouts, disk space, brute-force login attempts, etc.)
 - Consumption-based billing + base tier
 - Tenancy model (with nestable containers)
 - 1 environment: production (internal tenants vs external tenants)
