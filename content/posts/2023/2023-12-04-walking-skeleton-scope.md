@@ -51,7 +51,7 @@ TODO (scope)
 - Build reports and alerts
 - Auto-update of dependency versions (scheduled, with testing, etc.)
 - Architecture (orchestration vs choreography, state snapshot vs stored state as the source of truth)
-- Configuration drift management
+- Infrastructure as code (Pulumi vs Terraform, configuration drift management)
 - Zero-trust security
 - Querying events manually (authorization, auditability, etc.)
 - Back-office (tenant management, enabling features and modules, event-driven)
@@ -61,6 +61,9 @@ TODO (scope)
 - Data engineering (OLAP database, pipeline, etc.)
 - Local scripts (1 command to do an operation e.g., build and test, so that you don't need to know the right commands)
 - Idempotency (throughout, with 3rd-party providers, etc.)
+- Shared libraries (yes vs no, versioning, monorepo vs separate libraries, what for)
+- Currency (how to model, what to do, based on fundamental units)
+- Certificates management (rotation, issuing, certificate authorities, injection, etc.)
 - ID generation (ULIDs, TSIDs, partitioned, etc.)
 
 TODOs
