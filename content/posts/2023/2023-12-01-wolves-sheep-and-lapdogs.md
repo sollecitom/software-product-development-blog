@@ -24,6 +24,24 @@ Why are we talking about animals now? It turns out that the employees in a compa
 
 ## Wolves
 
+TODO
+
+## Lapdogs
+
+TODO
+
+## Leeches
+
+TODO
+
+# The dynamics between the three archetypes
+
+TODO
+
+# What companies should aim for
+
+TODO
+
 TODO wolves, leeches, and lapdogs
 
 - leeches love mediocrity
