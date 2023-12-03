@@ -1,5 +1,5 @@
 ---
-title: "Wolves, sheep, and leeches: how institutionalized mediocrity sucks the soul out of companies"
+title: "Wolves, lapdogs, and leeches: how institutionalized mediocrity and politics suck the soul out of companies"
 categories: [ "system-thinking" ]
 tags: [ "people", "management", "startups", "leadership", "process" ]
 date: 2023-12-01T05:00:00
@@ -82,7 +82,7 @@ Even when they band together, lapdogs don't tend to form strong bonds among them
 
 ## Lapdogs -> Wolves
 
-Lapdogs are afraid of wolves --- TODO
+Lapdogs are afraid of wolves --- TODO (pretending to be a wolf to feel okay with themselves, a sheep in wolf's clothes)
 
 -- TODO as managers
 
