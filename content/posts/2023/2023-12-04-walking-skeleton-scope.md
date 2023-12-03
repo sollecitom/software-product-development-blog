@@ -26,7 +26,7 @@ TODO (scope)
 - Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
 - Circuit breakers and bulk-heads (if needed)
 - Test strategy (contract, integration, service tests, smoke tests)
-- Performance tests
+- Performance tests (stress tests, soak tests, etc.) and resilience tests (chaos testing)
 - Security build scanning (secret leakage prevention, etc.)
 - Configuration management (environment, files, properties, config maps, rotation, etc.)
 - Thread pools (connections to databases, etc.)
@@ -74,7 +74,12 @@ TODO (scope)
 - Asynchronous request-reply to serve synchronous requests (with NATS)
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Accessibility (regression testing using Wave, Axe, and Pa11y, https://opensource.com/article/23/2/automated-accessibility-testing)
-- TODO
+- In-app announcements (changelog, marketing communications, etc.)
+- In-app audit log (what users did, when, how, where from, etc.)
+- History of changes for each entity (e.g., for projects, etc.)
+- Client-side SDK (yes vs no, domain-driven style vs service style, test extensions, whether to give it to customers)
+- CORS
+- Monitoring (CPU, memory, open connections, etc.)
 
 TODOs
 - Change the lousy title
