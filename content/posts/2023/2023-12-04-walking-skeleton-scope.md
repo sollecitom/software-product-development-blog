@@ -6,11 +6,19 @@ date: 2023-12-04T05:00:00
 draft: true
 ---
 
+A walking skeleton is a basic set of code that acts as a “starter pack” for the development team. It's a lightweight application framework without any product-specific functionality, but that is still runnable and can exemplify the fundamental architectural patterns.
+
+In a nutshell, you create a well-planned system that works, but that does nothing relevant, and then you add your product-specific behavior to it. Starting your software system from a walking skeleton offers several benefits:
+
+1. As the various parts and aspects are inter-dependent, designing them together improves the quality of the overall system. Trying to add system-wide aspects later on is always much harder.
+2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system to a different complete system. This is much safer and faster, de-risking your progress.
+3. You can put automated tests in place, to avoid new functionality breaking desired system-wide properties e.g., idempotency. 
+
+
+
+
+
 TODO
-- What is a walking skeleton
-- Why it matters
-  - You create a system that works, but does nothing, and then add behavior to it
-  - The parts are interdependent, so you need to build them together, not one by one
 - What happens if you don't do this?
   - Most companies experience a sharp increase in the cost of change, as they progress, which is often fatal
 - When should you do it?
