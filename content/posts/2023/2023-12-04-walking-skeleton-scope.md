@@ -105,6 +105,7 @@ TODO (scope)
 - Ephemeral environments (to test large-scale infrastructure changes, or for performance-intensive changes)
 - Test tenants, test users, test email server
 - Local testing
+- Product requirements and user entitlements (T&C, user properties, proof of address, etc.)
 
 TODOs
 - Change the lousy title
