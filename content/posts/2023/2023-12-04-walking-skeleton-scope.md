@@ -21,7 +21,7 @@ TODO
 TODO (scope)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
-- Authentication (login challenge, SSO, IDP federation, allowing or disallowing email aliases, etc.)
+- Authentication (login challenge, SSO, IDP federation, allowing or disallowing email aliases, login and logout events, etc.)
 - Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation, OPA)
 - Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
 - Circuit breakers and bulk-heads (if needed)
@@ -93,7 +93,9 @@ TODO (scope)
 - Data tweaks (compression, dynamic resizing of images, CDNs)
 - Object storage (pre-signed upload and download links, quarantine buckets, hash-based duplication checks if the size matches, PII handling with either tagging and deleting or template + encrypted data, etc.)
 - Semantic instrumentation (what, how, why a user is doing things)
-- TODO
+- Ephemeral environments (to test large-scale infrastructure changes, or for performance-intensive changes)
+- Test tenants, test users, test email server
+- Local testing
 
 TODOs
 - Change the lousy title
