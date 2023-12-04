@@ -14,15 +14,16 @@ In a nutshell, you create a well-planned system that works, but that does nothin
 2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system to a different complete system. This is much safer and faster, de-risking your progress.
 3. You can put automated tests in place, to avoid new functionality breaking desired system-wide properties e.g., idempotency. 
 
+What happens if a company doesn't do this? Well, the problem is that the company will still need to design and build the aspects a walking skeleton covers. This is much harder once you have customers using your products, and as you build new features. Also, you wouldn't get the chance to design the system end-to-end, meaning you likely won't achieve the same levels of effectiveness.
 
+Most companies experience a steady increase in the cost of changing their systems, until things start becoming unfeasible 12 to 18 months in. At that point, the cost of addressing these issues is incredibly high, so it's often either rebuilding from scratch or slow death. Rolling rewrites work very rarely, because the new subsystems don't fit with the old ones. 
 
+What's the best time to build a walking skeleton? It depends on the company. If the company is cash rich, perhaps a new venture within an established and profitable business, you'll want to do that early on, while you carry over market research. On the other hand, if you're bootstrapped, you won't have the runway to complete a walking skeleton before you start building your product, so prioritize your product initiatives in this case. After finding Product-Market Fit, take the time to rebuild your systems, from a walking skeleton. Don't skip this phase! It's tempting, but it often leads to ruin.
 
+# Scope of a walking skeleton
 
-TODO
-- What happens if you don't do this?
-  - Most companies experience a sharp increase in the cost of change, as they progress, which is often fatal
-- When should you do it?
-  - Either in the beginning, if you can, or after finding PMF, when you re-write
+Let's have a look at the scope of a walking skeleton. All these aspects should be addressed, in a way where they all work together. With a competent team of senior people, you can build a walking skeleton in 4 to 6 months, for most projects. Small-scale projects won't likely require this at all, or you can focus only on some aspects. 
+
 - Scope
   - (plenty)
 
