@@ -53,6 +53,7 @@ TODO (scope)
 - Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks, front-end, back-end, mobile)
 - Alerts (external ping, unavailability, sagas with timeouts, disk space, brute-force login attempts, etc.)
 - Consumption-based billing + base tier
+- Logs collection and searching
 - Tenancy model (with nestable containers)
 - 1 environment: production (internal tenants vs external tenants)
 - Cloud provider (GCP vs AWS vs Azure, vs more than 1 active-passive, vs more than 1 active-active)
