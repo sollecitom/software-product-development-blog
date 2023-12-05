@@ -63,8 +63,18 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 - On the front-end, you should retrieve the roles and the containing scopes from the user's token, then look up the policies and permissions granted by those roles, from a dedicated endpoint.
 - I recommend using a standard way of defining and querying authorization permissions and policies, with Open Policy Agent (OPA) being an excellent choice.
 
+## Tenancy model
+
+- This is mostly a B2B concern.
+- Your users will belong to different tenants. Also, a tenant will likely be too big to map to a single namespace.
+- You should allow your tenants to define more granular groups of users.
+- You could choose to model these groups as projects, spaces, teams, or organizations.
+- My advice is to avoid choosing one model, and allow arbitrarily nestable containers, like folders. This way, a tenant can model their own organizational structures within your product, and put users and resources within these.
+- It's important that belonging to a container cascade down their hierarchy. So if a tenant creates a Global folder, US and EU folders underneath it, and a France folder underneath EU, anything within France will also need to be within the EU and the Global folders. 
+- These nestable containers will be used as containing scopes for authorization (see above). So if a user has the Project-Accessor role within the France scope, they'll see projects in France, but a different user with the same role in a different scope won't.
+- These groupings will also be useful with billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.  
+
 TODO (scope)
-- Tenancy model (company, projects, etc.)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
 - Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
