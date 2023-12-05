@@ -30,7 +30,8 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 - For the non-SSO option, you'll need MFA, email verification, password storage (Argon2 hashing or similar), and password reset.
 - You need to know when a user logs in the first time, when they log out, etc.
 - You should decide whether to accept email aliases e.g., somebody+something@gmail.com.
-- You should pick between delegated or mapped identity, for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity in the external IDP in your own IDP. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP. 
+- You should pick between delegated or mapped identity, for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity in the external IDP in your own IDP. My advice here is to always map. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP.
+- You'll also want to support Personal Access Tokens (for user accounts) and API keys (for service accounts), because orchestrated authentication workflows don't work well with scripting. 
 - You'll almost always want to either host an open-source solution like Keycloak, or to go with a managed service like Okta.
 
 ## Token management
@@ -38,6 +39,7 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 - You'll need to issue, rotate, and verify tokens, as part of your authentication workflow.
 - Certificate management (below) is a prerequisite for this. You could choose to have a single certificate (with rotation), or different certificates across different tenants (if B2B, based on subdomains) or geographies.
 - You should include a unique client-side session ID in your tokens, along with the token's validity start and end timestamps.
+- The authorization roles and containing scopes (below) should also be included in the token.
 - The duration of a token should be a maximum of 30m to 1 hour.
 - You also need to choose an algorithm, ideally EdDSA, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
 - In terms of token structure, JWTs are a safe bet.
@@ -53,12 +55,18 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 
 ## Authorization
 
-TODO
+- You need a way to model rules about authorization.
+- You also need a way to query this, both on the front-end (to hide or gray out things the user cannot perform) and on the back-end (to enforce authorization rules).
+- Authorization should be checked and enforced once per invocation. If the grants for a user change, in-flight invocations should complete with the grants they had at the beginning of their processing.
+- My advice is to model resources (the things your product allows to interact with), actions (what you can do with a resource), and container scopes (nestable groupings of resources).
+- I also advise defining policies as sets of action-resource permissions, and creating roles that are associated with bundles of policies. A user then has multiple roles, each associated with a containing scope (think about these as projects, spaces, or folders). So when a user is in a given context, it has certain roles active in that context, and inherits some permissions through the policies associated with those roles, as a result.
+- On the front-end, you should retrieve the roles and the containing scopes from the user's token, then look up the policies and permissions granted by those roles, from a dedicated endpoint.
+- I recommend using a standard way of defining and querying authorization permissions and policies, with Open Policy Agent (OPA) being an excellent choice.
 
 TODO (scope)
+- Tenancy model (company, projects, etc.)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
-- Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation, OPA)
 - Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
 - Circuit breakers and bulk-heads (if needed)
 - Test strategy (contract, integration, service tests, smoke tests)
