@@ -32,6 +32,15 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 - You should decide whether to accept email aliases e.g., somebody+something@gmail.com.
 - You'll almost always want to either host an open-source solution like Keycloak, or to go with a managed service like Okta.
 
+## Token management
+
+- You'll need to issue, rotate, and verify tokens, as part of your authentication workflow.
+- Certificate management (below) is a prerequisite for this. You could choose to have a single certificate (with rotation), or different certificates across different tenants (if B2B, based on subdomains) or geographies.
+- You should include a unique client-side session ID in your tokens, along with the token's validity start and end timestamps.
+- The duration of a token should be a maximum of 30m to 1 hour.
+- You also need to choose an algorithm, ideally EdDSA, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
+- In terms of token structure, JWTs are a safe bet.
+
 TODO (scope)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
