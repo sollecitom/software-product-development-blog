@@ -30,6 +30,7 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 - For the non-SSO option, you'll need MFA, email verification, password storage (Argon2 hashing or similar), and password reset.
 - You need to know when a user logs in the first time, when they log out, etc.
 - You should decide whether to accept email aliases e.g., somebody+something@gmail.com.
+- You should pick between delegated or mapped identity, for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity in the external IDP in your own IDP. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP. 
 - You'll almost always want to either host an open-source solution like Keycloak, or to go with a managed service like Okta.
 
 ## Token management
