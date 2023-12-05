@@ -103,6 +103,7 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - This approach also allows to record all invocations, whether commands or queries, to provide full auditability.
 - As your system is fully asynchronous, message-based, and reactive, you can implement the async request-reply pattern to respond to queries synchronously.
 - My advice is to use NATS for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket.
+- About the messaging broker, Apache Pulsar and Apache Kafka are both good choices. I find Apache Pulsar superior overall, but Apache Kafka still has a larger community and more ready-made integrations. In any case, I recommend hosting these yourself, rather than using a managed service, for cost reasons. Apache Pulsar is way easier than Kafka to host, so yet another reason to prefer it.
 - Choose whether to leverage an API gateway, or to go without one.
 - My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing tracing information (below), CORS handling, and other similar operations.
 - I also recommend hosting an open-source or a commercial solution, rather than buying a service.
