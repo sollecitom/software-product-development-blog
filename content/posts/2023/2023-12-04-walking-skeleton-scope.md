@@ -41,6 +41,19 @@ Let's have a look at the scope of a walking skeleton. All these aspects should b
 - You also need to choose an algorithm, ideally EdDSA, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
 - In terms of token structure, JWTs are a safe bet.
 
+## Tenant isolation
+
+- This is mostly a B2B concern.
+- Tenants should be isolated from each other in terms of workflows.
+- The data for a tenant should be stored and encrypted separately from the data of other tenants.
+- Each tenant should be able to set up SSO with their own IDP, and to enable IP address range restrictions if they want.
+- To separate the entry-points (required for the above), you should consider creating a subdomain per tenant e.g., <tenant-name>.<your-root-domain>.com. This needs to happen automatically when you onboard a new tenant.
+- If you offer environments, you'll likely need infrastructure isolation, to prevent activity from a tenant to affect another tenant's workflows.
+
+## Authorization
+
+TODO
+
 TODO (scope)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
