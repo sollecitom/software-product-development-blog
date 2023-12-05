@@ -53,7 +53,8 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - The data for a tenant should be stored and encrypted separately from the data of other tenants.
 - Each tenant should be able to set up SSO with their own IDP, and to enable IP address range restrictions if they want.
 - To separate the entry-points (required for the above), you should consider creating a subdomain per tenant e.g., <tenant-name>.<your-root-domain>.com. This needs to happen automatically when you onboard a new tenant.
-- If you offer environments, you'll likely need infrastructure isolation, to prevent activity from a tenant to affect another tenant's workflows.
+- If you offer environments, you'll likely need infrastructure isolation to prevent activity from a tenant to affect another tenant's workflows.
+- You'll need to implement at least two tenants for each tenant type, as part of your walking skeleton.
 
 ## Authorization
 
@@ -74,13 +75,14 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - My advice is to avoid choosing one model, and allow arbitrarily nestable containers, like folders. This way, a tenant can model their own organizational structures within your product, and put users and resources within these.
 - It's important that belonging to a container cascade down their hierarchy. So if a tenant creates a Global folder, US and EU folders underneath it, and a France folder underneath EU, anything within France will also need to be within the EU and the Global folders. 
 - These nestable containers will be used as containing scopes for authorization (see above). So if a user has the Project-Accessor role within the France scope, they'll see projects in France, but a different user with the same role in a different scope won't.
-- These groupings will also be useful with billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.  
+- These groupings will also be useful with billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.
+- You'll need to model at least two branches of the organizational hierarchy for each tenant, and do that for at least two tenants, as part of your walking skeleton. 
+
+## Architecture
 
 TODO (scope)
 - API style (REST vs RPC vs GraphQL)
-- Features and product modules (representation in the code, who has enabled what, how do you know)
 - Tracing (correlation, who, when, how, where from)
-
 - Architecture (orchestration vs choreography, state snapshot vs stored state as the source of truth)
 - Server-pushed notifications across channels (MQTT vs websockets, vs commercial)
 - Asynchronous request-reply to serve synchronous requests (with NATS)
@@ -90,44 +92,41 @@ TODO (scope)
 - Auditability
   - Commands and queries as events
 - CQRS
-- Integration events (company-wide schemata and registry of topics)
-- Data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
-- Consumption-based billing + base tier
 - GDPR and PII data handling (per-end-user symmetric encryption keys, with the data encrypted as part of the events)
 
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
+- Features and product modules (representation in the code, who has enabled what, how do you know)
 - In-app announcements (changelog, marketing communications, etc.)
 - In-app audit log (what users did, when, how, where from, etc.)
-- Accessibility testing (regression testing using Wave, Axe, and Pa11y, https://opensource.com/article/23/2/automated-accessibility-testing)
+- Accessibility
 - History of changes for each entity (e.g., for projects, etc.)
 - Product instrumentation and attribution (Amplitude for both, vs Amplitude/Pendo/many for instrumentation and Split for attribution, vs home-made)
 - Semantic instrumentation (what, how, why a user is doing things)
+- Consumption-based billing + base tier
 - Attribution (which features are causing a difference in behavior)
 - Product requirements and user entitlements (T&C, user properties, proof of address, etc.)
 
-- Back-office (tenant management, enabling features and modules, event-driven)
-- Data engineering (OLAP database, pipeline, etc.)
-- Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
-
-- Configuration management (environment, files, properties, tenant segregation, Vault, config maps, rotation, etc.)
 - 1 environment: production (internal tenants vs external tenants)
+- Infrastructure as code (Pulumi vs Terraform, configuration drift management)
 - Cloud provider (GCP vs AWS vs Azure, vs more than 1 active-passive, vs more than 1 active-active)
+- Regions and AZs: 1 vs active-passive vs active-active, 3 AZs
+- Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
+- Configuration management (environment, files, properties, tenant segregation, Vault, config maps, rotation, etc.)
 - Certificates management (rotation, issuing, certificate authorities, injection, etc.)
 - Messaging (authorization, ACLs, custom authorizer with OPA, auto-scaling, partitioning, etc.)
-- Regions and AZs: 1 vs active-passive vs active-active, 3 AZs
-- Infrastructure as code (Pulumi vs Terraform, configuration drift management)
+- Push-notifications (MQTT)
+
+- Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
-- Data segregation and replication (by tenant, across geographies for data residency regulations)
 - Zero-trust security
+- Data segregation and replication (by tenant, across geographies for data residency regulations)
 - Monitoring (CPU, memory, open connections, etc.)
-- Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
+- Alerts (external ping, unavailability, sagas with timeouts, disk space, brute-force login attempts, etc.)
+
 - Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks, front-end, back-end, mobile)
 - Data migrations (as part of releases, framework, before the new instances come up, during the release, after the old instances are gone, using sidecars)
-- Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
-- Alerts (external ping, unavailability, sagas with timeouts, disk space, brute-force login attempts, etc.)
 - Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
-- Logs collection and searching
-- Querying events manually (authorization, auditability, etc.)
+- Logs collection
 
 - Test strategy (contract, integration, service tests, smoke tests)
 - Test tenants, test users, test email server
@@ -162,8 +161,12 @@ TODO (scope)
 - Data tweaks (compression, dynamic resizing of images, CDNs)
 - Object storage (pre-signed upload and download links, quarantine buckets, hash-based duplication checks if the size matches, PII handling with either tagging and deleting or template + encrypted data, etc.)
 
-
-- Restarting message consumers with the same local cluster ID
+- Back-office (tenant management, enabling features and modules, event-driven)
+- Integration events (company-wide schemata and registry of topics)
+- Querying logs and events manually (authorization, auditability, etc.)
+- Data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
+- Data engineering (OLAP database, pipeline, etc.)
+- Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
 
 TODOs
 - Find an image if you can
