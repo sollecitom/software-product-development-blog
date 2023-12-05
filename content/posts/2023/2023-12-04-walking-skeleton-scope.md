@@ -24,13 +24,17 @@ What's the best time to build a walking skeleton? It depends on the company. If 
 
 Let's have a look at the scope of a walking skeleton. All these aspects should be addressed, in a way where they all work together. With a competent team of senior people, you can build a walking skeleton in 4 to 6 months, for most projects. Small-scale projects won't likely require this at all, or you can focus only on some aspects. 
 
-- Scope
-  - (plenty)
+## Authentication
+
+- You'll likely need a Single-Sign On option, and Identity Provider federation if in B2B.
+- For the non-SSO option, you'll need MFA, email verification, password storage (Argon2 hashing or similar), and password reset.
+- You need to know when a user logs in the first time, when they log out, etc.
+- You should decide whether to accept email aliases e.g., somebody+something@gmail.com.
+- You'll almost always want to either host an open-source solution like Keycloak, or to go with a managed service like Okta.
 
 TODO (scope)
 - Tracing (correlation, who, when, how, where from)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
-- Authentication (login challenge, SSO, IDP federation, allowing or disallowing email aliases, login and logout events, etc.)
 - Authorization (how to query for permissions, scoping with containers, how to ensure authorization is the same for a whole invocation, OPA)
 - Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade)
 - Circuit breakers and bulk-heads (if needed)
