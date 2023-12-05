@@ -80,19 +80,37 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 
 ## Architecture
 
-TODO (scope)
-- API style (REST vs RPC vs GraphQL)
+- You'll need to choose whether to use orchestration (the logic is centralized in a controller, which dispatches calls to other services) or choreography (the logic is distributed, with each service reacting to what other services are doing).
+- The choice between orchestration and choreography is for each workflow and subsystem. My advice is to adopt service choreography for every workflow and subsystem.
+- You'll also need to decide whether to record the current state, or whether to store the history of state changes, use it as your source of truth, and derive the current state from this history.
+- This is also theoretically a local choice, so that each subsystem could choose a different approach. My advice is to record the history of state changes and use that as your source of truth, for all the subsystems.
+- An architecture that globally uses service choreography and records the history of state changes is called an event-driven architecture.
+- At this point, I also recommend Command and Query Responsibility Segregation (CQRS). This means that commands (invocations that mutate the state without retrieving it) are processed by subsystems that are separate from the ones that process queries (invocations that retrieve the state without mutating it).
+
+## Realization
+
+- Event-driven architectures work well with a partitioned distributed ledger, like Apache Pulsar (or Apache Kafka), as message broker and the backbone of event propagation.
+- You should consider whether storing the events indefinitely within Apache Pulsar (with tier storage backed by object storage, like S3 and Glacier), or whether using Apache Pulsar for propagation and a having a separate storage for events.
+- My advice is to consider having a separate storage for events, like EventStore or even Postgres.
+- You'll need a mechanism to handle PII with regard to GDPR's Right To Be Forgotten. Storing PII as part of the events with field-level encryption using per-end-user symmetric keys is a good approach, so when the user needs to be forgotten, you can unlink the key, without losing data integrity.
+- Your servers will have to push information to your clients. You should consider whether hosting a solution, like an MQTT broker, or going for a commercial solution, like Ably. The main factor here is cost: if you foresee a lot of server-pushed messages, hosting your own MQTT cluster is the clear winner.
+- My advice is to avoid websockets, as they introduce connection stickiness (you need to know which socket to use to send a message to a user), and they're too low level.
+- In terms of API style, you'll have to pick one and stick to it for your whole API surface. Examples of API styles include REST, GraphQL, and RPC.
+- My advice is to adopt an RPC style. GraphQL and REST both operate at data manipulation level, but what you want is domain-specific actions.
+- So use the POST HTTP method, with the type of the invocation as part of the path, and choose whether to differentiate commands and queries. Examples include `POST /commands/tranfer-account-ownership`, `POST /queries/retrieve-available-balance`, and `POST /invocations/tranfer-account-ownership`.
+- You can easily specify caching instructions for POST responses, but my advice is to try and avoid caching responses as much as possible, subscribing to changes instead.
+- This approach allows bulk invocations endpoints e.g. `POST /commands`, `POST /queries` and `POST /invocations`, so a client can send multiple invocations in one exchange with the server.
+- This approach also allows to record all invocations, whether commands or queries, to provide full auditability.
+- As your system is fully asynchronous, message-based, and reactive, you can implement the async request-reply pattern to respond to queries synchronously.
+- My advice is to use NATS for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket.
+- Choose whether to leverage an API gateway, or to go without one.
+- My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing tracing information (below), CORS handling, and other similar operations.
+- I also recommend hosting an open-source or a commercial solution, rather than buying a service.
+- You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies).
+
+## Tracing
+TODO
 - Tracing (correlation, who, when, how, where from)
-- Architecture (orchestration vs choreography, state snapshot vs stored state as the source of truth)
-- Server-pushed notifications across channels (MQTT vs websockets, vs commercial)
-- Asynchronous request-reply to serve synchronous requests (with NATS)
-- Gateway (vs no gateway, along with responsibilities, open source vs commercial vs homemade, CORS)
-- Event propagation (Pulsar)
-- Event storage (Pulsar with Tier Storage vs EventStore vs Postgres)
-- Auditability
-  - Commands and queries as events
-- CQRS
-- GDPR and PII data handling (per-end-user symmetric encryption keys, with the data encrypted as part of the events)
 
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
