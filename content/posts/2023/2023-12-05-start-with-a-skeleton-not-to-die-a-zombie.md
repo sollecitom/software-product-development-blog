@@ -109,9 +109,13 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - I also recommend hosting an open-source or a commercial solution, rather than buying a service.
 - You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies).
 
-## Tracing
-TODO
+## Invocation context
+
+- Every invocation should be contextualised with information about the invocation itself.
+- This context should be part of your software models, not something implicit and accessed outside the normal call stack.
+- The context should contain information about the access, the trace, and the toggles associated with the invocation.
 - Tracing (correlation, who, when, how, where from)
+- TODO
 
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
