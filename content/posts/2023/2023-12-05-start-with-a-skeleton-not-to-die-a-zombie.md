@@ -469,7 +469,6 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
 - Checks for the data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
 - API style rules, and compliance checks (params, typos, etc.)
-- Build pipelines (GitOps e.g., GitHub actions vs build server e.g., TeamCity or Concourse, which handle cascading builds well, signing builds, knowing which version is in production)
 
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
