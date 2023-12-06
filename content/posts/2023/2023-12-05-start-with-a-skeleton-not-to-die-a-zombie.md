@@ -1,5 +1,5 @@
 ---
-title: "Starting as a skeleton is better than dying a zombie"
+title: "Start with a skeleton not to die a zombie"
 categories: [ "software-development" ]
 tags: [ "system-thinking", "architecture", "effectiveness", "startups", "platform-engineering" ]
 date: 2023-12-04T05:00:00
