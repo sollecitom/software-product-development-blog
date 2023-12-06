@@ -428,9 +428,14 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - To avoid representation precision issues with decimals, you should model currency amounts using the fundamental units of a given currency. So instead of representing $7.52 dollars with a decimal, you should represent it with the number of dollar cents, 752.
 - Tenants and users based in different countries might get billed in different currencies. Keep this in mind if you have this requirement, and think about price conversion. 
 
-##
+## Encryption
 
-- Encryption (symmetric AES and SHA-256/SHA-512 for hashing, BouncyCastle, runtime algorithm choice vs static, FIPS vs non-FIPS, post-quantum e.g., Dilithium and Kyber)
+- Choose a battle-tested library for your encryption primitives. Never ever roll your own implementation of anything encryption related (unless you're an encryption company). BouncyCastle is a good choice.
+- Figure out the whole FIPS vs non-FIPS thing. Unless you're a government, or work very closely with governments, non-FIPS is better supported and more secure.
+- Consider whether you would benefit more from runtime selection of algorithms and parameters, or from type-safe and abstracted encryption primitives. Personally I never found the first useful, and hate using BouncyCastle's API directly.
+- Stick to well-known and battle-tested algorithms, like AES for symmetric encryption, and SHA or Argon2 for hashing (different use cases).
+- If your application heavily relies on encryption at application level e.g., a distributed ledger, you might want to consider post-Quantum algorithms like Crystals Kyber (as key encapsulation mechanism or KEM) and Crystals Dilithium (as a digital signature scheme).
+
 
 - Test strategy (contract, integration, service tests, smoke tests)
 - Test tenants, test users, test email server
@@ -444,9 +449,6 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - API style rules, and compliance checks (params, typos, etc.)
 - Build pipelines (GitOps e.g., GitHub actions vs build server e.g., TeamCity or Concourse, which handle cascading builds well, signing builds, knowing which version is in production)
 - Build tool (Gradle, vs Maven, vs others)
-- Packaging (OCI images vs native images e.g., Graal or kotlin native, image repositories)
-- Front-end modularity (components, micro-frontends)
-- Back-end modularity
 
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
