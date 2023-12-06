@@ -148,6 +148,7 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - If a user has the specific permission, they should be able to also see in the changelog the actions performed by other users.
 - Each item in the audit log should contain the full invocation context (above) for the invocation represented by that item, with dates, etc.
 
+- Showing errors, allowing to report errors, etc.
 - Features and product modules (representation in the code, who has enabled what, how do you know)
 - Product documentation and walkthrough
 - Accessibility
