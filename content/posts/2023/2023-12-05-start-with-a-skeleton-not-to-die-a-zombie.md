@@ -22,7 +22,9 @@ What's the best time to build a walking skeleton? It depends on the company. If 
 
 Let's have a look at the scope of a walking skeleton. All these aspects should be addressed in a way where they all work together. So it doesn't make sense to build one aspect and then move to the next one. Instead, build them in circles.
 
-With a competent team of senior people, you can build a walking skeleton in 4 to 6 months, for most projects. Small-scale projects won't likely require this at all, or you can focus only on some aspects. 
+With a competent team of senior people, you can build a walking skeleton in 4 to 6 months, for most projects. Small-scale projects won't likely require this at all, or you can focus only on some aspects.
+
+I'll try to group these aspects by category, but they'll all inter-dependent. So you should read through, understand how things could work together, and then decide whether you'd like the overall system. I'll sometimes advise for things: feel free to ignore it, but changing one aspect will likely change how the overall system behaves, and what's achievable.
 
 # Tenant and access management
 
