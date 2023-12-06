@@ -335,7 +335,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - About product aspects, stuck workflows that are not progressing through the steps after a given time (using sagas for this), brute-force login attempts, suspicious patterns, etc.
 - You should also have health checks and readiness checks for each service, along with an externally generated availability check service e.g., Pingdom, to check whether your platform is available to the outside world.
 - Any error-level log entry should trigger an alert to be investigated.
-- My advice would be to use open-source tools for monitoring e.g., Prometheus, as opposed to commercial solutions like Datadog, as these can get obscenely expensive.
+- My advice is to use open-source tools for monitoring and for dashboards e.g., Prometheus and Graphana, as opposed to commercial solutions like Datadog, as these can get obscenely expensive.
 
 ## Data segregation and replication
 
@@ -363,6 +363,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - The events are already recorded forever, so no point in mapping them as logs that are also kept forever. You can keep the direct application logs for a while (1 month, or something similar), and merge these on demand with the event logs, when an employee wants to search for something.
 - Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you. Your system should show the whole tree of correlated logs and events.
 - If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space.
+- My advice is to use open-source tools for logs collection and searching, as commercial solutions can get expensive quickly.
 
 ## Outbound invocations
 
