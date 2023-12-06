@@ -523,15 +523,17 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - You should be careful with these, as the amount of data you have will likely influence your performance, so either makes the two environments identical or be careful about how you structure your tests.
 - Examples of these tests include stress tests, soak tests, etc.
 
-- Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
-- Local development (scripts to run all the services together)
+# Data
+
+- Data engineering (OLAP database, pipeline, custom dashboards, etc.)
+
+# Backoffice
 
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
 - Integration events (company-wide schemata and registry of topics)
 - Querying logs and events manually (authorization, auditability, etc.)
 - Data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
-- Data engineering (OLAP database, pipeline, custom dashboards, etc.)
 - Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
 
 TODOs
