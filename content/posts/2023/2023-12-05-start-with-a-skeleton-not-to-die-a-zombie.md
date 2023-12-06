@@ -273,7 +273,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Also, you could allow your tenants to enable mTLS and IP address range restrictions programmatically, by calling the internet edge solution's API as part of handling such a command.
 - My recommendation falls on Fastly, as it's usually easier to integrate with, compared to CloudFlare.
 
-## Cloud provider(s)
+## Cloud providers
 
 - You'll need to decide whether single Cloud provider availability and business continuity is enough.
 - If so, then my advice is to stick with Google Cloud Platform (GCP). It's cheaper than the others, and offers great fundamental products e.g., the managed Kubernetes service.
