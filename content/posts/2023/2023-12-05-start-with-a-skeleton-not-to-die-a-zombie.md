@@ -155,7 +155,13 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - If a user has the specific permission, they should be able to also see in the changelog the actions performed by other users.
 - Each item in the audit log should contain the full invocation context (above) for the invocation represented by that item, with dates, etc.
 
-- Showing errors, allowing to report errors, etc.
+## Displaying and reporting errors
+
+- You should display meaningful error messages when something goes wrong, in the user's locale (with fallback, if not supported). These shouldn't be protocol level error messages (e.g., 403 Forbidden), but properly crafted messages, explaining what went wrong, and what the user should do about it.
+- Some types of errors should offer the user the option to retry (using the same invocation ID for idempotency).
+- All unexpected errors should allow the user to report the error, and ask them to choose a recent invocation the error relates to. This should create an entry within an in-app open error investigations section, and retry the invocation with bumped up logging level (using a toggle) and same invocation ID (for idempotency). This should alert your back-office (below). Once the error is fixed, a back-office user can provide information about what happened and what was done about it, and the open investigation should be updated, with the user receiving an in-app/email notification.
+
+
 - Features and product modules (representation in the code, who has enabled what, how do you know)
 - Product documentation and walkthrough
 - Accessibility
