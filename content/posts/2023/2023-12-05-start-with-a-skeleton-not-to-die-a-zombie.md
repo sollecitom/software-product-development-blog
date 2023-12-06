@@ -340,9 +340,17 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Different tenants might require different encryption keys, physically segregated storage, and different locations for their data.
 - Data residency regulations require that data for customers in a Country is also going to be kept in that country (some Countries require "only" instead of "also", but only 1 or 2).
 
+## Releases and deployments
 
-- Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks, front-end, back-end, mobile)
-- Data migrations (as part of releases, framework, before the new instances come up, during the release, after the old instances are gone, using sidecars)
+- You'll need automatic canary deployments, gradually incrementing the amount of traffic directed to the upcoming version, based on comparing the error rate with the one measured for the old version.
+- Each invocation that failed on the new version should be retried on the old version, to ensure there's no downtime (remember: you should have idempotency throughout).
+- A failed release (error rate increased beyond the acceptable) should be rolled back automatically, with alerts, so the development team can investigate.
+- For back-end applications, you'll likely want a continuous deployment model, where each change merged is released to production and enters into effect immediately.
+- For web and mobile applications, you'll want a similar deployment model, but the changes should be deployed with feature flags that make them inactive, to be activated at a later stage based on marketing campaigns, etc. For mobile, you should batch your changes, so that a new version is published to the app store only once a week or so.
+- Data migrations should be performed as part of the release, by pre-init containers. You should be able to specify migrations that run before the new instances come up, during the release, and after all the old instances have been brought down.
+
+## Logs
+
 - Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
 - Logs collection
 
