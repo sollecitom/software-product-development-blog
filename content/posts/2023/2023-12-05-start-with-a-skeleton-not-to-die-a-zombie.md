@@ -415,14 +415,6 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - For blocking IO operations, you'll want thread pool and bulkheads. An example might involve a separate thread pool and connection pool for each tenant, to talk to a SQL database. This way a tenant cannot easily influence other tenants with their activity.
 - Another good practice is a separate thread pool for the management endpoints, for otherwise high activity will make your application not respond to management queries and commands.
 
-## Packaging
-
-- Each service should be packaged, as part of its build.
-- You should choose between OCI images (e.g., Docker), native images (e.g., Graal), etc.
-- You should also tweak the runtime properties for your executable bundles. For JVM-based applications, this means which garbage collector to use, memory settings, GC flags, additional JVM options, etc.
-- Structure your OCI images with multi-stage builds, so that each stage can be cached if it didn't change. Ensure you separate runtime requirements from build-time requirements, so unnecessary things don't end up in your image.
-- Your OCI images should be reproducible, meaning that the same code version should produce identical bytes. This requires some configuration tuning, but also for the contained artifacts (JARs, etc.) to also be reproducible.
-
 ## Data optimizations
 
 - You should use compression for client-to-server, server-to-client, and service-to-service communications.
@@ -446,6 +438,16 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Stick to well-known and battle-tested algorithms, like AES for symmetric encryption, and SHA or Argon2 for hashing (different use cases).
 - If your application heavily relies on encryption at application level e.g., a distributed ledger, you might want to consider post-Quantum algorithms like Crystals Kyber (as key encapsulation mechanism or KEM) and Crystals Dilithium (as a digital signature scheme).
 
+# Building and testing
+
+## Packaging
+
+- Each service should be packaged, as part of its build.
+- You should choose between OCI images (e.g., Docker), native images (e.g., Graal), etc.
+- You should also tweak the runtime properties for your executable bundles. For JVM-based applications, this means which garbage collector to use, memory settings, GC flags, additional JVM options, etc.
+- Structure your OCI images with multi-stage builds, so that each stage can be cached if it didn't change. Ensure you separate runtime requirements from build-time requirements, so unnecessary things don't end up in your image.
+- Your OCI images should be reproducible, meaning that the same code version should produce identical bytes. This requires some configuration tuning, but also for the contained artifacts (JARs, etc.) to also be reproducible.
+
 ## Builds
 
 - Write scripts to build each service locally, without having to know the details of the build tool used by that service.
@@ -460,15 +462,38 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Tag each image with the full hash of the code from version control, and pass this as an argument to the image, so that the service will be able to return its version from a management endpoint.
 - On the remote build pipeline, sign each image with a key-pair, tag the image with the signature and the key ID, and verify the signature against the relevant public key before allowing Kubernetes to spin up those images. This prevents people from uploading whatever, whether unintentionally or maliciously.   
 
-- Test strategy (contract, integration, service tests, smoke tests)
+## Functional tests as part of the build
+
+- Each service should declare its input and output contract, using OpenAPI specifications, Avro schemata, JSON schemata, etc.
+- Test each declared input and output contract for compliance with a set of company-wide rules. Examples include path style for OpenApi, or kebab-case instead of camelCase for Avro and JSON. This guarantees you get consistency of API standards, and it's especially important for customer-facing contracts. 
+- Test each service against its input and output contracts, to see whether it stays compatible with other services.
+- Test each internal module against its code contract (externally visible types and functions). Do this wrong, and your tests will be tied to the internal structure of your code, meaning they'll break when you change the structure, even if the behavior still worked.
+- Test each driving and driven adapter against the technology they integrate with. These integration tests should run using only localhost. Use a library like Testcontainers to orchestrate Docker containers to do your testing.
+- After each driving and driven adapter is tested in isolation, and your business logic is covered by the contract tests for the application and domain modules, have one or two service-level tests. These start the whole service locally, and go from a driving adapter to a driven adapter, testing the correct configuration and wiring of the service.
+- Run your service-level tests against your service running in-memory, and the same service running as a Docker image. This way, you can identify issues with the packaging part.
+- Avoid any dependencies among tests, whether it's shared data or expected order of execution.
+- All these tests should run as part of each build, run under 2 minutes, and you should be able to run them locally. Having a smart build tool like Gradle helps with this.
+
+## Checks as part of the build
+
+- Perform static code quality checks.
+- Automatically apply reformatting and linting.
+- Inspect the code to prevent accidental leakage of secrets.
+- Perform static code security analysis.
+- Check dependency versions against known vulnerabilities.
+- All these checks should run as part of each build, run under 2 minutes, and you should be able to run them locally. Having a smart build tool like Gradle helps with this.
+
+## Performance tests as part of the build
+
+- TODO
+
+## Smoke tests in production
+
+- Test strategy (smoke tests) TODO
 - Test tenants, test users, test email server
-- Security build scanning (secret leakage prevention, etc.)
-- Local testing
-- Local scripts (1 command to do an operation e.g., build and test, so that you don't need to know the right commands)
-- Automatic linting and static code analysis
+
 - Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
-- Checks for the data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
-- API style rules, and compliance checks (params, typos, etc.)
+- Local development (scripts to run all the services together)
 
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
