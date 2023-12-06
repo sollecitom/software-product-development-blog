@@ -218,7 +218,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - You should model what requirements each feature, module, product, or platform needs, before a user can access it.
 - Each requirement could be satisfied by different alternative entitlements.
 - An example might be that a "valid email address" could be satisfied by a passed email verification check, or by receiving a corporate email address from a federated identity provider.
-- You should model which entitlement satisfy a requirement. This can vary based on the country, etc.
+- You should model which entitlements satisfy a requirement. This can vary based on the country, etc.
 - Users should be associated with the set of entitlements they already gained, so that a product with requirements already satisfied by the entitlements the user has shouldn't ask the user to do anything else.
 - You should be capable of disabling functionality the user hasn't qualified to use yet, of explaining which requirements aren't met yet, of showing the available ways of qualifying for each requirement, of running the verification step for the entitlement chosen by the user, and finally of unlocking the feature when all the requirements are met.
 - Requirements and entitlements should be dynamic, sent by the server to the client as data. Your client applications shouldn't know which requirements a product or feature needs as part of their code.
