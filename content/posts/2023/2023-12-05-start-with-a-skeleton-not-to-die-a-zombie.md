@@ -135,7 +135,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - For external APIs, some will allow you to specify an external invocation ID for idempotency purposes. In this case, you simply pass that value, and the system will take care of staying idempotent to duplicated changes with the same ID. This should work the same for your API, since your clients can choose to repeat the external invocation ID, if they want to retry an invocation in a safe way.
 - Some external APIs, like emails, won't allow you to specify an idempotency ID. In this case, you can use a SQL database to filter out duplicates, as per above except for skipping the call to the external system in case of a uniqueness constraint failure with the idempotency ID. 
 
-# Client applications
+# User-facing applications
 
 ## Internationalization
 
@@ -163,15 +163,54 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Some types of errors should offer the user the option to retry (using the same invocation ID for idempotency).
 - All unexpected errors should allow the user to report the error, and ask them to choose a recent invocation the error relates to. This should create an entry within an in-app open error investigations section, and retry the invocation with bumped up logging level (using a toggle) and same invocation ID (for idempotency). This should alert your back-office (below). Once the error is fixed, a back-office user can provide information about what happened and what was done about it, and the open investigation should be updated, with the user receiving an in-app/email notification.
 
+## Accessibility
 
-- Features and product modules (representation in the code, who has enabled what, how do you know)
-- Product documentation and walkthrough
-- Accessibility
-- History of changes for each entity (e.g., for projects, etc.)
-- Product instrumentation and attribution (Amplitude for both, vs Amplitude/Pendo/many for instrumentation and Split for attribution, vs home-made)
-- Semantic instrumentation (what, how, why a user is doing things)
-- Consumption-based billing + base tier
-- Attribution (which features are causing a difference in behavior)
+- If you have any accessibility requirements, and probably even if you don't, you should ensure your client applications are accessible.
+- You should create automated tests against regressions (e.g., using Wave, Axe, and Pa11y, https://opensource.com/article/23/2/automated-accessibility-testing), so that what's accessible doesn't lose this property at some point in the future.
+
+## In-app and off-app learning
+
+- You'll need to guide your users through learning how to use your product.
+- This can be a mix of in-app resources e.g., a guided walkthrough and the product's documentation, and off-app resources e.g., videos on YouTube.
+- In any case, you should list these resources in-app, and guide the users through their journey.
+
+## History of changes for each entity
+
+- Your product will expose specific entities to users, allowing them to manipulate them.
+- You should ensure that users can browse and search the history of all changes that happened on any one of such entities.
+- An example might be that, if your product allows users to create projects, any user with permissions should be able to see the whole history of changes on a specific project: who created it and when, the original data, the log of changes, each including who did what, when, and how.
+
+## Multi-platform strategy
+
+- If you ever need both mobile and web, you'll need to decide whether leveraging a multi-platform approach (like React/React Native, Kotlin multi-platform, etc.), or whether to adopt separate codebases for each channel.
+- In B2B, it almost always makes sense to go with a multi-platform approach.
+- In B2C, your users will tend to be mobile first, so going native might sometimes be preferable.
+- However, this is not a rule, so make an explicit decision, keeping in mind the number of specialists you have available, etc.
+
+## Components
+
+- You'll want to curate a set of client components, to achieve a consistent user experience and look&feel, throughout your applications.
+- You should be able to compose these into higher-order components.
+- You should be able to test each component in isolation.
+- These should be versioned, and maintained as a library.
+
+## Modules, features, and billing
+
+- Your products will contain various modules and features.
+- You'll need to model these explicitly, so that a new module can be released in the back-end, without having to re-release the front-ends.
+- You should be able to bill based on a combination of a base tier, plus a consumption-based contribution. In any case, what you charge should be auditable.
+- Whenever a tenant would have exceeded their maximum quota of operations, you should be able to automatically disable further actions from that tenant, until they expand their subscription or the new cycle starts.
+
+## Instrumentation and attribution
+
+- You should instrument your products, so that you can know what your users are clicking, doing, etc.
+- These events should be captured within the client applications, and sent to the server or to an external service.
+- Instrumentation should include both low-level actions (clicks, text typed, etc.) and high-level intentions (logged in, created a project, changed the permissions of another user, viewed the list of projects, etc.).
+- You should also be able to attribute events to user-specific toggles, to gauge the impact your tweaks have on the KPIs you hope to affect.
+- It's pretty much always better to use an external tool to do instrumentation and attribution. Examples could be Amplitude for both, or Amplitude/Pendo/others for instrumentation and Split for attribution.
+
+## Requirements and entitlements
+
 - Product requirements and user entitlements (T&C, user properties, proof of address, etc.)
 
 - 1 environment: production (internal tenants vs external tenants)
@@ -183,6 +222,12 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Certificates management (rotation, issuing, certificate authorities, injection, etc.)
 - Messaging (authorization, ACLs, custom authorizer with OPA, auto-scaling, partitioning, etc.)
 - Push-notifications (MQTT)
+
+## Frameworks and libraries
+
+- You'll need to figure out how to do a range of table stakes, including configuration parsing, etc.
+- You don't want to implement these low-level concerns yourself.
+- You TODO
 
 - Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
@@ -212,10 +257,8 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Build pipelines (GitOps e.g., GitHub actions vs build server e.g., TeamCity or Concourse, which handle cascading builds well, signing builds, knowing which version is in production)
 - Build tool (Gradle, vs Maven, vs others)
 - Packaging (OCI images vs native images e.g., Graal or kotlin native, image repositories)
-- Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
 - Front-end modularity (components, micro-frontends)
 - Back-end modularity
-- Accessibility testing (regression testing using Wave, Axe, and Pa11y, https://opensource.com/article/23/2/automated-accessibility-testing)
 
 - Circuit breakers and bulk-heads (if needed)
 - Thread pools (connections to databases, etc.)
@@ -230,6 +273,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Object storage (pre-signed upload and download links, quarantine buckets, hash-based duplication checks if the size matches, PII handling with either tagging and deleting or template + encrypted data, etc.)
 
 - Back-office (tenant management, enabling features and modules, event-driven)
+- Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
 - Integration events (company-wide schemata and registry of topics)
 - Querying logs and events manually (authorization, auditability, etc.)
 - Data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
