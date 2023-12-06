@@ -112,10 +112,14 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 ## Invocation context
 
 - Every invocation should be contextualised with information about the invocation itself.
-- The context should contain information about the access, the trace, and the toggles associated with the invocation.
 - This context should be part of your software models, not something implicit and accessed outside the normal call stack. You should be able to base your behavior on this information, to log it, and to make it part of the events you publish.
-- TODO
-- Tracing (correlation, who, when, how, where from)
+- The context should contain information about the access, the trace, and the toggles associated with the invocation.
+- The toggles associated to an invocation should be a set of key-value pairs, where the key is a feature toggle ID, and the value is the type-safe value for that feature. This can be used for A/B testing, to bump the logging level for an invocation, and for many other use cases. Mind that these toggles are per-invocation, so they shouldn't contain things like product tiers, etc.
+- The access should include authorization information, provenance information (client IP address, parsed user agent, etc.). It should also indicate whether the invocation was unauthenticated (for operations exposed outside of login) or authenticated. For authenticated accesses, information about the actor should also be included. This should indicate the account ID, whether it's a user or a service account, the tenant the actor belongs to, and the authentication mechanism (including client-side session ID or the hash of the API key used). Last, the actor should support impersonation and acting on behalf of other accounts.
+- The trace should allow to correlate invocations that are logically related. A good way of achieving this is to generate some initial unique IDs (e.g., ULIDs) on the client side: 1 for the action itself e.g., a button press, plus 1 for each invocation to the back-end this action maps to (typically one). After that, the gateway should generate an originating trace ID, so that these 3 pieces of information stay immutable throughout the chain of invocations. Last, each service that processes the invocation should receive a parent invocation ID, generate an invocation ID, and send this last ID as parent invocation ID for downstream calls.
+- This way humans and systems can easily identify retries and logically duplicate invocations.
+- Overall, the information in the invocation context allows to determine an idempotency key: this one is typically the external invocation ID, within a namespace composed of the tenant ID and the actor ID (so that different actors and tenants cannot interfere with each other in terms of idempotency). 
+
 
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
