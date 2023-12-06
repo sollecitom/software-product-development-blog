@@ -471,8 +471,9 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Test each driving and driven adapter against the technology they integrate with. These integration tests should run using only localhost. Use a library like Testcontainers to orchestrate Docker containers to do your testing.
 - After each driving and driven adapter is tested in isolation, and your business logic is covered by the contract tests for the application and domain modules, have one or two service-level tests. These start the whole service locally, and go from a driving adapter to a driven adapter, testing the correct configuration and wiring of the service.
 - Run your service-level tests against your service running in-memory, and the same service running as a Docker image. This way, you can identify issues with the packaging part.
+- Use mutation tests to check whether your tests are actually protecting you against undesired code changes. Aim for zero survived mutants. Don't bother with measuring test code coverage.
 - Avoid any dependencies among tests, whether it's shared data or expected order of execution.
-- All these tests should run as part of each build, run under 2 minutes, and you should be able to run them locally. Having a smart build tool like Gradle helps with this.
+- The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Checks as part of the build
 
@@ -481,11 +482,13 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Inspect the code to prevent accidental leakage of secrets.
 - Perform static code security analysis.
 - Check dependency versions against known vulnerabilities.
-- All these checks should run as part of each build, run under 2 minutes, and you should be able to run them locally. Having a smart build tool like Gradle helps with this.
+- The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Performance tests as part of the build
 
-- TODO
+- For parts of your codebase where performance is critical, create micro-benchmarks e.g., with [JMH](https://github.com/openjdk/jmh) if you're using a JVM-based language.
+- Establish a baseline, and run these as part of each build.
+- The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Smoke tests in production
 
