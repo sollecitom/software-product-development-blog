@@ -112,10 +112,10 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 ## Invocation context
 
 - Every invocation should be contextualised with information about the invocation itself.
-- This context should be part of your software models, not something implicit and accessed outside the normal call stack.
 - The context should contain information about the access, the trace, and the toggles associated with the invocation.
-- Tracing (correlation, who, when, how, where from)
+- This context should be part of your software models, not something implicit and accessed outside the normal call stack. You should be able to base your behavior on this information, to log it, and to make it part of the events you publish.
 - TODO
+- Tracing (correlation, who, when, how, where from)
 
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
