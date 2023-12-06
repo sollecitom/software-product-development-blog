@@ -137,9 +137,18 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - All communications e.g., emails and in-app notifications should respect the locale of the user, falling back to a default locale, if the user's locale is not currently supported.
 - If you plan to support Arab countries, or Asian countries like China and Japan, you should also change the page layout based on the user locale, as the languages involved are laid out differently. 
 
+## In-app notifications of changes
+
+- You should represent new features, marketing communications, etc., notify in-app and through email about them, and expose a browsable changelog for all historical changes to your products.
+- This changelog should be an append-only log of changes, so that a user can browse and filter them. Each item should take the user to a page with more details on that change.
+
+## In-app audit log
+
+- Users should be able to browse, filter, and inspect a changelog with all the actions they ever performed.
+- If a user has the specific permission, they should be able to also see in the changelog the actions performed by other users.
+- Each item in the audit log should contain the full invocation context (above) for the invocation represented by that item, with dates, etc.
+
 - Features and product modules (representation in the code, who has enabled what, how do you know)
-- In-app announcements (changelog, marketing communications, etc.)
-- In-app audit log (what users did, when, how, where from, etc.)
 - Product documentation and walkthrough
 - Accessibility
 - History of changes for each entity (e.g., for projects, etc.)
