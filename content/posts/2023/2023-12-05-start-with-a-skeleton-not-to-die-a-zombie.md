@@ -236,9 +236,9 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 
 # Infrastructure
 
-## Only 1 long-lived environment
+## Only one long-lived environment
 
-- You should only have 1 long-lived environment: production. So no test, UAT, or staging environments.
+- You should only have one long-lived environment: production. So no test, UAT, or staging environments.
 - Learn how to test locally (more on this below), and leverage internal tenants to test and demo your changes before releasing them to external tenants.
 - Use ephemeral short-lived environments to perform intense tests e.g., stress performance tests, or to test large infrastructure changes. These should be exact copies of the production environment, with masked sensitive tenant data, and you should spin them up and down programmatically. 
 
@@ -259,6 +259,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - When not feasible, use a standard way of injecting configuration, like Kubernetes ConfigMaps, or file-based configuration (exposed to the apps through ephemeral volumes).
 - In terms of storing the secrets, you'll want something audited, segregated, and secure, like Hashicorp Vault.
 - You should ensure that whenever a configuration value changes, your applications can pick up the change. I recommend rebooting the containers in this case, as it's usually not a big deal.
+- All credentials should be service-specific, never shared among applications.
 
 ## Certificate management
 
@@ -298,17 +299,47 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - A user shouldn't be able to subscribe to information they shouldn't see (e.g., belonging to other tenants or users), so you'll need authentication and authorization.
 - You'll need to structure your topics carefully, balancing authorization needs and the effort involved in pushing an update. So a topic per user makes authorization trivial, but pushing updates a nightmare. A single topic is the opposite. You'll need a balance.
 
+## Service registry
+
+- You should have a service registry, listing all existing services.
+- Each service should show which infrastructure resources they depend on, along with the libraries and versions they use.
+- You should be able to see all services that use a dependency version affected by a vulnerability.
+- Every service should also link to its codebase on version control.
+- Each service should have an identity in the form of a unique identifier e.g., a ULID.
+
 ## Messaging
 
-- Your TODO
-- Messaging (authorization, ACLs, custom authorizer with OPA, auto-scaling, partitioning, etc.)
+- Your messaging infrastructure will need authorization, auto-scaling, replication, partitioning, etc.
+- You should have a service registry in place, and a way of authenticating services. mTLS is a good way of doing this, if you issue per-service certificates, with rotation, using sidecars to proxy the communications.
+- In terms of authorization, ACLs work well, but a custom authorizer using OPA is better. Both Pulsar and Kafka support this. The way it works is that you can declare a custom authorizer as a plugin extension, and your broker will ask it whether a service is allowed to publish or subscribe to a topic, caching the result afterwards.
+- Partitioning and cluster auto-scaling are much easier with Pulsar than they are with Kafka.
+- You should also have a company-wide registry of topics and schemata (typically in Apache Avro). So that each developer should know what topics exist, what are they for, and their schemata.
+- Your cluster should be configured to reject messages whose payload is backward or forward incompatible with the schema set for the topic.
 
-- Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
-- Auto-scaling (CPU-based for endpoints, queue-based for event processors)
-- Zero-trust security
-- Data segregation and replication (by tenant, across geographies for data residency regulations)
-- Monitoring (CPU, memory, open connections, etc.)
-- Alerts (external ping, unavailability, sagas with timeouts, disk space, brute-force login attempts, etc.)
+## Service-to-service communications
+
+- Ideally no two services should ever know of each other's existence, exclusively publishing and receiving events instead.
+- If you must have peer-to-peer communications, service mesh will help manage this.
+- By using peer-to-peer communications you lose a lot, in terms of backpressure, security, extensibility, etc. so think really carefully whether you really have to.
+
+## Autoscaling for services
+
+- You'll want CPU-based auto-scaling groups, for command and query endpoints, as their driven by unpredictable external traffic.
+- For event processors and event sinks, CPU-based autoscaling makes no sense, as these process messages out of a queue. Instead, you'll want to scale their consumer groups based on the derivative of their queue size: if they're falling behind the producers, ramp up, and if they're catching up fast, ramp down. 
+
+## Monitoring
+
+- You should have dashboards and alerts for both product and infrastructure related aspects.
+- In terms of infrastructure, things like CPU, memory, number of inbound and outbound connections, error rate, available disk space, etc.
+- About product aspects, stuck workflows that are not progressing through the steps after a given time (using sagas for this), brute-force login attempts, suspicious patterns, etc.
+- You should also have health checks and readiness checks for each service, along with an externally generated availability check service e.g., Pingdom, to check whether your platform is available to the outside world.
+- Any error-level log entry should trigger an alert to be investigated.
+
+## Data segregation and replication
+
+- Different tenants might require different encryption keys, physically segregated storage, and different locations for their data.
+- Data residency regulations require that data for customers in a Country is also going to be kept in that country (some Countries require "only" instead of "also", but only 1 or 2).
+
 
 - Rollouts (Argo Deploy, error-rate monitoring, canary releases, automatic rollbacks, front-end, back-end, mobile)
 - Data migrations (as part of releases, framework, before the new instances come up, during the release, after the old instances are gone, using sidecars)
@@ -357,7 +388,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Integration events (company-wide schemata and registry of topics)
 - Querying logs and events manually (authorization, auditability, etc.)
 - Data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
-- Data engineering (OLAP database, pipeline, etc.)
+- Data engineering (OLAP database, pipeline, custom dashboards, etc.)
 - Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
 
 TODOs
