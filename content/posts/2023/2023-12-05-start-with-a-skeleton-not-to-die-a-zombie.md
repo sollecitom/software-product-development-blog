@@ -134,9 +134,9 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - The client should externalize all text content, so that a different value can be used based on the browser's locale. When the locale changes in the browser, this should also be changed.
 - The back-end should return these internationalization keys, rather than text in English, for everything.
 - The actual values should be packaged in the app itself, with a fallback to a lookup against a CDN. This allows to trade-off chattiness with app size, and to override a value without having to wait for a release.
-- All communications 
+- All communications e.g., emails and in-app notifications should respect the locale of the user, falling back to a default locale, if the user's locale is not currently supported.
+- If you plan to support Arab countries, or Asian countries like China and Japan, you should also change the page layout based on the user locale, as the languages involved are laid out differently. 
 
-- Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
 - In-app announcements (changelog, marketing communications, etc.)
 - In-app audit log (what users did, when, how, where from, etc.)
