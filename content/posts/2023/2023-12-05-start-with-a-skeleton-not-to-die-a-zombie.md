@@ -335,6 +335,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - About product aspects, stuck workflows that are not progressing through the steps after a given time (using sagas for this), brute-force login attempts, suspicious patterns, etc.
 - You should also have health checks and readiness checks for each service, along with an externally generated availability check service e.g., Pingdom, to check whether your platform is available to the outside world.
 - Any error-level log entry should trigger an alert to be investigated.
+- My advice would be to use open-source tools for monitoring e.g., Prometheus, as opposed to commercial solutions like Datadog, as these can get obscenely expensive.
 
 ## Data segregation and replication
 
