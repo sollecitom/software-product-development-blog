@@ -361,7 +361,15 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - So why do we need to occasionally bump the log level to INFO? Or why log directly from the apps completely? Because sometimes weird things happen, and an application ends up not being able to publish the event, or you might be interested in how the inside of an app is working.
 - The events are already recorded forever, so no point in mapping them as logs that are also kept forever. You can keep the direct application logs for a while (1 month, or something similar), and merge these on demand with the event logs, when an employee wants to search for something.
 - Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you.
-- If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space. 
+- If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space.
+
+## Outbound invocations
+
+- If your applications initiate outbound invocations to a tenant's infrastructure, you'll need to somehow prove these are genuine and originated from the right environment.
+- For webhooks, you should consider [HTTP Message Signatures](https://httpwg.org/http-extensions/draft-ietf-httpbis-message-signatures.html).
+- Each tenant-specific area of your infrastructure should generate a key pair (with rotation) used to sign outbound requests.
+- The receiver should retrieve the public key from a well-known endpoint exposed under the tenant-specific subdomain (so protected by mTLS, IP address range restrictions, etc.), and use the key to verify the signature.
+- As a trade-off, you might also decide to encrypt using a symmetric key, at the cost of not being able to cache this, and having a higher performance hit. 
 
 # Application development
 
@@ -412,6 +420,8 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Each service should be packaged, as part of its build.
 - You should choose between OCI images (e.g., Docker), native images (e.g., Graal), etc.
 - You should also tweak the runtime properties for your executable bundles. For JVM-based applications, this means which garbage collector to use, memory settings, GC flags, additional JVM options, etc.
+- Structure your OCI images with multi-stage builds, so that each stage can be cached if it didn't change. Ensure you separate runtime requirements from build-time requirements, so unnecessary things don't end up in your image.
+- Your OCI images should be reproducible, meaning that the same code version should produce identical bytes. This requires some configuration tuning, but also for the contained artifacts (JARs, etc.) to also be reproducible.
 
 ## Data optimizations
 
@@ -436,10 +446,22 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Stick to well-known and battle-tested algorithms, like AES for symmetric encryption, and SHA or Argon2 for hashing (different use cases).
 - If your application heavily relies on encryption at application level e.g., a distributed ledger, you might want to consider post-Quantum algorithms like Crystals Kyber (as key encapsulation mechanism or KEM) and Crystals Dilithium (as a digital signature scheme).
 
+## Builds
+
+- Write scripts to build each service locally, without having to know the details of the build tool used by that service.
+- Embed the build tool within the codebase of the service, rather than expecting for this to be installed on the machine running the build. An example is the Gradle Wrapper.
+- Choose a smart build tool, so that only modules whose hash has changed are rebuilt (and re-tested), recursively. This can save a ton of time from the duration of your builds. Gradle does this well.
+- Your build pipeline should be the only criteria to decide whether your service is releasable. No human inspections should ever be needed. Manual regression testing is a crime. Manual exploratory testing is great, but not as part of the build and release pipeline.
+- You should be able to build all your systems locally, relying only on localhost, and expecting nothing to be installed on the machine. As an example, if Java is not installed but is needed to build a service, the build script should install Java.  An alternative approach to achieve this is to use a Docker container to run the build itself.
+- Decide whether you prefer GitHub/GitLab Actions, or a traditional build server. Build servers make it easy to rebuild dependent services, etc. and are generally much faster.
+- If you prefer GitHub/GitLab Actions, seriously consider running the agent on your own Kubernetes cluster, so that each build runs in its own throwaway Docker container on Kube. It'll be much faster and cheaper as well.
+- Ensure you upload build and test reports, and that you alert the development team of any failed builds, or any build that was previously failing and just succeeded.
+- Each service should specify its own build script (whether you use GitHub Actions or TeamCity), producing a Docker image, and uploading it to an image repository.
+- Tag each image with the full hash of the code from version control, and pass this as an argument to the image, so that the service will be able to return its version from a management endpoint.
+- On the remote build pipeline, sign each image with a key-pair, tag the image with the signature and the key ID, and verify the signature against the relevant public key before allowing Kubernetes to spin up those images. This prevents people from uploading whatever, whether unintentionally or maliciously.   
 
 - Test strategy (contract, integration, service tests, smoke tests)
 - Test tenants, test users, test email server
-- Build reports and alerts
 - Security build scanning (secret leakage prevention, etc.)
 - Local testing
 - Local scripts (1 command to do an operation e.g., build and test, so that you don't need to know the right commands)
@@ -448,7 +470,6 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Checks for the data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
 - API style rules, and compliance checks (params, typos, etc.)
 - Build pipelines (GitOps e.g., GitHub actions vs build server e.g., TeamCity or Concourse, which handle cascading builds well, signing builds, knowing which version is in production)
-- Build tool (Gradle, vs Maven, vs others)
 
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
