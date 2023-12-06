@@ -492,8 +492,20 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 
 ## Smoke tests in production
 
-- Test strategy (smoke tests) TODO
-- Test tenants, test users, test email server
+- You should have a minimal set of smoke tests, running periodically in production.
+- These should not duplicate the tests you run as part of each build, and you're not aiming for coverage here.
+- The only purpose of smoke tests is to catch unexpected problems in your production environment. Misconfigured network rules, etc.
+- Having one test for each main workflow works well, and these tests should exercise your whole system, in depth.
+- An example of a smoke test might involve creating a test user for a test tenant, attempting to log in with the wrong password, resetting the password using a test email server, logging in successfully, logging out, and checking a login-protected page is now not available.
+- If a smoke test fails, something is seriously wrong.
+- You'll need test tenants, test users, test email servers.
+- Normally you should use your actual third-party dependencies. Sometimes this is not possible, at which point you should use their test versions or some stubs, configured to only be used for these test users.
+- These smoke tests should run in production and nowhere else, because the problems these tests catch are almost always environment-specific, so running them in another environment would be completely useless.
+- Ideally these should run in ten to twenty minutes, and you should run them every thirty minutes or so.
+
+## Performance and resilience tests in production
+
+TODO
 
 - Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
 - Local development (scripts to run all the services together)
