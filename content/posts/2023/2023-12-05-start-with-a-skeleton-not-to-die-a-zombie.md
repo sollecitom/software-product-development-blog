@@ -523,10 +523,24 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - You should be careful with these, as the amount of data you have will likely influence your performance, so either makes the two environments identical or be careful about how you structure your tests.
 - Examples of these tests include stress tests, soak tests, etc.
 
-# Data
+# Data and analytics
 
-TODO
-- Data engineering (OLAP database, pipeline, custom dashboards, etc.)
+## Data lake
+
+- Every application event should specify all the relevant and available information known at the time, without leaving anything out because it's not currently used by the downstream event processors.
+- Never run OLAP queries on a database used by a service. Instead, an event sink can map the domain events published to a data lake for OLAP queries.
+- Ensure you mask all sensitive data before inserting it into the data lake.
+
+## Materialized aggregations
+
+- Other event sinks can update some materialized view, for analytics that are aggregated as soon as the event that changed them is processed. An example would be the total number of users, updated as a count every time an event indicates that a new user has joined.
+
+## Data operations and custom dashboards
+
+- Use a set of connectors to produce events about various aspects.
+- These should not include application events, as those are already produced.
+- Anything of interest that happens off-platform should be produced. Financial reports, etc.
+- Adopt tools that allow every employee to create their own custom dashboards and metrics. An example of these tools is Metabase. 
 
 # Backoffice
 
