@@ -354,6 +354,10 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
 - Logs collection
 
+## Application development
+
+- Event-driven optimizations (single threaded processing, in-memory processing with crash recovery from eventually consistent snapshots + replaying, batched processing for sinks)
+
 ## Frameworks and libraries
 
 - You'll need to figure out how to do a range of table stakes, including configuration parsing, etc.
