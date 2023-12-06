@@ -372,7 +372,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Local scripts (1 command to do an operation e.g., build and test, so that you don't need to know the right commands)
 - Automatic linting and static code analysis
 - Ephemeral environments (to test large-scale infrastructure changes, or for performance-intensive changes)
-- Performance tests (stress tests, soak tests, etc.) and resilience tests (chaos testing)
+- Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
 - Checks for the data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
 - API style rules, and compliance checks (params, typos, etc.)
 - Auto-update of dependency versions (scheduled, with testing, etc.)
