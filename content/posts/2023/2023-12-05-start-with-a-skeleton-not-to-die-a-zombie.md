@@ -234,15 +234,72 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 
 # Infrastructure
 
-- 1 environment: production (internal tenants vs external tenants)
-- Infrastructure as code (Pulumi vs Terraform, configuration drift management)
-- Cloud provider (GCP vs AWS vs Azure, vs more than 1 active-passive, vs more than 1 active-active)
-- Regions and AZs: 1 vs active-passive vs active-active, 3 AZs
-- Provisioning (scripted vs dynamic provisioning, Kubernetes Operators)
-- Configuration management (environment, files, properties, tenant segregation, Vault, config maps, rotation, etc.)
-- Certificates management (rotation, issuing, certificate authorities, injection, etc.)
+## Only 1 long-lived environment
+
+- You should only have 1 long-lived environment: production. So no test, UAT, or staging environments.
+- Learn how to test locally (more on this below), and leverage internal tenants to test and demo your changes before releasing them to external tenants.
+- Use ephemeral short-lived environments to perform intense tests e.g., stress performance tests, or to test large infrastructure changes. These should be exact copies of the production environment, with masked sensitive tenant data, and you should spin them up and down programmatically. 
+
+## Infrastructure as code
+
+- You should describe your entire infrastructure and tenant configuration in a declarative way, as code.
+- Changes in the code should trigger changes in your infrastructure.
+- You can use various approaches for this, including Pulumi and Terraform.
+- You should monitor your infrastructure, checking for divergences between the declared state and the actual one.
+- A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
+- In terms of provisioning, a fully scripted approach will work well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform can leave you with an inconsistent state in case of failure. So Kubernetes Operators are a better approach for this. 
+
+## Configuration management
+
+- Your applications will need variables, private keys, certificates, passwords, etc.
+- These might depend on the specific tenant the invocation belongs to (so 2 different tenants might use separate databases, each with their own credentials).
+- Whenever you can, avoid injecting these variables into your applications at all. Instead, use side-cars that proxy the connections or do the work requiring the secrets.
+- When not feasible, use a standard way of injecting configuration, like Kubernetes ConfigMaps, or file-based configuration (exposed to the apps through ephemeral volumes).
+- In terms of storing the secrets, you'll want something audited, segregated, and secure, like Hashicorp Vault.
+- You should ensure that whenever a configuration value changes, your applications can pick up the change. I recommend rebooting the containers in this case, as it's usually not a big deal.
+
+## Certificate management
+
+- Your products will use certificates, and those certificates will need rotation, etc.
+- In multi-tenant contexts, each tenant will likely end up with its own subdomain and its own certificates.
+- Figure out how you're going to achieve this programmatically.
+
+## Internet Edge Solution
+
+- An internet edge solution, like Fastly or CloudFlare is almost always a great idea.
+- You get protection from DDoS attacks, and against other malicious attempts.
+- Also, you could allow your tenants to enable mTLS and IP address range restrictions programmatically, by calling the internet edge solution's API as part of handling such a command.
+- My recommendation falls on Fastly, as it's usually easier to integrate with, compared to CloudFlare.
+
+## Cloud provider(s)
+
+- You'll need to decide whether single Cloud provider availability and business continuity is enough.
+- If so, then my advice is to stick with Google Cloud Platform (GCP). It's cheaper than the others, and offers great fundamental products e.g., the managed Kubernetes service.
+- If you need a multi-Cloud approach, you'll need to figure out whether active-passive-cold is enough, or whether you need active-passive-hot or active-active.
+- In any case, the way this should work is that, when your active Cloud provider has an issue, you should be able to switch to another Cloud provider with 1 click.
+- You should aim at not losing any data as part of this. Ideally this should also happen with zero downtime.
+- Active-active and active-passive-hot multi-Cloud workflows are hard, but can be achieved in a similar way multi-region workflows work.
+- You could deploy a messaging cluster on each Cloud provider, and then replicate each command across all clusters, ensuring each replicated command ends up having the same offset across different clusters. Apache Pulsar can help with this, with its geo-replication features. Once you have this, you can enable/disable the side effects in your passive Cloud provider, but it'll be ready and eventually consistent with the active one.
+- Even if you simply need to be deployable in more than 1 Cloud provider, but downtime is okay, you should still test with at least 3 Cloud providers, as part of your walking skeleton. This is because you usually need quorum to recover from a temporary failure, so the minimum Cloud providers you'll need is 3, when 1 is not enough.
+
+## Regions and Availability Zones
+
+- Depending on your availability and disaster recovery requirements, you'll need your services across multiple Availability Zones, or even across multiple Regions.
+- Active-active and active-passive-hot multi-region workflows are hard, just like it's hard to get these working well across multiple Cloud providers.
+- The difference is that the Cloud providers introduce more management complexity, while the regions introduce higher latency involved with your replication.
+- If you have multi-region requirements, you should test in at least 3 regions, as part of your walking skeleton. This is because you usually need quorum to recover from a temporary failure, so the minimum regions you'll need is 3, when 1 is not enough.
+
+## Server-push data
+
+- Your back-end will need to sometimes push data to your client applications.
+- A hosted or managed MQTT cluster is a great way of achieving this.
+- A user shouldn't be able to subscribe to information they shouldn't see (e.g., belonging to other tenants or users), so you'll need authentication and authorization.
+- You'll need to structure your topics carefully, balancing authorization needs and the effort involved in pushing an update. So a topic per user makes authorization trivial, but pushing updates a nightmare. A single topic is the opposite. You'll need a balance.
+
+## Messaging
+
+- Your TODO
 - Messaging (authorization, ACLs, custom authorizer with OPA, auto-scaling, partitioning, etc.)
-- Push-notifications (MQTT)
 
 - Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
