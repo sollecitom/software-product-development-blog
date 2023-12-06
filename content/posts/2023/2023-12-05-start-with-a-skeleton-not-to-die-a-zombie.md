@@ -222,6 +222,18 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Requirements and entitlements should be dynamic, sent by the server to the client as data. Your client applications shouldn't know which requirements a product or feature needs as part of their code.
 - This works very well with components. So a requirement might be "having signed the terms and conditions with ID 123", an entitlement might be "digitally signed a document showing the terms and conditions with ID 123", and you could have a component for this entitlement, so that any time a product or feature needs T&Cs signed, you can re-use the component as part of that workflow.
 
+## SDKs
+
+- You should abstract all communications to and from the back-end with client-side SDKs.
+- Each SDK should be built, tested, versioned, and released as a stand-alone library.
+- Each SDK should have an API or contract module, and various implementations e.g., HTTP-based + MQTT for server-pushed communications, or an in-memory implementation for local testing.
+- You should test your client applications against an in-memory version of the SDK, not against an environment hosting your back-end.
+- You should use reactive-streams e.g., RxJS or MobX to allow the client to subscribe to server-pushed data.
+- You should use the SDK to write tests that don't test the UI e.g., smoke tests you can run periodically in production (more on this below).
+- At some point you might want to give your client-facing SDKs to your customers.
+
+# Infrastructure
+
 - 1 environment: production (internal tenants vs external tenants)
 - Infrastructure as code (Pulumi vs Terraform, configuration drift management)
 - Cloud provider (GCP vs AWS vs Azure, vs more than 1 active-passive, vs more than 1 active-active)
@@ -231,12 +243,6 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Certificates management (rotation, issuing, certificate authorities, injection, etc.)
 - Messaging (authorization, ACLs, custom authorizer with OPA, auto-scaling, partitioning, etc.)
 - Push-notifications (MQTT)
-
-## Frameworks and libraries
-
-- You'll need to figure out how to do a range of table stakes, including configuration parsing, etc.
-- You don't want to implement these low-level concerns yourself.
-- You TODO
 
 - Service-to-service communications (event-driven, service mesh, sidecars with mTLS, etc.)
 - Auto-scaling (CPU-based for endpoints, queue-based for event processors)
@@ -249,6 +255,12 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Data migrations (as part of releases, framework, before the new instances come up, during the release, after the old instances are gone, using sidecars)
 - Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
 - Logs collection
+
+## Frameworks and libraries
+
+- You'll need to figure out how to do a range of table stakes, including configuration parsing, etc.
+- You don't want to implement these low-level concerns yourself.
+- You TODO
 
 - Test strategy (contract, integration, service tests, smoke tests)
 - Test tenants, test users, test email server
