@@ -20,11 +20,11 @@ Most companies experience a steady increase in the cost of changing their system
 
 What's the best time to build a walking skeleton? It depends on the company. If the company is cash rich, perhaps a new venture within an established and profitable business, you'll want to do that early on, while you carry over market research. On the other hand, if you're bootstrapped, you won't have the runway to complete a walking skeleton before you start building your product, so prioritize your product initiatives in this case. After finding Product-Market Fit, take the time to rebuild your systems, from a walking skeleton. Don't skip this phase! It's tempting, but it often leads to ruin.
 
-# Scope of a walking skeleton
-
 Let's have a look at the scope of a walking skeleton. All these aspects should be addressed in a way where they all work together. So it doesn't make sense to build one aspect and then move to the next one. Instead, build them in circles.
 
 With a competent team of senior people, you can build a walking skeleton in 4 to 6 months, for most projects. Small-scale projects won't likely require this at all, or you can focus only on some aspects. 
+
+# Tenant and access management
 
 ## Authentication
 
@@ -78,7 +78,9 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - These groupings will also be useful with billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.
 - You'll need to model at least two branches of the organizational hierarchy for each tenant, and do that for at least two tenants, as part of your walking skeleton. 
 
-## Architecture
+# High-level architecture
+
+## Main architectural patterns
 
 - You'll need to choose whether to use orchestration (the logic is centralized in a controller, which dispatches calls to other services) or choreography (the logic is distributed, with each service reacting to what other services are doing).
 - The choice between orchestration and choreography is for each workflow and subsystem. My advice is to adopt service choreography for every workflow and subsystem.
@@ -109,24 +111,36 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - I also recommend hosting an open-source or a commercial solution, rather than buying a service.
 - You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies).
 
+# Correlation
+
 ## Invocation context
 
 - Every invocation should be contextualised with information about the invocation itself.
 - This context should be part of your software models, not something implicit and accessed outside the normal call stack. You should be able to base your behavior on this information, to log it, and to make it part of the events you publish.
 - The context should contain information about the access, the trace, and the toggles associated with the invocation.
 - The toggles associated to an invocation should be a set of key-value pairs, where the key is a feature toggle ID, and the value is the type-safe value for that feature. This can be used for A/B testing, to bump the logging level for an invocation, and for many other use cases. Mind that these toggles are per-invocation, so they shouldn't contain things like product tiers, etc.
-- The access should include authorization information, provenance information (client IP address, parsed user agent, etc.). It should also indicate whether the invocation was unauthenticated (for operations exposed outside of login) or authenticated. For authenticated accesses, information about the actor should also be included. This should indicate the account ID, whether it's a user or a service account, the tenant the actor belongs to, and the authentication mechanism (including client-side session ID or the hash of the API key used). Last, the actor should support impersonation and acting on behalf of other accounts.
+- The access should include authorization information, provenance information (client IP address, parsed user agent, etc.). It should also indicate whether the invocation was unauthenticated (for operations exposed outside of login) or authenticated. For authenticated accesses, information about the actor should also be included. This should indicate the account ID, whether it's a user or a service account, the tenant the actor belongs to, the locale of the user, and the authentication mechanism (including client-side session ID or the hash of the API key used). Last, the actor should support impersonation and acting on behalf of other accounts.
 - The trace should allow to correlate invocations that are logically related. A good way of achieving this is to generate some initial unique IDs (e.g., ULIDs) on the client side: 1 for the action itself e.g., a button press, plus 1 for each invocation to the back-end this action maps to (typically one). After that, the gateway should generate an originating trace ID, so that these 3 pieces of information stay immutable throughout the chain of invocations. Last, each service that processes the invocation should receive a parent invocation ID, generate an invocation ID, and send this last ID as parent invocation ID for downstream calls.
 - This way humans and systems can easily identify retries and logically duplicate invocations.
 - Overall, the information in the invocation context allows to determine an idempotency key: this one is typically the external invocation ID, within a namespace composed of the tenant ID and the actor ID (so that different actors and tenants cannot interfere with each other in terms of idempotency).
 - An application should receive the full invocation context from the gateway (typically encoded as JSON and to Base64 in a header), fork it (generate a unique invocation ID, and move the received invocation ID as new parent invocation ID), add it to the log stack, pass it as an argument (or context argument) to all functions, include this information in every event, and send this as a header as part of any downstream HTTP request.
 - Every event and message should also have their own context information, which is the ID of the originating and the parent events and messages. So each event has an event context, which includes the invocation context, and event correlation information. Each message (the event might be in the payload), will also contain message correlation information. 
 
+# Client applications
+
+## Internationalization
+
+- All strings should be represented using the UTF-16 or UTF-8 charsets. UTF-8 can represent every character, but it's optimized for text that is mostly ASCII. So it depends on the intensity of this requirement. In any case, stick to UTF-8 at a minimum, even if you don't currently have any internationalization requirements.
+- The client should externalize all text content, so that a different value can be used based on the browser's locale. When the locale changes in the browser, this should also be changed.
+- The back-end should return these internationalization keys, rather than text in English, for everything.
+- The actual values should be packaged in the app itself, with a fallback to a lookup against a CDN. This allows to trade-off chattiness with app size, and to override a value without having to wait for a release.
+- All communications 
 
 - Internationalization (server returns i8n keys, dedicated front-end type to display the actual text from browser locale, changing the settings from user's configuration)
 - Features and product modules (representation in the code, who has enabled what, how do you know)
 - In-app announcements (changelog, marketing communications, etc.)
 - In-app audit log (what users did, when, how, where from, etc.)
+- Product documentation and walkthrough
 - Accessibility
 - History of changes for each entity (e.g., for projects, etc.)
 - Product instrumentation and attribution (Amplitude for both, vs Amplitude/Pendo/many for instrumentation and Split for attribution, vs home-made)
