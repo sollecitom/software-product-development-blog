@@ -488,6 +488,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 
 - For parts of your codebase where performance is critical, create micro-benchmarks e.g., with [JMH](https://github.com/openjdk/jmh) if you're using a JVM-based language.
 - Establish a baseline, and run these as part of each build.
+- For event-driven workflows, you can use flow analysis to determine the performance of the whole system from the performance of the parts. This is an extremely nice property. Given an event processor, you should test the throughput it can process, and the latency each event experience.
 - The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Smoke tests in production
