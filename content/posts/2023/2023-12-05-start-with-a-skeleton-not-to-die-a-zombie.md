@@ -232,7 +232,8 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - You should test your client applications against an in-memory version of the SDK, not against an environment hosting your back-end.
 - You should use reactive-streams e.g., RxJS or MobX to allow the client to subscribe to server-pushed data.
 - You should use the SDK to write tests that don't test the UI e.g., smoke tests you can run periodically in production (more on this below).
-- You might want to give your client-facing SDKs to your customers.
+- You should have test extensions for your SDKs, allowing you to easily create preconditions that wouldn't make sense as normal operations.
+- You might want to give your client-facing SDKs to your customers. You shouldn't give your customers the test extensions.
 
 # Infrastructure
 
@@ -362,15 +363,74 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you.
 - If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space. 
 
-## Application development
+# Application development
 
-- Event-driven optimizations (single threaded processing, in-memory processing with crash recovery from eventually consistent snapshots + replaying, batched processing for sinks)
+## Codebase
+
+- You should choose whether you want a mono-repo or different repositories for your services. Even when you use multiple programming languages (hopefully always), mono-repos make local development a lot easier, so this is something to consider.
 
 ## Frameworks and libraries
 
 - You'll need to figure out how to do a range of table stakes, including configuration parsing, etc.
 - You don't want to implement these low-level concerns yourself.
-- You TODO
+- Choose libraries and frameworks that make your life easier, without becoming too attached to them, and avoiding the ones that are too opinionated or that slow down application startup time significantly.
+- You should be able to check for new versions of every library a service uses, and to update them, with one command.
+- Each service should have a scheduled job to update all dependency versions (libraries, build tools, plugins, programming languages, frameworks, etc.), run the tests for that service, and merge a PR to update those dependencies if the tests pass. If the tests fail, the job should alert the development team.
+
+## Event-driven optimizations
+
+- For event-processors, you'll want to process an event on the same thread.
+- Ideally your processing should happen in-memory. Your service processes the inbound event, and update its in-memory state. A separate process aggregates your outbound events into a state snapshot, against the partition and the offset. When your processor starts, it gets assigned a set of partitions, loads the state snapshot for each of them, and then compares the offset of the snapshot with the offset of the inbound message. If the snapshot is behind, the processor simply reprocesses the events between the snapshot offset and the offset of the inbound message, applying the state changes to the in-memory state, and it's back up.
+- For event sinks, you should adopt batched processing if you're not on the critical path. As an example, a sink that updates a materialized view could batch every 5000 events or every 1 second, whichever happens first, and do 1 database batch insert instead of 5000 inserts and round-trips.
+
+## Shared libraries
+
+- Some people swear by shared libraries, and some other folks swear when they see them. In any case, you should decide whether to use them.
+- Shared libraries are only available to programming languages compatible with the language their written in. So mixing multiple programming languages in the same area e.g., web apps, or back-end apps can be a pain.
+- Avoid home-made frameworks at all costs. The difference between frameworks and libraries is that frameworks are heavily opinionated, while libraries can be swapped easily.
+- In any case, never ever mandate any library or framework. Each team should decide, for each service, what to use, without being obligated to use a company-wide approach.
+- If you decide to use shared libraries, each should be developed, versioned, built, tested, released, and documented like an external library.
+- Shared libraries can be powerful to offer well-thought plug-and-play behavior that would be expensive and error-prone to implement in each new service.
+
+## ID generation
+
+- You should choose the type of unique IDs you generate for each concern.
+- My advice is to use ULIDs for domain IDs, and to use TSIDs as primary keys in SQL databases.
+- You should also figure out whether to rely on sortable unique identifiers to infer the order of the events, in which case you should generate IDs from an event-processor, with partitioning.
+
+## Resilience
+
+- Circuit breakers and retries are important, whenever you perform requests to downstream services.
+- In an event-driven architecture, most services process messages from a queue, making both of these less important.
+- For command and query endpoints, though, you might still need them.
+- Each service should also expose a set of management endpoints, for health checks, etc. It's important that these are exposed on a separate port, compared to the main application endpoints, so that Kubernetes can access these without exposing them to the clients at all.
+- For blocking IO operations, you'll want thread pool and bulkheads. An example might involve a separate thread pool and connection pool for each tenant, to talk to a SQL database. This way a tenant cannot easily influence other tenants with their activity.
+- Another good practice is a separate thread pool for the management endpoints, for otherwise high activity will make your application not respond to management queries and commands.
+
+## Packaging
+
+- Each service should be packaged, as part of its build.
+- You should choose between OCI images (e.g., Docker), native images (e.g., Graal), etc.
+- You should also tweak the runtime properties for your executable bundles. For JVM-based applications, this means which garbage collector to use, memory settings, GC flags, additional JVM options, etc.
+
+## Data optimizations
+
+- You should use compression for client-to-server, server-to-client, and service-to-service communications.
+- Large attachments e.g., images and videos should be uploaded to object storage instead (e.g., S3), and a pre-signed download URL should be sent instead, as a mechanism to obtain the attachment if needed.
+- For images and videos, you also want to leverage CDNs, and to dynamically adjust their size based on the user's screen, and their quality based on the user's internet connection speed.
+- Whenever a user needs to upload an attachment (image, video, etc.), your back-end should generate a pre-signed upload URL to an object storage location, so that the traffic doesn't flow through your systems.
+- In this case, you should adopt a quarantine bucket, so that every upload triggers a malware inspection process, which copies the file to another bucket if it deems the attachment secure.
+- About PII, you should either encrypt the whole document with an end-user-specific key so, after the user has invoked the Right To Be Forgotten the documents will be unusable. Or you should store a template for the document and the data separate, so that after the user has opted out, you would still be able to produce a document, but with some information redacted.  
+
+## Dealing with money
+
+- You should model money so that invalid amounts e.g., $15.732 cannot be represented.
+- To avoid representation precision issues with decimals, you should model currency amounts using the fundamental units of a given currency. So instead of representing $7.52 dollars with a decimal, you should represent it with the number of dollar cents, 752.
+- Tenants and users based in different countries might get billed in different currencies. Keep this in mind if you have this requirement, and think about price conversion. 
+
+##
+
+- Encryption (symmetric AES and SHA-256/SHA-512 for hashing, BouncyCastle, runtime algorithm choice vs static, FIPS vs non-FIPS, post-quantum e.g., Dilithium and Kyber)
 
 - Test strategy (contract, integration, service tests, smoke tests)
 - Test tenants, test users, test email server
@@ -379,29 +439,14 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Local testing
 - Local scripts (1 command to do an operation e.g., build and test, so that you don't need to know the right commands)
 - Automatic linting and static code analysis
-- Ephemeral environments (to test large-scale infrastructure changes, or for performance-intensive changes)
 - Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
 - Checks for the data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
 - API style rules, and compliance checks (params, typos, etc.)
-- Auto-update of dependency versions (scheduled, with testing, etc.)
-- Code storage (monorepo vs multiple repositories, for what)
 - Build pipelines (GitOps e.g., GitHub actions vs build server e.g., TeamCity or Concourse, which handle cascading builds well, signing builds, knowing which version is in production)
 - Build tool (Gradle, vs Maven, vs others)
 - Packaging (OCI images vs native images e.g., Graal or kotlin native, image repositories)
 - Front-end modularity (components, micro-frontends)
 - Back-end modularity
-
-- Circuit breakers and bulk-heads (if needed)
-- Thread pools (connections to databases, etc.)
-- Idempotency (throughout, with 3rd-party providers, etc.)
-- Shared libraries (yes vs no, versioning, monorepo vs separate libraries, what for)
-- Currency (how to model, what to do, based on fundamental units)
-- ID generation (ULIDs, TSIDs, partitioned, etc.)
-- Encryption (symmetric AES and SHA-256/SHA-512 for hashing, BouncyCastle, runtime algorithm choice vs static, FIPS vs non-FIPS, post-quantum e.g., Dilithium and Kyber)
-- Client-side SDK (yes vs no, domain-driven style vs service style, test extensions, whether to give it to customers)
-- Runtime optimizations (garbage collector and options, memory, etc.)
-- Data tweaks (compression, dynamic resizing of images, CDNs)
-- Object storage (pre-signed upload and download links, quarantine buckets, hash-based duplication checks if the size matches, PII handling with either tagging and deleting or template + encrypted data, etc.)
 
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
