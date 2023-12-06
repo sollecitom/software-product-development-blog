@@ -351,8 +351,16 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 
 ## Logs
 
-- Logging (asynchronous, correlation, bump the level of logging for a specific invocation)
-- Logs collection
+- Each service should be able to log as a plain sentence, or in JSON, based on a configuration variable passed at runtime. The default should be JSON, overridden locally to be plain instead.
+- The log entry should have a company-wide specific JSON schema. Services should be tested to check whether the log lines they produce comply with this schema, as part of the build pipelines.
+- The invocation context should also have its own schema, included as an optional field in the log entry schema.
+- Logging long strings is incredibly slow in general, so the default minimum log level should be kept to DEBUG, and INFO should never be used as part of normal workflows.
+- An invocation should be able to specify a toggle to bump the produced logged level from DEBUG to INFO.
+- Does this mean that most workflows won't produce any logs? No, because an event sink can map each produced event into a log line, asynchronously, without slowing down the processing itself.
+- So why do we need to occasionally bump the log level to INFO? Or why log directly from the apps completely? Because sometimes weird things happen, and an application ends up not being able to publish the event, or you might be interested in how the inside of an app is working.
+- The events are already recorded forever, so no point in mapping them as logs that are also kept forever. You can keep the direct application logs for a while (1 month, or something similar), and merge these on demand with the event logs, when an employee wants to search for something.
+- Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you.
+- If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space. 
 
 ## Application development
 
