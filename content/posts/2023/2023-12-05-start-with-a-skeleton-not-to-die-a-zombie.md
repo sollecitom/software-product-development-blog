@@ -525,10 +525,12 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 
 # Data
 
+TODO
 - Data engineering (OLAP database, pipeline, custom dashboards, etc.)
 
 # Backoffice
 
+TODO
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
 - Integration events (company-wide schemata and registry of topics)
