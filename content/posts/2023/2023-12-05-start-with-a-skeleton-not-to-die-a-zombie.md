@@ -124,7 +124,15 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - This way humans and systems can easily identify retries and logically duplicate invocations.
 - Overall, the information in the invocation context allows to determine an idempotency key: this one is typically the external invocation ID, within a namespace composed of the tenant ID and the actor ID (so that different actors and tenants cannot interfere with each other in terms of idempotency).
 - An application should receive the full invocation context from the gateway (typically encoded as JSON and to Base64 in a header), fork it (generate a unique invocation ID, and move the received invocation ID as new parent invocation ID), add it to the log stack, pass it as an argument (or context argument) to all functions, include this information in every event, and send this as a header as part of any downstream HTTP request.
-- Every event and message should also have their own context information, which is the ID of the originating and the parent events and messages. So each event has an event context, which includes the invocation context, and event correlation information. Each message (the event might be in the payload), will also contain message correlation information. 
+- Every event and message should also have their own context information, which is the ID of the originating and the parent events and messages. So each event has an event context, which includes the invocation context, and event correlation information. Each message (the event might be in the payload), will also contain message correlation information.
+
+## Idempotency
+
+- The invocation context (above) can give you an idempotency ID.
+- You can use this ID to ensure that logically duplicated calls do not cause duplicated side effects, including state changes and calls to external systems.
+- For SQL databases, you can use a transaction that tries to insert this ID into a dedicated table of previously seen invocations, with a unique constraint. As part of this transaction, you can do whatever that invocation would need to do in the database. If it fails because of the idempotency constraint, you can consider it successful, and proceed with anything else you need to do.
+- For external APIs, some will allow you to specify an external invocation ID for idempotency purposes. In this case, you simply pass that value, and the system will take care of staying idempotent to duplicated changes with the same ID. This should work the same for your API, since your clients can choose to repeat the external invocation ID, if they want to retry an invocation in a safe way.
+- Some external APIs, like emails, won't allow you to specify an idempotency ID. In this case, you can use a SQL database to filter out duplicates, as per above except for skipping the call to the external system in case of a uniqueness constraint failure with the idempotency ID. 
 
 # Client applications
 
