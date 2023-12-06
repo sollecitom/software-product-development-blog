@@ -6,6 +6,8 @@ date: 2023-12-04T05:00:00
 draft: true
 ---
 
+TODO change this; start with "Some companies die a zombie. After 12-18 months, the cost of change skyrockets, so they cannot do anything, limping around mindlessly, until they bite the bullet and re-write their systems, or kick the bucket".
+
 A walking skeleton is a basic set of code that acts as a “starter pack” for the development team. It's a lightweight application framework without any product-specific functionality, but that is still runnable and can exemplify the fundamental architectural patterns.
 
 In a nutshell, you create a well-planned system that works, but that does nothing relevant, and then you add your product-specific behavior to it. Starting your software system from a walking skeleton offers several benefits:
@@ -192,7 +194,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - You'll want to curate a set of client components, to achieve a consistent user experience and look&feel, throughout your applications.
 - You should be able to compose these into higher-order components.
 - You should be able to test each component in isolation.
-- These should be versioned, and maintained as a library.
+- These should be versioned and maintained as a library.
 
 ## Modules, features, and billing
 
