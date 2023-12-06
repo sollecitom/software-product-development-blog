@@ -232,7 +232,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - You should test your client applications against an in-memory version of the SDK, not against an environment hosting your back-end.
 - You should use reactive-streams e.g., RxJS or MobX to allow the client to subscribe to server-pushed data.
 - You should use the SDK to write tests that don't test the UI e.g., smoke tests you can run periodically in production (more on this below).
-- At some point you might want to give your client-facing SDKs to your customers.
+- You might want to give your client-facing SDKs to your customers.
 
 # Infrastructure
 
