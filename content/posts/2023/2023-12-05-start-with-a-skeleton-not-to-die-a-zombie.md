@@ -103,12 +103,11 @@ With a competent team of senior people, you can build a walking skeleton in 4 to
 - You can easily specify caching instructions for POST responses, but my advice is to try and avoid caching responses as much as possible, subscribing to changes instead.
 - This approach allows bulk invocations endpoints e.g. `POST /commands`, `POST /queries` and `POST /invocations`, so a client can send multiple invocations in one exchange with the server.
 - This approach also allows to record all invocations, whether commands or queries, to provide full auditability.
+- Whenever you need to enforce data-level domain rules, you'll have to choose between the outbox pattern (write to a DB, then derive publishing an event), or the saga patter (read from an eventually consistent view, decide in memory, publish an event, eventually update the view, on conflict rollback the changes and refund, etc.). My advice here is to use sagas, as the outbox pattern is tricky and constitutes a severe limitation in throughput.
 - As your system is fully asynchronous, message-based, and reactive, you can implement the async request-reply pattern to respond to queries synchronously.
 - My advice is to use NATS for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket.
 - About the messaging broker, Apache Pulsar and Apache Kafka are both good choices. I find Apache Pulsar superior overall, but Apache Kafka still has a larger community and more ready-made integrations. In any case, I recommend hosting these yourself, rather than using a managed service, for cost reasons. Apache Pulsar is way easier than Kafka to host, so yet another reason to prefer it.
-- Choose whether to leverage an API gateway, or to go without one.
-- My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing tracing information (below), CORS handling, and other similar operations.
-- I also recommend hosting an open-source or a commercial solution, rather than buying a service.
+- Choose whether to leverage an API gateway, or to go without one. My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing tracing information (below), CORS handling, and other similar operations. I also recommend hosting an open-source or a commercial solution, rather than buying a service.
 - You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies).
 
 # Correlation
