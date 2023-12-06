@@ -510,9 +510,10 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Chaos testing tools are a good approach to achieve this.
 - You should resist the temptation to run these in a separate environment, as they'd prove very little.
 
-## Alerts in production
+## Runtime monitoring in production
 
 - Each event-driven workflow should produce an alert if a step doesn't complete within a time limit, or if the whole workflow exceeds a time limit.
+- You should have a runtime security agent checking for abnormal behavior happening in production. [Wiz](https://go.wiz.io/) and [Aquasec](https://www.aquasec.com/) can help with this. 
 
 ## Performance tests
 
