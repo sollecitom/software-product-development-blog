@@ -360,7 +360,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Does this mean that most workflows won't produce any logs? No, because an event sink can map each produced event into a log line, asynchronously, without slowing down the processing itself.
 - So why do we need to occasionally bump the log level to INFO? Or why log directly from the apps completely? Because sometimes weird things happen, and an application ends up not being able to publish the event, or you might be interested in how the inside of an app is working.
 - The events are already recorded forever, so no point in mapping them as logs that are also kept forever. You can keep the direct application logs for a while (1 month, or something similar), and merge these on demand with the event logs, when an employee wants to search for something.
-- Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you.
+- Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you. Your system should show the whole tree of correlated logs and events.
 - If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space.
 
 ## Outbound invocations
@@ -503,9 +503,21 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - These smoke tests should run in production and nowhere else, because the problems these tests catch are almost always environment-specific, so running them in another environment would be completely useless.
 - Ideally these should run in ten to twenty minutes, and you should run them every thirty minutes or so.
 
-## Performance and resilience tests in production
+## Resilience tests in production
 
-TODO
+- You should perform resilience tests in your production environment.
+- Chaos testing tools are a good approach to achieve this.
+- You should resist the temptation to run these in a separate environment, as they'd prove very little.
+
+## Alerts in production
+
+- Each event-driven workflow should produce an alert if a step doesn't complete within a time limit, or if the whole workflow exceeds a time limit.
+
+## Performance tests
+
+- Exploratory performance tests should be run in ephemeral copies of your production environment.
+- You should be careful with these, as the amount of data you have will likely influence your performance, so either makes the two environments identical or be careful about how you structure your tests.
+- Examples of these tests include stress tests, soak tests, etc.
 
 - Performance tests (stress tests, soak tests, flow-based tests for event-driven workflows, etc.) and resilience tests (chaos testing)
 - Local development (scripts to run all the services together)
