@@ -220,7 +220,7 @@ I'll try to group these aspects by category, but they'll all inter-dependent. So
 - Users should be associated with the set of entitlements they already gained, so that a product with requirements already satisfied by the entitlements the user has shouldn't ask the user to do anything else.
 - You should be capable of disabling functionality the user hasn't qualified to use yet, of explaining which requirements aren't met yet, of showing the available ways of qualifying for each requirement, of running the verification step for the entitlement chosen by the user, and finally of unlocking the feature when all the requirements are met.
 - Requirements and entitlements should be dynamic, sent by the server to the client as data. Your client applications shouldn't know which requirements a product or feature needs as part of their code.
-- This works very well with components. So a requirement might be "having signed the terms and conditions with ID 123", an entitlement might be "digitally signed a document showing the terms and conditions with ID 123", and you could have a component for this entitlement, so that any time a product or feature needs T&Cs signed, you can re-use the component as part of the workflow.
+- This works very well with components. So a requirement might be "having signed the terms and conditions with ID 123", an entitlement might be "digitally signed a document showing the terms and conditions with ID 123", and you could have a component for this entitlement, so that any time a product or feature needs T&Cs signed, you can re-use the component as part of that workflow.
 
 - 1 environment: production (internal tenants vs external tenants)
 - Infrastructure as code (Pulumi vs Terraform, configuration drift management)
