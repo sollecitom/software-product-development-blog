@@ -252,6 +252,8 @@ I'll try to group these aspects by category, but they'll all interdependent. So 
 - You can use various approaches for this, including Pulumi and Terraform.
 - You should monitor your infrastructure, checking for divergences between the declared state and the actual one.
 - A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
+- Nobody should have direct access to any database, network, console, or anything.
+- Structure a mechanism for requesting and granting temporary and audited access (read or write) to resources. This needs to be approved and recorded.
 - In terms of provisioning, a fully scripted approach will work well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform can leave you with an inconsistent state in case of failure. So Kubernetes Operators are a better approach for this. 
 
 ## Configuration management
@@ -585,13 +587,12 @@ I'll try to group these aspects by category, but they'll all interdependent. So 
 - Browse product activity, with trends, patterns, etc.
 - Define and list dashboards and derived metrics.
 
-TODO
-- Back-office (tenant management, enabling features and modules, event-driven)
-- Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
-- Integration events (company-wide schemata and registry of topics)
+## Infrastructure management
 
-- Querying logs and events manually (authorization, auditability, etc.)
-- Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
-
-TODOs
-- Find an image if you can
+- You'll need to be able to manage your infrastructure from this app.
+- List infrastructure deployments, along with which tenants they host.
+- Show topics, event schemata, messaging queues, and services, in a topology.
+- Visualize your information flows, in terms of which services produce and consume which topics, laid out like a graph.
+- Visualize service information (by embedding or linking to your service registry).
+- Propose a scripted database operation, opening a case for somebody to review and approve, so that the infrastructure can then pick it up, execute it, and give you the result back.
+- Query logs and events, in an auditable and controlled way.
