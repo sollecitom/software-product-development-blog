@@ -546,26 +546,44 @@ I'll try to group these aspects by category, but they'll all interdependent. So 
 
 # Backoffice
 
+- You'll need a back-office web application for your employees.
+- This should be built with the same care of your main web applications.
+- Every operation should be event-driven, with full auditability.
+- You might want to support different roles and admin reviews and approvals for some operations.
+- This web application shouldn't be accessible from public internet, but only through VPN.
+
 ## Tenant management
 
-- You'll need a web application to list your tenants, and manage their configuration.
+- You'll need to list your tenants, and manage their configuration.
 - You should be able to see which features and modules they have enabled, the weights and limits they have, and to change these settings.
 - You need to be able to onboard a tenant from here, unless they can onboard from the app itself, in which case you need notifications.
-- Every operation should be event-driven, with full auditability.
-- This web application shouldn't be accessible from public internet, but only through VPN.
+- You should be able to review any applications, and either approve them or reject them for a specific reason. This should cause notifications for the tenant.
 
 ## User management
 
-- Another web application (or another part of the same backoffice app) should list and manage your users.
+- You'll need to list and manage your users.
 - You should be able to browse a user's activity.
 - Sensitive information (including names, phone numbers, email addresses, transaction details, etc.) should be shown encrypted. The decision to decrypt should stay as a record for audit purposes.
-- Every operation should be event-driven, with full auditability.
-- This web application shouldn't be accessible from public internet, but only through VPN.
 
 ## Issue management
 
-- Another web application (or another part of the same backoffice app) should list and manage your issues.
-- 
+- You'll need to list and manage your issues.
+- You should be notified whenever a user submits an issue from the main app.
+- The app should group issues by time, category, similarity, user, etc.
+- From a list view, you should be able to focus on an issue, check the user, see the actions involved in the issue, find all events and logs related to the invocation ID, and make this available to some developers for further investigation.
+- You should also be able to perform specific actions to compensate the user, or to fix their state. These should be normal commands, captured as events, showing up in the user's history, etc.
+- When done, you should be capable of notifying the user that the issue is resolved, and to explain what the cause was. This needs to be reflected on the issue itself.
+- Whenever things are more involved, you should be able to contact the user that's having the issue through the in-app chat.
+- You should be able to template a resolution, and then apply it to a group of related issues.
+
+## Product management
+
+- You'll need to be able to manage your products from this app.
+- TODO dashboards, features, modules, products, subscription tiers (with their limits, descriptions, etc.), in-app marketing messages, etc.
+- Plan the release of a feature, with scheduling, marketing message, incremental rollout, etc.
+- A/B test features, by enabling a toggle for a percentage of invocations for a target users sample (based on characteristics, etc.)
+- Browse product activity, with trends, patterns, etc.
+- Define and list dashboards and derived metrics.
 
 TODO
 - Back-office (tenant management, enabling features and modules, event-driven)
