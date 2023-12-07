@@ -34,21 +34,16 @@ Starting your software system from a walking skeleton offers several benefits:
 2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system that works to a different complete system that works. This is much safer and faster, de-risking your progress.
 3. You can put automated tests in place, to prevent any new functionality from breaking your desired system-wide properties. 
 
-Wait a minute though, what about YAGNI? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? YAGNI has to do with the scope of your product, not the quality of your system. 
+Wait a minute though, what about YAGNI? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? YAGNI has to do with the scope of your product, not the quality of your system.
 
-You can still overdo a walking skeleton, so it's a balance, but you shouldn't just ignore an aspect with the idea that you'll think about it later. This is because the cost of doing something changes dramatically during the lifecycle of a system. Designing is about trade-offs, and these decisions can be hard to reverse. 
+What happens if a company doesn't do this? Well, the problem is that the company will still need to design and build the aspects a walking skeleton covers. This is much harder once you have customers using your products, and while you're building new features. You can still overdo a walking skeleton though, so it's certainly a balance.
+
+But you shouldn't just ignore an aspect with the idea that you'll think about it later. This is because the cost of doing something changes dramatically during the lifecycle of a system. Designing is about trade-offs, and these decisions can be hard to reverse. 
 
 So if you design your messaging infrastructure one way, ignore tenant isolation, and later on try to design for tenant isolation, you'll find that the way your messaging infrastructure works will also have to change. And I'm talking about fundamental changes. These are only two aspects, but you're actually looking at twenty or more, so when you change your messaging infrastructure, your monitoring, logging, and scaling will also have to change. When any of them changes, other aspects will have to change in turn, and so on. You can't even do this in small steps, as the new parts don't fit with the rest of the existing system.  
 
-TODO 
+TODO
 
-Trying to add system-wide aspects later on is always much harder.
-
-What happens if a company doesn't do this? Well, the problem is that the company will still need to design and build the aspects a walking skeleton covers. This is much harder once you have customers using your products, and as you build new features. Also, you wouldn't get the chance to design the system end-to-end, meaning you likely won't achieve the same levels of effectiveness.
-
-Most companies experience a steady increase in the cost of changing their systems, until things start becoming unfeasible 12 to 18 months in. At that point, the cost of addressing these issues is incredibly high, so it's often either rebuilding from scratch or slow death. Rolling rewrites work very rarely, because the new subsystems don't fit with the old ones. 
-
-What's the best time to build a walking skeleton? It depends on the company. If the company is cash rich, perhaps a new venture within an established and profitable business, you'll want to do that early on, while you carry over market research. On the other hand, if you're bootstrapped, you won't have the runway to complete a walking skeleton before you start building your product, so prioritize your product initiatives in this case. After finding Product-Market Fit, take the time to rebuild your systems, from a walking skeleton. Don't skip this phase! It's tempting, but it often leads to ruin.
 
 Let's have a look at the scope of a walking skeleton. All these aspects should be addressed in a way where they all work together. So it doesn't make sense to build one aspect and then move to the next one. Instead, build them in circles.
 
