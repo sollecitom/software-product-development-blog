@@ -6,9 +6,9 @@ date: 2023-12-04T05:00:00
 draft: true
 ---
 
-Most companies die a zombie. They start lean and nimble, ship feature after feature, and delight their customers. Then, after twelve to eighteen months, the bubble pops, the cost of change skyrockets, so they cannot do anything. They limp around painfully until they bite the bullet and re-write their systems, or kick the bucket.
+Most companies die a zombie. They start lean and nimble, ship feature after feature, and delight their customers. Then, after eighteen to twenty-four months, the bubble pops, and suddenly they cannot do anything. They limp around painfully until they bite the bullet and re-write their systems, or kick the bucket.
 
-
+So what happens? What's this silent killer that shows itself after a year and a half or two? TODO
 
 TODO
 A walking skeleton is a basic set of code that acts as a “starter pack” for the development team. It's a lightweight application framework without any product-specific functionality, but that is still runnable and can exemplify the fundamental architectural patterns.
