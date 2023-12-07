@@ -152,7 +152,7 @@ I'll try to group these aspects by category, but they'll all interdependent. So 
 
 ## In-app notifications of changes
 
-- You should represent new features, marketing communications, etc., notify in-app and through email about them, and expose a browsable changelog for all historical changes to your products.
+- You should represent new features, marketing communications, etc., notify about them both in-app and through emails, both linking to a browsable changelog of all historical changes to your products.
 - This changelog should be an append-only log of changes, so that a user can browse and filter them. Each item should take the user to a page with more details on that change.
 
 ## In-app audit log
@@ -546,12 +546,33 @@ I'll try to group these aspects by category, but they'll all interdependent. So 
 
 # Backoffice
 
+## Tenant management
+
+- You'll need a web application to list your tenants, and manage their configuration.
+- You should be able to see which features and modules they have enabled, the weights and limits they have, and to change these settings.
+- You need to be able to onboard a tenant from here, unless they can onboard from the app itself, in which case you need notifications.
+- Every operation should be event-driven, with full auditability.
+- This web application shouldn't be accessible from public internet, but only through VPN.
+
+## User management
+
+- Another web application (or another part of the same backoffice app) should list and manage your users.
+- You should be able to browse a user's activity.
+- Sensitive information (including names, phone numbers, email addresses, transaction details, etc.) should be shown encrypted. The decision to decrypt should stay as a record for audit purposes.
+- Every operation should be event-driven, with full auditability.
+- This web application shouldn't be accessible from public internet, but only through VPN.
+
+## Issue management
+
+- Another web application (or another part of the same backoffice app) should list and manage your issues.
+- 
+
 TODO
 - Back-office (tenant management, enabling features and modules, event-driven)
 - Service registry (e.g., Backstage, services with dependencies, so you can go from a vulnerability in a library to all the services affected by it)
 - Integration events (company-wide schemata and registry of topics)
+
 - Querying logs and events manually (authorization, auditability, etc.)
-- Data format standards (camelCase vs snake_case vs kebab-case in JSON and Avro)
 - Manual database operations (manual database operations repository, PRs, merged scripts get executed by the infrastructure, and the result is returned)
 
 TODOs
