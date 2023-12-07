@@ -8,10 +8,27 @@ draft: true
 
 Most companies die a zombie. They start lean and nimble, ship feature after feature, and delight their customers. Then, after eighteen to twenty-four months, the bubble pops, and suddenly they cannot do anything. They limp around painfully until they bite the bullet and re-write their systems, or kick the bucket.
 
-So what happens? What's this silent killer that shows itself after a year and a half or two? TODO
+So what happens? What's this hidden killer that shows itself only after a year and a half or two? The problem is that most companies never plan their systems. They start with some functionality, get it out, check what the customers want, and keep doing this.
 
-TODO
-A walking skeleton is a basic set of code that acts as a “starter pack” for the development team. It's a lightweight application framework without any product-specific functionality, but that is still runnable and can exemplify the fundamental architectural patterns.
+And it's absolutely the right thing to do. With a big but, though. As a company, you can survive without a well-planned system in place for a while, but you're living on borrowed time. The cost of changing your system steadily increases in this case, until after a year and a half or two, you guessed it, changing anything has a prohibitive cost.
+
+When I say cost, by the way, I mean risk. So you could have a lot of money, but it wouldn't help much. Adding people makes things significantly worse very quickly, as they come up with workaround after workaround.
+
+So what options do you have? Well, it depends on how many resources you have in the beginning.
+
+Most companies won't have almost anything at the start, so make assumptions, validate them, and build prototypes until you identify your product market fit. At some point, you'll have to build a new system from scratch, and migrate your customers to it. Don't make the mistake of avoiding this step.
+
+In other circumstances, you might start as a new large program or company within a parent company with a large amount of resources. In this case you know you'll end up building some product, even if you don't exactly know what, but you're not overly concerned of running out of money. Have two separate systems, one that's a throwaway prototype for quick experimentation, and another one that's well-planned and extensible.
+
+In any case, you cannot build a complex well-functioning system part after part, and you cannot retrofit a large system that's not effective into one that works well. You'll want to start from a bare-bone system that does very little, but does it well: a walking skeleton.
+
+A walking skeleton it's like a Minimum Viable Product, but for your software systems. Its purpose is to prove that your choices and trade-offs achieve the desired system-wide properties you have in mind.
+
+There are a few differences across B2B and B2C, but it's the technical ambitions that determine the scope of a walking skeleton. That's its beauty: it has very little to do with your actual product, or even industry. So you could start building one in a way that's orthogonal to your product discovery efforts.
+
+It's called "walking" because the software is runnable, and it exemplifies the fundamental architectural patterns, approaches, technologies, and moving parts. And it's called "skeleton" because it's a robust system that works, but it does nothing significant: you'll add your product-specific behavior to it after it's ready.
+
+TODO 
 
 In a nutshell, you create a well-planned system that works, but that does nothing relevant, and then you add your product-specific behavior to it. Starting your software system from a walking skeleton offers several benefits:
 
