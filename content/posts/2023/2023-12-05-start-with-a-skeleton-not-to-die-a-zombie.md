@@ -34,6 +34,8 @@ Starting your software system from a walking skeleton offers several benefits:
 2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system that works to a different complete system that works. This is much safer and faster, de-risking your progress.
 3. You can put automated tests in place, to prevent any new functionality from breaking your desired system-wide properties. 
 
+Wait a minute though, what about YAGNI? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? 
+
 TODO 
 
 Trying to add system-wide aspects later on is always much harder.
