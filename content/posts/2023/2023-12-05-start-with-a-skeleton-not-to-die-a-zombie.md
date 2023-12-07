@@ -28,13 +28,15 @@ There are a few differences across B2B and B2C, but it's the technical ambitions
 
 It's called "walking" because the software is runnable, and it exemplifies the fundamental architectural patterns, approaches, technologies, and moving parts. And it's called "skeleton" because it's a robust system that works, but it does nothing significant: you'll add your product-specific behavior to it after it's ready.
 
+Starting your software system from a walking skeleton offers several benefits:
+
+1. Designing the various parts and aspects together improves the quality of the overall system. This is because the parts are inter-dependent, so you cannot design one aspect without keeping in mind all the others. Simply keeping in mind all the aspects will force you to design things differently. 
+2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system that works to a different complete system that works. This is much safer and faster, de-risking your progress.
+3. You can put automated tests in place, to prevent any new functionality from breaking your desired system-wide properties. 
+
 TODO 
 
-In a nutshell, you create a well-planned system that works, but that does nothing relevant, and then you add your product-specific behavior to it. Starting your software system from a walking skeleton offers several benefits:
-
-1. As the various parts and aspects are inter-dependent, designing them together improves the quality of the overall system. Trying to add system-wide aspects later on is always much harder.
-2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system to a different complete system. This is much safer and faster, de-risking your progress.
-3. You can put automated tests in place, to avoid new functionality breaking desired system-wide properties e.g., idempotency. 
+Trying to add system-wide aspects later on is always much harder.
 
 What happens if a company doesn't do this? Well, the problem is that the company will still need to design and build the aspects a walking skeleton covers. This is much harder once you have customers using your products, and as you build new features. Also, you wouldn't get the chance to design the system end-to-end, meaning you likely won't achieve the same levels of effectiveness.
 
