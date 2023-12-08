@@ -42,28 +42,33 @@ But you shouldn't just ignore an aspect with the idea that you'll think about it
 
 So if you design your messaging infrastructure one way, ignore tenant isolation, and later on try to design for tenant isolation, you'll find that the way your messaging infrastructure works will also have to change. And I'm talking about fundamental changes. These are only two aspects, but you're actually looking at twenty or more, so when you change your messaging infrastructure, your monitoring, logging, and scaling will also have to change. When any of them changes, other aspects will have to change in turn, and so on. You can't even do this in small steps, as the new parts don't fit with the rest of the existing system.  
 
-TODO
+How long does building a walking skeleton take? Well, there's no standard answer to this. For tiny simple projects, it might only take a week or two. For large initiatives, it'll typically take a competent cross-functional team of senior people four to six months to build a walking skeleton. Projects requiring multi-Cloud, multi-region, or dynamic provisioning will require a longer time for this. I'd say that each of these factors multiplies the time it takes to build a walking skeleton by a factor of 1.5. Ballpark, of course.  
 
+Building a walking skeleton is not something you can parallelize much, because of the interdependencies involved in designing an end-to-end system. So, while raising the quality and expertise of the team involved will produce better results, increasing the number of people involved beyond ten or so will actually be counter-productive.
 
-Let's have a look at the scope of a walking skeleton. All these aspects should be addressed in a way where they all work together. So it doesn't make sense to build one aspect and then move to the next one. Instead, build them in circles.
+# What should the scope be for a walking skeleton?
 
-With a competent team of senior people, you can build a walking skeleton in 4 to 6 months, for most projects. Small-scale projects won't likely require this at all, or you can focus only on some aspects. Projects requiring multi-Cloud, multi-region, or dynamic provisioning will require a longer time to build a walking skeleton. I'd say that each of these factors multiplies the effort involved in building a walking skeleton by 1.5.
+Let's have a look at what a walking skeleton should cover. All these aspects should be addressed in a way that they all work together. So it doesn't make sense to build one aspect and then move to the next one. Instead, build them in circles: plan them together, build a prototype, checks if things fit well, adjust, expand, etc.
 
-Building a walking skeleton is not something you can parallelize, because of the interdependencies involved in designing an end-to-end system. So, while raising the quality and expertise of the team members will produce better results, increasing the number of people involved beyond ten or so will actually be counter-productive.
+I'll try to group these aspects by category, but they're all interdependent, so there's no way to lay them out in dependency order. You should read through, understand how things could work together, and then decide whether you'd like the overall resulting system.
 
-I'll try to group these aspects by category, but they'll all interdependent. So you should read through, understand how things could work together, and then decide whether you'd like the overall system. I'll sometimes advise for things: feel free to ignore it, but changing one aspect will likely change how the overall system behaves, and what's achievable.
+I'll sometimes advise for specific approaches: take this with a pinch of salt, or feel free to ignore it, but changing one aspect will likely change how the overall system behaves, and what's achievable. The important thing is that you consider all the aspects, make decisions, understand the trade-offs, and end up with a system that works well end-to-end.
 
 # Tenant and access management
 
 ## Authentication
 
-- You'll likely need a Single-Sign On option, and Identity Provider federation if in B2B.
-- For the non-SSO option, you'll need MFA, email verification, password storage (Argon2 hashing or similar, salting, peppering, etc.), and password reset.
-- You need to know when a user logs in the first time, when they log out, etc.
-- You should decide whether to accept email aliases e.g., somebody+something@gmail.com.
-- You should pick between delegated or mapped identity for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity in the external IDP in your own IDP. My advice here is to always map. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP.
-- You'll also want to support Personal Access Tokens (for user accounts) and API keys (for service accounts), because orchestrated authentication workflows don't work well with scripting. 
-- You'll almost always want to either host an open-source solution like Keycloak, or to go with a managed service like Okta.
+- Standard user journeys for onboarding, invitation, email verification, MFA, login, and password reset.
+- Single Sign-On options, including access via Google, etc. and external Identify Provider (IDP) federation for B2B.
+- Choose between delegated or mapped identity for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity from the external IDP in your own IDP. My advice here is to always map. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP.
+- Events for every time a user logs in for the first time, logs in, and logs out.
+- Whether to accept email aliases e.g., bruce.wayne+batman@gmail.com.
+- A login challenge e.g., matching a password hash, something based on signing some bytes on both sides, etc.
+- Support for Personal Access Tokens for user accounts, and API keys for service accounts. Because orchestrated authentication workflows don't play well with scripting.
+- Password storage implementation (Argon2 or similar to hash, salting, peppering, etc.).
+- My strong advice is to stick to a battle-tested open-source solution, like Keycloak, or to go with a managed service like Okta. Out of the two, I'd go with hosting Keycloak, in general.
+
+TODO
 
 ## Token management
 
