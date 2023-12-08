@@ -59,33 +59,34 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Authentication
 
 - Standard user journeys for onboarding, invitation, email verification, MFA, login, and password reset.
-- Single Sign-On options, including access via Google, etc. and external Identify Provider (IDP) federation for B2B.
+- Single Sign-On (SSO) options, including access via Google, etc. and external Identify Provider (IDP) federation for B2B.
 - Choose between delegated or mapped identity for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity from the external IDP in your own IDP. My advice here is to always map. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP.
+- You'll likely need to support both [OpenID Connect](https://openid.net/developers/how-connect-works/) (OIDC) and [Security Assertion Markup Language 2.0](https://en.wikipedia.org/wiki/SAML_2.0) (SAML 2.0), for IDP federation. 
 - Events for every time a user logs in for the first time, logs in, and logs out.
-- Whether to accept email aliases e.g., bruce.wayne+batman@gmail.com.
+- Whether to accept email aliases e.g., `bruce.wayne+batman@gmail.com`.
 - A login challenge e.g., matching a password hash, something based on signing some bytes on both sides, etc.
 - Support for Personal Access Tokens for user accounts, and API keys for service accounts. Because orchestrated authentication workflows don't play well with scripting.
 - Password storage implementation (Argon2 or similar to hash, salting, peppering, etc.).
-- My strong advice is to stick to a battle-tested open-source solution, like Keycloak, or to go with a managed service like Okta. Out of the two, I'd go with hosting Keycloak, in general.
-
-TODO
+- My strong advice is to stick to a battle-tested open-source solution, like [Keycloak](https://www.keycloak.org/), or to go with a managed service like Okta. Out of the two, I'd go with hosting Keycloak, in general.
 
 ## Token management
 
-- You'll need to issue, rotate, and verify tokens, as part of your authentication workflow.
-- Certificate management (below) is a prerequisite for this. You could choose to have a single certificate (with rotation), or different certificates across different tenants (if B2B, based on subdomains) or geographies.
-- You should include a unique client-side session ID in your tokens, along with the token's validity start and end timestamps.
-- The authorization roles and containing scopes (below) should also be included in the token.
+- Server-side sessions should be avoided.
+- Issuing, rotating, and verifying tokens, as part of your authentication workflows.
+- Certificate management is a prerequisite for this. You'll need to support tenant-specific certificates, associated with tenant-specific subdomains e.g., `<tenant>.<your-domain>.com`.
+- You should include a unique client-side session ID in your tokens, along with the start and end timestamps for the token's validity.
+- The authorization roles and containing scopes should also be included in the token.
 - The duration of a token should be a maximum of 30m to 1 hour.
-- You also need to choose an algorithm, ideally EdDSA, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
-- In terms of token structure, JWTs are a safe bet.
+- You also need to choose a digital signature scheme. [EdDSA](https://en.wikipedia.org/wiki/EdDSA#:~:text=In%20public%2Dkey%20cryptography%2C%20Edwards,signature%20schemes%20without%20sacrificing%20security.), ideally, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
+- In terms of token structure, [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) is a safe bet.
 
 ## Tenant isolation
 
-- This is mostly a B2B concern.
+TODO
+
 - Tenants should be isolated from each other in terms of workflows.
 - The data for a tenant should be stored and encrypted separately from the data of other tenants.
-- Each tenant should be able to set up SSO with their own IDP, and to enable IP address range restrictions if they want.
+- Each tenant should be able to set up Single Sign-On with their own IDP, and to enable IP address range restrictions if they want.
 - To separate the entry-points (required for the above), you should consider creating a subdomain per tenant e.g., <tenant-name>.<your-root-domain>.com. This needs to happen automatically when you onboard a new tenant.
 - If you offer environments, you'll likely need infrastructure isolation to prevent activity from a tenant to affect another tenant's workflows.
 - You'll need to implement at least two tenants for each tenant type, as part of your walking skeleton.
