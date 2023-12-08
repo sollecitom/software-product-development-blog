@@ -82,14 +82,14 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Tenant isolation
 
-TODO
-
 - Tenants should be isolated from each other in terms of workflows.
 - The data for a tenant should be stored and encrypted separately from the data of other tenants.
 - Each tenant should be able to set up Single Sign-On with their own IDP, and to enable [Mutual Transport Layer Security](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/) (mTLS) and IP address range restrictions.
-- To separate the entry-points (required for the above), you should consider creating a subdomain per tenant e.g., <tenant-name>.<your-root-domain>.com. This needs to happen automatically when you onboard a new tenant.
-- If you offer environments, you'll likely need infrastructure isolation to prevent activity from a tenant to affect another tenant's workflows.
+- As mentioned above, you'll need tenant-specific subdomains e.g., `<tenant-name>.<your-root-domain>.com` for this. This needs to happen automatically when you onboard a new tenant.
+- If you offer environments, you'll likely need infrastructure isolation to prevent the activity from one tenant to affect the workflows of another tenant.
 - You'll need to implement at least two tenants for each tenant type, as part of your walking skeleton.
+
+TODO
 
 ## Authorization
 
