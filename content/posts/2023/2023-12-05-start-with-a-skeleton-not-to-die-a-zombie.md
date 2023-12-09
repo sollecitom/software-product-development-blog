@@ -46,7 +46,7 @@ How long does building a walking skeleton take? Well, there's no standard answer
 
 Building a walking skeleton is not something you can parallelize much, because of the interdependencies involved in designing an end-to-end system. So, while raising the quality and expertise of the team involved will produce better results, increasing the number of people involved beyond ten or so will actually be counter-productive.
 
-Mind that the goal of a walking skeleton is to dig out the unknown unknowns, and to design a system that can cope with them. It does not require that you build everything. You need to balance You Ain't Going to Need It (YAGNI) with You Ain't Going to Survive It (YAGSI). So you need to cover at least two very different languages for internationalization. But you shouldn't go and build translation packs for every language known to humanity, just in case somebody might need it at some point. Also, you should build just enough to de-risk things, TODO
+Mind that the goal of a walking skeleton is to dig out the unknown unknowns, and to design a system that can cope with them. It does not require that you build everything. You need to balance You Ain't Going to Need It (YAGNI) with You Ain't Going to Survive It (YAGSI). So you need to cover at least two very different languages for internationalization. But you shouldn't go and build translation packs for every language known to humanity, just in case somebody might need it at some point.
 
 # What should the scope be for a walking skeleton?
 
