@@ -89,19 +89,20 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - If you offer environments, you'll likely need infrastructure isolation to prevent the activity from one tenant to affect the workflows of another tenant.
 - You'll need to implement at least two tenants for each tenant type, as part of your walking skeleton.
 
-TODO
-
 ## Authorization
 
-- You need a way to model rules about authorization.
-- You also need a way to query this, both on the front-end (to hide or gray out things the user cannot perform) and on the back-end (to enforce authorization rules).
-- Authorization should be checked and enforced once per invocation. If the grants for a user change, in-flight invocations should complete with the grants they had at the beginning of their processing.
 - My advice is to model resources (the things your product allows to interact with), actions (what you can do with a resource), and container scopes (nestable groupings of resources).
 - I also advise defining policies as sets of action-resource permissions, and creating roles that are associated with bundles of policies. A user then has multiple roles, each associated with a containing scope (think about these as projects, spaces, or folders). So when a user is in a given context, it has certain roles active in that context, and inherits some permissions through the policies associated with those roles, as a result.
+- Authorization should be checked and enforced once per invocation. If the grants for a user change, in-flight invocations should complete with the grants they had at the beginning of their processing.
+- You also need a way to query this, both on the front-end (to hide or gray out things the user cannot perform) and on the back-end (to enforce authorization rules).
 - On the front-end, you should retrieve the roles and the containing scopes from the user's token, then look up the policies and permissions granted by those roles, from a dedicated endpoint.
-- I recommend using a standard way of defining and querying authorization permissions and policies, with Open Policy Agent (OPA) being an excellent choice.
+- You'll need some standard available roles, plus the ability for your customers to define their own. To do this, you should describe what actions and policies each resource offers.
+- You should support mapping groups in your tenant's Identity Provider to roles and scopes in your domain. So that if a customer's employee is in the "UK" and the "developers" group, they might be associated with the "Standard User" role in the "UK" "Production" scope, and with the "Admin" role in the "UK" "Test" scope.  
+- I recommend using a standard way of defining and querying authorization permissions and policies. [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is an excellent choice.
 
 ## Tenancy model
+
+TODO
 
 - This is mostly a B2B concern.
 - Your users will belong to different tenants. Also, a tenant will likely be too big to map to a single namespace.
