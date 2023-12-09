@@ -77,7 +77,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - You should include a unique client-side session ID in your tokens, along with the start and end timestamps for the token's validity.
 - The authorization roles and containing scopes should also be included in the token.
 - The duration of a token should be a maximum of 30m to 1 hour.
-- You also need to choose a digital signature scheme. [EdDSA](https://en.wikipedia.org/wiki/EdDSA#:~:text=In%20public%2Dkey%20cryptography%2C%20Edwards,signature%20schemes%20without%20sacrificing%20security.), ideally, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
+- You also need to choose a digital signature scheme. [EdDSA](https://en.wikipedia.org/wiki/EdDSA), ideally, rather than RSA or ECDSA, as it's faster, requires shorter keys, and it's considered more secure.
 - In terms of token structure, [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) is a safe bet.
 
 ## Tenant isolation
@@ -114,16 +114,15 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Main architectural patterns
 
-TODO
-
-- You'll need to choose whether to use orchestration (the logic is centralized in a controller, which dispatches calls to other services) or choreography (the logic is distributed, with each service reacting to what other services are doing).
+- You'll need to choose whether to use orchestration (the logic is centralized in a controller, which dispatches calls to other services) or choreography (the logic is distributed, with each service reacting to what the other services are doing). [A longer explanation of these two approaches](https://temporal.io/blog/to-choreograph-or-orchestrate-your-saga-that-is-the-question).
 - The choice between orchestration and choreography is for each workflow and subsystem. My advice is to adopt service choreography for every workflow and subsystem.
-- You'll also need to decide whether to record the current state, or whether to store the history of state changes, use it as your source of truth, and derive the current state from this history.
-- This is also theoretically a local choice, so that each subsystem could choose a different approach. My advice is to record the history of state changes and use that as your source of truth, for all the subsystems.
-- An architecture that globally uses service choreography and records the history of state changes is called an event-driven architecture.
-- At this point, I also recommend Command and Query Responsibility Segregation (CQRS). This means that commands (invocations that mutate the state without retrieving it) are processed by subsystems that are separate from the ones that process queries (invocations that retrieve the state without mutating it).
+- Choose whether to have as your source of truth the snapshot of the current state, or the history of the state changes. [A longer explanation of these two approaches](https://www.eventstore.com/blog/what-is-event-sourcing). [Another explanation](https://developer.confluent.io/courses/event-sourcing/event-driven-vs-state-based/).
+- This is also a local choice, so that each subsystem could choose a different approach. My advice is to record the history of state changes and use that as your source of truth, for all the subsystems.
+- I also recommend [Command Query Responsibility Segregation](https://en.wikipedia.org/wiki/Command_Query_Responsibility_Segregation) (CQRS). This means that commands (invocations that mutate the state without retrieving it) are processed by subsystems that are separate from the ones that process queries (invocations that retrieve the state without mutating it).
 
 ## Realization
+
+TODO
 
 - Event-driven architectures work well with a partitioned distributed ledger, like Apache Pulsar (or Apache Kafka), as message broker and the backbone of event propagation.
 - You should consider whether storing the events indefinitely within Apache Pulsar (with tier storage backed by object storage, like S3 and Glacier), or whether using Apache Pulsar for propagation and a having a separate storage for events.
