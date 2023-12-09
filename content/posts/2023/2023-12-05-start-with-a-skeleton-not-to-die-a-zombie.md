@@ -102,7 +102,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Authorization
 
 - My advice is to model resources (the things your product allows to interact with), actions (what you can do with a resource), and container scopes (nestable groupings of resources).
-- I also advise defining policies as sets of action-resource permissions, and creating roles that are associated with bundles of policies. A user then has multiple roles, each associated with a containing scope (think about these as projects, spaces, or folders). So when a user is in a given context, it has certain roles active in that context, and inherits some permissions through the policies associated with those roles, as a result.
+- I also advise defining policies as sets of action-resource permissions, and creating roles that are associated with bundles of policies. A user then has multiple roles, each associated with a containing scope. So when a user is in a given context, it has certain roles active in that context, and inherits some permissions through the policies associated with those roles, as a result.
 - Authorization should be checked and enforced once per invocation. If the grants for a user change, in-flight invocations should complete with the grants they had at the beginning of their processing.
 - You also need a way to query this, both on the front-end (to hide or gray out things the user cannot perform) and on the back-end (to enforce authorization rules).
 - On the front-end, you should retrieve the roles and the containing scopes from the user's token, then look up the policies and permissions granted by those roles, from a dedicated endpoint.
