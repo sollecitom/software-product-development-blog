@@ -89,6 +89,16 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - If you offer environments, you'll likely need infrastructure isolation to prevent the activity from one tenant to affect the workflows of another tenant.
 - You'll need to implement at least two tenants for each tenant type, as part of your walking skeleton.
 
+## Tenancy model
+
+- Your users will belong to different tenants, but a tenant will likely be too big to map to a single namespace.
+- You should allow your tenants to define more granular groups of users. You could choose to model these groups as projects, spaces, teams, or organizations.
+- My advice is to avoid choosing one model, and allow arbitrarily nestable containers, similar to folders. This way, a tenant can model their own organizational structures within your product, and allocate users and resources according to where they live in their own company.
+- The property of belonging to a container should cascade down the hierarchy. So if a tenant creates a "Global" folder, "US" and "EU" folders underneath it, and a "France" folder underneath "EU", anything within "France" will also need to be within the "EU" and the "Global" folders.
+- These nestable containers can be used as containing scopes for authorization. So if a user has the "Project-Accessor" role within the "France" scope, they'll see projects in France, but a different user with the same role in a different scope won't.
+- These groupings are also useful for billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.
+- As part of your walking skeleton, model at least two branches of the organizational hierarchy for each tenant, and do that for at least two separate tenants.
+
 ## Authorization
 
 - My advice is to model resources (the things your product allows to interact with), actions (what you can do with a resource), and container scopes (nestable groupings of resources).
@@ -100,23 +110,11 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - You should support mapping groups in your tenant's Identity Provider to roles and scopes in your domain. So that if a customer's employee is in the "UK" and the "developers" group, they might be associated with the "Standard User" role in the "UK" "Production" scope, and with the "Admin" role in the "UK" "Test" scope.  
 - I recommend using a standard way of defining and querying authorization permissions and policies. [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is an excellent choice.
 
-## Tenancy model
-
-TODO
-
-- This is mostly a B2B concern.
-- Your users will belong to different tenants. Also, a tenant will likely be too big to map to a single namespace.
-- You should allow your tenants to define more granular groups of users.
-- You could choose to model these groups as projects, spaces, teams, or organizations.
-- My advice is to avoid choosing one model, and allow arbitrarily nestable containers, like folders. This way, a tenant can model their own organizational structures within your product, and put users and resources within these.
-- It's important that belonging to a container cascades down their hierarchy. So if a tenant creates a Global folder, US and EU folders underneath it, and a France folder underneath EU, anything within France will also need to be within the EU and the Global folders. 
-- These nestable containers will be used as containing scopes for authorization (see above). So if a user has the Project-Accessor role within the France scope, they'll see projects in France, but a different user with the same role in a different scope won't.
-- These groupings will also be useful with billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.
-- You'll need to model at least two branches of the organizational hierarchy for each tenant, and do that for at least two tenants, as part of your walking skeleton. 
-
 # High-level architecture
 
 ## Main architectural patterns
+
+TODO
 
 - You'll need to choose whether to use orchestration (the logic is centralized in a controller, which dispatches calls to other services) or choreography (the logic is distributed, with each service reacting to what other services are doing).
 - The choice between orchestration and choreography is for each workflow and subsystem. My advice is to adopt service choreography for every workflow and subsystem.
