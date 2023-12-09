@@ -124,28 +124,28 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Realization
 
-TODO
-
-- Event-driven architectures work well with a partitioned distributed ledger, like Apache Pulsar (or Apache Kafka), as message broker and the backbone of event propagation.
-- You should consider whether storing the events indefinitely within Apache Pulsar (with tier storage backed by object storage, like S3 and Glacier), or whether using Apache Pulsar for propagation and a having a separate storage for events.
-- My advice is to consider having a separate storage for events, like EventStore or even Postgres.
-- You'll need a mechanism to handle PII with regard to GDPR's Right To Be Forgotten. Storing PII as part of the events with field-level encryption using per-end-user symmetric keys is a good approach, so when the user needs to be forgotten, you can unlink the key, without losing data integrity.
-- Your servers will have to push information to your clients. You should consider whether hosting a solution, like an MQTT broker, or going for a commercial solution, like Ably. The main factor here is cost: if you foresee a lot of server-pushed messages, hosting your own MQTT cluster is the clear winner.
+- Event-driven architectures work well with a partitioned distributed ledger as the backbone of event propagation.
+- [Apache Pulsar](https://pulsar.apache.org/) and [Apache Kafka](https://kafka.apache.org/) are both open-source and very popular. My recommendation is to go with Apache Pulsar, which I find superior to Kafka in every possible way. You should probably host your own Pulsar cluster, as it's much easier than hosting Kafka, and much cheaper than a as-a-service commercial solution.
+- You should consider whether storing the events indefinitely within your distributed ledger (with tier storage backed by object storage, like S3 and Glacier), or whether using your ledger for propagation and a separate technology for events.
+- My advice is to have a store for events, like [EventStore](https://www.eventstore.com/eventstoredb) or even [Postgres](https://www.postgresql.org/).
+- You'll need a mechanism to handle PII with regard to GDPR's Right To Be Forgotten. Storing PII as part of the events with field-level encryption using per end-user symmetric keys is a good approach. When the user needs to be forgotten, you can unlink the key, without losing data integrity.
+- Your servers will have to push information to your clients. You should either host a solution, like an [MQTT](https://mqtt.org/) cluster, like [EMQX](https://www.emqx.io/), or going for a commercial solution, like [Ably](https://ably.com/). The main factor here is cost: if you foresee a lot of server-pushed messages, hosting your own MQTT cluster is the clear winner.
 - My advice is to avoid websockets, as they introduce connection stickiness (you need to know which socket to use to send a message to a user), and they're too low level.
-- In terms of API style, you'll have to pick one and stick to it for your whole API surface. Examples of API styles include REST, GraphQL, and RPC.
-- My advice is to adopt an RPC style. GraphQL and REST both operate at data manipulation level, but what you want is domain-specific actions.
+- In terms of API style, you'll have to pick one and stick to it for your whole API surface. Examples of API styles include [REST](https://en.wikipedia.org/wiki/REST), [GraphQL](https://en.wikipedia.org/wiki/GraphQL), and [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call).
+- My advice is to adopt an RPC style. GraphQL and REST both operate at data manipulation level, but what you want is domain-specific actions. I'm not talking about [gRPC](https://grpc.io/) by the way, as it brings its own protocol tweaks and doesn't work well with many existing tools. Go over standard HTTP 2, and use either [JSON](https://en.wikipedia.org/wiki/JSON) or [Avro](https://en.wikipedia.org/wiki/Avro) as data format. I'd recommend Avro, but JavaScript in the browser supports it poorly, so even JSON works fine. 
 - So use the POST HTTP method, with the type of the invocation as part of the path, and choose whether to differentiate commands and queries. Examples include `POST /commands/tranfer-account-ownership`, `POST /queries/retrieve-available-balance`, and `POST /invocations/tranfer-account-ownership`.
-- You can easily specify caching instructions for POST responses, but my advice is to try and avoid caching responses as much as possible, subscribing to changes instead.
-- This approach allows bulk invocations endpoints e.g. `POST /commands`, `POST /queries` and `POST /invocations`, so a client can send multiple invocations in one exchange with the server.
-- This approach also allows to record all invocations, whether commands or queries, to provide full auditability.
-- Whenever you need to enforce data-level domain rules, you'll have to choose between the outbox pattern (write to a DB, then derive publishing an event), or the saga patter (read from an eventually consistent view, decide in memory, publish an event, eventually update the view, on conflict rollback the changes and refund, etc.). My advice here is to use sagas, as the outbox pattern is tricky and constitutes a severe limitation in throughput.
-- As your system is fully asynchronous, message-based, and reactive, you can implement the async request-reply pattern to respond to queries synchronously.
-- My advice is to use NATS for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket.
-- About the messaging broker, Apache Pulsar and Apache Kafka are both good choices. I find Apache Pulsar superior overall, but Apache Kafka still has a larger community and more ready-made integrations. In any case, I recommend hosting these yourself, rather than using a managed service, for cost reasons. Apache Pulsar is way easier than Kafka to host, so yet another reason to prefer it.
-- Choose whether to leverage an API gateway, or to go without one. My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing tracing information (below), CORS handling, and other similar operations. I also recommend hosting an open-source or a commercial solution, rather than buying a service.
-- You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies).
+- You can specify caching instructions for POST responses, but my advice is to avoid caching responses as much as possible. If you really need that performance, subscribe to changes on the client side.
+- This approach enables bulk invocations endpoints e.g. `POST /commands`, `POST /queries` and `POST /invocations`, so a client can send multiple invocations in one exchange with the server.
+- This way, it's easy to record all the invocations that happened, whether commands or queries, to provide full auditability.
+- Whenever you need to enforce domain rules that depend on the current state, you'll have to choose between the [outbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) (write to a DB, then derive publishing an event), or [the saga patter](https://en.wikipedia.org/wiki/Compensating_transaction) (read from an eventually consistent view, decide in memory, publish an event, eventually update the view, rollback the changes and refund if there are conflicts). My advice here is to use sagas, as the outbox pattern is tricky and constitutes a severe limitation in throughput.
+- As your system is fully asynchronous, message-based, and reactive, you can use the [async request-reply pattern](https://medium.com/@mahernaija/messaging-patterns-cf4bc5b164cf) to respond to queries synchronously.
+- My advice is to use [NATS](https://en.wikipedia.org/wiki/NATS_Messaging) for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket. MQTT works well for this too, but it's quite a heavy technology to deploy.
+- Choose whether to leverage an API gateway, or to go without one. My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing of tracing information, [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) handling, [TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy), and other similar aspects. I also recommend hosting an open-source or a commercial solution, rather than buying a service.
+- You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies, or updating materialized views).
 
 # Correlation
+
+TODO
 
 ## Invocation context
 
