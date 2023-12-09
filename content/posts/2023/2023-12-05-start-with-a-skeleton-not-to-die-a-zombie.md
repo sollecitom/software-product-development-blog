@@ -34,7 +34,7 @@ Starting your software system from a walking skeleton offers several benefits:
 2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system that works to a different complete system that works. This is much safer and faster, de-risking your progress.
 3. You can put automated tests in place, to prevent any new functionality from breaking your desired system-wide properties. 
 
-Wait a minute though, what about YAGNI? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? YAGNI has to do with the scope of your product, not the quality of your system.
+Wait a minute though, what about YAGNI? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? YAGNI has to do with the scope of your product, not the quality of your system. 
 
 What happens if a company doesn't do this? Well, the problem is that the company will still need to design and build the aspects a walking skeleton covers. This is much harder once you have customers using your products, and while you're building new features. You can still overdo a walking skeleton though, so it's certainly a balance.
 
@@ -45,6 +45,8 @@ So if you design your messaging infrastructure one way, ignore tenant isolation,
 How long does building a walking skeleton take? Well, there's no standard answer to this. For tiny simple projects, it might only take a week or two. For large initiatives, it'll typically take a competent cross-functional team of senior people four to six months to build a walking skeleton. Projects requiring multi-Cloud, multi-region, or dynamic provisioning will require a longer time for this. I'd say that each of these factors multiplies the time it takes to build a walking skeleton by a factor of 1.5. Ballpark, of course.  
 
 Building a walking skeleton is not something you can parallelize much, because of the interdependencies involved in designing an end-to-end system. So, while raising the quality and expertise of the team involved will produce better results, increasing the number of people involved beyond ten or so will actually be counter-productive.
+
+Mind that the goal of a walking skeleton is to dig out the unknown unknowns, and to design a system that can cope with them. It does not mean you build everything. You need to balance You Ain't Going to Need It (YAGNI) with You Ain't Going to Survive It (YAGSI). So you need to cover at least two very different languages for internationalization, but you shouldn't go and build translation packs for every language known to humanity, just in case somebody might need it at some point. 
 
 # What should the scope be for a walking skeleton?
 
