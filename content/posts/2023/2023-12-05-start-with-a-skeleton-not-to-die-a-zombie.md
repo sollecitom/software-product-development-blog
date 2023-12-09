@@ -109,7 +109,7 @@ TODO
 - You should allow your tenants to define more granular groups of users.
 - You could choose to model these groups as projects, spaces, teams, or organizations.
 - My advice is to avoid choosing one model, and allow arbitrarily nestable containers, like folders. This way, a tenant can model their own organizational structures within your product, and put users and resources within these.
-- It's important that belonging to a container cascade down their hierarchy. So if a tenant creates a Global folder, US and EU folders underneath it, and a France folder underneath EU, anything within France will also need to be within the EU and the Global folders. 
+- It's important that belonging to a container cascades down their hierarchy. So if a tenant creates a Global folder, US and EU folders underneath it, and a France folder underneath EU, anything within France will also need to be within the EU and the Global folders. 
 - These nestable containers will be used as containing scopes for authorization (see above). So if a user has the Project-Accessor role within the France scope, they'll see projects in France, but a different user with the same role in a different scope won't.
 - These groupings will also be useful with billing insights, so that billing contributions can be tagged with the containing scope they were produced in, allowing to roll them up hierarchically, according to the tenant's own organizational structure.
 - You'll need to model at least two branches of the organizational hierarchy for each tenant, and do that for at least two tenants, as part of your walking skeleton. 
