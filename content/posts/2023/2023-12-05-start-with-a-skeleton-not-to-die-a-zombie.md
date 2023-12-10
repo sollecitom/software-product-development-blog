@@ -214,19 +214,18 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - You should ensure that your users can browse and search the history of all changes that happened on any one of such entities.
 - An example might be that, if your product allows users to create projects, any user with permissions should be able to see the whole history of changes on a specific project: who created it and when, the original data, the log of changes, each including who did what, when, and how.
 
-## Multi-platform strategy
+## Multiplatform strategy
 
-- If you ever need both mobile and web, you'll need to decide whether leveraging a multi-platform approach (like React/React Native, Kotlin multi-platform, etc.), or whether to adopt separate codebases for each channel.
-- In B2B, it almost always makes sense to go with a multi-platform approach.
-- In B2C, your users will tend to be mobile first, so going native might sometimes be preferable.
-- However, this is not a rule, so make an explicit decision, keeping in mind the number of specialists you have available, etc.
+- If you ever need more than platform e.g., iOS, Android, and web, you'll need to decide between leveraging a multiplatform approach (like [React](https://react.dev/)/[React Native](https://reactnative.dev/), [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html), etc.), and adopting separate codebases and technologies for each channel.
+- In B2B, it almost always makes sense to go with a multiplatform approach. In B2C, your users will tend to be mobile-first, so going native might sometimes be preferable.
+- However, this is not a rule, so make an explicit decision, keeping in mind the number of specialists you'll need, and how exacting are your platform-specific requirements.
 
-## Components
+## UI components
 
-- You'll want to curate a set of client components, to achieve a consistent user experience and look&feel, throughout your applications.
-- You should be able to compose these into higher-order components.
+- You'll want to curate a set of UI components to avoid duplication and achieve a consistent user experience, throughout your applications.
+- You should be able to compose these into higher-order components and workflows.
 - You should be able to test each component in isolation.
-- These should be versioned and maintained as a library.
+- These components should be versioned and maintained as a library.
 
 ## Modules, features, and billing
 
