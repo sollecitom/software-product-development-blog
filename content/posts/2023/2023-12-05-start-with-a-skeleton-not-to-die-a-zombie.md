@@ -203,9 +203,10 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## In-app and off-app learning
 
-- You'll need to guide your users through learning how to use your product.
-- This can be a mix of in-app resources e.g., a guided walkthrough and the product's documentation, and off-app resources e.g., videos on YouTube.
+- You'll need to walk your users through your product.
+- This can be a mix of in-app resources e.g., a guided walkthrough and your product's documentation, and off-app resources e.g., videos on YouTube.
 - In any case, you should list these resources in-app, and guide the users through their journey.
+- My advice is to use an existing product tour tool, rather than trying to roll your own. [Here's a selection of some options for this](https://www.storylane.io/blog/11-best-product-tour-software-for-saas).
 
 ## History of changes for each entity
 
