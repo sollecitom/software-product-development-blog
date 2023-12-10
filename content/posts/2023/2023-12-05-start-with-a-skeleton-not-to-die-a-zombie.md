@@ -191,14 +191,15 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Displaying and reporting errors
 
-- You should display meaningful error messages when something goes wrong, in the user's locale (with fallback, if not supported). These shouldn't be protocol level error messages (e.g., 403 Forbidden), but properly crafted messages, explaining what went wrong, and what the user should do about it.
-- Some types of errors should offer the user the option to retry (using the same invocation ID for idempotency).
-- All unexpected errors should allow the user to report the error, and ask them to choose a recent invocation the error relates to. This should create an entry within an in-app open error investigations section, and retry the invocation with bumped up logging level (using a toggle) and same invocation ID (for idempotency). This should alert your back-office (below). Once the error is fixed, a back-office user can provide information about what happened and what was done about it, and the open investigation should be updated, with the user receiving an in-app/email notification.
+- You should display meaningful error messages when something goes wrong, in the user's locale (with fallback, if not supported). These shouldn't be protocol-level error messages e.g., 403 Forbidden, but properly crafted messages, explaining what went wrong, and what the user should do about it.
+- Some types of errors should offer the user the option to retry, automatically using the same external invocation ID for idempotency.
+- All unexpected errors should ask the user to report the error, automatically adding correlation information about the invocation. Reporting an error should create an entry within an in-app error investigations section, and retry the invocation with bumped up logging level (using a toggle) and same external invocation ID (for idempotency).
+- This should alert your back-office. Once the error is fixed, a back-office user can provide information about what happened and what was done about it. The open investigation should be updated, and the user should receive an in-app and an email notification.
 
 ## Accessibility
 
 - If you have any accessibility requirements, and probably even if you don't, you should ensure your client applications are accessible.
-- You should create automated tests against regressions (e.g., using Wave, Axe, and Pa11y, https://opensource.com/article/23/2/automated-accessibility-testing), so that what's accessible doesn't lose this property at some point in the future.
+- You should create automated tests to prevent regressions (using tools like [Wave](https://wave.webaim.org/), [Axe](https://www.deque.com/axe/), and [Pa11y](https://pa11y.org/), https://opensource.com/article/23/2/automated-accessibility-testing), so that what's accessible doesn't lose this property at some point in the future.
 
 ## In-app and off-app learning
 
