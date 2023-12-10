@@ -463,12 +463,11 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Resilience
 
-- Circuit breakers and retries are important, whenever you perform requests to downstream services.
-- In an event-driven architecture, most services process messages from a queue, making both of these less important.
-- For command and query endpoints, though, you might still need them.
-- Each service should also expose a set of management endpoints, for health checks, etc. It's important that these are exposed on a separate port, compared to the main application endpoints, so that Kubernetes can access these without exposing them to the clients at all.
-- For blocking IO operations, you'll want thread pool and bulkheads. An example might involve a separate thread pool and connection pool for each tenant, to talk to a SQL database. This way a tenant cannot easily influence other tenants with their activity.
-- Another good practice is a separate thread pool for the management endpoints, for otherwise high activity will make your application not respond to management queries and commands.
+- Circuit breakers and retries are important whenever you perform requests to downstream services.
+- In an event-driven architecture, most services process messages from a queue, making both of these less important. For command and query endpoints, though, you still need them.
+- For blocking IO operations, you'll want thread pools and bulkheads. An example might involve a separate thread pool and connection pool for each tenant, to interact with a SQL database. This way a tenant cannot easily influence other tenants with their activity.
+- Each service should also expose a set of management endpoints, for health checks, etc. It's important that these are exposed on a separate port, rather than on the main application port, so that Kubernetes can access these without exposing them at all to other services or over public internet.
+- Another good practice is a separate thread pool for the management endpoints, for otherwise high activity will make your application not responsive to management queries and commands.
 
 ## Data optimizations
 
