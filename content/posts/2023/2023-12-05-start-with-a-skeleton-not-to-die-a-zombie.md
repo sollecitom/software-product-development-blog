@@ -549,9 +549,9 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Performance tests as part of the build
 
 - For parts of your codebase where performance is critical, create micro-benchmarks e.g., with [JMH](https://github.com/openjdk/jmh) if you're using a JVM-based language.
-- Establish a baseline, and run these as part of each build.
-- For event-driven workflows, you can use flow analysis to determine the performance of the whole system from the performance of the parts. This is an extremely nice property. Given an event processor, you should test the throughput it can process, and the latency each event experience.
-- The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
+- Establish a baseline, and run these as part of each build, failing the process if there are regressions in the measured performance.
+- For event-driven workflows, you can use flow analysis to determine the performance of the whole system from the performance of the parts. This is an extremely nice property. Given an event processor, you should test the maximum throughput it can sustain, and the latency each event experiences.
+- The whole build, including all tests and checks should run in under 3 to 5 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Smoke tests in production
 
@@ -559,17 +559,16 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - These should not duplicate the tests you run as part of each build, and you're not aiming for coverage here.
 - The only purpose of smoke tests is to catch unexpected problems in your production environment. Misconfigured network rules, etc.
 - Having one test for each main workflow works well, and these tests should exercise your whole system, in depth.
-- An example of a smoke test might involve creating a test user for a test tenant, attempting to log in with the wrong password, resetting the password using a test email server, logging in successfully, logging out, and checking a login-protected page is now not available.
+- An example of a smoke test might involve creating a test user for a test tenant, failing to log in with the wrong password, resetting the password by following a link on an email received by a test email server, logging in successfully, logging out, and checking that a login-protected page is now not available.
 - If a smoke test fails, something is seriously wrong.
 - You'll need test tenants, test users, test email servers.
-- Normally you should use your actual third-party dependencies. Sometimes this is not possible, at which point you should use their test versions or some stubs, configured to only be used for these test users.
+- Normally you should use your actual third-party dependencies. Sometimes this is not possible, at which point you should use their test versions. If your 3rd-party services don't have test versions, replace them with stubs configured to only be enabled for these test users.
 - These smoke tests should run in production and nowhere else, because the problems these tests catch are almost always environment-specific, so running them in another environment would be completely useless.
-- Ideally these should run in ten to twenty minutes, and you should run them every thirty minutes or so.
+- Ideally these should run in under 20 minutes, and you should run them every 30 minutes or so.
 
 ## Resilience tests in production
 
-- You should perform resilience tests in your production environment.
-- Chaos testing tools are a good approach to achieve this.
+- You should perform resilience tests in your production environment. [Chaos engineering](https://en.wikipedia.org/wiki/Chaos_engineering) tools are a good approach to achieve this.
 - You should resist the temptation to run these in a separate environment, as they'd prove very little.
 
 ## Runtime monitoring in production
@@ -577,10 +576,10 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Each event-driven workflow should produce an alert if a step doesn't complete within a time limit, or if the whole workflow exceeds a time limit.
 - You should have a runtime security agent checking for abnormal behavior happening in production. [Wiz](https://go.wiz.io/) and [Aquasec](https://www.aquasec.com/) can help with this.
 
-## Performance tests
+## Exploratory performance tests
 
 - Exploratory performance tests should be run in ephemeral copies of your production environment.
-- You should be careful with these, as the amount of data you have will likely influence your performance, so either makes the two environments identical or be careful about how you structure your tests.
+- You should be careful with these, as the amount of data you have will likely influence your performance, so either make the two environments identical or be careful about what you can infer from your tests.
 - Examples of these tests include stress tests, soak tests, etc.
 
 # Data and analytics
