@@ -497,11 +497,11 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Packaging
 
-- Each service should be packaged, as part of its build.
-- You should choose between OCI images (e.g., Docker), native images (e.g., Graal), etc.
-- You should also tweak the runtime properties for your executable bundles. For JVM-based applications, this means which garbage collector to use, memory settings, GC flags, additional JVM options, etc.
-- Structure your OCI images with multi-stage builds, so that each stage can be cached if it didn't change. Ensure you separate runtime requirements from build-time requirements, so unnecessary things don't end up in your image.
-- Your OCI images should be reproducible, meaning that the same code version should produce identical bytes. This requires some configuration tuning, but also for the contained artifacts (JARs, etc.) to also be reproducible.
+- Each service should be packaged, as part of its build. You should choose between [OCI images](https://github.com/opencontainers/image-spec) e.g., [Docker](https://www.docker.com/), or native images e.g., [Graal](https://www.graalvm.org/).
+- You should also tweak the runtime properties for your executable bundles. For JVM-based applications, this means chosen garbage collector, memory settings, GC flags, additional JVM options, etc.
+- Structure your OCI images with [multi-stage builds](https://docs.docker.com/build/building/multi-stage/), so that each stage can be cached if it didn't change.
+- Ensure you separate runtime requirements from build-time requirements, so unnecessary things don't end up in your image.
+- Your [OCI images should be reproducible](https://medium.com/nttlabs/bit-for-bit-reproducible-builds-with-dockerfile-7cc2b9faed9f), meaning that the same code version should produce identical bytes. This requires some configuration tuning, but also for the contained artifacts e.g., JARs to also be reproducible. Here's [how to enable reproducible archives in Gradle](https://docs.gradle.org/current/userguide/working_with_files.html#sec:reproducible_archives).
 
 ## Builds
 
