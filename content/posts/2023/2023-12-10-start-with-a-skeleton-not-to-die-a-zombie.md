@@ -2,8 +2,8 @@
 title: "Start with a skeleton not to die a zombie"
 categories: [ "software-development" ]
 tags: [ "system-thinking", "architecture", "walking-skeleton", "effectiveness", "startups" ]
-date: 2023-12-04T05:00:00
-draft: true
+date: 2023-12-10T05:00:00
+draft: false
 ---
 
 Most companies die a zombie. They start lean and nimble, ship feature after feature, and delight their customers. Then, after eighteen to twenty-four months, the bubble pops, and suddenly they cannot do anything. They limp around painfully until they bite the bullet and re-write their systems, or kick the bucket.
