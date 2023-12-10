@@ -168,16 +168,14 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 # User-facing applications
 
-TODO
-
 ## Internationalization
 
-- All strings should be represented using the UTF-16 or UTF-8 charsets. UTF-8 can represent every character, but it's optimized for text that is mostly ASCII. So it depends on the intensity of this requirement. In any case, stick to UTF-8 at a minimum, even if you don't currently have any internationalization requirements.
-- The client should externalize all text content, so that a different value can be used based on the browser's locale. When the locale changes in the browser, this should also be changed.
-- The back-end should return these internationalization keys, rather than text in English, for everything.
-- The actual values should be packaged in the app itself, with a fallback to a lookup against a CDN. This allows trading off chattiness with app size, and overriding a value without having to wait for a release.
+- All strings should be represented using the UTF-16 or UTF-8 charsets. UTF-8 can represent any character, but it's optimized for text that is mostly ASCII. So it depends on the intensity of this requirement. In any case, stick to UTF-8 at a minimum, even if you don't currently have any internationalization requirements.
+- The frontend applications should externalize all text content, so that a different value can be used based on the browser's locale. When the locale changes in the browser, this should also be changed.
+- The backend should return these internationalization keys, rather than text in English, for everything.
+- The actual values should be packaged in the app itself, falling back to a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network) (CDN) lookup. This allows trading off chattiness and app size, and changing text without having to release.
 - All communications e.g., emails and in-app notifications should respect the locale of the user, falling back to a default locale, if the user's locale is not currently supported.
-- If you plan to support Arab countries, or Asian countries like China and Japan, you should also change the page layout based on the user locale, as the languages involved are laid out differently. 
+- If you plan to support Arab countries, or Asian countries like China and Japan, you should also change the page layout based on the user locale, as some of these languages are laid out differently. 
 
 ## In-app notifications of changes
 
