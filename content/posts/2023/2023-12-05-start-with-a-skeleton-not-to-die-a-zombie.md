@@ -318,16 +318,18 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Cloud providers
 
-- You'll need to decide whether single Cloud provider availability and business continuity is enough.
-- If so, then my advice is to stick with Google Cloud Platform (GCP). It's cheaper than the others, and offers great fundamental products e.g., the managed Kubernetes service.
+- You'll need to decide whether having single Cloud provider availability and business continuity is enough.
+- If so, then my advice is to stick with [Google Cloud Platform](https://cloud.google.com/) (GCP). It's cheaper than the others, and offers great essential products e.g., the managed Kubernetes service.
 - If you need a multi-Cloud approach, you'll need to figure out whether active-passive-cold is enough, or whether you need active-passive-hot or active-active.
 - In any case, the way this should work is that, when your active Cloud provider has an issue, you should be able to switch to another Cloud provider with 1 click.
-- You should aim at not losing any data as part of this. Ideally this should also happen with zero downtime.
-- Active-active and active-passive-hot multi-Cloud workflows are hard, but can be achieved in a similar way multi-region workflows work.
-- You could deploy a messaging cluster on each Cloud provider, and then replicate each command across all clusters, ensuring each replicated command ends up having the same offset across different clusters. Apache Pulsar can help with this, with its geo-replication features. Once you have this, you can enable/disable the side effects in your passive Cloud provider, but it'll be ready and eventually consistent with the active one.
-- Even if you simply need to be deployable in more than 1 Cloud provider, but downtime is okay, you should still test with at least 3 Cloud providers, as part of your walking skeleton. This is because you usually need quorum to recover from a temporary failure, so the minimum Cloud providers you'll need is 3, when 1 is not enough.
+- You should aim at being able to switch without losing any data, and with zero downtime (that's where active-passive-hot and active-active come into play).
+- Active-passive-hot and active-active multi-Cloud workflows are rare and hard, but they can be achieved in a similar way active-active multi-region workflows work.
+- You could deploy a messaging cluster on each Cloud provider, and then replicate each command across all clusters, ensuring that each replicated command ends up having the same offset across different clusters. Apache Pulsar can help with this, with its geo-replication features. Once you have this, you can enable/disable the side effects in your passive Cloud provider, but it'll be ready and eventually consistent with the active one.
+- You should use at least three Cloud providers, as part of your walking skeleton, if you need a multi-Cloud approach. This is because you'll need quorum to recover from a temporary failure, so you'll need three Cloud providers at a minimum, if one is not enough.
 
 ## Regions and Availability Zones
+
+TODO
 
 - Depending on your availability and disaster recovery requirements, you'll need your services across multiple Availability Zones, or even across multiple Regions.
 - Active-active and active-passive-hot multi-region workflows are hard, just like it's hard to get these working well across multiple Cloud providers.
