@@ -472,11 +472,12 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Data optimizations
 
 - You should use compression for client-to-server, server-to-client, and service-to-service communications.
-- Large attachments e.g., images and videos should be uploaded to object storage instead (e.g., S3), and a pre-signed download URL should be sent instead, as a mechanism to obtain the attachment if needed.
-- For images and videos, you also want to leverage CDNs, and to dynamically adjust their size based on the user's screen, and their quality based on the user's internet connection speed.
+- Large attachments e.g., images and videos should be uploaded to object storage instead (e.g., [Google Cloud Storage](https://cloud.google.com/storage) or [AWS S3](https://aws.amazon.com/pm/serv-s3/)), and a pre-signed download URL should be sent instead, as a mechanism to obtain the attachment if needed.
+- For images and videos, you also want to leverage CDNs, to dynamically adjust their size based on the screen dimensions of the user, and to choose their quality based on the user's internet connection speed.
 - Whenever a user needs to upload an attachment (image, video, etc.), your back-end should generate a pre-signed upload URL to an object storage location, so that the traffic doesn't flow through your systems.
-- In this case, you should adopt a quarantine bucket, so that every upload triggers a malware inspection process, which copies the file to another bucket if it deems the attachment secure.
-- About PII, you should either encrypt the whole document with an end-user-specific key so, after the user has invoked the Right To Be Forgotten the documents will be unusable. Or you should store a template for the document and the data separate, so that after the user has opted out, you would still be able to produce a document, but with some information redacted.
+- You should adopt a quarantine bucket, so that every upload triggers a malware inspection process, which copies the file to the actual bucket if it deems the attachment secure.
+- About PII, you should either encrypt the whole document with an end-user-specific key so, after the user has invoked the Right To Be Forgotten the documents will be unusable.
+- Alternatively, you should store a template for the document and keep the data separate, so that after the user has opted out, you would still be able to produce a document, but with some of the information redacted.
 
 ## Dealing with money
 
