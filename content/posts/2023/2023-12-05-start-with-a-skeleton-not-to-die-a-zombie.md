@@ -288,7 +288,8 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - My advice is to use Pulumi, as it allows you to dynamically declare resources based on runtime data. You can also create your own types and functions, and it's easier to compose.
 - You should monitor your infrastructure, checking for divergences between the declared and the actual state. A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
 - Structure a mechanism for requesting and granting temporary and audited access (read or write) to resources. These requests need to be approved and recorded. Nobody should have direct access to any database, network, console, or anything.
-- In terms of provisioning, a fully scripted approach works well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform and Pulumi can leave you with an inconsistent state in case of failure. Kubernetes Operators are a better approach in this case. 
+- In terms of provisioning, a fully scripted approach works well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform and Pulumi can leave you with an inconsistent state in case of failure. Kubernetes Operators are a better approach in this case.
+- My advice would be to use Pulumi to set up Kubernetes and install a bootstrap Operator, and then use Kubernetes Operators for everything else, even when you don't have dynamic infrastructure provisioning requirements. 
 
 ## Configuration management
 
