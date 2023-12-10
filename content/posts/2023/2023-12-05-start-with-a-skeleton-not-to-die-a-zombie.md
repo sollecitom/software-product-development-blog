@@ -229,12 +229,10 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Modules, features, and billing
 
-TODO
-
 - Your products will contain various modules and features.
-- You'll need to model these explicitly, so that a new module can be released in the back-end, without having to re-release the front-ends.
-- You should be able to bill based on a combination of a base tier, plus a consumption-based contribution. In any case, what you charge should be auditable.
-- Whenever a tenant would have exceeded their maximum quota of operations, you should be able to automatically disable further actions from that tenant, until they expand their subscription or the new cycle starts.
+- You'll need to model these explicitly in your code, so that a new module can be released without having to release the front-end applications.
+- You should be able to bill based on a combination of a base tier, plus a consumption-based contribution. In any case, you should be able to clearly explain your bills, with hierarchical roll-ups based on nested containing scopes.
+- Whenever a tenant would have exceeded their maximum quota of operations, you should be able to automatically disable further actions from that tenant, until they expand their subscription or a new billing cycle starts.
 
 ## Instrumentation and attribution
 
