@@ -69,6 +69,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - A login challenge e.g., matching a password hash, something based on signing some bytes on both sides, etc.
 - Support for Personal Access Tokens for user accounts, and API keys for service accounts. Because orchestrated authentication workflows don't play well with scripting.
 - Password storage implementation (Argon2 or similar to hash, salting, peppering, etc.).
+- You should allow users to view their active and historical sessions, and to invalidate specific ones.
 - My strong advice is to stick to a battle-tested open-source solution, like [Keycloak](https://www.keycloak.org/), or to go with a managed service like Okta. Out of the two, I'd go with hosting Keycloak, in general.
 
 ## Token management
