@@ -91,6 +91,8 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Each tenant should be able to set up Single Sign-On with their own IDP, and to enable [Mutual Transport Layer Security](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/) (mTLS) and IP address range restrictions.
 - As mentioned above, you'll need tenant-specific subdomains e.g., `<tenant-name>.<your-root-domain>.com` for this. This needs to happen automatically when you onboard a new tenant.
 - If you offer environments, you'll likely need infrastructure isolation to prevent the activity from one tenant to affect the workflows of another tenant.
+- Different tenants might require different encryption keys, physically segregated storage, and different locations for their data.
+- Data residency regulations require that data for customers in a Country is also going to be kept in that country (some Countries require "only" instead of "also", but very few).
 - You'll need to implement at least two tenants for each tenant type, as part of your walking skeleton.
 
 ## Tenancy model
@@ -167,7 +169,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - The context should contain information about the access, the trace, and the toggles associated with the invocation.
 - The toggles associated to an invocation are a set of key-value pairs, where the key is a feature toggle ID, and the value is the type-safe value for that feature. This can be used for A/B testing, to bump the logging level for an invocation, and for many other use cases. Mind that these toggles are per-invocation, so they shouldn't contain things like product tiers, etc.
 - The access should include authorization information, provenance information (client IP address, parsed user agent, etc.). It should also indicate whether the invocation was unauthenticated (for operations exposed outside of login) or authenticated. For authenticated accesses, information about the actor should also be included. This should indicate the account ID, whether it's a user or a service account, the tenant the actor belongs to, the locale of the user, and the authentication mechanism (including client-side session ID or the hash of the API key used). The actor model should also support impersonation and acting on behalf of other accounts.
-- The trace should allow correlating invocations that are logically related. A good way of achieving this is to generate some initial unique IDs (e.g., ULIDs) on the client side: 1 for the action itself e.g., a button press, plus 1 for each invocation to the back-end this action results in (typically one). After that, the gateway should generate an originating trace ID, and these 3 pieces of information should be immutable throughout the chain of invocations. Each service that processes the invocation should receive a parent invocation ID, generate an invocation ID, and send this last ID as parent invocation ID for downstream calls.
+- The trace should allow correlating invocations that are logically related. A good way of achieving this is to generate some initial unique IDs (e.g., [ULID](https://github.com/ulid/spec)s) on the client side: 1 for the action itself e.g., a button press, plus 1 for each invocation to the back-end this action results in (typically one). After that, the gateway should generate an originating trace ID, and these 3 pieces of information should be immutable throughout the chain of invocations. Each service that processes the invocation should receive a parent invocation ID, generate an invocation ID, and send this last ID as parent invocation ID for downstream calls.
 - This way humans and systems can easily identify retries and invocation that are logical duplicates of previous invocations.
 - The information in the invocation context allows determining an idempotency key: this one is typically the external invocation ID, within a namespace composed of the tenant ID and the actor ID (so that different actors and tenants cannot interfere with each other in terms of idempotency).
 - An application should receive the full invocation context from the gateway (typically encoded as JSON and to Base64 in a header), fork it (generate a unique invocation ID, and move the received invocation ID as new parent invocation ID), add it to the log stack, pass it as an argument (or as a context parameter) to all functions, include this information in every event, and send this as a header as part of any downstream HTTP request.
@@ -349,45 +351,49 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Service registry
 
-- You should have a service registry, listing all existing services.
+- You should have a service registry, listing all your existing services.
+- Each service should have an identity in the form of a unique identifier e.g., a [ULID](https://github.com/ulid/spec).
 - Each service should show which infrastructure resources they depend on, along with the libraries and versions they use.
 - You should be able to see all services that use a dependency version affected by a vulnerability.
 - Every service should also link to its codebase on version control.
-- Each service should have an identity in the form of a unique identifier e.g., a ULID.
 
 ## Messaging
 
 - Your messaging infrastructure will need authorization, auto-scaling, replication, partitioning, etc.
 - You should have a service registry in place, and a way of authenticating services. mTLS is a good way of doing this, if you issue per-service certificates, with rotation, using sidecars to proxy the communications.
-- In terms of authorization, ACLs work well, but a custom authorizer using OPA is better. Both Pulsar and Kafka support this. The way it works is that you can declare a custom authorizer as a plugin extension, and your broker will ask it whether a service is allowed to publish or subscribe to a topic, caching the result afterwards.
-- Partitioning and cluster auto-scaling are much easier with Pulsar than they are with Kafka.
-- You should also have a company-wide registry of topics and schemata (typically in Apache Avro). So that each developer should know what topics exist, what are they for, and their schemata.
-- Your cluster should be configured to reject messages whose payload is backward or forward incompatible with the schema set for the topic.
+- In terms of authorization, [ACLs](https://docs.streamnative.io/docs/access-control) work well, but a custom [Authorization Provider](https://pulsar.apache.org/docs/next/security-extending/) using [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is better. Both Pulsar and Kafka support this. The way it works is that you can declare a custom Authorization Provider as a plugin extension, and your broker will ask it whether a service is allowed to publish or subscribe to a topic, caching the result afterward.
+- Partitioning and [cluster auto-scaling](https://docs.datastax.com/en/streaming/kaap-operator/0.1.0/) are much easier with Pulsar than they are with Kafka, because Apache Pulsar's brokers are stateless. You'll need to template both aspects as part of your walking skeleton.
+- You should also have a company-wide registry of topics and schemata (typically in [Apache Avro](https://avro.apache.org/)). So that each developer should know what topics exist, what are they for, and what schema is published to that topic.
+- Your cluster should be configured to reject messages whose payload is backward or forward incompatible with the schema set for the topic. [An overview of how this works in Pulsar](https://pulsar.apache.org/docs/3.1.x/schema-understand#schema-evolution).
 
 ## Service-to-service communications
 
 - Ideally no two services should ever know of each other's existence, exclusively publishing and receiving events instead.
 - If you must have peer-to-peer communications, service mesh will help manage this.
 - By using peer-to-peer communications you lose a lot, in terms of backpressure, security, extensibility, etc. so think really carefully whether you really have to.
+- For external services, you'll need peer-to-peer communications anyway. My advice is to structure proxy services for 3rd-party dependencies, so that your applications are not concerned with certificate management, credentials, etc.
+
+## Outbound invocations
+
+- If your applications initiate outbound invocations to a tenant's infrastructure, you'll need to somehow prove these are genuine and originated from the right environment.
+- For webhooks, you should consider [HTTP Message Signatures](https://httpwg.org/http-extensions/draft-ietf-httpbis-message-signatures.html).
+- Each tenant-specific area of your infrastructure should generate a key pair (with rotation) used to sign outbound requests.
+- The receiver should retrieve the public key from a well-known endpoint exposed under the tenant-specific subdomain (so protected by mTLS, IP address range restrictions, etc.), and use the key to verify the signature.
+- Like for calls to external services, my advice is to use proxy services to produce and attach HTTP Message Signatures to outbound invocations, so that your applications are not concerned with certificate management, credentials, etc.
 
 ## Autoscaling for services
 
-- You'll want CPU-based auto-scaling groups, for command and query endpoints, as their driven by unpredictable external traffic.
+- You'll want CPU-based auto-scaling groups, for command and query endpoints, as their driven by push-based unpredictable external traffic.
 - For event processors and event sinks, CPU-based autoscaling makes no sense, as these process messages out of a queue. Instead, you'll want to scale their consumer groups based on the derivative of their queue size: if they're falling behind the producers, ramp up, and if they're catching up fast, ramp down. 
 
 ## Monitoring
 
-- You should have dashboards and alerts for both product and infrastructure related aspects.
+- You should have dashboards and alerts for both product and infrastructure-related aspects.
 - In terms of infrastructure, things like CPU, memory, number of inbound and outbound connections, error rate, available disk space, etc.
 - About product aspects, stuck workflows that are not progressing through the steps after a given time (using sagas for this), brute-force login attempts, suspicious patterns, etc.
-- You should also have health checks and readiness checks for each service, along with an externally generated availability check service e.g., Pingdom, to check whether your platform is available to the outside world.
+- You should also have health checks and readiness checks for each service, along with an external availability check service e.g., [Pingdom](https://www.pingdom.com/), to check whether your platform is available to the outside world.
 - Any error-level log entry should trigger an alert to be investigated.
-- My advice is to use open-source tools for monitoring and for dashboards e.g., Prometheus and Graphana, as opposed to commercial solutions like Datadog, as these can get obscenely expensive.
-
-## Data segregation and replication
-
-- Different tenants might require different encryption keys, physically segregated storage, and different locations for their data.
-- Data residency regulations require that data for customers in a Country is also going to be kept in that country (some Countries require "only" instead of "also", but only 1 or 2).
+- My advice is to use open-source tools for monitoring and for dashboards e.g., [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/), as opposed to commercial solutions like [Datadog](https://www.datadoghq.com/), as these can get very expensive fast.
 
 ## Releases and deployments
 
@@ -411,14 +417,6 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you. Your system should show the whole tree of correlated logs and events.
 - If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space.
 - My advice is to use open-source tools for logs collection and searching, as commercial solutions can get expensive quickly.
-
-## Outbound invocations
-
-- If your applications initiate outbound invocations to a tenant's infrastructure, you'll need to somehow prove these are genuine and originated from the right environment.
-- For webhooks, you should consider [HTTP Message Signatures](https://httpwg.org/http-extensions/draft-ietf-httpbis-message-signatures.html).
-- Each tenant-specific area of your infrastructure should generate a key pair (with rotation) used to sign outbound requests.
-- The receiver should retrieve the public key from a well-known endpoint exposed under the tenant-specific subdomain (so protected by mTLS, IP address range restrictions, etc.), and use the key to verify the signature.
-- As a trade-off, you might also decide to encrypt using a symmetric key, at the cost of not being able to cache this, and having a higher performance hit. 
 
 # Application development
 
@@ -452,7 +450,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## ID generation
 
 - You should choose the type of unique IDs you generate for each concern.
-- My advice is to use ULIDs for domain IDs, and to use TSIDs as primary keys in SQL databases.
+- My advice is to use [ULID](https://github.com/ulid/spec)s for domain IDs, and to use TSIDs as primary keys in SQL databases.
 - You should also figure out whether to rely on sortable unique identifiers to infer the order of the events, in which case you should generate IDs from an event-processor, with partitioning.
 
 ## Resilience
