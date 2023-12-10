@@ -600,55 +600,55 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Anything of interest that happens off-platform should be produced. Financial reports, etc.
 - Adopt tools that allow every employee to create their own custom dashboards and metrics. An example of these tools is [Metabase](https://www.metabase.com/).
 
-# Backoffice
+# Back-office
+
+## Internal application
 
 - You'll need a back-office web application for your employees.
 - This should be built with the same care of your main web applications.
 - Every operation should be event-driven, with full auditability.
 - You might want to support different roles, and require admin review and approval for some operations.
 - This web application shouldn't be accessible over public internet, but only through a [Virtual private Network](https://en.wikipedia.org/wiki/Virtual_private_network).
+- This back-office application should use federated access with your company's Identity Provider (IDP), so that your employees can log in to it with Single Sign-On, and with the appropriate authorization roles.
 
 ## Tenant management
-
-TODO
 
 - You'll need to list your tenants, and manage their configuration.
 - You should be able to see which features and modules they have enabled, the weights and limits they have, and to change these settings.
 - You need to be able to onboard a tenant from here, unless they can onboard from the app itself, in which case you need notifications.
-- You should be able to review any applications, and either approve them or reject them for a specific reason. This should cause notifications for the tenant.
+- You should be able to review any applications, and either approve them or reject them for a specific reason. This should cause notifications for the tenant, received in-app and over email.
 
 ## User management
 
 - You'll need to list and manage your users.
 - You should be able to browse a user's activity.
-- Sensitive information (including names, phone numbers, email addresses, transaction details, etc.) should be shown encrypted. The decision to decrypt should stay as a record for audit purposes.
+- Sensitive information (including names, phone numbers, email addresses, transaction details, etc.) should be shown encrypted. The decision to decrypt should stay on record for audit purposes.
 
 ## Issue management
 
-- You'll need to list and manage your issues.
-- You should be notified whenever a user submits an issue from the main app.
-- The app should group issues by time, category, similarity, user, etc.
-- From a list view, you should be able to focus on an issue, check the user, see the actions involved in the issue, find all events and logs related to the invocation ID, and make this available to some developers for further investigation.
+- You'll need to list and manage the issues your users have reported from your products.
+- You should be notified whenever a user reports an issue.
+- Issues should be presented grouped by time, category, similarity, user, etc.
+- From a list view, you should be able to focus on an issue, check the user, see the actions leading to the issue, find all events and logs related to the invocation ID, and make this available to some developers for further investigation.
 - You should also be able to perform specific actions to compensate the user, or to fix their state. These should be normal commands, captured as events, showing up in the user's history, etc.
-- When done, you should be capable of notifying the user that the issue is resolved, and to explain what the cause was. This needs to be reflected on the issue itself.
+- When done, you should be capable of notifying the user in-app about the fact that the issue is resolved, and to explain what the cause was. This needs to be reflected on the issue itself.
 - Whenever things are more involved, you should be able to contact the user that's having the issue through the in-app chat.
-- You should be able to template a resolution, and then apply it to a group of related issues.
+- A back-office user should be able to template a resolution, and to then apply it to multiple related issues.
+- Back-office operators should have dashboards showing activity levels and error rates, with comparisons with historical averages.
 
 ## Product management
 
-- You'll need to be able to manage your products from this app.
-- TODO dashboards, features, modules, products, subscription tiers (with their limits, descriptions, etc.), in-app marketing messages, etc.
-- Plan the release of a feature, with scheduling, marketing message, incremental rollout, etc.
-- A/B test features, by enabling a toggle for a percentage of invocations for a target users sample (based on characteristics, etc.)
-- Browse product activity, with trends, patterns, etc.
-- Define and list dashboards and derived metrics.
+- Product operators should be able to manage features, modules, products, subscription tiers (with their limits, descriptions, etc.), product requirements, in-app marketing messages, etc.
+- You should be able to plan the release of a feature, with scheduling, marketing message, incremental rollout, etc.
+- Develop the ability to A/B test features, by enabling a toggle for a percentage of invocations for a target users sample (based on characteristics, etc.)
+- Be able to browse product activity, with trends, patterns, etc. Also, operators should be able to deep dive into specific user sessions, to understand users' behavior.
+- Operators should be able to manage dashboards and derived metrics.
 
 ## Infrastructure management
 
-- You'll need to be able to manage your infrastructure from this app.
-- List infrastructure deployments, along with which tenants they host.
-- Show topics, event schemata, messaging queues, and services, in a topology.
-- Visualize your information flows, in terms of which services produce and consume which topics, laid out like a graph.
-- Visualize service information (by embedding or linking to your service registry).
-- Propose a scripted database operation, opening a case for somebody to review and approve, so that the infrastructure can then pick it up, execute it, and give you the result back.
-- Query logs and events, in an auditable and controlled way.
+- Infrastructure operators should be able to list infrastructure deployments, along with which tenants they host.
+- Develop the ability to show topics, event schemata, messaging queues, and services, in a topology.
+- Also, support visualizing your information flows, in terms of which services produce and consume which topics, laid out like a graph. Include a quantitative visualization of your traffic patterns: how many events are moving, on which topics, the size of your queues, etc.
+- Give your operators the ability to read specific service information (by embedding your service registry or by linking to it).
+- Allow infrastructure operators to propose a scripted database operation, opening a case for somebody to review and approve, so that the infrastructure can then pick it up, execute it, and give you the result back. This should stay on record, to achieve auditability of database changes.
+- Enabled your infrastructure operators to query logs and events, in an auditable and controlled way.
