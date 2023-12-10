@@ -30,19 +30,19 @@ It's called "walking" because the software is runnable, and it exemplifies the f
 
 Starting your software system from a walking skeleton offers several benefits:
 
-1. Designing the various parts and aspects together improves the quality of the overall system. This is because the parts are inter-dependent, so you cannot design one aspect without keeping in mind all the others. Simply keeping in mind all the aspects will force you to design things differently. 
+1. Designing the various parts and aspects together improves the quality of the overall system. This is because the parts are inter-dependent, so you cannot design one aspect without keeping in mind all the others. Simply keeping in mind all the aspects will force you to design things differently.
 2. It yields a software system that works end-to-end, so you can iterate on it, and move from a complete system that works to a different complete system that works. This is much safer and faster, de-risking your progress.
-3. You can put automated tests in place, to prevent any new functionality from breaking your desired system-wide properties. 
+3. You can put automated tests in place, to prevent any new functionality from breaking your desired system-wide properties.
 
-Wait a minute though, what about [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? YAGNI has to do with the scope of your product, not the quality of your system. 
+Wait a minute though, what about [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)? Are we not wasting time trying to imagine a future that will never happen? Should we not face these challenges when and if they manifest? YAGNI has to do with the scope of your product, not the quality of your system.
 
 What happens if a company doesn't do this? Well, the problem is that the company will still need to design and build the aspects a walking skeleton covers. This is much harder once you have customers using your products, and while you're building new features. You can still overdo a walking skeleton though, so it's certainly a balance.
 
-But you shouldn't just ignore an aspect with the idea that you'll think about it later. This is because the cost of doing something changes dramatically during the lifecycle of a system. Designing is about trade-offs, and these decisions can be hard to reverse. 
+But you shouldn't just ignore an aspect with the idea that you'll think about it later. This is because the cost of doing something changes dramatically during the lifecycle of a system. Designing is about trade-offs, and these decisions can be hard to reverse.
 
-So if you design your messaging infrastructure one way, ignore tenant isolation, and later on try to design for tenant isolation, you'll find that the way your messaging infrastructure works will also have to change. And I'm talking about fundamental changes. These are only two aspects, but you're actually looking at twenty or more, so when you change your messaging infrastructure, your monitoring, logging, and scaling will also have to change. When any of them changes, other aspects will have to change in turn, and so on. You can't even do this in small steps, as the new parts don't fit with the rest of the existing system.  
+So if you design your messaging infrastructure one way, ignore tenant isolation, and later on try to design for tenant isolation, you'll find that the way your messaging infrastructure works will also have to change. And I'm talking about fundamental changes. These are only two aspects, but you're actually looking at twenty or more, so when you change your messaging infrastructure, your monitoring, logging, and scaling will also have to change. When any of them changes, other aspects will have to change in turn, and so on. You can't even do this in small steps, as the new parts don't fit with the rest of the existing system.
 
-How long does building a walking skeleton take? Well, there's no standard answer to this. For tiny simple projects, it might only take a week or two. For large initiatives, it'll typically take a competent cross-functional team of senior people four to six months to build a walking skeleton. Projects requiring multi-Cloud, multi-region, or dynamic provisioning will require a longer time for this. I'd say that each of these factors multiplies the time it takes to build a walking skeleton by a factor of 1.5.  
+How long does building a walking skeleton take? Well, there's no standard answer to this. For tiny simple projects, it might only take a week or two. For large initiatives, it'll typically take a competent cross-functional team of senior people four to six months to build a walking skeleton. Projects requiring multi-Cloud, multi-region, or dynamic provisioning will require a longer time for this. I'd say that each of these factors multiplies the time it takes to build a walking skeleton by a factor of 1.5.
 
 Building a walking skeleton is not something you can parallelize much, because of the interdependencies involved in designing an end-to-end system. So, while raising the quality and expertise of the team involved will produce better results, increasing the number of people involved beyond ten or so will actually be counter-productive.
 
@@ -113,7 +113,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - You also need a way to query this, both on the front-end (to hide or gray out things the user cannot perform) and on the back-end (to enforce authorization rules).
 - On the front-end, you should retrieve the roles and the containing scopes from the user's token, then look up the policies and permissions granted by those roles, from a dedicated endpoint.
 - You'll need some standard available roles, plus the ability for your customers to define their own. To do this, you should describe what actions and policies each resource offers.
-- You should support mapping groups in your tenant's Identity Provider to roles and scopes in your domain. So that if a customer's employee is in the "UK" and the "developers" group, they might be associated with the "Standard User" role in the "UK" "Production" scope, and with the "Admin" role in the "UK" "Test" scope.  
+- You should support mapping groups in your tenant's Identity Provider to roles and scopes in your domain. So that if a customer's employee is in the "UK" and the "developers" group, they might be associated with the "Standard User" role in the "UK" "Production" scope, and with the "Admin" role in the "UK" "Test" scope.
 - I recommend using a standard way of defining and querying authorization permissions and policies. [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is an excellent choice.
 
 # High-level architecture
@@ -132,7 +132,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - [Apache Pulsar](https://pulsar.apache.org/) and [Apache Kafka](https://kafka.apache.org/) are both open-source and very popular. My recommendation is to go with Apache Pulsar, which I find superior to Kafka in every possible way. You should probably host your own Pulsar cluster, as it's much easier than hosting Kafka, and much cheaper than a as-a-service commercial solution.
 - You should consider whether storing the events indefinitely within your distributed ledger (with tier storage backed by object storage, like S3 and Glacier), or whether using your ledger for propagation and a separate technology for events.
 - My advice is to have a store for events, like [EventStore](https://www.eventstore.com/eventstoredb) or even [Postgres](https://www.postgresql.org/).
-- You'll need a mechanism to handle PII with regard to GDPR's Right To Be Forgotten. Storing PII as part of the events with field-level encryption using per end-user symmetric keys is a good approach. When the user needs to be forgotten, you can unlink the key, without losing data integrity.
+- You'll need a mechanism to handle [Personal Identifiable Information](https://en.wikipedia.org/wiki/Personal_data) (PII) with regard to GDPR's Right To Be Forgotten. Storing PII as part of the events with field-level encryption using per end-user symmetric keys is a good approach. When the user needs to be forgotten, you can unlink the key, without losing data integrity.
 - Whenever you need to enforce domain rules that depend on the current state, you'll have to choose between the [outbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) (write to a DB, then derive publishing an event), or [the saga patter](https://en.wikipedia.org/wiki/Compensating_transaction) (read from an eventually consistent view, decide in memory, publish an event, eventually update the view, rollback the changes and refund if there are conflicts). My advice here is to use sagas, as the outbox pattern is tricky and constitutes a severe limitation in throughput.
 - As your system is fully asynchronous, message-based, and reactive, you can use the [async request-reply pattern](https://medium.com/@mahernaija/messaging-patterns-cf4bc5b164cf) to respond to queries synchronously.
 - My advice is to use [NATS](https://en.wikipedia.org/wiki/NATS_Messaging) for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket. MQTT works well for this too, but it's quite a heavy technology to deploy.
@@ -140,7 +140,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## API style
 
 - In terms of API style, you'll have to pick one and stick to it for your whole API surface. Examples of API styles include [REST](https://en.wikipedia.org/wiki/REST), [GraphQL](https://en.wikipedia.org/wiki/GraphQL), and [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call).
-- My advice is to adopt an RPC style. GraphQL and REST both operate at data manipulation level, but what you want is domain-specific actions. I'm not talking about [gRPC](https://grpc.io/) by the way, as it brings its own protocol tweaks and doesn't work well with many existing tools. Go over standard HTTP 2, and use either [JSON](https://en.wikipedia.org/wiki/JSON) or [Avro](https://en.wikipedia.org/wiki/Avro) as data format. I'd recommend Avro, but JavaScript in the browser supports it poorly, so even JSON works fine. 
+- My advice is to adopt an RPC style. GraphQL and REST both operate at data manipulation level, but what you want is domain-specific actions. I'm not talking about [gRPC](https://grpc.io/) by the way, as it brings its own protocol tweaks and doesn't work well with many existing tools. Go over standard HTTP 2, and use either [JSON](https://en.wikipedia.org/wiki/JSON) or [Avro](https://en.wikipedia.org/wiki/Avro) as data format. I'd recommend Avro, but JavaScript in the browser supports it poorly, so even JSON works fine.
 - So use the POST HTTP method, with the type of the invocation as part of the path, and choose whether to differentiate commands and queries. Examples include `POST /commands/tranfer-account-ownership`, `POST /queries/retrieve-available-balance`, and `POST /invocations/tranfer-account-ownership`.
 - You can specify caching instructions for POST responses, but my advice is to avoid caching responses as much as possible. If you really need that performance, subscribe to changes on the client side.
 - This approach enables bulk invocations endpoints e.g. `POST /commands`, `POST /queries` and `POST /invocations`, so a client can send multiple invocations in one exchange with the server.
@@ -181,7 +181,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - You can use this ID to ensure that logically duplicated calls do not cause duplicated side effects, including state changes and calls to external systems.
 - For SQL databases, you can use a transaction that inserts this ID into a dedicated table of previously seen invocations, with a unique constraint. As part of this transaction, you can do whatever that invocation needs to do from a business perspective. If the transaction fails because of the idempotency constraint, you should consider the operation successful, and proceed with anything else you would normally do if it completed regularly.
 - For external APIs, some will allow you to specify an idempotency key. In this case, you simply pass your external invocation ID, and the 3rd-party system will take care of idempotency on its end. This works the same for your system, since your clients can choose to repeat the external invocation ID, if they want to retry an invocation in a safe way.
-- Some 3rd-party APIs e.g., email senders, won't allow you to specify an idempotency ID. In this case, you can use a SQL database to filter out duplicates, as per above except for skipping the call to the external system in case of a uniqueness constraint failure with the idempotency ID. This approach does not guarantee idempotency, because if you cannot transactionally invoke the 3rd-party API and your database, so if you crash in between, you can end up with duplicate invocations. 
+- Some 3rd-party APIs e.g., email senders, won't allow you to specify an idempotency ID. In this case, you can use a SQL database to filter out duplicates, as per above except for skipping the call to the external system in case of a uniqueness constraint failure with the idempotency ID. This approach does not guarantee idempotency, because if you cannot transactionally invoke the 3rd-party API and your database, so if you crash in between, you can end up with duplicate invocations.
 
 # User-facing applications
 
@@ -192,7 +192,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - The backend should return these internationalization keys, rather than text in English, for everything.
 - The actual values should be packaged in the app itself, falling back to a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network) (CDN) lookup. This allows trading off chattiness and app size, and changing text without having to release.
 - All communications e.g., emails and in-app notifications should respect the locale of the user, falling back to a default locale, if the user's locale is not currently supported.
-- If you plan to support Arab countries, or Asian countries like China and Japan, you should also change the page layout based on the user locale, as some of these languages are laid out differently. 
+- If you plan to support Arab countries, or Asian countries like China and Japan, you should also change the page layout based on the user locale, as some of these languages are laid out differently.
 
 ## In-app notifications of changes
 
@@ -271,7 +271,8 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - This works very well with components. So a requirement might be "having accepted the terms and conditions with ID 123", an entitlement might be "digitally signed a document showing the terms and conditions with ID 123", and you could have a component for this entitlement, so that any time a product or feature needs terms and conditions signed, you can re-use the component as part of that workflow.
 
 ## Documents and reports
-- You'll likely need to develop the ability to produce PDFs for terms and conditions, and for reports. 
+
+- You'll likely need to develop the ability to produce PDFs for terms and conditions, and for reports.
 - Legal documents should be stored in an immutable way, rather than being produced again in the future.
 - So if you're a bank and a user produces a statement of their transactions, you should store that statement, so that the user is guaranteed to access the same statement in the future, even if you change your business logic.
 
@@ -294,7 +295,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - If you support dynamic environments, every such environment should be production for you. If your customers want a test environment, this should still be a production environment for you. To understand this better, think about how Cloud providers work.
 - Learn how to test locally, and leverage internal tenants to test and demo your changes before releasing them to external tenants.
 - Use ephemeral short-lived environments to perform intense tests e.g., stress performance tests, or to test large-scale infrastructure changes.
-- These ephemeral environments should be exact copies of the production environment, with masked sensitive tenant data, and you should be able to spin them up and down programmatically. 
+- These ephemeral environments should be exact copies of the production environment, with masked sensitive tenant data, and you should be able to spin them up and down programmatically.
 
 ## Infrastructure as code
 
@@ -305,7 +306,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - You should monitor your infrastructure, checking for divergences between the declared and the actual state. A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
 - Structure a mechanism for requesting and granting temporary and audited access (read or write) to resources. These requests need to be approved and recorded. Nobody should have direct access to any database, network, console, or anything.
 - In terms of provisioning, a fully scripted approach works well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform and Pulumi can leave you with an inconsistent state in case of failure. [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) are a better approach in this case.
-- My advice would be to use Pulumi to set up [Kubernetes](https://kubernetes.io/) and install a bootstrap Operator, and then use [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) for everything else, even when you don't have dynamic infrastructure provisioning requirements. 
+- My advice would be to use Pulumi to set up [Kubernetes](https://kubernetes.io/) and install a bootstrap Operator, and then use [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) for everything else, even when you don't have dynamic infrastructure provisioning requirements.
 
 ## Configuration management
 
@@ -384,7 +385,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Autoscaling for services
 
 - You'll want CPU-based auto-scaling groups, for command and query endpoints, as their driven by push-based unpredictable external traffic.
-- For event processors and event sinks, CPU-based autoscaling makes no sense, as these process messages out of a queue. Instead, you'll want to scale their consumer groups based on the derivative of their queue size: if they're falling behind the producers, ramp up, and if they're catching up fast, ramp down. 
+- For event processors and event sinks, CPU-based autoscaling makes no sense, as these process messages out of a queue. Instead, you'll want to scale their consumer groups based on the derivative of their queue size: if they're falling behind the producers, ramp up, and if they're catching up fast, ramp down.
 
 ## Monitoring
 
@@ -406,52 +407,59 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Logs
 
-- Each service should be able to log as a plain sentence, or in JSON, based on a configuration variable passed at runtime. The default should be JSON, overridden locally to be plain instead.
-- The log entry should have a company-wide specific JSON schema. Services should be tested to check whether the log lines they produce comply with this schema, as part of the build pipelines.
-- The invocation context should also have its own schema, included as an optional field in the log entry schema.
-- Logging long strings is incredibly slow in general, so the default minimum log level should be kept to DEBUG, and INFO should never be used as part of normal workflows.
-- An invocation should be able to specify a toggle to bump the produced logged level from DEBUG to INFO.
+- Each service should be able to log in plain statements, or in JSON, based on a configuration variable passed at runtime. The default should be JSON, overridden locally to be plain instead.
+- Each log entry should comply with a company-wide JSON schema. Services should be tested to check whether the log lines they produce comply with this schema, as part of the build pipelines.
+- The `Invocation Context` should also have its own schema, included as an optional field in the log entry schema.
+- Logging long strings is incredibly slow in general, so the default minimum log level should be kept to `DEBUG`, and `INFO` should never be used as part of normal workflows.
+- An invocation should be able to specify a toggle to bump the produced logged level from `DEBUG` to `INFO`.
 - Does this mean that most workflows won't produce any logs? No, because an event sink can map each produced event into a log line, asynchronously, without slowing down the processing itself.
-- So why do we need to occasionally bump the log level to INFO? Or why log directly from the apps completely? Because sometimes weird things happen, and an application ends up not being able to publish the event, or you might be interested in how the inside of an app is working.
-- The events are already recorded forever, so no point in mapping them as logs that are also kept forever. You can keep the direct application logs for a while (1 month, or something similar), and merge these on demand with the event logs, when an employee wants to search for something.
+- So why do we need to occasionally bump the log level to `INFO`? Or why log directly from the apps completely? That's because, sometimes, weird things happen, and an application ends up not being able to publish events. Or you might be interested in how the inside of an app is working.
+- The events are already recorded forever, so no point in mapping them as logs that are also kept forever. You can keep the direct application logs for a while (1 month, or something similar), and merge these on demand with the event logs, when an employee wants to investigate something.
 - Imagine you're having a live incident, you can ask your logging system to give you all the logs for a given invocation ID. Your system will merge the direct logs from the application containing that ID, and re-consume all events with that invocation ID, to produce a search space for you. Your system should show the whole tree of correlated logs and events.
-- If you create wrapping types for PII and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when putting them in the search space.
-- My advice is to use open-source tools for logs collection and searching, as commercial solutions can get expensive quickly.
+- If you create wrapping types for Personal Identifiable Information (PII) and secrets, you can easily avoid these being leaked in the direct application logs, and you can mask them when bringing them into the search space.
+- My advice is to use open-source tools for logs collection and searching, like [Kibana](https://www.elastic.co/kibana), as commercial solutions can quickly get expensive.
 
 # Application development
 
 ## Codebase
 
-- You should choose whether you want a mono-repo or different repositories for your services. Even when you use multiple programming languages (hopefully always), mono-repos make local development a lot easier, so this is something to consider.
+- You should choose whether you want a mono-repo or different repositories for your services.
+- Even when you use multiple programming languages (hopefully always), mono-repos make local development a lot easier, so this is something to consider.
+- If you use multiple languages and adopt a mono-repo, consider grouping your projects under language-specific folders. This is going to make your life easier when working with IDEs.
 
 ## Frameworks and libraries
 
-- You'll need to figure out how to do a range of table stakes, including configuration parsing, etc.
-- You don't want to implement these low-level concerns yourself.
-- Choose libraries and frameworks that make your life easier, without becoming too attached to them, and avoiding the ones that are too opinionated or that slow down application startup time significantly.
+- You'll need to figure out how to cover a range of table stakes, including configuration parsing, etc. You don't want to implement these low-level concerns yourself.
+- Choose libraries and frameworks that make your life easier, without becoming too attached to them, and avoiding the ones that are too opinionated or that significantly slow down application startup.
 - You should be able to check for new versions of every library a service uses, and to update them, with one command.
-- Each service should have a scheduled job to update all dependency versions (libraries, build tools, plugins, programming languages, frameworks, etc.), run the tests for that service, and merge a PR to update those dependencies if the tests pass. If the tests fail, the job should alert the development team.
+- Each service should have a scheduled job to update all dependency versions (libraries, build tools, plugins, programming languages, frameworks, etc.), run the tests for that service, open a PR to update those dependencies if the tests pass, and automatically merge it. If the tests fail, the job should alert the development team.
 
 ## Event-driven optimizations
 
-- For event-processors, you'll want to process an event on the same thread.
-- Ideally your processing should happen in-memory. Your service processes the inbound event, and update its in-memory state. A separate process aggregates your outbound events into a state snapshot, against the partition and the offset. When your processor starts, it gets assigned a set of partitions, loads the state snapshot for each of them, and then compares the offset of the snapshot with the offset of the inbound message. If the snapshot is behind, the processor simply reprocesses the events between the snapshot offset and the offset of the inbound message, applying the state changes to the in-memory state, and it's back up.
-- For event sinks, you should adopt batched processing if you're not on the critical path. As an example, a sink that updates a materialized view could batch every 5000 events or every 1 second, whichever happens first, and do 1 database batch insert instead of 5000 inserts and round-trips.
+- For event-processors, you'll want to process an event on only one thread.
+- Ideally your processing should happen in-memory. Your service processes the inbound event, and update its in-memory state.
+- A separate process aggregates your outbound events into a state snapshot, using the partition as key, and including the offset the snapshot is valid at.
+- When your processor starts, it gets assigned a set of partitions, loads the state snapshot for each of them, and then compares the offset of the snapshot with the offset of the inbound message.
+- If the snapshot is behind, the processor simply reprocesses the events between the offset of the inbound message and the offset of the snapshot. The service applies the state changes to the in-memory state, and it's back, ready to correctly process the inbound message it received when starting up.
+- For event sinks, you should adopt batched processing if the service is not on the critical path. As an example, a sink that updates a materialized view could batch every 5000 events or every 1 second, whichever happens first, and do 1 database batch insert instead of 5000 inserts and round-trips.
+- Perhaps unsurprisingly, in-memory processing hugely reduces latency while achieving great throughput, while batched processing enormously improves throughput.
 
 ## Shared libraries
 
-- Some people swear by shared libraries, and some other folks swear when they see them. In any case, you should decide whether to use them.
-- Shared libraries are only available to programming languages compatible with the language their written in. So mixing multiple programming languages in the same area e.g., web apps, or back-end apps can be a pain.
-- Avoid home-made frameworks at all costs. The difference between frameworks and libraries is that frameworks are heavily opinionated, while libraries can be swapped easily.
-- In any case, never ever mandate any library or framework. Each team should decide, for each service, what to use, without being obligated to use a company-wide approach.
+- Some people swear by shared libraries, and some other folks swear when they see them. In any case, you should make an explicit decision about this.
+- Shared libraries are only available to programming languages compatible with the language they're written in. So mixing multiple programming languages in the same area e.g., web apps, or back-end apps can be a pain.
+- Avoid home-made frameworks at all costs. Home-made libraries are okay. The difference between frameworks and libraries is that frameworks are heavily opinionated and require full buy-in, while libraries are modular and can be easily replaced.
 - If you decide to use shared libraries, each should be developed, versioned, built, tested, released, and documented like an external library.
 - Shared libraries can be powerful to offer well-thought plug-and-play behavior that would be expensive and error-prone to implement in each new service.
+- My advice is to write a set of shared libraries for each programming language you use.
+- In any case, never ever mandate any library or framework. Each team should decide what to use for each service, without being obligated to use a company-wide approach.
+- Enforcing consistency kills continuous improvement, because it increases the cost of choosing a different approach. Experiments become less appealing, and anything promising requires changing everybody's opinion and updating all code. Don't do this. Always assume you have two or more stable alternative approaches, and a few ongoing experiments. Every new initiative should involve an experiment.
 
 ## ID generation
 
-- You should choose the type of unique IDs you generate for each concern.
-- My advice is to use [ULID](https://github.com/ulid/spec)s for domain IDs, and to use TSIDs as primary keys in SQL databases.
-- You should also figure out whether to rely on sortable unique identifiers to infer the order of the events, in which case you should generate IDs from an event-processor, with partitioning.
+- You should choose the type of unique IDs you generate. Different types work best in different contexts.
+- My advice is to use [Universally Unique Lexicographically Sortable Identifier](https://github.com/ulid/spec)s (ULIDs) or [K-Sortable Unique Identifier](https://github.com/segmentio/ksuid)s (KSUIDs) for domain IDs, and [Time-Sorted Unique Identifier](https://github.com/f4b6a3/tsid-creator)s (TSIDs) as primary keys in SQL databases. Here's [why TSIDs make great SQL database primary keys](https://vladmihalcea.com/uuid-database-primary-key/).
+- You should also figure out whether to rely on sortable unique identifiers to infer the order of the events, in which case you should generate IDs from an event-processor, with partitioning, to ensure in-order processing.
 
 ## Resilience
 
@@ -469,13 +477,13 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - For images and videos, you also want to leverage CDNs, and to dynamically adjust their size based on the user's screen, and their quality based on the user's internet connection speed.
 - Whenever a user needs to upload an attachment (image, video, etc.), your back-end should generate a pre-signed upload URL to an object storage location, so that the traffic doesn't flow through your systems.
 - In this case, you should adopt a quarantine bucket, so that every upload triggers a malware inspection process, which copies the file to another bucket if it deems the attachment secure.
-- About PII, you should either encrypt the whole document with an end-user-specific key so, after the user has invoked the Right To Be Forgotten the documents will be unusable. Or you should store a template for the document and the data separate, so that after the user has opted out, you would still be able to produce a document, but with some information redacted.  
+- About PII, you should either encrypt the whole document with an end-user-specific key so, after the user has invoked the Right To Be Forgotten the documents will be unusable. Or you should store a template for the document and the data separate, so that after the user has opted out, you would still be able to produce a document, but with some information redacted.
 
 ## Dealing with money
 
 - You should model money so that invalid amounts e.g., $15.732 cannot be represented.
 - To avoid representation precision issues with decimals, you should model currency amounts using the fundamental units of a given currency. So instead of representing $7.52 dollars with a decimal, you should represent it with the number of dollar cents, 752.
-- Tenants and users based in different countries might get billed in different currencies. Keep this in mind if you have this requirement, and think about price conversion. 
+- Tenants and users based in different countries might get billed in different currencies. Keep this in mind if you have this requirement, and think about price conversion.
 
 ## Encryption
 
@@ -501,18 +509,18 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Embed the build tool within the codebase of the service, rather than expecting for this to be installed on the machine running the build. An example is the Gradle Wrapper.
 - Choose a smart build tool, so that only modules whose hash has changed are rebuilt (and re-tested), recursively. This can save a ton of time from the duration of your builds. Gradle does this well.
 - Your build pipeline should be the only criteria to decide whether your service is releasable. No human inspections should ever be needed. Manual regression testing is a crime. Manual exploratory testing is great, but not as part of the build and release pipeline.
-- You should be able to build all your systems locally, relying only on localhost, and expecting nothing to be installed on the machine. As an example, if Java is not installed but is needed to build a service, the build script should install Java.  An alternative approach to achieve this is to use a Docker container to run the build itself.
+- You should be able to build all your systems locally, relying only on localhost, and expecting nothing to be installed on the machine. As an example, if Java is not installed but is needed to build a service, the build script should install Java. An alternative approach to achieve this is to use a Docker container to run the build itself.
 - Decide whether you prefer GitHub/GitLab Actions, or a traditional build server. Build servers make it easy to rebuild dependent services, etc. and are generally much faster.
 - If you prefer GitHub/GitLab Actions, seriously consider running the agent on your own Kubernetes cluster, so that each build runs in its own throwaway Docker container on Kube. It'll be much faster and cheaper as well.
 - Ensure you upload build and test reports, and that you alert the development team of any failed builds, or any build that was previously failing and just succeeded.
 - Each service should specify its own build script (whether you use GitHub Actions or TeamCity), producing a Docker image, and uploading it to an image repository.
 - Tag each image with the full hash of the code from version control, and pass this as an argument to the image, so that the service will be able to return its version from a management endpoint.
-- On the remote build pipeline, sign each image with a key-pair, tag the image with the signature and the key ID, and verify the signature against the relevant public key before allowing Kubernetes to spin up those images. This prevents people from uploading whatever, whether unintentionally or maliciously.   
+- On the remote build pipeline, sign each image with a key-pair, tag the image with the signature and the key ID, and verify the signature against the relevant public key before allowing Kubernetes to spin up those images. This prevents people from uploading whatever, whether unintentionally or maliciously.
 
 ## Functional tests as part of the build
 
 - Each service should declare its input and output contract, using OpenAPI specifications, Avro schemata, JSON schemata, etc.
-- Test each declared input and output contract for compliance with a set of company-wide rules. Examples include path style for OpenApi, or kebab-case instead of camelCase for Avro and JSON. This guarantees you get consistency of API standards, and it's especially important for customer-facing contracts. 
+- Test each declared input and output contract for compliance with a set of company-wide rules. Examples include path style for OpenApi, or kebab-case instead of camelCase for Avro and JSON. This guarantees you get consistency of API standards, and it's especially important for customer-facing contracts.
 - Test each service against its input and output contracts, to see whether it stays compatible with other services.
 - Test each internal module against its code contract (externally visible types and functions). Do this wrong, and your tests will be tied to the internal structure of your code, meaning they'll break when you change the structure, even if the behavior still worked.
 - Test each driving and driven adapter against the technology they integrate with. These integration tests should run using only localhost. Use a library like Testcontainers to orchestrate Docker containers to do your testing.
@@ -560,7 +568,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Runtime monitoring in production
 
 - Each event-driven workflow should produce an alert if a step doesn't complete within a time limit, or if the whole workflow exceeds a time limit.
-- You should have a runtime security agent checking for abnormal behavior happening in production. [Wiz](https://go.wiz.io/) and [Aquasec](https://www.aquasec.com/) can help with this. 
+- You should have a runtime security agent checking for abnormal behavior happening in production. [Wiz](https://go.wiz.io/) and [Aquasec](https://www.aquasec.com/) can help with this.
 
 ## Performance tests
 
@@ -585,7 +593,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Use a set of connectors to produce events about various aspects.
 - These should not include application events, as those are already produced.
 - Anything of interest that happens off-platform should be produced. Financial reports, etc.
-- Adopt tools that allow every employee to create their own custom dashboards and metrics. An example of these tools is Metabase. 
+- Adopt tools that allow every employee to create their own custom dashboards and metrics. An example of these tools is Metabase.
 
 # Backoffice
 
