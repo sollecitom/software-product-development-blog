@@ -505,17 +505,18 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Builds
 
+- Choose a smart build tool, so that only modules whose hash has changed get rebuilt and re-tested. This can save a ton of time from the duration of your builds. [Gradle](https://gradle.org/) does this well.
 - Write scripts to build each service locally, without having to know the details of the build tool used by that service.
-- Embed the build tool within the codebase of the service, rather than expecting for this to be installed on the machine running the build. An example is the Gradle Wrapper.
-- Choose a smart build tool, so that only modules whose hash has changed are rebuilt (and re-tested), recursively. This can save a ton of time from the duration of your builds. Gradle does this well.
-- Your build pipeline should be the only criteria to decide whether your service is releasable. No human inspections should ever be needed. Manual regression testing is a crime. Manual exploratory testing is great, but not as part of the build and release pipeline.
-- You should be able to build all your systems locally, relying only on localhost, and expecting nothing to be installed on the machine. As an example, if Java is not installed but is needed to build a service, the build script should install Java. An alternative approach to achieve this is to use a Docker container to run the build itself.
-- Decide whether you prefer GitHub/GitLab Actions, or a traditional build server. Build servers make it easy to rebuild dependent services, etc. and are generally much faster.
-- If you prefer GitHub/GitLab Actions, seriously consider running the agent on your own Kubernetes cluster, so that each build runs in its own throwaway Docker container on Kube. It'll be much faster and cheaper as well.
-- Ensure you upload build and test reports, and that you alert the development team of any failed builds, or any build that was previously failing and just succeeded.
-- Each service should specify its own build script (whether you use GitHub Actions or TeamCity), producing a Docker image, and uploading it to an image repository.
+- Embed the build tool within the codebase of the service, rather than expecting for this to be installed on the machine running the build. An example is the [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
+- Your build pipeline should be the only criteria to decide whether your service is releasable. No human inspections should be needed. Manual regression testing is a crime. Manual exploratory testing is great, but not as part of the build and release pipeline.
+- You should be able to build all your systems locally, relying only on localhost, and expecting nothing to be installed on the machine.
+- As an example, if Java is not installed but is needed to build a service, the build script should install Java. An alternative approach to achieve this is to use a Docker container to run the build itself.
+- Decide whether you prefer [GitHub Actions](https://github.com/features/actions), or a traditional build server e.g., [TeamCity](https://www.jetbrains.com/teamcity/). Build servers make it easy to rebuild dependent services, etc. and are generally much faster.
+- If you prefer GitHub Actions, seriously consider running the agent on your own Kubernetes cluster, so that each build runs in its own throwaway Docker container on Kubernetes. It'll be much faster and cheaper.
+- Ensure you upload build and test reports, and that you alert the development team of any failed builds, and of any build that was previously failing and just succeeded.
+- Each service should specify its own build script, producing a Docker image, and uploading it to an image repository.
 - Tag each image with the full hash of the code from version control, and pass this as an argument to the image, so that the service will be able to return its version from a management endpoint.
-- On the remote build pipeline, sign each image with a key-pair, tag the image with the signature and the key ID, and verify the signature against the relevant public key before allowing Kubernetes to spin up those images. This prevents people from uploading whatever, whether unintentionally or maliciously.
+- On the remote build pipeline, sign each image with a key-pair, tag the image with the signature and the key ID, and verify the signature against the relevant public key before allowing Kubernetes to spin up those images. This prevents people from uploading imagines not produced by your build pipelines, whether unintentionally or maliciously.
 
 ## Functional tests as part of the build
 
