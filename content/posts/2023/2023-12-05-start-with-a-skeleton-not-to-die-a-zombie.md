@@ -544,7 +544,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Inspect the code to prevent accidental leakage of secrets.
 - Perform static code security analysis.
 - Check dependency versions against known vulnerabilities.
-- The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
+- The whole build, including all tests and checks should run in under 3 to 5 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Performance tests as part of the build
 
