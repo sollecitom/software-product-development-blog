@@ -483,7 +483,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 - You should model money so that invalid amounts e.g., $15.732 cannot be represented.
 - To avoid representation precision issues with decimals, you should model currency amounts using the fundamental units of a given currency. So instead of representing $7.52 dollars with a decimal, you should represent it with the number of dollar cents, 752.
-- Tenants and users based in different countries might get billed in different currencies. Keep this in mind if you have this requirement, and think about price conversion.
+- Tenants and users based in different countries might get billed in different currencies. Keep this in mind if you have this requirement, and think about currency conversion.
 
 ## Encryption
 
