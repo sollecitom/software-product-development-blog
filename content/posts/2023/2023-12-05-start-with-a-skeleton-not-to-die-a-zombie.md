@@ -124,24 +124,37 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - This is also a local choice, so that each subsystem could choose a different approach. My advice is to record the history of state changes and use that as your source of truth, for all the subsystems.
 - I also recommend [Command Query Responsibility Segregation](https://en.wikipedia.org/wiki/Command_Query_Responsibility_Segregation) (CQRS). This means that commands (invocations that mutate the state without retrieving it) are processed by subsystems that are separate from the ones that process queries (invocations that retrieve the state without mutating it).
 
-## Realization
+## Event-driven workflows
 
 - Event-driven architectures work well with a partitioned distributed ledger as the backbone of event propagation.
 - [Apache Pulsar](https://pulsar.apache.org/) and [Apache Kafka](https://kafka.apache.org/) are both open-source and very popular. My recommendation is to go with Apache Pulsar, which I find superior to Kafka in every possible way. You should probably host your own Pulsar cluster, as it's much easier than hosting Kafka, and much cheaper than a as-a-service commercial solution.
 - You should consider whether storing the events indefinitely within your distributed ledger (with tier storage backed by object storage, like S3 and Glacier), or whether using your ledger for propagation and a separate technology for events.
 - My advice is to have a store for events, like [EventStore](https://www.eventstore.com/eventstoredb) or even [Postgres](https://www.postgresql.org/).
 - You'll need a mechanism to handle PII with regard to GDPR's Right To Be Forgotten. Storing PII as part of the events with field-level encryption using per end-user symmetric keys is a good approach. When the user needs to be forgotten, you can unlink the key, without losing data integrity.
-- Your servers will have to push information to your clients. You should either host a solution, like an [MQTT](https://mqtt.org/) cluster, like [EMQX](https://www.emqx.io/), or going for a commercial solution, like [Ably](https://ably.com/). The main factor here is cost: if you foresee a lot of server-pushed messages, hosting your own MQTT cluster is the clear winner.
-- My advice is to avoid websockets, as they introduce connection stickiness (you need to know which socket to use to send a message to a user), and they're too low level.
+- Whenever you need to enforce domain rules that depend on the current state, you'll have to choose between the [outbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) (write to a DB, then derive publishing an event), or [the saga patter](https://en.wikipedia.org/wiki/Compensating_transaction) (read from an eventually consistent view, decide in memory, publish an event, eventually update the view, rollback the changes and refund if there are conflicts). My advice here is to use sagas, as the outbox pattern is tricky and constitutes a severe limitation in throughput.
+- As your system is fully asynchronous, message-based, and reactive, you can use the [async request-reply pattern](https://medium.com/@mahernaija/messaging-patterns-cf4bc5b164cf) to respond to queries synchronously.
+- My advice is to use [NATS](https://en.wikipedia.org/wiki/NATS_Messaging) for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket. MQTT works well for this too, but it's quite a heavy technology to deploy.
+
+## API style
+
 - In terms of API style, you'll have to pick one and stick to it for your whole API surface. Examples of API styles include [REST](https://en.wikipedia.org/wiki/REST), [GraphQL](https://en.wikipedia.org/wiki/GraphQL), and [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call).
 - My advice is to adopt an RPC style. GraphQL and REST both operate at data manipulation level, but what you want is domain-specific actions. I'm not talking about [gRPC](https://grpc.io/) by the way, as it brings its own protocol tweaks and doesn't work well with many existing tools. Go over standard HTTP 2, and use either [JSON](https://en.wikipedia.org/wiki/JSON) or [Avro](https://en.wikipedia.org/wiki/Avro) as data format. I'd recommend Avro, but JavaScript in the browser supports it poorly, so even JSON works fine. 
 - So use the POST HTTP method, with the type of the invocation as part of the path, and choose whether to differentiate commands and queries. Examples include `POST /commands/tranfer-account-ownership`, `POST /queries/retrieve-available-balance`, and `POST /invocations/tranfer-account-ownership`.
 - You can specify caching instructions for POST responses, but my advice is to avoid caching responses as much as possible. If you really need that performance, subscribe to changes on the client side.
 - This approach enables bulk invocations endpoints e.g. `POST /commands`, `POST /queries` and `POST /invocations`, so a client can send multiple invocations in one exchange with the server.
 - This way, it's easy to record all the invocations that happened, whether commands or queries, to provide full auditability.
-- Whenever you need to enforce domain rules that depend on the current state, you'll have to choose between the [outbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) (write to a DB, then derive publishing an event), or [the saga patter](https://en.wikipedia.org/wiki/Compensating_transaction) (read from an eventually consistent view, decide in memory, publish an event, eventually update the view, rollback the changes and refund if there are conflicts). My advice here is to use sagas, as the outbox pattern is tricky and constitutes a severe limitation in throughput.
-- As your system is fully asynchronous, message-based, and reactive, you can use the [async request-reply pattern](https://medium.com/@mahernaija/messaging-patterns-cf4bc5b164cf) to respond to queries synchronously.
-- My advice is to use [NATS](https://en.wikipedia.org/wiki/NATS_Messaging) for this. You generate a unique response NATS topic, subscribe to it, emit an event tagged with the response topic, await for a downstream service to publish the outcome of your workflow to NATS, and finally respond to the open socket. MQTT works well for this too, but it's quite a heavy technology to deploy.
+
+## Server-push data
+
+- Your back-end will need to sometimes push data to your client applications. This means the server will initiate a communication with the client, rather than the other way around.
+- You should either host a solution, like an [MQTT](https://mqtt.org/) cluster, like [EMQX](https://www.emqx.io/), or going for a commercial solution, like [Ably](https://ably.com/).
+- My advice is to avoid websockets, as they introduce connection stickiness (you need to know which socket to use to send a message to a user), and they're too low level.
+- A user shouldn't be able to subscribe to information they shouldn't see (data belonging to other tenants or users), so you'll need authentication and authorization.
+- You'll need to structure your topics carefully, balancing authorization needs and the effort involved in pushing an update. So a topic per user makes authorization trivial, but pushing updates a nightmare. A single topic is the opposite. You'll need a balance.
+- My advice is to use a hosted open-source solution when you plan on sending server-pushed information often, as the cost builds up with commercial solutions.
+
+## Gateway and services
+
 - Choose whether to leverage an API gateway, or to go without one. My advice would be to use one, so you can centralize token signature verification, authorization enforcement, parsing of tracing information, [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) handling, [TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy), and other similar aspects. I also recommend hosting an open-source or a commercial solution, rather than buying a service.
 - You'll want to create templates for the various types of services that appear in your topology. Command endpoints (receive and emit commands), query endpoints (serve queries), event processors (receive and emit events), event sinks (receive and consume events, typically integrating with third-party technologies, or updating materialized views).
 
@@ -329,19 +342,10 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Regions and Availability Zones
 
-TODO
-
-- Depending on your availability and disaster recovery requirements, you'll need your services across multiple Availability Zones, or even across multiple Regions.
+- Depending on your availability and disaster recovery requirements, you'll need your services across multiple Availability Zones, or even across multiple Regions. [More information about Regions and Zones](https://cloud.google.com/compute/docs/regions-zones).
 - Active-active and active-passive-hot multi-region workflows are hard, just like it's hard to get these working well across multiple Cloud providers.
-- The difference is that the Cloud providers introduce more management complexity, while the regions introduce higher latency involved with your replication.
-- If you have multi-region requirements, you should test in at least 3 regions, as part of your walking skeleton. This is because you usually need quorum to recover from a temporary failure, so the minimum regions you'll need is 3, when 1 is not enough.
-
-## Server-push data
-
-- Your back-end will need to sometimes push data to your client applications.
-- A hosted or managed MQTT cluster is a great way of achieving this.
-- A user shouldn't be able to subscribe to information they shouldn't see (e.g., belonging to other tenants or users), so you'll need authentication and authorization.
-- You'll need to structure your topics carefully, balancing authorization needs and the effort involved in pushing an update. So a topic per user makes authorization trivial, but pushing updates a nightmare. A single topic is the opposite. You'll need a balance.
+- The difference is that multiple Cloud providers introduce higher management complexity, while multiple Regions introduce higher latency involved in your replication.
+- If you have multi-region requirements, you should test in at least 3 regions as part of your walking skeleton. This is because you usually need quorum to recover from a temporary failure, so the minimum regions you'll need is 3, when 1 is not enough.
 
 ## Service registry
 
