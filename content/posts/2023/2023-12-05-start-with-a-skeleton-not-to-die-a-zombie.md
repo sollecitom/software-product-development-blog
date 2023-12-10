@@ -306,7 +306,8 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 - Your products will use certificates, and those certificates will need rotation, etc.
 - In multi-tenant contexts, each tenant will likely end up with its own subdomain and its own certificates.
-- Figure out how you're going to achieve this programmatically.
+- Figure out how to manage dynamic certificates: either by issuing them through a root certificate, or by rolling your own [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority).
+- Whenever a tenant or an infrastructure zone requires its own certificate, you should be able to issue it programmatically.
 
 ## Internet Edge Solution
 
