@@ -179,14 +179,14 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## In-app notifications of changes
 
-- You should represent new features, marketing communications, etc., notify about them both in-app and through emails, both linking to a browsable changelog of all historical changes to your products.
-- This changelog should be an append-only log of changes, so that a user can browse and filter them. Each item should take the user to a page with more details on that change.
+- You should model new features, marketing communications, etc. as code, and notify your users about them both in-app and through emails. The notifications should link to a browsable changelog of all historical changes to your products.
+- This changelog should be an append-only log of changes, so that a user can browse and search them. Each item in this list should take the user to a page with more details about that specific change.
 
 ## In-app audit log
 
 - Users should be able to browse, filter, and inspect a changelog with all the actions they ever performed.
 - If a user has the specific permission, they should be able to also see in the changelog the actions performed by other users.
-- Each item in the audit log should contain the full invocation context (above) for the invocation represented by that item, with dates, etc.
+- Each item in the audit log should contain the full context of the invocation represented by that item, with dates, access, etc.
 
 ## Displaying and reporting errors
 
