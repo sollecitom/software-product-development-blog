@@ -397,12 +397,12 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Releases and deployments
 
-- You'll need automatic canary deployments, gradually incrementing the amount of traffic directed to the upcoming version, based on comparing the error rate with the one measured for the old version.
+- You'll need automatic canary deployments, gradually incrementing the amount of traffic directed to the upcoming version, based on comparing the error rate with the baseline for the old version.
 - Each invocation that failed on the new version should be retried on the old version, to ensure there's no downtime (remember: you should have idempotency throughout).
 - A failed release (error rate increased beyond the acceptable) should be rolled back automatically, with alerts, so the development team can investigate.
-- For back-end applications, you'll likely want a continuous deployment model, where each change merged is released to production and enters into effect immediately.
-- For web and mobile applications, you'll want a similar deployment model, but the changes should be deployed with feature flags that make them inactive, to be activated at a later stage based on marketing campaigns, etc. For mobile, you should batch your changes, so that a new version is published to the app store only once a week or so.
-- Data migrations should be performed as part of the release, by pre-init containers. You should be able to specify migrations that run before the new instances come up, during the release, and after all the old instances have been brought down.
+- For back-end applications, you'll likely want a continuous deployment model, where each successfully built change is released to production and enters into effect immediately.
+- For web and mobile applications, you'll want a similar deployment model, but the changes should be deployed with feature flags that make them inactive, to be activated at a later stage based on marketing campaigns, etc. For mobile, you should batch your changes, so that a new version is published to the app stores only once a week or so.
+- Data migrations should be performed as part of the release, by [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/). You should be able to control when your migrations run, so that some run before the new instances come up, some during the release, and some only after all the old instances have been brought down.
 
 ## Logs
 
