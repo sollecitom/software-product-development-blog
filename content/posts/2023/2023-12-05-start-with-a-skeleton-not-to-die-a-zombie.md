@@ -487,11 +487,11 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Encryption
 
-- Choose a battle-tested library for your encryption primitives. Never ever roll your own implementation of anything encryption related (unless you're an encryption company). BouncyCastle is a good choice.
-- Figure out the whole FIPS vs non-FIPS thing. Unless you're a government, or work very closely with governments, non-FIPS is better supported and more secure.
+- Choose a battle-tested library for your encryption primitives. Never ever roll your own implementation of anything encryption related (unless you're an encryption company). [BouncyCastle](https://www.bouncycastle.org/) is a great choice.
+- Figure out if you need compliance with the [Federal Information Processing Standards](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards) (FIPS). Unless your work closely with the US government, you should probably stick to non-FIPS implementations, as they are better supported and arguably more secure. Here's [an explanation of why Microsoft stopped recommending FIPS-compliant implementations](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-re-not-recommending-fips-mode-anymore/ba-p/701037).
 - Consider whether you would benefit more from runtime selection of algorithms and parameters, or from type-safe and abstracted encryption primitives. Personally I never found the first useful, and hate using BouncyCastle's API directly.
-- Stick to well-known and battle-tested algorithms, like AES for symmetric encryption, and SHA or Argon2 for hashing (different use cases).
-- If your application heavily relies on encryption at application level e.g., a distributed ledger, you might want to consider post-Quantum algorithms like Crystals Kyber (as key encapsulation mechanism or KEM) and Crystals Dilithium (as a digital signature scheme).
+- Stick to well-known and battle-tested algorithms, like [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) for symmetric encryption, and [SHA](https://en.wikipedia.org/wiki/Secure_Hash_Algorithms) or [Argon2](https://en.wikipedia.org/wiki/Argon2) for hashing (SHA and Argon2 are best for different use cases).
+- If your application heavily relies on encryption at application level e.g., a distributed ledger, you might want to consider post-Quantum algorithms like [Crystals Kyber](https://pq-crystals.org/kyber/) (as key encapsulation mechanism or KEM) and [Crystals Dilithium](https://pq-crystals.org/dilithium/) (as a digital signature scheme).
 
 # Building and testing
 
