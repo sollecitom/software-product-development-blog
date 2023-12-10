@@ -210,8 +210,8 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## History of changes for each entity
 
-- Your product will expose specific entities to users, allowing them to manipulate them.
-- You should ensure that users can browse and search the history of all changes that happened on any one of such entities.
+- Your product will expose specific entities, allowing users to manipulate these entities to achieve their goals.
+- You should ensure that your users can browse and search the history of all changes that happened on any one of such entities.
 - An example might be that, if your product allows users to create projects, any user with permissions should be able to see the whole history of changes on a specific project: who created it and when, the original data, the log of changes, each including who did what, when, and how.
 
 ## Multi-platform strategy
