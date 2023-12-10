@@ -580,36 +580,37 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 - Exploratory performance tests should be run in ephemeral copies of your production environment.
 - You should be careful with these, as the amount of data you have will likely influence your performance, so either make the two environments identical or be careful about what you can infer from your tests.
-- Examples of these tests include stress tests, soak tests, etc.
+- Examples of these tests include [load tests, stress tests, spike tests, and soak tests](https://zoonou.com/resources/blog/performance-testing-techniques/).
 
 # Data and analytics
 
 ## Data lake
 
-- Every application event should specify all the relevant and available information known at the time, without leaving anything out because it's not currently used by the downstream event processors.
-- Never run OLAP queries on a database used by a service. Instead, an event sink can map the domain events published to a data lake for OLAP queries.
-- Ensure you mask all sensitive data before inserting it into the data lake.
+- Every application event should include all the relevant and available information known at the time, without leaving anything out because it's not currently used by any downstream event processor.
+- Never run [OLAP operations](https://en.wikipedia.org/wiki/Online_analytical_processing) on a database used for [OLTP operations](https://en.wikipedia.org/wiki/Online_transaction_processing) by a service. Instead, an event sink can map the domain events published to a data lake reserved for OLAP queries.
+- Ensure you mask all sensitive data before inserting your events' information into the data lake.
 
 ## Materialized aggregations
 
-- Other event sinks can update some materialized view, for analytics that are aggregated as soon as the event that changed them is processed. An example would be the total number of users, updated as a count every time an event indicates that a new user has joined.
+- You can use event sinks to update a materialized view every time the information it provides a snapshot of changed. This yields analytics that are updated as soon as the event that changed them is processed. An example would be the total count of users, updated every time an event indicates that a new user has joined.
 
 ## Data operations and custom dashboards
 
-- Use a set of connectors to produce events about various aspects.
-- These should not include application events, as those are already produced.
+- Use a set of connectors to produce events about various aspects. These should not include application events, as those are already produced by your applications.
 - Anything of interest that happens off-platform should be produced. Financial reports, etc.
-- Adopt tools that allow every employee to create their own custom dashboards and metrics. An example of these tools is Metabase.
+- Adopt tools that allow every employee to create their own custom dashboards and metrics. An example of these tools is [Metabase](https://www.metabase.com/).
 
 # Backoffice
 
 - You'll need a back-office web application for your employees.
 - This should be built with the same care of your main web applications.
 - Every operation should be event-driven, with full auditability.
-- You might want to support different roles and admin reviews and approvals for some operations.
-- This web application shouldn't be accessible from public internet, but only through VPN.
+- You might want to support different roles, and require admin review and approval for some operations.
+- This web application shouldn't be accessible over public internet, but only through a [Virtual private Network](https://en.wikipedia.org/wiki/Virtual_private_network).
 
 ## Tenant management
+
+TODO
 
 - You'll need to list your tenants, and manage their configuration.
 - You should be able to see which features and modules they have enabled, the weights and limits they have, and to change these settings.
