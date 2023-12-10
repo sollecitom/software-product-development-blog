@@ -311,10 +311,10 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Internet Edge Solution
 
-- An internet edge solution, like Fastly or CloudFlare is almost always a great idea.
+- An internet edge solution, like [Fastly](https://www.fastly.com/) or [CloudFlare](https://www.cloudflare.com/) is almost always a great idea.
 - You get protection from DDoS attacks, and against other malicious attempts.
-- Also, you could allow your tenants to enable mTLS and IP address range restrictions programmatically, by calling the internet edge solution's API as part of handling such a command.
-- My recommendation falls on Fastly, as it's usually easier to integrate with, compared to CloudFlare.
+- Also, you can allow your tenants to enable mTLS and IP address range restrictions programmatically, by calling the internet edge solution's API as part of handling such a command on your back-end.
+- My advice is to use [Fastly](https://www.fastly.com/), as it's usually powerful and easy to integrate with.
 
 ## Cloud providers
 
