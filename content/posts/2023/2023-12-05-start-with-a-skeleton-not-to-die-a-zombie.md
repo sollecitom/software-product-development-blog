@@ -261,14 +261,12 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## SDKs
 
-TODO
-
 - You should abstract all communications to and from the back-end with client-side SDKs.
 - Each SDK should be built, tested, versioned, and released as a stand-alone library.
-- Each SDK should have an API or contract module, and various implementations e.g., HTTP-based + MQTT for server-pushed communications, or an in-memory implementation for local testing.
+- Each SDK should have a contract-only module, and various implementations e.g., HTTP-based + MQTT for server-pushed communications, or an in-memory implementation for local testing.
 - You should test your client applications against an in-memory version of the SDK, not against an environment hosting your back-end.
-- You should use reactive-streams e.g., RxJS or MobX to allow the client to subscribe to server-pushed data.
-- You should use the SDK to write tests that don't test the UI e.g., smoke tests you can run periodically in production (more on this below).
+- You should use reactive-streams e.g., [RxJS](https://rxjs.dev/) or [MobX](https://mobx.js.org/README.html) to allow the client to subscribe to server-pushed data.
+- You should use the SDK to write tests that don't test the UI e.g., smoke tests you can run periodically in production.
 - You should have test extensions for your SDKs, allowing you to easily create preconditions that wouldn't make sense as normal operations.
 - You might want to give your client-facing SDKs to your customers. You shouldn't give your customers the test extensions.
 
@@ -276,20 +274,21 @@ TODO
 
 ## Only one long-lived environment
 
-- You should only have one long-lived environment: production. So no test, UAT, or staging environments.
-- Learn how to test locally (more on this below), and leverage internal tenants to test and demo your changes before releasing them to external tenants.
-- Use ephemeral short-lived environments to perform intense tests e.g., stress performance tests, or to test large infrastructure changes. These should be exact copies of the production environment, with masked sensitive tenant data, and you should spin them up and down programmatically. 
+- You should have only one long-lived environment: production. So no test, UAT, or staging environments.
+- If you support dynamic environments, every such environment should be production for you. If your customers want a test environment, this should still be a production environment for you. To understand this better, think about how Cloud providers work.
+- Learn how to test locally, and leverage internal tenants to test and demo your changes before releasing them to external tenants.
+- Use ephemeral short-lived environments to perform intense tests e.g., stress performance tests, or to test large-scale infrastructure changes.
+- These ephemeral environments should be exact copies of the production environment, with masked sensitive tenant data, and you should be able to spin them up and down programmatically. 
 
 ## Infrastructure as code
 
 - You should describe your entire infrastructure and tenant configuration in a declarative way, as code.
 - Changes in the code should trigger changes in your infrastructure.
-- You can use various approaches for this, including Pulumi and Terraform.
-- You should monitor your infrastructure, checking for divergences between the declared state and the actual one.
-- A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
-- Nobody should have direct access to any database, network, console, or anything.
-- Structure a mechanism for requesting and granting temporary and audited access (read or write) to resources. This needs to be approved and recorded.
-- In terms of provisioning, a fully scripted approach will work well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform can leave you with an inconsistent state in case of failure. So Kubernetes Operators are a better approach for this. 
+- You can use various approaches for this, including [Pulumi](https://www.pulumi.com/) and [Terraform/OpenTofu](https://opentofu.org/).
+- My advice is to use Pulumi, as it allows you to dynamically declare resources based on runtime data. You can also create your own types and functions, and it's easier to compose.
+- You should monitor your infrastructure, checking for divergences between the declared and the actual state. A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
+- Structure a mechanism for requesting and granting temporary and audited access (read or write) to resources. These requests need to be approved and recorded. Nobody should have direct access to any database, network, console, or anything.
+- In terms of provisioning, a fully scripted approach works well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform and Pulumi can leave you with an inconsistent state in case of failure. Kubernetes Operators are a better approach in this case. 
 
 ## Configuration management
 
