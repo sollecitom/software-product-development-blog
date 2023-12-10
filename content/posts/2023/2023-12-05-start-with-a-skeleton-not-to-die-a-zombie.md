@@ -245,17 +245,23 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 ## Requirements and entitlements
 
 - Some features, modules, or products will come with additional requirements.
-- Even just accessing your platform will likely have some base requirements e.g., a valid email address.
-- You should model what requirements each feature, module, product, or platform needs, before a user can access it.
-- Each requirement could be satisfied by different alternative entitlements.
-- An example might be that a "valid email address" could be satisfied by a passed email verification check, or by receiving a corporate email address from a federated identity provider.
-- You should model which entitlements satisfy a requirement. This can vary based on the country, etc.
-- Users should be associated with the set of entitlements they already gained, so that a product with requirements already satisfied by the entitlements the user has shouldn't ask the user to do anything else.
+- Even just accessing your platform will likely have some basic requirements e.g., a valid email address.
+- You should model what requirements each feature, module, product, or platform needs, before a user can access it, within your code.
+- Each requirement could be satisfied by various alternative entitlements. You should model which entitlements satisfy a requirement. This can vary based on the country, etc.
+- An example might be that a valid email address requirement could be satisfied by a passed email verification check, or by receiving a corporate email address from a federated identity provider.
+- Users should be associated with the set of entitlements they already have. A product with requirements that already satisfied by the entitlements a user has shouldn't ask the user to do anything else.
 - You should be capable of disabling functionality the user hasn't qualified to use yet, of explaining which requirements aren't met yet, of showing the available ways of qualifying for each requirement, of running the verification step for the entitlement chosen by the user, and finally of unlocking the feature when all the requirements are met.
-- Requirements and entitlements should be dynamic, sent by the server to the client as data. Your client applications shouldn't know which requirements a product or feature needs as part of their code.
-- This works very well with components. So a requirement might be "having signed the terms and conditions with ID 123", an entitlement might be "digitally signed a document showing the terms and conditions with ID 123", and you could have a component for this entitlement, so that any time a product or feature needs T&Cs signed, you can re-use the component as part of that workflow.
+- Requirements and entitlements should be dynamic, sent by the server to the client as data. Your client applications shouldn't know which requirements a product or feature needs. The same product might have different requirements across different countries. And a requirement might be met by different entitlements, in different countries.
+- This works very well with components. So a requirement might be "having accepted the terms and conditions with ID 123", an entitlement might be "digitally signed a document showing the terms and conditions with ID 123", and you could have a component for this entitlement, so that any time a product or feature needs terms and conditions signed, you can re-use the component as part of that workflow.
+
+## Documents and reports
+- You'll likely need to develop the ability to produce PDFs for terms and conditions, and for reports. 
+- Legal documents should be stored in an immutable way, rather than being produced again in the future.
+- So if you're a bank and a user produces a statement of their transactions, you should store that statement, so that the user is guaranteed to access the same statement in the future, even if you change your business logic.
 
 ## SDKs
+
+TODO
 
 - You should abstract all communications to and from the back-end with client-side SDKs.
 - Each SDK should be built, tested, versioned, and released as a stand-alone library.
