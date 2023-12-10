@@ -236,11 +236,11 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Instrumentation and attribution
 
-- You should instrument your products, so that you can know what your users are clicking, doing, etc.
-- These events should be captured within the client applications, and sent to the server or to an external service.
-- Instrumentation should include both low-level actions (clicks, text typed, etc.) and high-level intentions (logged in, created a project, changed the permissions of another user, viewed the list of projects, etc.).
-- You should also be able to attribute events to user-specific toggles, to gauge the impact your tweaks have on the KPIs you hope to affect.
-- It's pretty much always better to use an external tool to do instrumentation and attribution. Examples could be Amplitude for both, or Amplitude/Pendo/others for instrumentation and Split for attribution.
+- You should instrument your products, so that you can learn what your users are clicking, doing, etc.
+- These events should be captured within the client applications, and sent to the server or to a 3rd-party service.
+- Instrumentation should include both low-level actions e.g., clicks, typed text, etc. and high-level intentions e.g., logged in, created a project, changed the permissions of another user, viewed the list of projects, etc.
+- You should also be able to attribute events to user-specific toggles, to gauge the impact your tweaks had on the KPIs they hoped to improve.
+- My advice is to use an external tool for both instrumentation and attribution. Examples could be [Amplitude](https://amplitude.com/) for both, or [Pendo](https://www.pendo.io/) for instrumentation and [Split](https://www.split.io/) for attribution.
 
 ## Requirements and entitlements
 
