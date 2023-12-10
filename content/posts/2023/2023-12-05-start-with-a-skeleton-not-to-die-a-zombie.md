@@ -299,7 +299,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - When not feasible, use a standard way of injecting configuration, like [Kubernetes ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/), or file-based configuration exposed to the apps through ephemeral volumes.
 - In terms of storing secrets, you'll want something audited, segregated, and secure, like [Hashicorp Vault](https://www.hashicorp.com/products/vault). You don't want each application to interact with Vault directly, though. So either expose the secrets in Vault through [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), or pass them to your applications inside files on ephemeral volumes.
 - You should ensure that whenever a configuration value changes, your applications can pick up the change. I recommend rebooting the containers in this case, as it's usually not a big deal.
-- All credentials should be service-specific, never shared among applications.
+- All credentials should be service-specific, never shared across applications.
 
 ## Certificate management
 
