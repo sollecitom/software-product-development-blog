@@ -288,16 +288,16 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - My advice is to use Pulumi, as it allows you to dynamically declare resources based on runtime data. You can also create your own types and functions, and it's easier to compose.
 - You should monitor your infrastructure, checking for divergences between the declared and the actual state. A configuration drift management tool can help you spot these inconsistency, raise alerts, and even roll-back any undeclared changes.
 - Structure a mechanism for requesting and granting temporary and audited access (read or write) to resources. These requests need to be approved and recorded. Nobody should have direct access to any database, network, console, or anything.
-- In terms of provisioning, a fully scripted approach works well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform and Pulumi can leave you with an inconsistent state in case of failure. Kubernetes Operators are a better approach in this case.
-- My advice would be to use Pulumi to set up Kubernetes and install a bootstrap Operator, and then use Kubernetes Operators for everything else, even when you don't have dynamic infrastructure provisioning requirements. 
+- In terms of provisioning, a fully scripted approach works well, except when infrastructure needs to be provisioned as part of some users' actions. In this case, you'll need dynamic provisioning, and Terraform and Pulumi can leave you with an inconsistent state in case of failure. [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) are a better approach in this case.
+- My advice would be to use Pulumi to set up [Kubernetes](https://kubernetes.io/) and install a bootstrap Operator, and then use [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) for everything else, even when you don't have dynamic infrastructure provisioning requirements. 
 
 ## Configuration management
 
-- Your applications will need variables, private keys, certificates, passwords, etc.
-- These might depend on the specific tenant the invocation belongs to (so 2 different tenants might use separate databases, each with their own credentials).
-- Whenever you can, avoid injecting these variables into your applications at all. Instead, use side-cars that proxy the connections or do the work requiring the secrets.
-- When not feasible, use a standard way of injecting configuration, like Kubernetes ConfigMaps, or file-based configuration (exposed to the apps through ephemeral volumes).
-- In terms of storing the secrets, you'll want something audited, segregated, and secure, like Hashicorp Vault.
+- Your applications will need configuration variables, secret keys, certificates, passwords, etc.
+- These might depend on the specific tenant the invocation belongs to. Two tenants might use separate databases, each with their own credentials.
+- Whenever you can, avoid injecting these variables into your applications at all. Instead, use side-cars that proxy the connections or do the work that requires the secrets.
+- When not feasible, use a standard way of injecting configuration, like [Kubernetes ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/), or file-based configuration exposed to the apps through ephemeral volumes.
+- In terms of storing secrets, you'll want something audited, segregated, and secure, like [Hashicorp Vault](https://www.hashicorp.com/products/vault). You don't want each application to interact with Vault directly, though. So either expose the secrets in Vault through [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), or pass them to your applications inside files on ephemeral volumes.
 - You should ensure that whenever a configuration value changes, your applications can pick up the change. I recommend rebooting the containers in this case, as it's usually not a big deal.
 - All credentials should be service-specific, never shared among applications.
 
