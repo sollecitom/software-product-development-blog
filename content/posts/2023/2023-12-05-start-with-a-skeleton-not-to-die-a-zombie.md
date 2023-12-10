@@ -520,16 +520,16 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Functional tests as part of the build
 
-- Each service should declare its input and output contract, using OpenAPI specifications, Avro schemata, JSON schemata, etc.
-- Test each declared input and output contract for compliance with a set of company-wide rules. Examples include path style for OpenApi, or kebab-case instead of camelCase for Avro and JSON. This guarantees you get consistency of API standards, and it's especially important for customer-facing contracts.
+- Each service should declare its input and output contract, using [OpenAPI](https://www.openapis.org/) specifications, Avro schemata, JSON schemata, etc.
 - Test each service against its input and output contracts, to see whether it stays compatible with other services.
-- Test each internal module against its code contract (externally visible types and functions). Do this wrong, and your tests will be tied to the internal structure of your code, meaning they'll break when you change the structure, even if the behavior still worked.
-- Test each driving and driven adapter against the technology they integrate with. These integration tests should run using only localhost. Use a library like Testcontainers to orchestrate Docker containers to do your testing.
-- After each driving and driven adapter is tested in isolation, and your business logic is covered by the contract tests for the application and domain modules, have one or two service-level tests. These start the whole service locally, and go from a driving adapter to a driven adapter, testing the correct configuration and wiring of the service.
-- Run your service-level tests against your service running in-memory, and the same service running as a Docker image. This way, you can identify issues with the packaging part.
-- Use mutation tests to check whether your tests are actually protecting you against undesired code changes. Aim for zero survived mutants. Don't bother with measuring test code coverage.
+- Test each declared input and output contract for compliance with a set of company-wide rules. Examples include path style for OpenApi, or kebab-case instead of camelCase for Avro and JSON. This guarantees you get consistency of API standards, and is especially important for customer-facing contracts.
+- Test each internal module against its code contract (the externally visible types and functions). Do this wrong, and your tests will be tied to the internal structure of your code, meaning they'll break when you change the structure, even if the behavior still works.
+- Test each driving and driven adapter against the technology they integrate with. These integration tests should run using only localhost. Use a library like [Testcontainers](https://testcontainers.com/) to orchestrate Docker containers as part of your tests.
+- After each driving and driven adapter is tested in isolation, and your business logic is covered by the contract tests for the application and domain modules, have one or two service tests. These start the whole service locally, and go from a driving adapter to a driven adapter, testing the correct configuration and wiring of the service.
+- Run your service tests against your service running in-memory, and against the same service running as a Docker image. This way, you can identify issues with the packaging part.
+- Use [mutation testing](https://pitest.org/) to check whether your tests are actually protecting you against undesired code changes. Aim for zero survived mutants. Don't bother with measuring test code coverage.
 - Avoid any dependencies among tests, whether it's shared data or expected order of execution.
-- The whole build, including all tests and checks should run in under 3 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
+- The whole build, including all tests and checks should run in under 3 to 5 minutes, and you should be able to run all tests and checks locally. Having a smart build tool like Gradle helps with this.
 
 ## Checks as part of the build
 
