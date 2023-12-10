@@ -455,6 +455,12 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - In any case, never ever mandate any library or framework. Each team should decide what to use for each service, without being obligated to use a company-wide approach.
 - Enforcing consistency kills continuous improvement, because it increases the cost of choosing a different approach. Experiments become less appealing, and anything promising requires changing everybody's opinion and updating all code. Don't do this. Always assume you have two or more stable alternative approaches, and a few ongoing experiments. Every new initiative should involve an experiment.
 
+## Service-level architecture
+
+- Adopt a standard service-level architecture, to organize the code that makes up each service for ease of readability and testability.
+- Organize your code so that what's used together stays and changes together. So "winter clothes" and "summer clothes" are good groupings, while "trousers" and "tops" are bad.
+- My advice is to adopt the [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/), also called Ports and Adapters Architecture. It's a great way of structuring your code for effective changing and testing.
+
 ## ID generation
 
 - You should choose the type of unique IDs you generate. Different types work best in different contexts.
