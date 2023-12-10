@@ -60,8 +60,8 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 
 ## Authentication
 
-- Standard user journeys for onboarding, invitation, email verification, MFA, login, and password reset.
-- Single Sign-On (SSO) options, including access via Google, etc. and external Identify Provider (IDP) federation for B2B.
+- Standard user journeys for onboarding, invitation, email verification, [Multi-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) (MFA), login, and password reset.
+- Single Sign-On (SSO) options, including access via Google, etc. and external [Identify Provider](https://en.wikipedia.org/wiki/Identity_provider) (IDP) federation for B2B.
 - Choose between delegated or mapped identity for IDP federation cases. With delegated identity, the external IDP tells your IDP the identity of the user, and you take it at face value. With mapped identity, you map the identity from the external IDP in your own IDP. My advice here is to always map. In any case, you should ensure that when an identity is removed from an external IDP, it also gets removed from your IDP.
 - You'll likely need to support both [OpenID Connect](https://openid.net/developers/how-connect-works/) (OIDC) and [Security Assertion Markup Language 2.0](https://en.wikipedia.org/wiki/SAML_2.0) (SAML 2.0), for IDP federation. 
 - Events for every time a user logs in for the first time, logs in, and logs out.
