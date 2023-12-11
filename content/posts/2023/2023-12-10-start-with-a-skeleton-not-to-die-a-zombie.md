@@ -410,7 +410,7 @@ I'll sometimes advise for specific approaches: take this with a pinch of salt, o
 - Each service should be able to log in plain statements, or in JSON, based on a configuration variable passed at runtime. The default should be JSON, overridden locally to be plain instead.
 - Each log entry should comply with a company-wide JSON schema. Services should be tested to check whether the log lines they produce comply with this schema, as part of the build pipelines.
 - The `Invocation Context` should also have its own schema, included as an optional field in the log entry schema.
-- Logging long strings is incredibly slow in general, so the default minimum log level should be kept to `DEBUG`, and `INFO` should never be used as part of normal workflows.
+- Logging long strings is incredibly slow in general, so the default minimum log level should be kept to `INFO`, and `INFO` should never be used as part of normal workflows.
 - An invocation should be able to specify a toggle to bump the produced logged level from `DEBUG` to `INFO`.
 - Does this mean that most workflows won't produce any logs? No, because an event sink can map each produced event into a log line, asynchronously, without slowing down the processing itself.
 - So why do we need to occasionally bump the log level to `INFO`? Or why log directly from the apps completely? That's because, sometimes, weird things happen, and an application ends up not being able to publish events. Or you might be interested in how the inside of an app is working.
