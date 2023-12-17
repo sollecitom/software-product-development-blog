@@ -18,3 +18,11 @@ fun processEvent(event: Any): Any {
 ```
 
 TODO
+
+```kotlin
+
+fun moveTo(x: Double, y: Double, z: Double) {
+
+    // move there
+}
+```
