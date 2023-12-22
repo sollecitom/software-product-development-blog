@@ -1,7 +1,7 @@
 ---
-title: "Software product development distilled"
-categories: [ "software-development" ]
-tags: [ "system-thinking", "organization-design", "effectiveness", "management", "performance" ]
+title: "My belief system for software product development"
+categories: [ "system-thinking" ]
+tags: [ "software-development", "organization-design", "effectiveness", "management", "belief-system" ]
 date: 2023-12-21T05:00:00
 draft: true
 ---
@@ -24,9 +24,10 @@ You should evaluate the coherence of your belief system and your principles over
 
 # Belief system
 
-TODO
+[//]: # (TODO)
 
-# Principles
+# Parting words
 
-1. I wrote down quite a few organizational principles in [a previous article](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-11-16-organizational-principles-for-effectiveness/).
-2. TODO
+[//]: # (TODO)
+
+I wrote down quite a few organizational principles in [a previous article](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-11-16-organizational-principles-for-effectiveness/). These principles derive from my current belief system, so they won't resonate if you hold a different set of beliefs.
