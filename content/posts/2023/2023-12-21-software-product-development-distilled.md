@@ -14,4 +14,19 @@ And so it's perhaps unsurprising that software companies rarely know how to stru
 
 And yet, reality isn't linear or clear-cut. What works in another company won't likely work elsewhere. A practice that's effective in a company with 30 employees will almost surely not work when the same company has 100 employees. Systems are full of interdependencies and nonlinearities, so you cannot improve your sales without changing your product and your marketing, and you cannot change who you hire without changing how you work.
 
-So what should a company do? When common sense doesn't work, frameworks aren't effective, and copying what famous businesses are doing won't take you far? TODO
+So what should a company do? When common sense doesn't work, frameworks aren't effective, and copying what famous businesses are doing won't take you far?
+
+The answer is that you should write down a set of principles that derive from your belief system, and then use these to orient yourself in this highly complex environment. A belief system is a set of fundamental beliefs that shapes the way you perceive reality and link causes to consequences.
+
+You should evaluate the coherence of your belief system and your principles overall. So if two beliefs or principles conflict, you should think deeper and evolve them, until the conflict disappears.
+
+> What follows is some of my personal beliefs when it comes to software product development, along with some principles that derive from my belief system. I highly recommend them, and they served me well over the years, but I keep evolving them, and you shouldn't take them at face value. The important thing is that you write down your beliefs, evaluate them as a whole system, write down your principles, and use them to orient yourself when designing how your company operates.
+
+# Belief system
+
+TODO
+
+# Principles
+
+1. I wrote down quite a few organizational principles in [a previous article](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-11-16-organizational-principles-for-effectiveness/).
+2. TODO
