@@ -42,7 +42,22 @@ You should evaluate the coherence of your belief system and your principles over
 16. Consistency of technologies is overrated. Even if you're right, changing your mind when needed will require convincing everybody and changing things company-wide.
 17. Consistency in architecture is underrated. You won't benefit from any desirable system-wide properties, unless you design your whole system to achieve these.
 18. Products, people, technologies, processes, incentives, and company structure are interdependent.
-19. 
+19. The cost (effort, risk) involved in modifying software depends super-linearly on how many possibilities you need to take into account.
+20. A strongly typed domain model eliminates undesired possibilities impossible.
+21. Software architecture is about limiting the degrees of freedom involved in moving and storing information.
+22. Every employee should want to do their best, and to continuously improve their best.
+23. Team members should vary in strengths, backgrounds, and experience, but should have compatible belief systems.
+24. The tell-sign of a high-performing team is the pride they take in their craftsmanship.
+25. People should be passionate and have strong opinions. Bad opinions can be fixed, a lack of passion cannot.
+26. Teams should be co-located: either all sitting closely together most days, or all entirely remote.
+27. The teams of product developers should make most decisions: about the product, and about their ways of working. Push authority to where information is.
+28. The most important job for an executive is to form a core group of high performers, and to remove people that would endanger this.
+29. Early feedback prevents waste.
+30. You cannot inspect quality into a product.
+31. The 10x developer is a myth. When you factor in how bad decisions compound over time, a 10x factor isn't even near the difference between bad and great.
+32. Fewer and better people will run circles around many more worse employees.
+33. Staffing the best people you can find is the single most important thing for any company.
+34. TODO
 
 [//]: # (TODO)
 
