@@ -27,6 +27,22 @@ You should evaluate the coherence of your belief system and your principles over
 1. A software product is a set of promises, not a set of features.
 2. Customers hire your product to do a job they would otherwise attempt to do in other ways.
 3. Product development is about finding a good job to be done, and tailoring your product to meet the customers' needs well, given the circumstances your users find themselves in.
+4. A software system is not the sum of its parts: every time there's a new requirement, you need to modify the software to meet this new requirement plus all the previous ones.
+5. The cost (effort, risk) involved in modifying a software system depends on its internal quality, which is how well the code is structured.
+6. The cost (effort, risk) involved in modifying software depends on how easy it is to understand where to operate the change, and on how contained the change is in terms of testing.
+7. The cost of modifying the software because of new requirements always ends up trumping the initial cost involved in writing it.
+8. The unit of work allocation should always be a team.
+9. Teams should abstract who's working on what, and be resilient to holidays, illness, etc.
+10. A team should be able to work on anything the company needs.
+11. The coordination effort required in a team, department, or company increases super-linearly with its number of people.
+12. We're all going to be wrong a lot.
+13. Behind every bad idea that were people thinking it was an excellent idea.
+14. Whenever people disagree, a prototype or test is the right way forward. Whenever people agree, still, a prototype or test prevents embarrassing mistakes.
+15. You cannot create an effective system by building its parts sequentially.
+16. Consistency of technologies is overrated. Even if you're right, changing your mind when needed will require convincing everybody and changing things company-wide.
+17. Consistency in architecture is underrated. You won't benefit from any desirable system-wide properties, unless you design your whole system to achieve these.
+18. Products, people, technologies, processes, incentives, and company structure are interdependent.
+19. 
 
 [//]: # (TODO)
 
