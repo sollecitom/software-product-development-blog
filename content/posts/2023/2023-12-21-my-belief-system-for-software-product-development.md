@@ -20,9 +20,13 @@ The answer is that you should write down a set of principles that derive from yo
 
 You should evaluate the coherence of your belief system and your principles overall. So if two beliefs or principles conflict, you should think deeper and evolve them, until the conflict disappears.
 
-> What follows is some of my personal beliefs when it comes to software product development, along with some principles that derive from my belief system. I highly recommend them, and they served me well over the years, but I keep evolving them, and you shouldn't take them at face value. The important thing is that you write down your beliefs, evaluate them as a whole system, write down your principles, and use them to orient yourself when designing how your company operates.
+> What follows is some of my personal beliefs when it comes to software product development. I stand by them, and they served me well over the years, but I keep evolving them, and you shouldn't take them at face value. The important thing is that you write down your beliefs, evaluate them as a whole system, write down your principles, and use them to orient yourself when designing how your company operates.
 
 # Belief system
+
+1. A software product is a set of promises, not a set of features.
+2. Customers hire your product to do a job they would otherwise attempt to do in other ways.
+3. Product development is about finding a good job to be done, and tailoring your product to meet the customers' needs well, given the circumstances your users find themselves in.
 
 [//]: # (TODO)
 
