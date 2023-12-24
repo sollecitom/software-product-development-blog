@@ -59,7 +59,15 @@ You should evaluate the coherence of your belief system and your principles over
 33. Fewer and better people will run circles around many more worse employees.
 34. Staffing the best people you can find is the single most important thing for any company.
 35. Nobody cares about your business and its customers. Everybody's in for themselves. The best people you can hire are those who are in for the fun of solving problems together. Align the incentives so that what's best for the company is what's best for the employee.
-36. 
+36. Growth is important, but development equally so. Growth is about doing more, in terms of users, revenue, etc. Development is about becoming better at the activities involved in operating the company.
+37. Storing the history of changes, as opposed to the state itself, yields amazing possibilities.
+38. The number of features and bugs is irrelevant. One great feature might make your product. One bad bug can kill your company. Most features and bugs won't move the needle.
+39. At some point, quantity becomes quality. Many small issues eventually give your customers the impression of a poor product.
+40. Bureaucracy kills. Stay lean, keep things flat and collaborative, ensure every requirement comes with the name of the person behind it. Needs must be met, but the suggested ways of meeting those needs do not need to be observed.
+41. The job of management is to ensure that your system of work is effective. This requires an intimate understanding of both how the work works, and of how it should work.
+42. Management by objectives is a travesty. Replace it with management by means.
+43. Executives, managers, and product developers have different jobs. Use clear boundaries to who's responsible for a decision. Avoid splitting your company into people who think and people who do.
+44. 
 
 [//]: # (TODO)
 
