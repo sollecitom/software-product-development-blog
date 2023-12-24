@@ -35,7 +35,7 @@ You should evaluate the coherence of your belief system and your principles over
 9. Teams should abstract who's working on what, and be resilient to holidays, illness, etc.
 10. A team should be able to work on anything the company needs.
 11. The coordination effort required in a team, department, or company increases super-linearly with its number of people.
-12. We're all going to be wrong a lot.
+12. We're all going to be wrong a lot. Remember you can still be wrong, even when you're dead sure you're right. Keep an open mind.
 13. Behind every bad idea that were people thinking it was an excellent idea.
 14. The biggest risk for a new company is solving a problem not worth solving.
 15. Whenever people disagree, a prototype or test is the right way forward. Whenever people agree, still, a prototype or test prevents embarrassing mistakes.
@@ -72,7 +72,8 @@ You should evaluate the coherence of your belief system and your principles over
 46. Everything is possible, unless it violates the laws of physics. Some things can be prohibitively expensive, or undesirable.
 47. When designing something, start from the desired outcomes, and walk back to the technologies and the approaches. Don't decide whether to turn left or right without knowing how that decision fits with your travel plan.
 48. Your fight is against entropy. Do nothing, and things will get worse. Order and desired states require a lot of active effort. Chaos and disorder are the natural state of things.
-49. 
+49. If you have formal authority over other people, how good you are at your job can be assessed by how often you have to resort to formal authority.
+50. 
 
 [//]: # (TODO)
 
