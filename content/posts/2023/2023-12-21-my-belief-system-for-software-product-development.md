@@ -71,7 +71,7 @@ You should evaluate the coherence of your belief system and your principles over
 45. When people capable of doing the thing disagree with people who wouldn't be capable themselves, the former should have authority.
 46. Everything is possible, unless it violates the laws of physics. Some things can be prohibitively expensive, or undesirable.
 47. When designing something, start from the desired outcomes, and walk back to the technologies and the approaches. Don't decide whether to turn left or right without knowing how that decision fits with your travel plan.
-48. Your main fight is against entropy. Do nothing, and things will get worse. Order and desired states require a lot of active effort. Chaos and disorder are the natural state of things.
+48. Your fight is against entropy. Do nothing, and things will get worse. Order and desired states require a lot of active effort. Chaos and disorder are the natural state of things.
 49. 
 
 [//]: # (TODO)
