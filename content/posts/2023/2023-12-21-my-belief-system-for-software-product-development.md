@@ -69,7 +69,9 @@ You should evaluate the coherence of your belief system and your principles over
 43. Executives, managers, and product developers have different jobs. Use clear boundaries to who's responsible for a decision. Avoid splitting your company into people who think and people who do.
 44. Experts working outside a team should be advisors. Advisors are not decision-makers. The authority should remain with the team getting the advice. Including architecture, security, product management, design, etc.
 45. When people capable of doing the thing disagree with people who wouldn't be capable themselves, the former should have authority.
-46. 
+46. Everything is possible, unless it violates the laws of physics. Some things can be prohibitively expensive, or undesirable.
+47. When designing something, start from the desired outcomes, and walk back to the technologies and the approaches. Don't decide whether to turn left or right without knowing how that decision fits with your travel plan.
+48. 
 
 [//]: # (TODO)
 
