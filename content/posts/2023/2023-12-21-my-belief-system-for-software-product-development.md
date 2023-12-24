@@ -37,32 +37,33 @@ You should evaluate the coherence of your belief system and your principles over
 9. You cannot inspect quality into a product or a system. You need to build quality in, throughout the lifecycle.
 10. At some point, quantity becomes quality. Many small issues eventually give your customers the impression of a poor product.
 11. If you have formal authority over other people, how good you are at your job can be assessed by how infrequently you have to resort to formal authority.
-
-# Product
-
-1. A software product is a set of promises, not a set of features.
-2. Customers hire your product to do a job they would otherwise attempt to do in other ways.
-3. Product development is about finding a good job to be done, and tailoring your product to meet the customers' needs well, given the circumstances your users find themselves in.
-4. Behind every bad idea that were people thinking it was an excellent idea.
-5. The biggest risk for a new company is solving a problem not worth solving.
-6. The number of features and bugs is irrelevant. One great feature might make your product. One bad bug can kill your company. Most features and bugs won't move the needle.
+12. Nobody cares about your business and its customers. Everybody's in for themselves. The best people you can hire are those who are in for the fun of solving problems together. Align the incentives so that what's best for the company is what's best for the employee.
+13. Resist the lure of metrics and KPIs. Indicators are useful, but should never become targets. Running a company without metrics and KPIs can be hard. Running a company primarily by metrics and KPIs is usually a disaster. Many important things are not measurable.
 
 # Processes
 
-1. Bureaucracy kills. Stay lean, keep things flat and collaborative, ensure every requirement comes with the name of the person behind it. Needs must be met, but the suggested ways of meeting those needs do not need to be observed.
-2. The job of management is to ensure that your system of work is effective. This requires an intimate understanding of both how the work works, and of how it should work.
-3. Management by objectives is a travesty. Replace it with management by means.
-4. Executives, managers, and product developers have different jobs. Use clear boundaries to who's responsible for a decision. Avoid splitting your company into people who think and people who do.
-5. The unit of work allocation should always be a team.
-6. Teams should abstract who's working on what, and be resilient to holidays, illness, etc.
-7. A team should be able to work on anything the company needs.
-8. The coordination effort required in a team, department, or company increases super-linearly with its number of people.
-9. Whenever people disagree, a prototype or test is the right way forward. Whenever people agree, still, a prototype or test prevents embarrassing mistakes.
-10. The teams of product developers should make most decisions: about the product, and about their ways of working. Push authority to where information is.
-11. Early feedback prevents waste.
-12. Nobody cares about your business and its customers. Everybody's in for themselves. The best people you can hire are those who are in for the fun of solving problems together. Align the incentives so that what's best for the company is what's best for the employee.
-13. Experts working outside a team should be advisors. Advisors are not decision-makers. The authority should remain with the team getting the advice. Including architecture, security, product management, design, etc.
-14. When people capable of doing the thing disagree with people who wouldn't be capable themselves, the former should have authority.
+1. Bureaucracy kills. Stay lean, keep things flat and collaborative, ensure that every requirement comes with the name of the person behind it. Needs should be met, but the suggested ways of meeting those needs does not need to be observed.
+2. The job of management is to ensure that your system of work is effective. This requires an intimate understanding of both how the work works, and of how it should work. Management by objectives is a travesty. Replace it with management by means.
+3. Executives, managers, and product developers have different jobs. Use clear boundaries for decision-making. Avoid splitting your company into people who think and people who do.
+4. Push authority information, rather than information to authority.
+5. The teams of product developers should make most decisions: about the product, and about their ways of working.
+6. Whenever people disagree, a prototype or test is the right way forward. Whenever people agree, still, a prototype or test prevents embarrassing mistakes.
+7. The coordination effort required in a team, department, or company increases super-linearly with its number of people.
+8. Early feedback prevents waste.
+9. The unit of work allocation should always be a team.
+10. Teams should abstract who's working on what, and be resilient to holidays, illness, etc.
+11. A team should be able to work on anything the company needs.
+12. Experts working outside a team should be advisors. Advisors are not decision-makers. The authority should remain with the team getting the advice. Including architecture, security, product management, design, etc.
+13. When people capable of doing the thing disagree with people who wouldn't be capable themselves, the former should have authority.
+
+# Product
+
+1. Customers hire your product to do a job they would otherwise attempt to do in other ways.
+2. Product development is about finding a good job to be done, and tailoring your product to meet the customers' needs well, given the circumstances your users find themselves in.
+3. A software product is a set of promises, not a set of features. A product is still the same product if the features evolve, but not if the needs it meets changes.
+4. The biggest risk for a new company is solving a problem not worth solving.
+5. Behind every bad idea that were people thinking it was an excellent idea. Write down your assumptions, and test these assumptions, before fully committing. Finding evidence should rarely require building things.
+6. The number of features and bugs is irrelevant. One great feature might make your product. One bad bug can kill your company. Most features and bugs won't move the needle.
 
 # Technology
 
