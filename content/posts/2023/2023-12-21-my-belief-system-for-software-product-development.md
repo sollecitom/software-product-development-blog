@@ -2,8 +2,8 @@
 title: "My belief system for software product development"
 categories: [ "system-thinking" ]
 tags: [ "software-development", "organization-design", "effectiveness", "management", "belief-system" ]
-date: 2023-12-21T05:00:00
-draft: true
+date: 2023-12-24T05:00:00
+draft: false
 ---
 
 Running a software product development company is complex. People, processes, products, technologies, and operations are all crucially important, and interdependent.
