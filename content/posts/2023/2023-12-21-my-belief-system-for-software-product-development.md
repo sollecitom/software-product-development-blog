@@ -67,7 +67,7 @@ You should evaluate the coherence of your belief system and your principles over
 41. The job of management is to ensure that your system of work is effective. This requires an intimate understanding of both how the work works, and of how it should work.
 42. Management by objectives is a travesty. Replace it with management by means.
 43. Executives, managers, and product developers have different jobs. Use clear boundaries to who's responsible for a decision. Avoid splitting your company into people who think and people who do.
-44. Experts working outside a team should be advisors. Advisors are not decision-makers. The authority should remain with the team getting the advice.
+44. Experts working outside a team should be advisors. Advisors are not decision-makers. The authority should remain with the team getting the advice. Including architecture, security, product management, design, etc.
 45. 
 
 [//]: # (TODO)
