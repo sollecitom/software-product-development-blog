@@ -73,6 +73,7 @@ You should evaluate the coherence of your belief system and your principles over
 47. When designing something, start from the desired outcomes, and walk back to the technologies and the approaches. Don't decide whether to turn left or right without knowing how that decision fits with your travel plan.
 48. Your fight is against entropy. Do nothing, and things will get worse. Order and desired states require a lot of active effort. Chaos and disorder are the natural state of things.
 49. If you have formal authority over other people, how good you are at your job can be assessed by how infrequently you have to resort to formal authority.
-50. 
+50. Trust and verify. Treat people like adults. Allow people to do mistakes. Get rid of people who abuse your trust or who keep making the same mistakes. Do not restrict everybody's freedom because a few people abused that freedom.
+51. 
 
 [//]: # (TODO)
