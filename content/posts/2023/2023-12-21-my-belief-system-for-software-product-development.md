@@ -58,27 +58,29 @@ You should evaluate the coherence of your belief system and your principles over
 
 # Product
 
-1. Customers hire your product to do a job they would otherwise attempt to do in other ways.
+1. Customers hire your product to do a job they would otherwise attempt to do in other ways. Nobody cares about your product, people care about the job your product does for them.
 2. Product development is about finding a good job to be done, and tailoring your product to meet the customers' needs well, given the circumstances your users find themselves in.
 3. A software product is a set of promises, not a set of features. A product is still the same product if the features evolve, but not if the needs it meets changes.
 4. The biggest risk for a new company is solving a problem not worth solving.
 5. Behind every bad idea that were people thinking it was an excellent idea. Write down your assumptions, and test these assumptions, before fully committing. Finding evidence should rarely require building things.
-6. The number of features and bugs is irrelevant. One great feature might make your product. One bad bug can kill your company. Most features and bugs won't move the needle.
+6. Being a big fish in a small pond is better than being a small fish in a big pond. The right starting pond can be expanded after you outgrow it.
+7. People make emotional rather than rational decisions. Their perception of your company, their job, your product, and the competition will determine their behavior. Positioning is the battle for the mind of your prospects.
+8. The number of features and bugs is irrelevant. One great feature might make your product. One bad bug can kill your company. Most features and bugs won't move the needle.
 
 # Technology
 
 1. A software system is not the sum of its parts: every time there's a new requirement, you need to modify the software to meet this new requirement plus all the previous ones.
-2. The cost (effort, risk) involved in modifying a software system depends on its internal quality, which is how well the code is structured.
-3. The cost (effort, risk) involved in modifying software depends on how easy it is to understand where to operate the change, and on how contained the change is in terms of testing.
-4. The cost of modifying the software because of new requirements always ends up trumping the initial cost involved in writing it.
-5. You cannot create an effective system by building its parts sequentially.
-6. Consistency of technologies is overrated. Even if you're right, changing your mind when needed will require convincing everybody and changing things company-wide.
-7. Consistency in architecture is underrated. You won't benefit from any desirable system-wide properties, unless you design your whole system to achieve these.
-8. Humans can only keep so many things in their head. Well-designed modules compartmentalize complexity.
+2. You cannot create an effective system by building its parts sequentially.
+3. Consistency of technologies is overrated. Even if you're right when you choose something, changing your mind when needed will require convincing everybody and changing things company-wide.
+4. Consistency in architecture is underrated. You won't benefit from any desirable system-wide properties, unless you design your whole system to achieve these.
+5. Humans can only keep so many things in their head. Well-designed modules compartmentalize complexity.
+6. The cost (effort, risk) involved in modifying a software system depends on its internal quality, which is how well the code is structured.
+7. The cost (effort, risk) involved in modifying software depends on how easy it is to understand where to operate the change, and on how contained the change is in terms of testing.
+8. The cost of modifying software because of new requirements always ends up trumping the initial cost involved in writing it.
 9. The cost (effort, risk) involved in modifying software depends super-linearly on how many possibilities you need to take into account.
 10. A strongly typed domain model makes undesired possibilities impossible.
 11. Software architecture is about limiting the degrees of freedom involved in moving and storing information.
-12. Storing the history of changes, as opposed to the state itself, yields amazing possibilities.
+12. Storing the history of changes, as opposed to storing the state itself, allows amazing options.
 
 # People
 
@@ -87,6 +89,6 @@ You should evaluate the coherence of your belief system and your principles over
 3. Team members should vary in strengths, backgrounds, and experience, but should have compatible belief systems.
 4. The tell-sign of a high-performing team is the pride they take in their craftsmanship.
 5. People should be passionate and have strong opinions. Bad opinions can be fixed, but a lack of passion cannot.
-6. Teams should be co-located: either all sitting closely together most days, or all entirely remote.
+6. Teams should be co-located: either everybody sitting closely together most days, or everyone entirely remote.
 7. The 10x developer is a myth. When you factor in how bad decisions compound over time, a 10x factor isn't even near the difference between bad and great.
 8. Fewer and better people will run circles around many more worse employees.
