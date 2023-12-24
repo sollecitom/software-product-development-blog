@@ -26,17 +26,17 @@ You should evaluate the coherence of your belief system and your principles over
 
 # Holistic
 
-1. Products, people, technologies, processes, incentives, and company structure are interdependent.
+1. Products, people, technologies, processes, incentives, and company structure are interdependent. You shouldn't design them independently.
 2. We're all going to be wrong a lot. Remember you can still be wrong, even when you're dead sure you're right. Keep an open mind.
-3. The most important job for an executive is to form a core group of high performers, and to remove people that would endanger this.
-4. You cannot inspect quality into a product.
-5. Growth is important, but development equally so. Growth is about doing more, in terms of users, revenue, etc. Development is about becoming better at the activities involved in operating the company.
-6. At some point, quantity becomes quality. Many small issues eventually give your customers the impression of a poor product.
-7. Everything is possible, unless it violates the laws of physics. Some things can be prohibitively expensive, or undesirable.
-8. When designing something, start from the desired outcomes, and walk back to the technologies and the approaches. Don't decide whether to turn left or right without knowing how that decision fits with your travel plan.
-9. Your fight is against entropy. Do nothing, and things will get worse. Order and desired states require a lot of active effort. Chaos and disorder are the natural state of things.
-10. If you have formal authority over other people, how good you are at your job can be assessed by how infrequently you have to resort to formal authority.
-11. Trust and verify. Treat people like adults. Allow people to do mistakes. Get rid of people who abuse your trust or who keep making the same mistakes. Do not restrict everybody's freedom because a few people abused that freedom.
+3. Everything is possible, unless it violates the laws of physics. Some things can be prohibitively expensive, or undesirable.
+4. When designing something, start from the desired outcomes, and walk back to the technologies and the approaches. Don't decide whether to turn left or right without knowing how that decision fits with your travel plan.
+5. Your fight is against entropy. Do nothing, and things will get worse. Order and desired states require a lot of active effort. Chaos and disorder are the natural state of things.
+6. The most important job for an executive is to form a core group of high performers, and to remove people that would endanger this.
+7. Growth is important, but development equally so. Growth is about doing more, in terms of users, revenue, etc. Development is about becoming better at the activities involved in operating the company.
+8. Trust and verify. Treat people like adults. Allow people to do mistakes. Get rid of people who abuse your trust or who keep making the same mistakes. Do not restrict everybody's freedom because a few people abused that freedom.
+9. You cannot inspect quality into a product or a system. You need to build quality in, throughout the lifecycle.
+10. At some point, quantity becomes quality. Many small issues eventually give your customers the impression of a poor product.
+11. If you have formal authority over other people, how good you are at your job can be assessed by how infrequently you have to resort to formal authority.
 
 # Product
 
