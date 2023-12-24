@@ -25,6 +25,7 @@ You should evaluate the coherence of your belief system and your principles over
 # Belief system
 
 # Holistic
+
 1. Products, people, technologies, processes, incentives, and company structure are interdependent.
 2. We're all going to be wrong a lot. Remember you can still be wrong, even when you're dead sure you're right. Keep an open mind.
 3. The most important job for an executive is to form a core group of high performers, and to remove people that would endanger this.
@@ -47,6 +48,7 @@ You should evaluate the coherence of your belief system and your principles over
 6. The number of features and bugs is irrelevant. One great feature might make your product. One bad bug can kill your company. Most features and bugs won't move the needle.
 
 # Processes
+
 1. Bureaucracy kills. Stay lean, keep things flat and collaborative, ensure every requirement comes with the name of the person behind it. Needs must be met, but the suggested ways of meeting those needs do not need to be observed.
 2. The job of management is to ensure that your system of work is effective. This requires an intimate understanding of both how the work works, and of how it should work.
 3. Management by objectives is a travesty. Replace it with management by means.
@@ -62,8 +64,8 @@ You should evaluate the coherence of your belief system and your principles over
 13. Experts working outside a team should be advisors. Advisors are not decision-makers. The authority should remain with the team getting the advice. Including architecture, security, product management, design, etc.
 14. When people capable of doing the thing disagree with people who wouldn't be capable themselves, the former should have authority.
 
-
 # Technology
+
 1. A software system is not the sum of its parts: every time there's a new requirement, you need to modify the software to meet this new requirement plus all the previous ones.
 2. The cost (effort, risk) involved in modifying a software system depends on its internal quality, which is how well the code is structured.
 3. The cost (effort, risk) involved in modifying software depends on how easy it is to understand where to operate the change, and on how contained the change is in terms of testing.
@@ -78,6 +80,7 @@ You should evaluate the coherence of your belief system and your principles over
 12. Storing the history of changes, as opposed to the state itself, yields amazing possibilities.
 
 # People
+
 1. Staffing the best people you can find is the single most important thing for any company.
 2. Every employee should want to do their best, and to continuously improve their best.
 3. Team members should vary in strengths, backgrounds, and experience, but should have compatible belief systems.
