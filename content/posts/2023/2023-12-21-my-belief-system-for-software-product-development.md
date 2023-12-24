@@ -76,9 +76,3 @@ You should evaluate the coherence of your belief system and your principles over
 50. 
 
 [//]: # (TODO)
-
-# Parting words
-
-[//]: # (TODO)
-
-I wrote down quite a few organizational principles in [a previous article](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-11-16-organizational-principles-for-effectiveness/). These principles derive from my current belief system, so they won't resonate if you hold a different set of beliefs.
