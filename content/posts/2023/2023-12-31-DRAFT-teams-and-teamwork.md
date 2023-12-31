@@ -3,7 +3,7 @@ title: "Teams and teamwork: the most important and misunderstood ingredient in a
 categories: [ "teamwork" ]
 tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "team" ]
 date: 2023-12-31T05:00:00
-draft: true
+draft: false
 ---
 
 I had a discussion on Twitter yesterday about whether a software development team should restrict the freedom of its members, and enforce shared approaches and ways of working. I and others were adamant that yes, this should absolutely be the case. Others were horrified, saying this is everything that's wrong with our industry.
@@ -76,49 +76,50 @@ Examples of teamwork are everywhere, not only in movies. A football team made of
 
 Once again, it's the nature of the activity that determines the best approach. If an activity is not linear, splitting the work never makes sense. No competitive activity is linear, hence the importance and prevalence of teams in sports and war.
 
-## Software development is not competitive but definitely not linear
+## Software development is definitely not linear
 
-So the million-dollar question is whether software development is a linear activity. If it is, all good, and people can work how they want. But if it's not a linear activity, groups of co-workers are going to be dramatically outperformed by true teams. 
+So the million-dollar question is whether software development is a linear activity. If it is, all good, and people can work how they want. But if it's not a linear activity, groups of co-workers are going to be dramatically outperformed by true teams.
 
+Software development isn't a competitive activity, no other software team is there trying to outmaneuver and sabotage you, so you don't need to adapt how you work to what your competitors are doing. Even in product development competition is more a fantasy some folks have than an actual threat to a company. Sure, other companies also want to capture the market, but you can decide not to compete, and to find your own niche other companies aren't interested in. The goal is making a profit, not world domination. It's not a zero-sum game.
 
-First of all, software development and product development are not competitive activities. I can hear some of you screaming at this, but they're really not. No other software team is there trying to outmaneuver and sabotage you, so you don't need to adapt how you work to what your competitors are doing. Even in product development, competition is more a fantasy some folks have than it is an actual threat. Sure, there are other companies that want to capture the market, but you can often decide to find your own niche other companies aren't interested in.
+Is there hope then? Hardly so. Software development can never be linear, because it's about developing software systems. A system's performance is never the sum of its parts, but the product of their interactions. So you can never split the development of a software system, work in parallel, put the pieces together, and end up with great outcomes.
 
-However, software development can never be linear, because it's about creating effective software systems. The performance of a software system is never the sum of its parts, but the product of their interaction. So you can never split the work of developing a software system, work in parallel, put the pieces together, and end up with great outcomes.
+I can hear some of you screaming. And indeed, there are some exceptions to what I just claimed. If a software system is trivial and tiny e.g., a low-throughput CRUD application with small amounts of data, people can easily divide the tasks and work alone in parallel. It might even be better.
 
-Once again, I can hear the screams. And indeed, there are some exceptions to what I just said. If a software system is trivial and tiny e.g., a low-throughput CRUD application with small amounts of data, people can easily divide the tasks and work individually in parallel. It might even be better.
+In many cases, though, software systems are large and complex, having to support a large concurrent number of users while maintaining a low latency. They can also involve large amounts of data, have strict data integrity and privacy requirements, and must continue to work in presence of network partitions and hardware faults.
 
-In many cases, though, software systems are large and complex, having to support a large concurrent number of users while maintaining a low latency. They can also involve large amounts of data, have strict data integrity and privacy requirements, and must remain available in presence of network partitions and hardware faults.
+For such projects, individuals working in parallel cannot cope. That's because, in an effective team, the individual strengths merge to form a collective understanding much higher than the sum of the parts. And so no team member could either design or build such a large system on their own, regardless of the time they have available, and yet the team can.
 
-For such projects, individuals working in parallel cannot cope. It's not about their number, but their knowledge and understanding. That's because, in an effective team, the collective capabilities are much higher than the sum of the individual skills. And so no team member could either design or build such a large system on their own, regardless of the time they have available, and yet the team can.
-
-Product development is even less linear, since the goal is to find and address a need customers are willing to pay the company for. It's not about building stuff, but about discovering problems, opportunities, and solutions.
+Product development is even less linear, since the goal is to find and address a need customers are willing to pay the company for. It's not about building stuff, but about discovering problems, opportunities, and solutions. You cannot solve 1/6 of the puzzle and put all the pieces together.
 
 ## What if it's not linear after all?
 
-So what changes if you believe that software (product) development is not a linear activity? As it turns out, you behave quite differently.
+So what then? What changes if you believe that software product development is not a linear activity? As it turns out, you behave quite a few things.
 
-First of all, unlike mechanical parts, two people are never identical. So you can never replace a team member without the whole team changing.
+First of all, you give up the fantasy that people are interchangeable. Unlike mechanical parts, two people are never identical. So you can never replace a team member without the whole team changing. Even worse, the same person or even the same pair of people will produce a different effect if they join different teams. A person that stabilizes a team might destabilize another. When discussing deliverables and initiatives, you now have to think about which people you need, rather than just how many.
 
-Secondly, you end up using teams as the unit of work allocation. You don't assign tasks to the individual team members, because the outcomes are not the sum of the individual accomplishments. "Bob's job will be hunting 1/6 of the bear".
+Secondly, you end up using teams as the unit of work allocation. Assigning tasks to the individual team members makes no sense, because the outcomes are not the sum of the individual accomplishments. "Bob's job will be hunting 1/6 of the bear".
 
-And you only hire people with a specific team in mind. Every team needs to be carefully assembled by mixing in various strengths, personalities, backgrounds, attitudes, and skills. So how could you ever look for "back-end engineers" company-wide, and then figure out where to place them? Unthinkable.
+You only now hire people with a specific team in mind. Every team needs to be carefully assembled by mixing in various strengths, personalities, backgrounds, attitudes, and skills. So how could you ever look for generic "back-end engineers" company-wide, and then figure out where to place them? Unthinkable.
 
-And even the way you assess performance is radically different. How can you even talk about individual performance if the effectiveness of the team is the product of the interaction between the team members? Somebody's sense of humor or curiosity might contribute to the effectiveness of the team in ways that a more skilled replacement could never hope to match.
+And the thought of assessing individual performance now makes you laugh. Somebody's sense of humor or curiosity might contribute to the effectiveness of the team in ways that a more skilled and hardworking replacement could never hope to match.
 
-The way you structure your incentives also changes. How can you reward a forward for each goal they score, knowing that winning the game depends on how well the team plays together? What do individual incentives do to teamwork?
+Finally, the way you structure the incentives also changes. How can you reward a forward for every goal they score, knowing that winning the game depends on how well the team plays together? What do individual incentives do to teamwork? Wouldn't that player be tempted to take every shot, rather than passing the ball? It might result in a higher bonus for themselves, after all, even if the team might win a lot less because of this.
 
-## Individual choice, teamwork, and management
+## Individual freedom, teamwork, and management
 
-Before wrapping up, I want to touch a little bit on some on another implication of teamwork. A team restricts the freedom of its members, because the ways of working are designed holistically to produce the desired outcomes.
+Let's go back at the original point of contention on the Twitter discussion. A team must restrict the freedom of its members. This is a consequence of its systemic nature. The way a team works is designed holistically to produce the desired outcomes, and this is interdependent with the team members than end up making the team.
 
-This should be a no-brainer, but I recently had a discussion on Twitter that showed me it absolutely isn't. And yet, it should be intuitive. If the performance of the team is the product of the interactions between its members, how well you fit the team's chosen approach matters way more than your individual skills. And I say chosen, because different teams can play in radically different ways, and achieve their goals.
+It should be obvious and a no-brainer. If the performance of the team is the product of the interactions between its members, how well you fit the team's chosen approach matters way more than your individual skills. And I say chosen, because different teams can play in radically different ways, and achieve their goals.
 
-The role of management is to develop effective strategies, and to carefully assemble teams that are well-formed to play that way. Within a team there's no space for uncoordinated activity. You can be a great football player but, if you don't want to pass the ball a lot, Barcelona is not the right team for you. You can be a great shot but, if you love whistling, and you do that while we're sneaking our way through an enemy base, you're a liability.
+The most important job of any manager is developing effective approaches, and then carefully assembling teams that are well-formed to play that way. The parallel with the world of sports and military is clear.
 
-So, as a software developer, be honest about your preferred ways of working and expectations, and find yourself a like-minded team and company. How you work and where you work from are still your choice, since you're not forced to work in teams or companies you don't like.
-
-But don't expect to join a team and then decide on your own how you work or where you work from.
+Within a team there's no space for uncoordinated activity. You can be a great football player but, if you don't want to pass the ball a lot, Barcelona is not the right team for you. You can be a great shot but, if you love whistling, and you do that while we're sneaking our way through an enemy base, you're a liability.
 
 ## Parting words
 
-Whew, last post of this 2023! Writing this one was strange. I'm very passionate about systems and teams, so I had to carefully decide what to include not to write another endless article. I hope you now have an understanding of these different ways of working in a group, and that you can tell which one your company uses. I very vocally believe that software product development is a team activity, and I strongly favor ensemble programming because of this. You don't need to agree with me, but please let me know your thoughts, especially if you disagree!  
+Whew, my last post for this 2023! I hope you now have an appreciation of the difference between a group of co-workers and a team, and that you can tell which one your company adopts.
+
+I very vocally believe that software product development is a nonlinear activity best done in teams, and I strongly favor ensemble programming because of this. So if you want to work alone or remotely, be upfront and find a team that operates that way. But don't fool yourself thinking this should be your choice after joining any team.
+
+You don't need to agree with me, but please let me know your thoughts, especially if you disagree!
