@@ -1,5 +1,5 @@
 ---
-title: "Teams and teamwork: the most important and misunderstood ingredient in any company"
+title: "So you think you work in a team"
 categories: [ "teamwork" ]
 tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "team" ]
 date: 2023-12-31T05:00:00
@@ -46,9 +46,7 @@ Most of the issues and the dysfunction companies experience derive from either:
 
 Today though, I want to focus on how most "teams" within software companies aren't working as a system. I might come back another day to talk about the other mistakes mentioned above.
 
-## Why this matters a lot
-
-[//]: # (TODO change this section's title)
+## The difference matters a lot
 
 The reason I obsess about teams is that the difference in effectiveness between a team and a group of co-workers can be dramatic, in the right context.
 
