@@ -10,7 +10,33 @@ Ask any software developer, and they'll tell you they work in a team. But do the
 
 The thing is, teamwork and teams are incredibly misunderstood. The terms themselves are very often abused, so that a team, these days, is just a fancier name for "a group of co-workers".
 
+I believe that many of the problems companies experience derive from this misunderstanding, and from putting in place practices that are anti-systemic and destroy teamwork.
 
+So what's a team then? A team is a social system, and as such it is a qualitatively different entity than a few individuals working alone side-by-side.
+
+To understand what this means, let's look at what "system" and "social" mean, in this context.
+
+When it comes to the definition of a system, I could never explain it better than by quoting Russell Ackoff:
+
+- "A system is a whole that consists of parts each of which can affect its behavior or its properties. Each part of the system when it affects the system is dependent for its effect on some other part. In other words: The parts are interdependent."
+- "No part of the system or a collection of parts of the system has an independent effect on it. Therefore, a system as a whole cannot be divided into independent parts."
+- "The essential or defining properties of any system are properties of the whole which none of its parts have. The essential property of an automobile is that it can carry you from one place to another. No part of an automobile can do that."
+- "Therefore, when a system is taken apart it loses its essential properties. A system is not the sum of the behavior of its parts, it’s a product of their interactions. The performance of a system depends on how the parts fit, not how they act taken separately."
+
+About "social" here, Russell Ackoff, once again, categorized any system as either:
+
+- A machine, where the overall system has no purpose, and neither have the parts. A machine serves the purpose of its creator.
+- An organism, where the overall system has its own purpose, but the parts do not.
+- A social system, where the overall system has its own purpose, and the subsystems also have their own purposes.
+
+Therefore, a social system is a system whose parts have their own purpose. There would be a lot to say about the dysfunction and the problems that arise from trying to treat teams as machines or organisms, but it'll have to wait for another day. Today I want to discuss how most "teams" within software companies aren't working as a system.
+
+[//]: # (TODO)
+
+
+Behaviors and cognition in the group have two major characteristics: they are interdependent, and this interdependence develops over time in a reciprocal manner.
+
+This developing interdependence implies that individuals’ cognitive processes affect and become affected by the ones of the other team members. Communication among the team members serves as the means for the gradually growing interdependence of cognition and behaviors such that efforts become coordinated and shared.
 
 TODO
 
