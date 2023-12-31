@@ -50,7 +50,9 @@ There are many activities, however, where a team might work out much better than
 
 As a group, you split the work, so I hunt in an area, and you in another. At the end of the hunt, we put together what you and I managed to get, and bring it back to the village. We work in parallel, more efficiently, and cover more ground. What's not to love? Well, as long as we're hunting things that are trivial to hunt, like frogs, this actually works best.
 
-What if we're hunting for something bigger or faster than us though? Perhaps in a dangerous environment with many dangerous predators? TODO
+What if we're hunting for something bigger or faster than us though? Perhaps in a dangerous environment with many dangerous predators? Humanity discovered a long time ago the value of working as a team, and that hunting alone was a great way of dying.
+
+TODO
 
 
 TODO
