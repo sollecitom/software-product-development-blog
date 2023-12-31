@@ -76,9 +76,10 @@ Examples of teamwork are everywhere, not only in movies. A football team made of
 
 Once again, it's the nature of the activity that determines the best approach. If an activity is not linear, splitting the work never makes sense. No competitive activity is linear, hence the importance and prevalence of teams in sports and war.
 
-## Is software development a linear activity?
+## Software development is not competitive but definitely not linear
 
-So the million-dollar question is whether software development is a linear activity a group of co-workers can carry over well, or a non-linear endeavor where teamwork produces dramatically better results.
+So the million-dollar question is whether software development is a linear activity. If it is, all good, and people can work how they want. But if it's not a linear activity, groups of co-workers are going to be dramatically outperformed by true teams. 
+
 
 First of all, software development and product development are not competitive activities. I can hear some of you screaming at this, but they're really not. No other software team is there trying to outmaneuver and sabotage you, so you don't need to adapt how you work to what your competitors are doing. Even in product development, competition is more a fantasy some folks have than it is an actual threat. Sure, there are other companies that want to capture the market, but you can often decide to find your own niche other companies aren't interested in.
 
