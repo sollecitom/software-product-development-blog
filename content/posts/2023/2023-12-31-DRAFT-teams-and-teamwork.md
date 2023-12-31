@@ -48,27 +48,33 @@ Today though, I want to focus on how most "teams" within software companies aren
 
 ## Why this matters a lot
 
-The reason why teamwork matters a lot is that the difference in effectiveness and efficiency between a team and a group of co-workers can be dramatic.
+[//]: # (TODO change this section's title)
 
-As an example, people who clean the streets of a city don't typically work as a team. Sure, they all together have breakfast, get to the location, exchange jokes and banter, plan the work, and come back. But this is not enough for a group of people to be called a team. That's because street cleaners divide the work among themselves, and then work in isolation. This works because cleaning streets is a linear activity, so if I clean a street, and you clean another, the overall outcomes are the sum of our individual outcomes. In these circumstances teamwork isn't necessary, and a working group might even be better.
+The reason I obsess about teams is that the difference in effectiveness between a team and a group of co-workers can be dramatic, in the right context.
 
-There are many activities, however, where a team might work out much better than a group of co-workers. Keep in mind that this is a choice. A good example is hunting. You can decide to hunt as a group, or as a team.
+Not all groups of co-workers are teams. As an example, street cleaners don't typically work as a team. They all together have breakfast, get to the location, exchange jokes and banter, plan the work, and commute back. But behaving socially and having a common goal aren't sufficient for a group to be called a team.
 
-As a group, you split the work, so I hunt in an area, and you in another. At the end of the hunt, we put together what you and I managed to get, and bring it back to the village. We work in parallel, more efficiently, and cover more ground. What's not to love? Well, as long as we're hunting things that are trivial to hunt, like frogs, this actually works best.
+The defining characteristic of a team is that the team members work synchronously together toward the goal, without splitting the task and working individually.
 
-What if we're hunting for something bigger or faster than us though? Perhaps in a dangerous environment with many dangerous predators? Humanity discovered a long time ago the value of working as a team, and that hunting alone was a great way of dying.
+Street cleaners divide the work among themselves, and then work individually. This works because cleaning streets is a linear activity, so if I clean a street, and you clean another, the overall outcomes are the sum of our individual outcomes. In these circumstances teamwork isn't necessary, and a working group might even be better.
 
-And so, the defining characteristic of a team, is that the team members work synchronously together toward the goal, without splitting the task and working individually. The difference between a team and a group is qualitative, rather than merely quantitative. A team can accomplish things that none of its team members could accomplish if working individually. And that's because, for some activities, the outcomes are not the sum of the individual outcomes.
+Working as a group or as a team is a choice, even if the outcomes are typically very different.
+
+A good example is hunting. You can decide to hunt as a group, or as a team. As a group, you split the work, so I hunt in an area, and you in another. At the end of the hunt, we put together what you and I managed to get, and bring it back to the village. We work in parallel, more efficiently, and cover more ground. What's not to love then?
+
+Well, as long as we're hunting things that are trivial to hunt, like frogs, this actually works best. What if we're hunting something bigger or faster than us though? Perhaps in a dangerous environment with many dangerous predators? Humanity discovered a long time ago the value of working as a team, and that hunting alone was a great way of dying.
+
+Remember? "The essential or defining properties of any system are properties of the whole which none of its parts have". A team is capable of things none of its members could accomplish individually. This matters a lot when an activity is not linear, cannot be divided in independent activities, and the overall result is not the sum of the result of the smaller tasks.
 
 We cannot hunt a part of a bear each. We're either capable of hunting a bear as a team, or we cannot hunt one.
 
-Only teams allow specialization. If we're splitting the work, you're forced to be self-sufficient, because you'll be working alone a lot. Teams, on the other hand, thrive on diversity. Adding more people that don't bring new strengths doesn't improve a team.
+Only teams allow specialization of roles. If we're splitting the work, you're forced to be self-sufficient, because you'll be working alone a lot. Teams, on the other hands, thrive on diversity. Adding more people that don't bring new strengths doesn't improve a team.
 
-In Ocean's Eleven, none of the gang's members could have pulled the heist on their own. It's only by acting as a team that something impossible for anybody in that group became feasible.
+In Ocean's Eleven, none of the gang's members could have pulled the heist on their own. It's only by acting as a team that something nobody could achieve became feasible. A gang made of only one type of specialist would have failed spectacularly.
 
-Outside of movies, examples of teamwork are everywhere, especially in sports or in the army. A football team made of only goalkeepers, defenders, midfielders, or forwards wouldn't go far. But a football team without any of these roles also wouldn't do well.
+Examples of teamwork are everywhere, not only in movies. A football team made of only goalkeepers, defenders, midfielders, or forwards wouldn't go far. Even more significantly, a football team without any one of these roles also wouldn't do well.
 
-Once again, it's the nature of the activity that determines the best approach. If an activity is not linear, splitting the work almost never makes sense. Any competitive activity, like team sports and war, is for sure never linear.
+Once again, it's the nature of the activity that determines the best approach. If an activity is not linear, splitting the work never makes sense. No competitive activity is linear, hence the importance and prevalence of teams in sports and war.
 
 ## Is software development a linear activity?
 
