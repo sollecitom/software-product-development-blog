@@ -106,7 +106,7 @@ Finally, the way you structure the incentives also changes. How can you reward a
 
 ## Individual freedom, teamwork, and management
 
-Let's go back at the original point of contention on the Twitter discussion. A team must restrict the freedom of its members. This is a consequence of its systemic nature. The way a team works is designed holistically to produce the desired outcomes, and this is interdependent with the team members than end up making the team.
+Let's go back at the original point of contention on the Twitter discussion. A team must restrict the freedom of its members. This is a consequence of its systemic nature. The way a team works is designed holistically to produce the desired outcomes, and this is interdependent with the team members that end up making the team.
 
 It should be obvious and a no-brainer. If the performance of the team is the product of the interactions between its members, how well you fit the team's chosen approach matters way more than your individual skills. And I say chosen, because different teams can play in radically different ways, and achieve their goals.
 
