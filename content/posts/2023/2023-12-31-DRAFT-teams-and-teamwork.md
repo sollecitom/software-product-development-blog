@@ -6,17 +6,23 @@ date: 2023-12-31T05:00:00
 draft: true
 ---
 
-Ask any software developer, and they'll tell you they work in a team. But do they? I worked in quite a few places and, in my experience, working as a team is rare within software companies.
+I had a discussion on Twitter yesterday about whether a software development team should restrict the freedom of its members, and enforce shared approaches and ways of working. I and others were adamant that yes, this should absolutely be the case. Others were horrified, saying this is everything that's wrong with our industry.
 
-The thing is, teamwork and teams are incredibly misunderstood. The terms themselves are very often abused, so that a team, these days, is just a fancier name for "a group of co-workers".
+This made me realize that I never wrote about teamwork in software product development. This is borderline insane, as I'm hugely passionate about system thinking and teams (which are systems, after all), and I have very strong opinions about this.
 
-I believe that many of the problems companies experience derive from this misunderstanding, and from putting in place practices that are anti-systemic and destroy teamwork.
+And so, here we are, let's talk about teams, teamwork, and the role of management in software product development.
 
-So what's a team then? A team is a social system, and as such it is a qualitatively different entity than a few individuals working alone side-by-side.
+## You probably don't work in a team
 
-To understand what this means, let's look at what "system" and "social" mean, in this context.
+Ask any software developer whether they work as a team, and sure as shooting they'll tell you they do. But do they? I worked in quite a few places and, in my experience, people rarely work as teams in software companies.
 
-## What a team actually is
+Teamwork is often misunderstood. I guess the word "team" feels more personal, and evokes better emotions, and that's why most people use it interchangeably with "group of co-workers".
+
+But a team is not simply a group of people working towards the same goal. And I believe that many of the problems companies experience derive from this misunderstanding, resulting in anti-systemic practices that prevent true teamwork.
+
+## Definition of a team
+
+So what's a team then? A team is a social system, and as such it is a qualitatively different entity than a few individuals working alone side-by-side. To understand what this means, let's look at what "system" and "social" mean, in this context.
 
 When it comes to the definition of a system, I could never explain it better than by quoting Russell Ackoff:
 
@@ -28,17 +34,17 @@ When it comes to the definition of a system, I could never explain it better tha
 About the word "social", Russell Ackoff, once again, categorized any system as either:
 
 - A machine, where the overall system has no purpose, and neither have the parts. A machine serves the purpose of its creator.
-- An organism, where the overall system has its own purpose, but the parts do not.
+- An organism, where the overall system has its own purpose, but the parts do not. You have a purpose, but your liver, your brain, and your hands don't.
 - A social system, where the overall system has its own purpose, and the subsystems also have their own purposes.
 
 Therefore, a social system is a system whose parts have their own purpose. The beliefs and behaviors in a team are interdependent, and this interdependence develops and evolves over time, in a reciprocal manner.
 
 Most of the issues and the dysfunction companies experience derive from either:
 
-1. Treating companies, teams, and people as if they were machines, forgetting that they have their own purposes.
-2. Dealing with companies and teams in an anti-systemic way, by focusing on the parts, rather than on the system as a whole.
+1. Dealing with companies or teams in an anti-systemic way, by focusing on the parts, rather than on the system as a whole.
+2. Treating companies, teams, and people as if they were machines, forgetting that they have their own purposes.
 
-Today though, I want to discuss how most "teams" within software companies aren't working as a system.
+Today though, I want to focus on how most "teams" within software companies aren't working as a system. I might come back another day to talk about the other mistakes mentioned above.
 
 ## Why this matters a lot
 
