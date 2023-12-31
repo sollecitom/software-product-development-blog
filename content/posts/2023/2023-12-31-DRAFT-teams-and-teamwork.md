@@ -16,6 +16,8 @@ So what's a team then? A team is a social system, and as such it is a qualitativ
 
 To understand what this means, let's look at what "system" and "social" mean, in this context.
 
+## What a team actually is
+
 When it comes to the definition of a system, I could never explain it better than by quoting Russell Ackoff:
 
 - "A system is a whole that consists of parts each of which can affect its behavior or its properties. Each part of the system when it affects the system is dependent for its effect on some other part. In other words: The parts are interdependent."
@@ -38,22 +40,21 @@ Most of the issues and the dysfunction companies experience derive from either:
 
 Today though, I want to discuss how most "teams" within software companies aren't working as a system.
 
-[//]: # (TODO)
+## Why this matters a lot
 
+The reason why teamwork matters a lot is that the difference in effectiveness and efficiency between a team and a group of co-workers can be dramatic.
 
-Behaviors and cognition in the group have two major characteristics: they are interdependent, and this interdependence develops over time in a reciprocal manner.
+As an example, people who clean the streets of a city don't typically work as a team. Sure, they all together have breakfast, get to the location, exchange jokes and banter, plan the work, and come back. But this is not enough for a group of people to be called a team. That's because street cleaners divide the work among themselves, and then work in isolation. This works because cleaning streets is a linear activity, so if I clean a street, and you clean another, the overall outcomes are the sum of our individual outcomes. In these circumstances teamwork isn't necessary, and a working group might even be better.
 
-This developing interdependence implies that individuals’ cognitive processes affect and become affected by the ones of the other team members. Communication among the team members serves as the means for the gradually growing interdependence of cognition and behaviors such that efforts become coordinated and shared.
+There are many activities, however, where a team might work out much better than a group of co-workers. Keep in mind that this is a choice. A good example is hunting. You can decide to hunt as a group, or as a team.
+
+As a group, you split the work, so I hunt in an area, and you in another. At the end of the hunt, we put together what you and I managed to get, and bring it back to the village. We work in parallel, more efficiently, and cover more ground. What's not to love? Well, as long as we're hunting things that are trivial to hunt, like frogs, this actually works best.
+
+What if we're hunting for something bigger or faster than us though? Perhaps in a dangerous environment with many dangerous predators? TODO
+
 
 TODO
 
-- Everybody thinks they work in a team.
-- But do they?
-- Most people can't articulate what a team is.
-- The definition of a team.
-- Why it matters.
-- Teams are more than the sum of the parts. It's about effectiveness AND efficiency.
-- Working as a team is a choice.
 - Team vs non-team activities. Examples (Romans, hunting, football, looking for gold, cleaning the streets, etc.)
 - Teams limit the freedom of the team members, by definition.
 - Teams allow specialization. If you have to work alone, you're forced to be an all-rounder.
