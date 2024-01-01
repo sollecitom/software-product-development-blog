@@ -37,6 +37,9 @@ Rather than the usual long explanations about systems, today I'll play it differ
 21. Outlaw the possibility of owning more than one house. Expropriate the additional initial houses some people own, with financial compensation.
 22. Rebrand the HMRC as Internal Tax Service. Reform it to operate in a fully digital economy. Nobody should declare their taxes. Companies should report incomes paid to people, and transactions should be monitored.
 23. Drop all financial support to religious institutions (of all sorts). Close all religious schools. Close all religious sites. Introduce multi-faith religious sites run by the government.
-24. 
+24. Reform the NHS to provide effective preventive and corrective care to everybody, for free, including dental. Only exclude cosmetic and gender-affirming medicine.
+25. Outlaw private medicine (all sorts). Hire all private doctors into the NHS.
+26. Restructure how medicine works, with local cross-functional centers operating preventive and corrective action. Introduce periodic checks for everybody, free vitamins programs, etc. Local centers should be able to take care of most common conditions, to operate minor surgeries, etc.
+27. 
 
 [//]: # (TODO: change title with "manifesto" in it; group, sort, and categorize the points; maybe add a principles section)
