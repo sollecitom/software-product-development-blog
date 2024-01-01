@@ -33,6 +33,9 @@ Rather than the usual long explanations about systems, today I'll play it differ
 17. Introduce a state-owned email service, free for everybody, tied to the single national identity. Do the same for calendar and appointments, video calls, file storage, and GPS maps navigation. Abolish landlines and the mobile network.
 18. Introduce a state-owned identity provider service, so that people can federate their digital identity across all services, both government-owned and run by third parties.
 19. Ban all written communications via mail, replacing them with email communications through the nationwide service.
-20. 
+20. Create a state-owned housing company. Build high-quality essential homes for everybody, on demand, at cost price. Introduce a zero-interest mortgage scheme, where money is taken as part of income tax directly, over 40 years.
+21. Outlaw the possibility of owning more than one house. Expropriate the additional initial houses some people own, with financial compensation.
+22. Rebrand the HMRC as Internal Tax Service. Reform it to operate in a fully digital economy. Nobody should declare their taxes. Companies should report incomes paid to people, and transactions should be monitored.
+23. 
 
 [//]: # (TODO: change title with "manifesto" in it; group, sort, and categorize the points; maybe add a principles section)
