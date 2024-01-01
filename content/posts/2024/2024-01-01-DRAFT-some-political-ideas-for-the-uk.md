@@ -43,6 +43,7 @@ Rather than the usual long explanations about systems, today I'll play it differ
 27. Restructure how medicine works, with local cross-functional centers operating preventive and corrective action. Introduce periodic checks for everybody, free vitamins programs, etc. Local centers should be able to take care of most common conditions, to operate minor surgeries, etc.
 28. Reform the prison system. Differentiate the control measures based on the type of inmates. Make the inmates work toward reaching zero-cost for prisons. Structure the time served around hard work, study, and picking up new skills.
 29. Introduce a mandatory permit to make a baby. Release permits based on sustainability and self-sufficiency targets. People who have fewer kids should precede people who have more in the queue. Make having an unsanctioned baby a crime.
-30. 
+30. Introduce harsher punishment for crimes committed by immigrants. Deport any immigrant who committed a crime, at the end of their prison sentence.
+31. 
 
 [//]: # (TODO: change title with "manifesto" in it; group, sort, and categorize the points; maybe add a principles section)
