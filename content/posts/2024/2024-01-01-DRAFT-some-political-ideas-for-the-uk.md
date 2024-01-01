@@ -23,6 +23,14 @@ Rather than the usual long explanations about systems, today I'll play it differ
 7. Create a state-owned national digital banking service, providing checking accounts, debit cards, and payments to everybody, for free. Abolish currency.
 8. Create a single digital identity scheme. Create a distributed ledger with remote backup for information, allowing people and organizations to request and access information, provided the person approves. Abolish passports, driving licenses, etc.
 9. Outlaw the possibility of taking any amount of money from a bank account without the approval of the account owner. For recurring payments, the approval should be given every time the money needs to leave the account.
-10. 
+10. Heavily invest in getting self-sufficient in terms of food production. Leverage research and high-tech facilities to produce essential foods.
+11. Create a state-owned supermarket. Essential foods, water, medicines, tools, clothes, etc. should be sold at zero-profit prices. The principle here is to offer high-quality affordable essentials to everybody. Exclude all highly processed products.
+12. Introduce a zero-tolerance policy for illegal immigration. Only let people actually needed in, with individual vetting. People should only be let in if there are margins in terms of self-sufficiency.
+13. Create local administrations with cross-functional responsibilities across justice, policing, legislation, etc. Align them centrally, but give them ample discretion to run their area.
+14. Introduce a zero-tolerance policy against crime and anti-social behavior. Re-introduce stop and search, etc. Increase the powers the police has. Mercilessly punish all power abuses.
+15. Create a state-owned internet access program, with high-speed connectivity (through optical fiber, etc.), free for everybody.
+16. Introduce a state-owner email service, free for everybody, tied to the single national identity.
+17. Ban all written communications via mail, replacing them with email communications through the nationwide service.
+18. 
 
 [//]: # (TODO: change title with "manifesto" in it; group, sort, and categorize the points; maybe add a principles section)
