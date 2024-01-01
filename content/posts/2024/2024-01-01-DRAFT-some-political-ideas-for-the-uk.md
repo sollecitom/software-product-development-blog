@@ -21,6 +21,8 @@ Rather than the usual long explanations about systems, today I'll play it differ
 5. Ditch the doctrine of precedent and common law. Stick to legislative enactments and civil law.
 6. Separate the responsibility of deciding the political direction and of writing the laws. The 100-people Chamber should decide the direction, and a newly instituted office should be responsible to adjust the set of laws to reflect the will of the Chamber.
 7. Create a state-owned national digital banking service, providing checking accounts, debit cards, and payments to everybody, for free. Abolish currency.
-8. 
+8. Create a single digital identity scheme. Create a distributed ledger with remote backup for information, allowing people and organizations to request and access information, provided the person approves. Abolish passports, driving licenses, etc.
+9. Outlaw the possibility of taking any amount of money from a bank account without the approval of the account owner. For recurring payments, the approval should be given every time the money needs to leave the account.
+10. 
 
 [//]: # (TODO: change title with "manifesto" in it; group, sort, and categorize the points; maybe add a principles section)
