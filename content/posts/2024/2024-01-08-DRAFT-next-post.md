@@ -111,8 +111,9 @@ In terms of the properties this system of work yields, we have:
 6. The amount of work-in-progress is under control. Teams don't work on more than they can chew. Nobody burns out. Things are finished before other things are started.
 7. Code quality is very high, and the architecture is modular and extensible. The cost of modifying the software system doesn't continuously increase over time.
 8. Knowledge spreads within a team (because of ensemble programming), and across teams (because there are no areas of the codebase owned by any team).
-9. Each team can work on anything the company needs. Initiatives can be flexibly scheduled regardless of their domain area. Late changes in requirements are accommodated immediately with minimum queue time.
-10. A ton of non-value activities are avoided: ceremonies, planning, fire-fighting, splitting work across teams or people, release management, branch management, merge conflicts, code reviews, manual regression testing, manual deployments, security reviews, etc.
+9. Each team can work on anything the company needs. Initiatives can be flexibly scheduled regardless of their domain area.
+10. The codebase is always working, at each commit, both locally and remotely. A team can pivot at any point without effort. Late changes in requirements are accommodated immediately with minimum disruption.
+11. A ton of non-value activities are avoided: ceremonies, planning, fire-fighting, splitting work across teams or people, release management, branch management, merge conflicts, code reviews, manual regression testing, manual deployments, security reviews, etc.
 
 ## Final words
 
