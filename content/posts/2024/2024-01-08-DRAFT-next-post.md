@@ -75,25 +75,27 @@ The proposed system would work according to the following principles:
 9. There's a company-wide registry for Pulsar/Kafka topics and contracts e.g., OpenAPI, Avro, and JSON.
 10. The team pulls initiatives from a company-wide queue, working on one thing at a time end-to-end, till completion, in continuous collaboration with stakeholders and external experts.
 11. Code is written using outside-in Test-Driven Development, with clear contracts and example tests at module boundary's level.
-12. The services use a build system capable of only rebuilding and retesting the modules that actually changed, using a deterministic non-cryptographic hash algorithm to determine whether a module has changed.
-13. The build includes an array of tests and checks that can run locally:
+12. Each invocation (commands and queries) is processed along with a bundle of information about the invocation itself. The user ID, the tenant ID, the ID of the token, etc. This information is logged, and it's part of each published domain event. It's also used to implement idempotency for all operations.
+13. The services use a build system capable of only rebuilding and retesting the modules that actually changed, using a deterministic non-cryptographic hash algorithm to determine whether a module has changed.
+14. The build includes an array of tests and checks that can run locally in under 3m:
     - Application tests: they test the application layer against the stubbed driven adapters. These cover the application logic.
     - Integration tests: driving adapters against a stubbed application, checking their inbound contract e.g., OpenApi or Avro. Driven adapters against their target technology running in Docker through TestContainers.
     - In-process service tests: the whole service going from driving adapter to driven adapters and back, against the downstream technologies running in Docker through TestContainers.
     - Container-based service tests: the service itself running in Docker, using TestContainers, from driving adapter to driven adapters and back, against the downstream technologies in Docker, also through TestContainers.
-14. TODO
+    - Compliance checks for data contracts e.g., OpenAPI, JSON, and Avro, against company-wide rules e.g., paths are dash-separated, no typos, no top-level array fields, etc.
+    - Performance micro-benchmarks. These tests prevent regressions in performance-sensitive parts of a service, without taking a big amount of time to run.
+    - Mutation tests. These tests inject mutations in the codebase before running the other tests, and count how many mutants go through the tests without failures. This is a way of assessing the effectiveness of your tests.
+    - Static code analysis, with regard to security, cyclomatic complexity, code smells, and inefficiencies.
+    - Dependency scanning to check dependencies and Docker images for security vulnerabilities.
+15. The team works directly on the main branch, pushing a commit every time a new test passes, and after every small refactoring or tidying. This typically happens maximum every 10 minutes.
+16. Every commit pushed upstream to the main branch is built, tested, and packaged.
+17. Each packaged new version of the code is either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable at any moment, without any further checks needed.
+18. Only one permanent environment exists: production. There are internal tenants and users to test things before rolling them out to customers, but this testing happens in production.
+19. New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants. This allows releasing features in a coordinated way with marketing and sales.
+20. Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
+21. Smoke tests run continuously in production, on internal tenants and users, simulating end-to-end the company's business workflows. Alerts are triggered if they fail.
+22. An external ping is used to check whether the APIs of the company are reachable from outside the company's infrastructure. Alerts are triggered if this fails.
 
-        - They have a series of service-level tests and checks they can run locally:
-            - Compliance checks for data contracts e.g., OpenAPI, JSON, and Avro, against company-wide rules e.g., paths are dash-separated.
-            - Performance micro-benchmarks.
-            - Mutation testing.
-            - Security static code analysis, cyclomatic complexity, dependencies and Docker image vulnerability scanning, etc.
-        - They work on the main branch directly, pushing a commit every time a new test passes, and after every small refactoring or tidying.
-        - Every commit pushed to the upstream main branch is built, tested, and packaged. It's also either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable manually at any moment.
-        - There's only one environment: production. Test tenants and users are used to test things internally to the company, but in production.
-        - New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants.
-        - Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
-        - Smoke tests run continuously in production, on internal tenants and users, covering each of the company's business workflows. Alerts are triggered if they fail.
 
 - Aspects:
     - This heavily limits what's possible, through types, tests, checks, many more smaller steps, working together, pre-defined component-level architecture, data contracts, CQRS, event-driven workflows.
