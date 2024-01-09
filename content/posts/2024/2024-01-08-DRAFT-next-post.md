@@ -1,14 +1,32 @@
 ---
 title: "Interdependencies in your system of work"
-categories: [ "teamwork" ]
-tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "team" ]
+categories: [ "system-thinking" ]
+tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "technical-processes" ]
 date: 2024-01-08T05:00:00
 draft: true
 ---
 
+I keep hearing people claiming their team tried Trunk-Based Development, and decided they didn't find it beneficial after a couple of months. Now, I love TBD, but today I'm not going to war about it.
+
+The problem with this kind of statement is that Trunk-Based Development is a part of a system of work. And the performance of a system is never the sum of its parts, but the product of its interactions.
+
+So you cannot look at Trunk-Based Development, a practice, and assess its performance in isolation from its containing system. This makes no sense whatsoever.
+
+Experiencing something without a containing system is also impossible. So when people say they tried Trunk-Based Development, what did they actually do? They probably attempted to work directly on the main branch, as the only change to the way they were working before.
+
+Even assuming they understood what TBD is and how it works, ideally with an instructor, what are the chances that "improving" a part of a system improves the performance of that system? Pretty much zero. Things almost always get worse.
+
+When you introduce any practice, Trunk-Based Development is just an example, to the way you work, you're implicitly creating a new system of work. And that's what you experience in terms of performance. Not the merits of TBD, but the merits of your overall new work system.
+
+It's as nonsensical as replacing a small airplane's thrusters with a helicopter's rotor, witnessing the poor thing crash, and concluding that rotors are a bad idea. As it goes for the airplane, what are the chances that swapping a part of a system with a part of another system significantly improves things: zero.
+
+## The system of work
+
+
+
+[//]: # (TODO index)
+
 - Ensemble programming, TDD, TBD, CD, DDD, etc. can be useful, but they're not goals on their own.
-- The way you work is a system, so its performance is never the sum of its parts, but the product of their interactions.
-- You cannot evaluate a practice on its own. You can see whether your current system would benefit from it. But you cannot see whether that practice would work well in a different system of work.
 - The goals are:
     - Effectiveness: doing the right thing, meeting the needs of the customers and of the company, delivering value earlier.
     - Safety: not breaking things in production, security, compliance, etc.
@@ -54,7 +72,7 @@ draft: true
     - This heavily limits what's possible, through types, tests, checks, many more smaller steps, working together, pre-defined component-level architecture, data contracts, CQRS, event-driven workflows.
     - This dramatically reduces the probability that something goes wrong, and the effort required to fix it when it happens. This increases super-linearly with the number of possibilities.
     - Shift left, the goal is to get quick feedback locally before pushing upstream. The tests and checks should run under three minutes. The careful modules and the smart build system hugely help.
-    - Feedback happens early and often. 
+    - Feedback happens early and often.
     - The tests and checks determine whether something is releasable. If something passes the tests and checks, and then breaks something, those tests and checks are evolved to prevent that in the future.
     - Every person works on the entire system, on rotation. Nobody works alone. There are always eight pairs of eyes on any character written. Problems are identified quicker. Quality is improved.
     - Knowledge spreads. If somebody is off, a team can function anyway.
