@@ -28,9 +28,23 @@ The system of work is a sociotechnical system, involving people, teams, processe
 
 So the practices, even when consider all together, don't have an independent effect on the system of work. You cannot separate Test-Driven Development, Continuous Delivery, and Trunk-Based Development from how the code is written, and from how the teams work.
 
-## The goals for our system of work
+## Assessing end-to-end alternative systems
 
-Since adopting specific practices is not a goal, what should the goals of our system of work be? If we're talking about developing software systems, I'd go with:
+To meaningfully evaluating the merits of different approaches, people must experience end-to-end alternative systems of work.
+
+It's the small airplane or the helicopter, not the small airplane or the small airplane with its thrusters replaced by a rotor.
+
+This obviously depends on the context and the task at hand. You wouldn't use a small airplane where helicopters excel, nor the other way around. There are some circumstances in which either will do, and these tend to be leisure cruises with no stakes or associated risks.
+
+In software development it's the same: if what you're doing is trivial, and if you don't care about the outcomes much, work in any way you want. No point in thinking deep about it, do whatever, and you'll get whatever.
+
+If you happen to care, though, the difference in performance between two alternative systems can be significant. In particular, a holistically and intentionally designed system will usually run circles around a system that's a patchwork of practises put together like if their effect added up.
+
+## Desired properties for our system of work
+
+The first thing to do when attempting to design a system is to be intentional with its desired properties. After all, how can you design anything if you don't know what you want?
+
+Since adopting specific practices is not a goal, what should the desired properties of our system of work be? If we're talking about developing software systems, I'd go with:
 
 1. Effectiveness: doing the right thing, meeting the needs of the customers and of the company, delivering value earlier.
 2. Safety: not breaking things in production, paying attention to security, compliance, and legal aspects.
@@ -38,9 +52,7 @@ Since adopting specific practices is not a goal, what should the goals of our sy
 4. Resilience: coping with temporary absences, adjusting to late changes in requirements, and working flexibly on anything needed.
 5. Efficiency: avoiding non-value activities.
 
-## Evaluating end-to-end alternative systems
-
-In order to
+If these are the desired properties we want in a system of work, we could evaluate alternative systems by assessing how well they manifest these properties.
 
 [//]: # (TODO index)
 
