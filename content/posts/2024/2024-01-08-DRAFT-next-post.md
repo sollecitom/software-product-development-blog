@@ -54,6 +54,12 @@ Since adopting specific practices is not a goal, what should the desired propert
 
 If these are the desired properties we want in a system of work, we could evaluate alternative systems by assessing how well they manifest these properties.
 
+I don't feel like criticizing the systems of work I don't believe in, at least not today. Instead, I'll outline how the system of work I do believe in operates, and reason around the properties it yields. I'll leave it to you to assess the system of work your company adopts.
+
+## A possible system of work
+
+TODO
+
 [//]: # (TODO index)
 
 - System:
