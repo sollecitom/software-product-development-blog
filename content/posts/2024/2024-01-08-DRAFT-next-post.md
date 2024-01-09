@@ -50,11 +50,11 @@ Since adopting specific practices is not a goal, what properties should our syst
 4. Resilience: coping with temporary absences, adjusting to late changes in requirements, and working flexibly on anything needed.
 5. Efficiency: avoiding non-value activities.
 
-If these are the desired properties we want in a system of work, we could evaluate alternative systems by assessing how well they manifest these properties.
+If these are the desired properties we want in a system of work, we should compare alternative systems by assessing how well they do with regard to these properties.
 
 I don't feel like criticizing the systems of work I don't believe in, at least not today. Instead, I'll outline how the system of work I do believe in operates, and reason around the properties it yields. I'll leave it to you to assess the system of work your company adopts.
 
-## A possible system of work
+## A possible system of work - TODO
 
 Next, I'm going to describe a possible system of work. Keep in mind that the various practices and processes are interdependent, so resist the temptation to decide whether you like this or that aspect, and a holistic judgment at the end instead.
 
@@ -111,7 +111,7 @@ In terms of the properties this system of work yields, we have:
 6. The amount of work-in-progress is under control. Teams don't work on more than they can chew. Nobody burns out. Things are finished before other things are started.
 7. Code quality is very high, and the architecture is modular and extensible. The cost of modifying the software system doesn't continuously increase over time.
 8. Knowledge spreads within a team (because of ensemble programming), and across teams (because there are no areas of the codebase owned by any team).
-9. Each team can work on anything the company needs. Initiatives can be flexibly scheduled regardless of their domain area.
+9. Each team can work on anything the company needs. Initiatives can be flexibly scheduled regardless of their domain area. Late changes in requirements are accommodated immediately with minimum queue time.
 10. A ton of non-value activities are avoided: ceremonies, planning, fire-fighting, splitting work across teams or people, release management, branch management, merge conflicts, code reviews, manual regression testing, manual deployments, security reviews, etc.
 
 ## Final words
