@@ -67,31 +67,33 @@ The proposed system would work according to the following principles:
 1. A cross-functional leaderless team of five product developers. This includes a mix of web, infrastructure, back-end, and mobile; settlers, explorers, and town planners; creativity, bias for action, and long-term thinking; starters and finishers; scripting, prototyping, and testing.
 2. The team members work in an ensemble, like in mob programming. This means they synchronously work together on the same task, rather than splitting the job and working in isolation.
 3. The distributed system adheres to an event-driven architecture. Service choreography, CQRS, event-sourcing, permanently stored events that can be replayed. Services are unaware of each other, and only communicate using domain events with a company-wide schema registry.
-4. The services are grouped using Bounded Context (Domain-Driven Design) and following how the business works. Context Maps (Domain-Driven Design) are used to visualize how the various contexts interact. 
+4. The services are grouped using Bounded Context (Domain-Driven Design) and following how the business works. Context Maps (Domain-Driven Design) are used to visualize how the various contexts interact.
+5. Each software service uses hexagonal architecture. Driving and driven adapters, application, domain.
+6. The team favors those programming languages with a sophisticated type system.
+7. Aggregate Roots, Entities, and Value Objects forming a rich and type-safe domain model for each Bounded Context, following the language used by the business (Domain-Driven Design).
+8. Shared libraries provide implemented patters, utilities, and a thin Shared Domain.
+9. There's a company-wide registry for Pulsar/Kafka topics and contracts e.g., OpenAPI, Avro, and JSON.
+10. The team pulls initiatives from a company-wide queue, working on one thing at a time end-to-end, till completion, in continuous collaboration with stakeholders and external experts.
+11. Code is written using outside-in Test-Driven Development, with clear contracts and example tests at module boundary's level.
+12. The services use a build system capable of only rebuilding and retesting the modules that actually changed, using a deterministic non-cryptographic hash algorithm to determine whether a module has changed.
+13. The build includes an array of tests and checks that can run locally:
+    - Application tests: they test the application layer against the stubbed driven adapters. These cover the application logic.
+    - Integration tests: driving adapters against a stubbed application, checking their inbound contract e.g., OpenApi or Avro. Driven adapters against their target technology running in Docker through TestContainers.
+    - In-process service tests: the whole service going from driving adapter to driven adapters and back, against the downstream technologies running in Docker through TestContainers.
+    - Container-based service tests: the service itself running in Docker, using TestContainers, from driving adapter to driven adapters and back, against the downstream technologies in Docker, also through TestContainers.
+14. TODO
 
-    - They use hexagonal architecture for each software component (driving and driven adapters, application, domain).
-    - They adopt a programming language with a sophisticated type system.
-    - They use Aggregate Roots, Entities, and Value Objects to model the domain of each Bounded Context, from Domain-Driven-Design, aligning the language used with how the business calls things.
-    - They maintain shared libraries with implemented patterns, utilities, and a thin Shared Domain.
-    - There's a company-wide registry of contracts e.g., OpenAPI, Avro, Kafka/Pulsar topics, etc.
-    - They pull work from a company-wide queue of initiatives, and operate with a work-in-progress limit of 1.
-    - They use outside-in Test-Driven Development to develop their internal modules, with clear contracts and example tests at module boundary's level.
-    - They adopt a build system able to only rebuild and retest the modules that actually changed (using hashing).
-    - They have a series of service-level tests and checks they can run locally:
-        - Application tests: application against stubbed driven adapters.
-        - Integration tests: driving adapters against their inbound contract e.g., OpenApi or Avro and against a stubbed application. Driven adapters against their target technology running in Docker through TestContainers.
-        - In-process service tests: the whole service going from driving adapter to driven adapters and back, against technologies in Docker.
-        - Container-based service tests: the whole service running in Docker, using TestContainers, from driving adapter to driven adapters and back, against technologies in Docker.
-        - Compliance checks for data contracts e.g., OpenAPI, JSON, and Avro, against company-wide rules e.g., paths are dash-separated.
-        - Performance micro-benchmarks.
-        - Mutation testing.
-        - Security static code analysis, cyclomatic complexity, dependencies and Docker image vulnerability scanning, etc.
-    - They work on the main branch directly, pushing a commit every time a new test passes, and after every small refactoring or tidying.
-    - Every commit pushed to the upstream main branch is built, tested, and packaged. It's also either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable manually at any moment.
-    - There's only one environment: production. Test tenants and users are used to test things internally to the company, but in production.
-    - New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants.
-    - Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
-    - Smoke tests run continuously in production, on internal tenants and users, covering each of the company's business workflows. Alerts are triggered if they fail.
+        - They have a series of service-level tests and checks they can run locally:
+            - Compliance checks for data contracts e.g., OpenAPI, JSON, and Avro, against company-wide rules e.g., paths are dash-separated.
+            - Performance micro-benchmarks.
+            - Mutation testing.
+            - Security static code analysis, cyclomatic complexity, dependencies and Docker image vulnerability scanning, etc.
+        - They work on the main branch directly, pushing a commit every time a new test passes, and after every small refactoring or tidying.
+        - Every commit pushed to the upstream main branch is built, tested, and packaged. It's also either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable manually at any moment.
+        - There's only one environment: production. Test tenants and users are used to test things internally to the company, but in production.
+        - New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants.
+        - Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
+        - Smoke tests run continuously in production, on internal tenants and users, covering each of the company's business workflows. Alerts are triggered if they fail.
 
 - Aspects:
     - This heavily limits what's possible, through types, tests, checks, many more smaller steps, working together, pre-defined component-level architecture, data contracts, CQRS, event-driven workflows.
