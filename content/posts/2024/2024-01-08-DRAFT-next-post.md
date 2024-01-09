@@ -42,10 +42,10 @@ If you happen to care, though, the difference in performance between two alterna
 
 The first thing to do when attempting to design a system is to be intentional with its desired properties. After all, how can you design anything if you don't know what you want?
 
-Since adopting specific practices is not a goal, what should the desired properties of our system of work be? If we're talking about developing software systems, I'd go with:
+Since adopting specific practices is not a goal, what properties should our system of work have? If we're talking about developing software systems, I'd go with:
 
 1. Effectiveness: doing the right thing, meeting the needs of the customers and of the company, delivering value earlier.
-2. Safety: not breaking things in production, paying attention to security, compliance, and legal aspects.
+2. Safety: not breaking things in production, meeting security, compliance, and legal needs.
 3. Sustainability: no heroics, no sprints, no borrowing from the future, and not ending up increasing the required costs or efforts over time.
 4. Resilience: coping with temporary absences, adjusting to late changes in requirements, and working flexibly on anything needed.
 5. Efficiency: avoiding non-value activities.
