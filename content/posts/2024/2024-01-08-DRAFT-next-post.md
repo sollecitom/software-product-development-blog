@@ -22,18 +22,27 @@ It's as nonsensical as replacing a small airplane's thrusters with a helicopter'
 
 ## The system of work
 
+The way people work to develop a software system is their system of work. This is just a subsystem of the product development system, which in turn is a subsystem of the company, which is contained in the industry, and the economy, and so on ad infinitum. For the sake of this discussion, though, let's stop at the way people develop a software system.
 
+The system of work is a sociotechnical system, involving people, teams, processes, practices, and the software system itself. All these aspects, like in any system, are interdependent, and you cannot divide the system into independent subsystems.
+
+So the practices, even when consider all together, don't have an independent effect on the system of work. You cannot separate Test-Driven Development, Continuous Delivery, and Trunk-Based Development from how the code is written, and from how the teams work.
+
+## The goals for our system of work
+
+Since adopting specific practices is not a goal, what should the goals of our system of work be? If we're talking about developing software systems, I'd go with:
+
+1. Effectiveness: doing the right thing, meeting the needs of the customers and of the company, delivering value earlier.
+2. Safety: not breaking things in production, paying attention to security, compliance, and legal aspects.
+3. Sustainability: no heroics, no sprints, no borrowing from the future, and not ending up increasing the required costs or efforts over time.
+4. Resilience: coping with temporary absences, adjusting to late changes in requirements, and working flexibly on anything needed.
+5. Efficiency: avoiding non-value activities.
+
+## Evaluating end-to-end alternative systems
+
+In order to
 
 [//]: # (TODO index)
-
-- Ensemble programming, TDD, TBD, CD, DDD, etc. can be useful, but they're not goals on their own.
-- The goals are:
-    - Effectiveness: doing the right thing, meeting the needs of the customers and of the company, delivering value earlier.
-    - Safety: not breaking things in production, security, compliance, etc.
-    - Sustainability: no heroics, no sprints, no borrowing from the future, no increasing the effort required, etc.
-    - Resilience: coping with temporary absences, late changes in requirements, etc.
-    - Efficiency: avoiding non-value activities.
-- It's a sociotechnical system made of people, processes, and technology systems.
 
 - System:
     - A cross-functional leaderless team of four product developers:
@@ -79,4 +88,4 @@ It's as nonsensical as replacing a small airplane's thrusters with a helicopter'
     - Each team can work on anything needed. The company can flexibly schedule its work and concentrate its efforts.
     - A ton of waste is avoided: ceremonies, planning, fire-fighting, release management, branch management, merge conflicts, code reviews
 
-[//]: # (TODO change the title;)
+[//]: # (TODO change the title; final words: building the walking skeleton of a simple event-driven workflow is a much better way of evaluating how to work)
