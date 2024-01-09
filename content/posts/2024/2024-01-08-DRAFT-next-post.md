@@ -118,6 +118,6 @@ In terms of the properties this system of work yields, we have:
 
 ## Final words
 
-If you only take one thing from this post let it be this: you cannot evaluate a practice in isolation. You should always evaluate alternative end-to-end systems of work, because the effectiveness depends on how the various parts work together.
+If you only take one thing from this post, let it be this: you cannot evaluate a practice in isolation. You should always evaluate alternative end-to-end systems of work, because the effectiveness depends on how the various parts work together.
 
 So next time you encounter a practice you're curious about, don't try to introduce it in your existing way of working. Instead, try to understand what it enables, and to think at how you could build a different way of working, given this new possibility.
