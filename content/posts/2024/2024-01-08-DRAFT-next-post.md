@@ -58,19 +58,17 @@ I don't feel like criticizing the systems of work I don't believe in, at least n
 
 ## A possible system of work
 
-TODO
+Next, I'm going to describe a possible system of work. Keep in mind that the various practices and processes are interdependent, so resist the temptation to decide whether you like this or that aspect, and a holistic judgment at the end instead.
 
-[//]: # (TODO index)
+Also, a system of work is always the child of a belief system. So if any part evokes a strong negative reaction, stop for a minute and try to understand which of your fundamental believes is in conflict with the practice.
 
-- System:
-    - A cross-functional leaderless team of four product developers:
-        - Backend, web, infra, mobile
-        - Settler, explorer, town planner
-        - Creativity, execution
-        - Starters, finishers
-    - The team members work with ensemble programming, synchronously together on the same task.
-    - They structure their distributed system using an event-driven architecture (service choreography, CQRS, event-sourcing, event-store).
-    - They use explicit Bounded Contexts and Context Maps to plan the architecture, from Domain-Driven Design.
+The proposed system would work according to the following principles:
+
+1. A cross-functional leaderless team of five product developers. This includes a mix of web, infrastructure, back-end, and mobile; settlers, explorers, and town planners; creativity, bias for action, and long-term thinking; starters and finishers; scripting, prototyping, and testing.
+2. The team members work in an ensemble, like in mob programming. This means they synchronously work together on the same task, rather than splitting the job and working in isolation.
+3. The distributed system adheres to an event-driven architecture. Service choreography, CQRS, event-sourcing, permanently stored events that can be replayed. Services are unaware of each other, and only communicate using domain events with a company-wide schema registry.
+4. The services are grouped using Bounded Context (Domain-Driven Design) and following how the business works. Context Maps (Domain-Driven Design) are used to visualize how the various contexts interact. 
+
     - They use hexagonal architecture for each software component (driving and driven adapters, application, domain).
     - They adopt a programming language with a sophisticated type system.
     - They use Aggregate Roots, Entities, and Value Objects to model the domain of each Bounded Context, from Domain-Driven-Design, aligning the language used with how the business calls things.
