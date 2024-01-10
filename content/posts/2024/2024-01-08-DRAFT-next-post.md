@@ -54,33 +54,38 @@ I don't feel like criticizing various systems of work I don't believe in, at lea
 
 ## A particular system of work
 
-Next, I'm going to describe a possible system of work. Keep in mind that the various practices and processes are interdependent, so resist the temptation to decide whether you like this or that aspect, and a holistic judgment at the end instead.
+Keep in mind that the various practices and processes are interdependent, so resist the temptation to decide whether you like this or that aspect, and form a holistic judgment at the end instead.
 
-Also, a system of work is always the child of a belief system. So if any part evokes a strong negative reaction, stop for a minute and try to understand which of your fundamental believes is in conflict with the practice.
+Also, a system of work is always the child of a belief system. So if any point evokes a strong negative reaction, stop for a minute and try to understand which of your fundamental believes is in conflict with that aspect. You don't need to agree, but understanding why you strongly disagree will benefit you.
 
 The proposed system would work according to the following principles:
 
-1. A cross-functional leaderless team of five product developers. This includes a mix of:
+1. A cross-functional leaderless [team (not merely a group of coworkers)](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-12-31-so-you-think-you-work-in-a-team/) of five product developers, working as equals, without seniority roles or separate responsibilities. This includes a mix of:
     - Skills at web, infrastructure, back-end, and mobile.
     - Settlers, explorers, and town planners.
     - People with creativity, with a bias for action, and with long-term thinking.
     - Starters and finishers.
     - Skills at scripting, prototyping, and testing.
-2. The team members work in an ensemble, like in mob programming. This means they synchronously work together on the same task, rather than splitting the job and working in isolation.
-3. The distributed system adheres to an event-driven architecture. Service choreography, CQRS, event-sourcing, permanently stored events that can be replayed. Services are unaware of each other, and only communicate using domain events with a company-wide schema registry.
-4. The services are grouped using Bounded Context (Domain-Driven Design) and following how the business works. Context Maps (Domain-Driven Design) are used to visualize how the various contexts interact.
-5. Each software service uses hexagonal architecture. Driving and driven adapters, application, domain.
-6. The team favors those programming languages with a sophisticated type system.
-7. Aggregate Roots, Entities, and Value Objects forming a rich and type-safe domain model for each Bounded Context, following the language used by the business (Domain-Driven Design).
-8. Shared libraries provide implemented patters, utilities, and a thin Shared Domain.
-9. There's a company-wide registry for Pulsar/Kafka topics and contracts e.g., OpenAPI, Avro, and JSON.
-10. No team owns any area of the codebase or any part of the product.
-11. The team pulls initiatives from a company-wide queue, working on one thing at a time end-to-end, till completion, in continuous collaboration with stakeholders and external experts. Initiatives are carved to take between 1 week and 6 weeks each.
-12. The team remains responsible for most decisions. Experts provide advice on demand, and stakeholders clarify the problem or opportunity space, but the team is in charge of the solution space, and of the implementation.
-13. Code is written using outside-in Test-Driven Development, with clear contracts and example tests at module boundary's level.
-14. Each invocation (commands and queries) is processed along with a bundle of information about the invocation itself. The user ID, the tenant ID, the ID of the token, etc. This information is logged, and it's part of each published domain event. It's also used to implement idempotency for all operations.
-15. The services use a build system capable of only rebuilding and retesting the modules that actually changed, using a deterministic non-cryptographic hash algorithm to determine whether a module has changed.
-16. The build includes an array of tests and checks that can all run locally in under 3m (courtesy of the smart build system and the in-process tests), like:
+    - A mix of backgrounds and experiences, the more, the merrier.
+2. The team members work in an ensemble e.g., with [Mob Programming](https://www.agilealliance.org/resources/experience-reports/mob-programming-agile2014/). This means they work synchronously together on the same task, rather than splitting the job and working in isolation.
+3. The team members are either all office-based, sitting closely with each other, or all fully-remote, working on a team video call most of the day.
+4. The distributed system employs an [Event-Driven Architecture](https://en.wikipedia.org/wiki/Event-driven_architecture). [Service choreography](https://camunda.com/blog/2023/02/orchestration-vs-choreography/), [CQRS](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf), and [Event Sourcing](https://www.eventstore.com/event-sourcing). Services are unaware of each other, share no dependencies, and only communicate using [Domain Event](https://medium.com/@chaojie.xiao/domain-driven-design-practice-domain-events-15b38f3c58fc)s with a company-wide schema registry.
+5. The services are grouped using [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html)s, and following how the business works. [Context Mapping](https://www.infoq.com/articles/ddd-contextmapping/) is used to visualize how the various contexts interact. ([Domain-Driven Design](https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design)).
+6. Each software service is structured according to [Hexagonal Architecture](https://www.arhohuttunen.com/hexagonal-architecture/). Driving and driven adapters, application, domain.
+7. The team favors those programming languages with a sophisticated type system. Examples might be TypeScript for frontend applications, Kotlin/Scala for backend, Golang with [Pulumi](https://www.pulumi.com/b/) for infrastructure.
+8. [Aggregate Roots](https://martinfowler.com/bliki/DDD_Aggregate.html), [Entities, and Value Objects](https://blog.jannikwempe.com/domain-driven-design-entities-value-objects) form a rich and type-safe domain model for each [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html), [reflecting the language used by the business](https://martinfowler.com/bliki/UbiquitousLanguage.html). ([Domain-Driven Design](https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design)).
+9. Shared libraries provide implemented patters, utilities, and a few thin [Shared Kernel](https://deviq.com/domain-driven-design/shared-kernel)s.
+10. There's a company-wide registry for Pulsar/Kafka topics and contracts e.g., [OpenAPI](https://www.openapis.org/), [Avro](https://avro.apache.org/), and [JSON Schema](https://json-schema.org/).
+11. There's [Collective Code Ownership](https://en.wikipedia.org/wiki/Extreme_programming_practices#:~:text=Collective%20code%20ownership%20): no team or person owns any area of the codebase or any part of the product.
+12. The team pulls initiatives from a company-wide queue, working on one thing at a time, end-to-end, till completion. The team is in continuous collaboration with stakeholders and external experts. Initiatives are carved to take between 1 week and 6 weeks each.
+13. Initiatives are minimally specified, as a summary that captures the problem or opportunity. All conversations with stakeholders and experts happen synchronously (either face-to-face or on video call). All discussions include all the relevant people, and happen at the latest responsible moment, right at the beginning of the work.
+14. The team remains responsible for most decisions. Experts provide advice on demand, stakeholders clarify the problem or opportunity space, but the team is in charge of the solution space, and of the implementation.
+15. The team uses [Story Mapping](https://www.jpattonassociates.com/wp-content/uploads/2015/03/story_mapping.pdf) to design and document the solution, and [Event Storming](https://en.wikipedia.org/wiki/Event_storming) to design the implementation.
+16. The code is written using [Outside-In Test-Driven Development](https://www.codecademy.com/article/tdd-outside-in), with clear contracts and example tests at module boundary's level.
+17. Each invocation (commands and queries) is processed along with a bundle of information about the invocation itself. The [Invocation Context](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-12-10-start-with-a-skeleton-not-to-die-a-zombie/#:~:text=Correlation-,Invocation%20context,-Every%20invocation%20should) contains the user ID, the tenant ID, the ID of the token, etc. This information is logged, and it's part of each published [Domain Event](https://medium.com/@chaojie.xiao/domain-driven-design-practice-domain-events-15b38f3c58fc). It's also used to [implement](https://sollecitom.github.io/software-product-development-blog/posts/2023/2023-12-10-start-with-a-skeleton-not-to-die-a-zombie/#:~:text=message%20correlation%20information.-,Idempotency,-The%20invocation%20context) [idempotency](https://betterprogramming.pub/architecting-distributed-systems-the-importance-of-idempotence-138722a6b88e) for all operations.
+18. The services use a build system capable of only rebuilding and retesting the modules that actually changed, using a deterministic non-cryptographic hash algorithm to determine whether a module has changed. An example for the [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) is how [Gradle](https://gradle.org/) uses the [Build Cache](https://www.baeldung.com/gradle-build-cache) to achieve this.
+19. The code is made of well-defined modules with clear boundaries, responsibilities, and contracts. These can include [Gradle modules](https://docs.gradle.org/current/userguide/multi_project_builds.html), [React components](https://legacy.reactjs.org/docs/components-and-props.html), shared libraries, (micro)services, etc. Limiting how these modules interact and establishing rigorous contracts, with tests checking them, is also essential, because it allows knowing when to stop testing things because of a change. An [Event-Driven Architecture](https://en.wikipedia.org/wiki/Event-driven_architecture) with data contracts using [Avro](https://avro.apache.org/) really helps achieve this.
+20. The build performs an array of tests and checks, including:
     - Application tests: they test the application layer against the stubbed driven adapters. These cover the application logic.
     - Integration tests: driving adapters against a stubbed application, checking their inbound contract e.g., OpenApi or Avro. Driven adapters against their target technology running in Docker through TestContainers.
     - In-process service tests: the whole service going from driving adapter to driven adapters and back, against the downstream technologies running in Docker through TestContainers.
@@ -92,14 +97,15 @@ The proposed system would work according to the following principles:
     - Mutation tests. These tests inject mutations in the codebase before running the other tests, and count how many mutants go through the tests without failures. This is a way of assessing the effectiveness of your tests.
     - Static code analysis, with regard to security, cyclomatic complexity, code smells, and inefficiencies.
     - Dependency scanning to check dependencies and Docker images for security vulnerabilities.
-17. The team works directly on the main branch, pushing a commit every time a new test passes, and after every small refactoring or tidying. This typically happens maximum every 10 minutes.
-18. Every commit pushed upstream to the main branch is built, tested, and packaged.
-19. Each packaged new version of the code is either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable at any moment, without any further checks needed.
-20. Only one permanent environment exists: production. There are internal tenants and users to test things before rolling them out to customers, but this testing happens in production.
-21. New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants. This allows releasing features in a coordinated way with marketing and sales.
-22. Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
-23. Smoke tests run continuously in production, on internal tenants and users, simulating end-to-end the company's business workflows. Alerts are triggered if they fail.
-24. An external ping is used to check whether the APIs of the company are reachable from outside the company's infrastructure. Alerts are triggered if this fails.
+21. Performing all the tests and checks that are part of every build takes less than 3 minutes overall. This is only possible with great attention to modularity, a smart build system, and tests that can confirm whether some changed module still honors its contracts.
+22. The team works directly on the main branch, pushing a commit every time a new test passes, and after every small refactoring or tidying. This typically happens maximum every 10 minutes.
+23. Every commit pushed upstream to the main branch is built, tested, and packaged.
+24. Each packaged new version of the code is either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable at any moment, without any further checks needed.
+25. Only one permanent environment exists: production. There are internal tenants and users to test things before rolling them out to customers, but this testing happens in production.
+26. New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants. This allows releasing features in a coordinated way with marketing and sales.
+27. Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
+28. Smoke tests run continuously in production, on internal tenants and users, simulating end-to-end the company's business workflows. Alerts are triggered if they fail.
+29. An external ping is used to check whether the APIs of the company are reachable from outside the company's infrastructure. Alerts are triggered if this fails.
 
 In terms of the properties this system of work yields, we have:
 
