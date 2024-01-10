@@ -98,14 +98,14 @@ The proposed system would work according to the following principles:
     - Static code analysis, with regard to security, cyclomatic complexity, code smells, and inefficiencies.
     - Dependency scanning to check dependencies and Docker images for security vulnerabilities.
 21. Performing all the tests and checks that are part of every build takes less than 3 minutes overall. This is only possible with great attention to modularity, a smart build system, and tests that can confirm whether some changed module still honors its contracts.
-22. The team works directly on the main branch, pushing a commit every time a new test passes, and after every small refactoring or tidying. This typically happens maximum every 10 minutes.
-23. Every commit pushed upstream to the main branch is built, tested, and packaged.
-24. Each packaged new version of the code is either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable at any moment, without any further checks needed.
-25. Only one permanent environment exists: production. There are internal tenants and users to test things before rolling them out to customers, but this testing happens in production.
-26. New behavior is feature-flagged, so that it's only visible to internal tenants, until explicitly enabled for external tenants. This allows releasing features in a coordinated way with marketing and sales.
-27. Ephemeral environments that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
-28. Smoke tests run continuously in production, on internal tenants and users, simulating end-to-end the company's business workflows. Alerts are triggered if they fail.
-29. An external ping is used to check whether the APIs of the company are reachable from outside the company's infrastructure. Alerts are triggered if this fails.
+22. The team works directly on the main branch, with [Trunk-Based Development](https://medium.com/@mattia.battiston/why-i-love-trunk-based-development-641fcf0b94a0), pushing a commit every time a new test passes, and after every small refactoring or tidying. This typically happens at least once every 10 minutes, for each team.
+23. [Continuous Delivery](https://continuousdelivery.com/) is in place: every commit pushed upstream to the main branch is built, tested, and packaged, and each packaged new version of the code is either released directly, with automatic rollbacks based on error-rate monitoring, or deemed releasable at any moment, without any further checks needed.
+24. Only one permanent environment exists: production. There are internal tenants and users to test things before rolling them out to customers, but this [testing happens in production](https://copyconstruct.medium.com/testing-in-production-the-safe-way-18ca102d0ef1).
+25. New behavior is guarded by [Feature Flags](https://martinfowler.com/articles/feature-toggles.html), so that it's only visible to internal test tenants, until explicitly enabled for external tenants. This allows releasing features in a coordinated way with marketing and sales.
+26. [Ephemeral environments](https://ephemeralenvironments.io/) that are identical to production can be brought up on demand, in minutes. These are used to test large-scale changes that cannot be gradually rolled-out.
+27. [Smoke tests run continuously in production](https://newrelic.com/blog/how-to-relic/smoke-testing-with-synthetic-monitors), on internal test tenants and users, simulating the company's business workflows end-to-end. Alerts are triggered if these tests fail.
+28. [Chaos engineering](https://www.lambdatest.com/learning-hub/chaos-testing) simulates the random loss of arbitrary infrastructure areas, in production.
+29. An external monitor is used to check whether the APIs and web applications of the company are reachable from outside the company's infrastructure, and for [DNS monitoring](https://www.pagerduty.com/resources/learn/dns-monitoring/). Alerts are triggered if these checks fail.
 
 In terms of the properties this system of work yields, we have:
 
