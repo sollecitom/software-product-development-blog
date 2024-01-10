@@ -46,11 +46,11 @@ Since adopting specific practices is not a goal, what properties should our syst
 2. Safety: not breaking things for customers, not losing data, meeting security, privacy, compliance, and legal needs.
 3. Sustainability: no heroics, no sprints, no borrowing from the future, and not ending up increasing the required costs or efforts over time.
 4. Resilience: tolerating temporary absences, dealing with late changes in requirements, and working flexibly on anything needed.
-5. Efficiency: minimizing no-value activities. An activity is deemed no-value if it doesn't directly add value for customers and users.
+5. Efficiency: minimizing no-value activities. An activity is deemed no-value if it doesn't directly add value for customers and users. Some useful activities, like discussing approaches, training employees, etc. are still no-value activities in this sense, because if you were able to provide the same value to your users without doing them, it'd be better.
 
 If these are the desired properties we want in a system of work, we should compare alternative systems by assessing how well they do with regard to these properties.
 
-I don't feel like criticizing the systems of work I don't believe in, at least not today. Instead, I'll outline how the system of work I do believe in operates, and reason around the properties it yields. I'll leave it to you to assess the system of work your company adopts.
+I don't feel like criticizing various systems of work I don't believe in, at least not today. Instead, I'll outline how a system of work I like operates, and reason around the properties it yields. I'll leave it to you to assess the system of work your company employs.
 
 ## A possible system of work - TODO
 
