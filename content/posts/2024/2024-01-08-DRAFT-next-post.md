@@ -52,7 +52,7 @@ If these are the desired properties we want in a system of work, we should compa
 
 I don't feel like criticizing various systems of work I don't believe in, at least not today. Instead, I'll outline how a system of work I like operates, and reason around the properties it yields. I'll leave it to you to assess the system of work your company employs.
 
-## A possible system of work - TODO
+## A particular system of work
 
 Next, I'm going to describe a possible system of work. Keep in mind that the various practices and processes are interdependent, so resist the temptation to decide whether you like this or that aspect, and a holistic judgment at the end instead.
 
