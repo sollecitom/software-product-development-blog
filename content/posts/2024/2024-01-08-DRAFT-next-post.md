@@ -82,11 +82,13 @@ The proposed system would work according to the following principles:
 13. Code is written using outside-in Test-Driven Development, with clear contracts and example tests at module boundary's level.
 14. Each invocation (commands and queries) is processed along with a bundle of information about the invocation itself. The user ID, the tenant ID, the ID of the token, etc. This information is logged, and it's part of each published domain event. It's also used to implement idempotency for all operations.
 15. The services use a build system capable of only rebuilding and retesting the modules that actually changed, using a deterministic non-cryptographic hash algorithm to determine whether a module has changed.
-16. The build includes an array of tests and checks that can all run locally in under 3m (courtesy of the smart build system and the in-process tests):
+16. The build includes an array of tests and checks that can all run locally in under 3m (courtesy of the smart build system and the in-process tests), like:
     - Application tests: they test the application layer against the stubbed driven adapters. These cover the application logic.
     - Integration tests: driving adapters against a stubbed application, checking their inbound contract e.g., OpenApi or Avro. Driven adapters against their target technology running in Docker through TestContainers.
     - In-process service tests: the whole service going from driving adapter to driven adapters and back, against the downstream technologies running in Docker through TestContainers.
     - Container-based service tests: the service itself running in Docker, using TestContainers, from driving adapter to driven adapters and back, against the downstream technologies in Docker, also through TestContainers.
+    - Property-based tests: where inputs are randomized, and outputs are checked against properties in relation to inputs e.g., the inverse of a matrix multiplied by the original matrix should produce the identity matrix.
+    - UI-driven tests: these tests check the correct rendering of UIs by exercising the UI against an in-memory implementation of the SDK that abstracts all communications between frontend and backend.
     - Compliance checks for data contracts e.g., OpenAPI, JSON, and Avro, against company-wide rules e.g., paths are dash-separated, no typos, no top-level array fields, etc.
     - Performance micro-benchmarks. These tests prevent regressions in performance-sensitive parts of a service, without taking a big amount of time to run.
     - Mutation tests. These tests inject mutations in the codebase before running the other tests, and count how many mutants go through the tests without failures. This is a way of assessing the effectiveness of your tests.
