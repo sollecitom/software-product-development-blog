@@ -107,19 +107,23 @@ The proposed system would work according to the following principles:
 28. [Chaos engineering](https://www.lambdatest.com/learning-hub/chaos-testing) simulates the random loss of arbitrary infrastructure areas, in production.
 29. An external monitor is used to check whether the APIs and web applications of the company are reachable from outside the company's infrastructure, and for [DNS monitoring](https://www.pagerduty.com/resources/learn/dns-monitoring/). Alerts are triggered if these checks fail.
 
-In terms of the properties this system of work yields, we have:
+## Properties of this work system
 
-1. Feedback happens early and often. From continuously working with stakeholders and experts, from running tests and checks locally, and from releasing tens of times a day. This delivers value earlier and prevents large amounts of rework from misunderstood requirements.
-2. Nobody works alone. Eight pairs of eyes review each character typed. This raises quality, prevents mistakes, and avoids rework a delayed inspection would introduce. Problems are identified earlier, when fixing them is much cheaper.
-3. Types, tests, checks, ways of working, data contracts, CQRS, event-driven workflows, and a pre-defined component-level architecture heavily limit what's possible. Fewer possibilities mean fewer things to keep in mind, which means fewer mistakes.
+In terms of the properties this system of work has, they include:
+
+1. Feedback happens early and often. From continuously working with stakeholders and experts, from running tests and checks locally, and from releasing tens of times a day. This delivers value earlier and prevents large amounts of rework due to misunderstood requirements.
+2. Nobody works alone. Eight pairs of eyes review each character typed. This raises quality, prevents mistakes, and avoids rework delayed inspection would introduce. Problems are identified earlier, when fixing them is much cheaper.
+3. Types, tests, checks, ways of working, data contracts, CQRS, event-driven workflows, and a pre-defined component-level architecture all heavily limit what's possible. Fewer possibilities mean fewer things to keep in mind, which means fewer mistakes.
 4. Releases are very safe, because the team takes many more much smaller steps. The effort required to fix the occasional issue is low.
-5. Everybody works on the entire system. There are no silos, permissions asked, or dependencies among teams. The work stays interesting. The teams have end-to-end ownership of an initiative, working directly with stakeholders, customers, and experts.
-6. The amount of work-in-progress is under control. Teams don't work on more than they can chew. Nobody burns out. Things are finished before other things are started.
-7. Code quality is very high, and the architecture is modular and extensible. The cost of modifying the software system doesn't continuously increase over time.
-8. Knowledge spreads within a team (because of ensemble programming), and across teams (because there are no areas of the codebase owned by any team).
-9. Each team can work on anything the company needs. Initiatives can be flexibly scheduled regardless of their domain area.
-10. The codebase is always working, at each commit, both locally and remotely. A team can pivot at any point without effort. Late changes in requirements are accommodated immediately with minimum disruption.
-11. A ton of non-value activities are avoided: ceremonies, planning, fire-fighting, splitting work across teams or people, release management, branch management, merge conflicts, code reviews, manual regression testing, manual deployments, security reviews, etc.
+5. The teams have end-to-end ownership of an initiative, working directly with stakeholders, customers, and experts. Everybody works on the entire system. There are no silos, or dependencies among teams. The work stays interesting.
+6. The amount of work-in-progress is under control. Work is pull-based. Teams don't work on more than they can chew. Nobody burns out. Things are finished before other things are started. The degree of parallelism equals the number of teams.
+7. People work together within a team for a long time. Managers can coach these teams into becoming more effective over time.
+8. Code quality is very high, and the architecture is modular and extensible. The cost of modifying the software system doesn't continuously increase over time.
+9. Knowledge spreads within a team, because of ensemble programming, and across teams, because there are no areas of the codebase owned by any team.
+10. Each team can work on anything the company needs. Initiatives can be flexibly scheduled regardless of their domain area.
+11. Every person has a farly good understanding of how the whole software system works, and of how the whole product works. This greatly reduces the number of mistakes, and makes supporting an on-call rotation easy.
+12. The codebase is always working, at each commit, both locally and remotely. A team can change what they're working on at any point without effort. Late changes in requirements are accommodated immediately with minimum disruption.
+13. A ton of non-value activities are avoided: ceremonies, planning, fire-fighting, awaiting permission, splitting work across teams or people, release management, branch management, merge conflicts, code reviews, manual regression testing, manual deployments, security reviews, architecture reviews, design reviews, etc.
 
 ## Final words
 
