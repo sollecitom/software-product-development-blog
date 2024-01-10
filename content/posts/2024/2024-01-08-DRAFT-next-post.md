@@ -38,7 +38,7 @@ If you happen to care, though, the difference in performance between two alterna
 
 ## Desired properties for our system of work
 
-The first thing to do when attempting to design a system is to be intentional with its desired properties. After all, how can you design anything if you don't know what you want?
+The first thing to do when attempting to design a system is to be explicit about its desired properties. After all, how can you design anything if you don't know what you want?
 
 Since adopting specific practices is not a goal, what properties should our system of work have? If we're talking about developing software systems, I'd go with:
 
