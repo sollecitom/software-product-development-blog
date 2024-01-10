@@ -6,37 +6,35 @@ date: 2024-01-10T05:00:00
 draft: true
 ---
 
-I hear of people saying their team tried Trunk-Based Development, and decided they didn't find it beneficial after a couple of months. Today I'm not going to war about the benefits of Trunk-Based Development, even if I do love this practice.
+I hear of people saying their team tried Trunk-Based Development, and decided they didn't find it beneficial after a couple of months. I'm not going to war about the benefits of Trunk-Based Development today, even if I do love this practice.
 
-Instead, I want to discuss the fact that this kind of statement is problematic. You see, Trunk-Based Development is a practice and, as such, part of the system of work. And the performance of a system depends on how the parts interact, not on how the parts perform separately.
+Instead, I want to discuss the fact that this kind of statement is problematic. You see, Trunk-Based Development is a practice, and therefore it's part of a system of work. The performance of a system depends on how the parts interact, not on how the parts perform separately.
 
 So you cannot look at Trunk-Based Development, a practice, and assess its performance in isolation from its containing system. It makes no sense whatsoever.
 
-Experiencing something without a containing system is also impossible. So when people say they tried Trunk-Based Development, they probably attempted to work directly on the main branch, and this was the only change to the way they were working before.
+Also, experiencing something without a containing system is impossible. So when people say they tried Trunk-Based Development, they probably attempted to work directly on the main branch, and this was the only change in how they were working before.
 
-Even assuming a perfect understanding of TBD, what are the chances that "improving" a part of a system improves the performance of that system? Pretty much zero. Things actually almost always get worse.
+What are the chances that "improving" a part of a system improves the performance of that system? Pretty much zero. Things actually almost always get worse.
 
 When you introduce any practice, Trunk-Based Development is just an example, to the way you work, you're implicitly creating a new system of work. And that's what you experience in terms of performance. Not the merits of the practice itself, but the merits of your overall new work system.
 
-It's as nonsensical as replacing an airplane's thrusters with a helicopter's rotor, witnessing the poor thing crash, and concluding that rotors are a bad idea. What are the chances that swapping a part of a system with a part of another system significantly improves the performance? Zero, just like for the airplane.
+It's as nonsensical as replacing the thrusters of an airplane with a helicopter's rotor, witnessing the crippled thing crash, and concluding that rotors are a bad idea. You might even be tempted to swap the rotor on the helicopter with some thrusters.
 
-## What's a system of work?
+Once again, what are the chances that swapping a part of a system with a part of another system significantly improves the performance? Zero, and not just for aircraft.
+
+## Comparing end-to-end alternative systems
 
 The way people work to develop a software system is their system of work. This is a subsystem of the product development system, which in turn is a subsystem of the company, which is contained in the industry, and the economy, and so on ad infinitum. For the sake of this discussion, though, let's stop at the way people develop a software system.
 
 The system of work is a sociotechnical system, involving people, teams, processes, practices, and the software system itself. All these aspects, like in any system, are interdependent: you cannot divide a system into independent subsystems.
 
-So the practices, even when consider all together, don't have an independent effect on the system of work. You cannot separate Test-Driven Development, Continuous Delivery, and Trunk-Based Development from how the code is written, and from how the teams work.
+So the practices, even when considered all together, don't have an independent effect on the system of work. You cannot take Test-Driven Development, Continuous Delivery, and Trunk-Based Development, and separate them from how the code is written, and from how the teams work.
 
-## Assessing end-to-end alternative systems
+People must experience end-to-end alternative systems of work to meaningfully evaluate the merits of different approaches. It's about comparing an airplane with a helicopter, not an airplane with the same airplane with its thrusters replaced by a rotor.
 
-People must experience end-to-end alternative systems of work to meaningfully evaluate the merits of different approaches. It's about comparing an airplane with a helicopter, not an airplane with an airplane with its thrusters replaced by a rotor.
+The effectiveness obviously depends on the context and the task at hand. You wouldn't use an airplane where helicopters excel, nor the other way around. There are some circumstances, though, in which either will do, and these tend to be leisure cruises with no stakes or associated risks. In software development it's the same: if what you're doing is trivial, or if you don't care about the outcomes, work in any way you want. No point in thinking about it, do whatever, and you'll get whatever.
 
-The effectiveness obviously depends on the context and the task at hand. You wouldn't use an airplane where helicopters excel, nor the other way around. There are some circumstances, though, in which either will do, and these tend to be leisure cruises with no stakes or associated risks.
-
-In software development it's the same: if what you're doing is trivial, and if you don't care about the outcomes much, work in any way you want. No point in thinking deep about it, do whatever, and you'll get whatever.
-
-If you happen to care, though, the difference in performance between two alternative systems can be significant. In particular, a holistically and intentionally designed system will usually run circles around a system that's a patchwork of practises put together like if their effect added up linearly.
+If you happen to care, though, the difference in performance between two alternative systems can be tremendous. In particular, a system designed holistically and intentionally will usually dramatically outperform a system that's a patchwork of practises put together like if their effect added up linearly.
 
 ## Desired properties for our system of work
 
