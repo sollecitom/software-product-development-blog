@@ -1,9 +1,9 @@
 ---
-title: "Interdependencies in your system of work"
+title: "Interdependencies in your system of work, and how not to evaluate software practices"
 categories: [ "system-thinking" ]
 tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "extreme-programming" ]
 date: 2024-01-10T05:00:00
-draft: true
+draft: false
 ---
 
 I hear of people saying their team tried Trunk-Based Development, and decided they didn't find it beneficial after a couple of months. I'm not going to war about the benefits of Trunk-Based Development today, even if I do love this practice.
