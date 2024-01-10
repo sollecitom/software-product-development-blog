@@ -1,7 +1,7 @@
 ---
 title: "Interdependencies in your system of work"
 categories: [ "system-thinking" ]
-tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "technical-processes" ]
+tags: [ "system-thinking", "Agile", "effectiveness", "software-development", "extreme-programming" ]
 date: 2024-01-10T05:00:00
 draft: true
 ---
