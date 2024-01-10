@@ -43,10 +43,10 @@ The first thing to do when attempting to design a system is to be explicit about
 Since adopting specific practices is not a goal, what properties should our system of work have? If we're talking about developing software systems, I'd go with:
 
 1. Effectiveness: doing the right thing, meeting the needs of the customers and of the company, delivering value earlier.
-2. Safety: not breaking things in production, meeting security, compliance, and legal needs.
+2. Safety: not breaking things for customers, not losing data, meeting security, privacy, compliance, and legal needs.
 3. Sustainability: no heroics, no sprints, no borrowing from the future, and not ending up increasing the required costs or efforts over time.
-4. Resilience: coping with temporary absences, adjusting to late changes in requirements, and working flexibly on anything needed.
-5. Efficiency: avoiding non-value activities.
+4. Resilience: tolerating temporary absences, dealing with late changes in requirements, and working flexibly on anything needed.
+5. Efficiency: minimizing no-value activities. An activity is deemed no-value if it doesn't directly add value for customers and users.
 
 If these are the desired properties we want in a system of work, we should compare alternative systems by assessing how well they do with regard to these properties.
 
