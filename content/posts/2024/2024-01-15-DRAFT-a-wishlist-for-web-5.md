@@ -16,6 +16,9 @@ Skeleton:
 
 Features:
 
-- TODO
+- Quantum-secure cryptography e.g., Kyber for key encapsulation mechanism, and Dilithium for signatures.
+- Identity registry with public keys.
+    - De-centralized with Trust-Based Acceptance (TBA*).
+    - Backed by centralized services for convenience.
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
