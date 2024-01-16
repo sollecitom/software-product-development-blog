@@ -61,5 +61,10 @@ Features:
         - Subscription requests can include an expiry timestamp.
         - When the information changes, the party that changed the information proceeds to notify the interested parties with peer-to-peer calls.
         - A centralized notification service can be used for convenience, falling back to decentralized peer-to-peer calls if it's unavailable.
+    - Example 2:
+        - People can ship packages to an entity, without having to know their physical address.
+        - Government shipping services can request to subscribe to changes in the physical address of an entity.
+        - When an entity changes their physical address, the government shipping service is notified.
+        - Shipped goods reach their target entity regardless of changes to their physical address.
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
