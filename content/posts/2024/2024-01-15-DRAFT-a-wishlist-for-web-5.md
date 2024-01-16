@@ -70,5 +70,15 @@ Features:
         - A restaurant exposes queries to see the menu, the opening times, and the free slots. They also expose commands to make a reservation, and to get in contact over voice (if previously whitelisted).
         - A person browses the menu, checks when a free slot is, and requests to book a table at a time.
         - Given the semantic nature of these commands, they can do this with a few clicks, and without dealing with phone numbers or downloading PDFs.
+    - Example 4:
+        - A person has access to a command that notifies subscribers that they're in danger.
+        - People (relatives), organizations (insurance companies, GPs), and government services (police, ambulance service) can subscribe to these.
+        - When the person feels in danger, they invoke the command, and all the interested parties are notified.
+    - Workflows can be composed based on different commands, queries, and subscriptions.
+    - Example 5:
+        - The person in danger can pre-authorize certain interested parties to invoke certain commands and to get some (temporary) subscriptions accepted automatically.
+        - So when the person declares that they're in danger, some interested parties can receive a subscription to the person's position (through GPS), and know their heart rate and vitals.
+        - Workflows can be composed on both sides, so on receiving notification that somebody is in danger, an entity could automatically trigger a response on their side e.g., requesting people closest to the location of the person in danger to intervene.
+    - TODO
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
