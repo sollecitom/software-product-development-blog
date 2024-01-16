@@ -19,7 +19,14 @@ Features:
 - Quantum-secure cryptography e.g., Kyber for key encapsulation mechanism, and Dilithium for signatures.
 - Country-wide high-speed internet access, for free.
 - Telecommunication service for everybody, for free.
-- Checking account for everybody, for free.
+- Checking account for everybody, for free, including account-to-account payments.
+- Digital identity with passive chip, falling back to mobile device.
+- Mobile free government application:
+    - Telecommunications.
+    - Trust-Based Distributed Ledger (TBDLT) manager.
+    - Password manager.
+    - Authentication manager.
+    - Peer-to-peer payments.
 - Identity registry for entities.
     - With public keys.
     - For both people and organizations.
@@ -79,6 +86,15 @@ Features:
         - The person in danger can pre-authorize certain interested parties to invoke certain commands and to get some (temporary) subscriptions accepted automatically.
         - So when the person declares that they're in danger, some interested parties can receive a subscription to the person's position (through GPS), and know their heart rate and vitals.
         - Workflows can be composed on both sides, so on receiving notification that somebody is in danger, an entity could automatically trigger a response on their side e.g., requesting people closest to the location of the person in danger to intervene.
-    - TODO
+- Digital identity at the center of all services and applications:
+    - It acts as username for all cases.
+    - Cryptographic challenges can involve application-specific secrets (stored encrypted within the government mobile application).
+    - No more:
+        - Email addresses.
+        - Phone numbers.
+        - Physical addresses for shipping things.
+        - Usernames for applications.
+        - Passports (as the identity acts as target for entitlements that allow the person to travel internationally).
+        - Bank account details (the identity is the target for peer-to-peer payments).
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
