@@ -66,5 +66,9 @@ Features:
         - Government shipping services can request to subscribe to changes in the physical address of an entity.
         - When an entity changes their physical address, the government shipping service is notified.
         - Shipped goods reach their target entity regardless of changes to their physical address.
+    - Example 3:
+        - A restaurant exposes queries to see the menu, the opening times, and the free slots. They also expose commands to make a reservation, and to get in contact over voice (if previously whitelisted).
+        - A person browses the menu, checks when a free slot is, and requests to book a table at a time.
+        - Given the semantic nature of these commands, they can do this with a few clicks, and without dealing with phone numbers or downloading PDFs.
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
