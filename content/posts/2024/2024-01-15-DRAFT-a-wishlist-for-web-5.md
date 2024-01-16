@@ -17,8 +17,49 @@ Skeleton:
 Features:
 
 - Quantum-secure cryptography e.g., Kyber for key encapsulation mechanism, and Dilithium for signatures.
-- Identity registry with public keys.
-    - De-centralized with Trust-Based Acceptance (TBA*).
+- Country-wide high-speed internet access, for free.
+- Telecommunication service for everybody, for free.
+- Checking account for everybody, for free.
+- Identity registry for entities.
+    - With public keys.
+    - For both people and organizations.
+    - De-centralized with Trust-Based Distributed Ledger (TBDLT).
     - Backed by centralized services for convenience.
+- Trust-Based Distributed Ledger (TBDLT) for information (not for currency):
+    - Statements can be represented digitally, and signed cryptographically by attestors. Anybody can attest anything.
+    - A distributed ledger with local storage facilitates storing, sharing, and requesting these attested statements.
+    - Centralized services provide convenience.
+    - Cryptography does not replace trust, but enhances it. A signature proves that a person or an organization attests a statement.
+    - Statements include timestamps for when they were created, and might include timestamps to show the limits of their validity.
+    - Creation timestamps are provided by notary services run by governments and big corporations. The notary attaches a timestamp to a statement, and signs cryptographically the outer metadata.
+    - Users can customize their trust preferences, to request specific attestors for specific statement types or categories, to enforce a minimum number of signatures, to only allow a maximum degree of delegation, etc.
+    - Example 1:
+        - I can decide to trust a statement about a person being a British Citizen only if anybody working for the British government at the time signed it.
+        - The worker can convince me they were working for the British government at the time, by sharing a statement signed by other employees, all the way up to a key belonging to the government itself.
+        - I can check the timestamps of all statements involved in providing trust against the public keys of the notaries who signed them.
+    - Example 2:
+        - I purchase a train ride, and receive a cryptographically signed piece of information with details about my entitlement.
+        - When I show up at the gate, the gate gets my entitlement through a QR-code, and verifies the signature against its own trust policies.
+        - Since the train company signed my entitlement to get on board, and since the current time falls within the allowed time window confirmed against the notary's signature, the gate opens.
+- Job-specific semantic contracts:
+    - They describe what commands, queries, and subscriptions that an entity allows, along with how to perform those invocations.
+    - The schemata evolve using the decentralized Trust-Based Distributed Ledger (TBDLT).
+    - These completely abstract the medium used to communicate.
+    - Example 1:
+        - A person exposes commands to request to be added to the inbound whitelist, and to request to initiate a voice call.
+        - The telecommunication service only allows people registered to an inbound whitelist to request to initiate a voice call with someone.
+        - When you want to be allowed in, you first have to request it with the person you want to call in the future. This request can come with an expiry timestamp.
+        - If you're allowed to call, you can request to initiate a voice call, and the service routes that to the person.
+        - If the person accepts the call, you're talking over voice.
+        - Government services would come pre-enabled in the whitelist, so that they can request a call at any time.
+        - The identity of both parties is verified with asymmetric cryptography.
+        - You don't need any protocol-level information e.g., a phone number.
+        - This would eliminate most scams that happen over the phone, and all undesired advertisements and services.
+    - Subscriptions allow people to communicate changes in their information to interested parties.
+        - They are pushed-based by the party that changes their information.
+        - Interested parties request to subscribe to changes in specific pieces of information (statements), based on their type or category. Entities can accept or reject these requests.
+        - Subscription requests can include an expiry timestamp.
+        - When the information changes, the party that changed the information proceeds to notify the interested parties with peer-to-peer calls.
+        - A centralized notification service can be used for convenience, falling back to decentralized peer-to-peer calls if it's unavailable.
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
