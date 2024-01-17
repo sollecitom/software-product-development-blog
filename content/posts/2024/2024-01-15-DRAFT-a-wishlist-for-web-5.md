@@ -96,5 +96,9 @@ Features:
         - Usernames for applications.
         - Passports (as the identity acts as target for entitlements that allow the person to travel internationally).
         - Bank account details (the identity is the target for peer-to-peer payments).
+- Cashless society. No more:
+    - Carrying money around.
+    - ATMs.
+    - Tax evasion (all banks need to communicate all transactions to the central bank).
 
 [//]: # (TODO change tags and categories, revist the title, turn the skeleton into a draft)
