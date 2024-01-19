@@ -6,40 +6,76 @@ date: 2024-01-15T05:00:00
 draft: true
 ---
 
-Skeleton:
+Hype cycles in tech rarely translate to significant changes in our lifestyle. Technology is a wide topic, but let's focus on information systems today, and leave energy, food, water, health, and other important topics for another time.
 
-- Lot of hype for AI these days, but will it change anything meaningful?
-- In technology there are often hype cycles about things, but society rarely changes.
-- There are many important aspects e.g., energy production and distribution, food, etc., but let's focus on information systems today.
-- There was a lot of talk about Web 3 and all the changes it should have brought. Let's assume we got tired of NFTs, unicorns, and mini-ponies with Web 4, and we actually wanted to improve something with Web 5.
-- This post is a wishlist for how Web 5 could work, to make people's life easier.
+We made it to 2024, and the current frenzy is about AI. Some people claim it'll change everything. I'm quite skeptical, but let's not digress, and think about the web instead.
+
+If you think about it, the web hasn't significantly changed in the past 20 years or so. Sure, things look better and work faster, but Google Maps came out in 2005. There was a lot of talk about Web 3 and all the changes it should have brought.
+
+So let's assume we finally got tired of NFTs, AI, unicorns, and mini-ponies with Web 4, and we somehow decided to actually try and improve things with Web 5. What would that look like?
+
+In this post I try to imagine what the web could be like, to make people's life easier. I feel we reached a point where further improvements in speed won't significantly improve the experience, so the changes should qualitative.
+
+# Web 5 ideas
+
+There are some requirements, for these ideas to work:
+
+We should build around quantum-secure cryptography. Example algorithms could be Kyber as a key encapsulation mechanism, and Dilithium for signatures. The algorithms are just examples, as they're not confirmed to be fully secure yet.
+
+High-speed internet access should be available country-wide, for free. Other country-wide free services should include a checking account with payments, and a telecommunication service supporting audio and video.
+
+It's important that the government offers these, for free, because the assumption is that everybody should have access to these, in order for some of the points below to work.
+
+Finally, the government should issue every citizen an identity, with a passive chip, falling back to a mobile device.
+
+## Governments as Certificate Authorities for digital identity
+
+Governments could act as Certificate Authorities, issuing quantum-secure certificates, associating a public key with the identity of a person or an organization.
+
+People could verify the authenticity and validity of a certificate using a local cache of the public keys of various governments, without requiring internet access and a connection to a server.
+
+Well-known government endpoints would allow people to receive the public key of a government.
+
+Some of you might scream at the idea of a government responsible for identity management, and wish for a de-centralized approach. Not only things already work like this though, but a central trusted authority is needed to address cases where an identity is somehow lost. Imagine losing your chip or private key, suddenly the idea of a government able to issue you another key-pair associated to your identity sounds pretty great.
+
+## Trust-Based Distributed Ledger
+
+A Trust-Based Distributed Ledger (TBDLT) could help society leverage information in a trusted way. This would only be for information, not for currency. I'm not talking about Blockchain.
+
+The idea is that an entity - a person or an organization - could attest a statement. Statements have a schema, and some data, and can be encoded as bytes, so that an attesting entity could sign them cryptographically.
+
+Anybody could attest anything. The ledger would be decentralized, with local storage. Such a ledger would support storing, sharing, and requesting statements, along with the attestations and the identity of the attestors. Centralized services could provide convenience e.g., storing statements in the Cloud, to have them accessible across devices, and not to lose them.
+
+About timestamps:
+
+1. Every statement includes a creation timestamp, and can optionally include an expiry timestamp to show the limit of its validity.
+2. Timestamps are attested by notary services, run by governments and large corporations. The creator of the statement includes a timestamp, and then asks a notary to attest it. The notary only attests it if the difference between the proposed creation time and the current time is within a narrow margin.
+
+An entity could delegate the ability to attest some statements to another entity. This is also a statement, so it can come with validity limits, etc.
+
+Mind that here cryptography does not replace trust, but enhances it. A signature only proves that a person or an organization supports the validity of a statement. You're never force to take anyone's word for something though. It's up to you to decide who to trust and why.
+
+Users can customize their trust preferences, including:
+
+1. Requesting specific attestors - or attestor category - for a given statement type or category. An example is that you might decide to only trust the British Government to attest the right of a British citizen to travel internationally.
+2. Requesting a minimum number of attestors.
+3. Only considering attestors within a maximum degree of delegation distance.
+
+When an entity presents a statement to another entity, they can include a set of supporting statements, and the receiving entity could use this information bundle to decide whether to trust the original statement being presented. 
+
+
+
+
 
 Features:
 
-- Quantum-secure cryptography e.g., Kyber for key encapsulation mechanism, and Dilithium for signatures.
-- Country-wide high-speed internet access, for free.
-- Telecommunication service for everybody, for free.
-- Checking account for everybody, for free, including account-to-account payments.
-- Digital identity with passive chip, falling back to mobile device.
 - Mobile free government application:
     - Telecommunications.
     - Trust-Based Distributed Ledger (TBDLT) manager.
     - Password manager.
     - Authentication manager.
     - Peer-to-peer payments.
-- Identity registry for entities.
-    - With public keys.
-    - For both people and organizations.
-    - De-centralized with Trust-Based Distributed Ledger (TBDLT).
-    - Backed by centralized services for convenience.
 - Trust-Based Distributed Ledger (TBDLT) for information (not for currency):
-    - Statements can be represented digitally, and signed cryptographically by attestors. Anybody can attest anything.
-    - A distributed ledger with local storage facilitates storing, sharing, and requesting these attested statements.
-    - Centralized services provide convenience.
-    - Cryptography does not replace trust, but enhances it. A signature proves that a person or an organization attests a statement.
-    - Statements include timestamps for when they were created, and might include timestamps to show the limits of their validity.
-    - Creation timestamps are provided by notary services run by governments and big corporations. The notary attaches a timestamp to a statement, and signs cryptographically the outer metadata.
-    - Users can customize their trust preferences, to request specific attestors for specific statement types or categories, to enforce a minimum number of signatures, to only allow a maximum degree of delegation, etc.
     - Example 1:
         - I can decide to trust a statement about a person being a British Citizen only if anybody working for the British government at the time signed it.
         - The worker can convince me they were working for the British government at the time, by sharing a statement signed by other employees, all the way up to a key belonging to the government itself.
