@@ -93,3 +93,47 @@ draft: true
 - The form and duration of the engagement should be decided by the people working in the business initiatives, and the advisors should be let go if the people they advise are unhappy with the service they receive.
 - This should apply for everything, regardless of the skill area we're talking about. Architecture, legal, finance, HR, office management, Cloud infrastructure, security, product management, design, etc.
 - So if you happen to be creating a company, do yourself and your future employees a favour, and remember these 2 fundamental rules of organizational design: "winter hats go with winter coats", and "supporters rather than jailers".
+
+
+# Draft
+-------
+
+In my journey through various workplaces, I've noticed a recurring theme—common problems that seem to plague most companies. Two issues stand out prominently: the pervasive presence of office politics and the diminishing capability of companies to evolve and adapt over time. But what if these issues were not just avoidable but had a remarkably simple solution that every company could implement?
+
+The Unavoidable Politics Conundrum
+
+Office politics, with its blame games and antagonistic dynamics, is often considered an inevitable part of corporate life. But is it truly unavoidable? Imagine an ideal workplace where professionals collaborate seamlessly, work toward common goals, and collectively strive for improvement. Does this sound like your workplace? Probably not. The reason for this disconnect lies in deeply ingrained beliefs that steer individuals toward a state of discord.
+
+As the saying goes, "most of the evil in this world is done by people with good intentions." In the realm of corporations, good intentions manifest in the form of the separation of responsibility and the pursuit of resource efficiency.
+
+# The Pitfalls of Separation of Responsibility
+
+Companies typically begin with the formation of an executive team, which then allocates global functions to various executives—Marketing, Revenue, Technology, Product, Operations, and so on. This separation cascades through the management hierarchy, creating sub-functions within each global function. For instance, within Technology, there are IT, engineering, Cloud infrastructure, security, and data sub-functions.
+
+The problems escalate when the company launches new initiatives. While global standards and policies are essential for consistency, the intersection of these standards with the existing structural decisions can lead to chaos.
+
+# The Alignment Crisis
+
+The crux of the issue lies in the destruction of alignment. Human psychology plays a pivotal role, as individuals inherently act in their self-interest. This misalignment between personal goals and the overall objectives of the team or company leads to suboptimal decision-making.
+
+Consider the scenario of a legal professional in a global legal function or a Cloud infrastructure expert in a global technology group. The clash of interests between different functions can result in internal conflicts, creating sworn enemies within the organization.
+
+The Solution: A Paradigm Shift in Organizational Design
+
+The remedy to these challenges lies in two fundamental organizational principles:
+
+Initiative-Based Structure: Instead of organizing people by function, group them by initiative. Whether launching a new product or entering a new market, individuals from various disciplines work together within the same initiative, reporting to a lead who, in turn, reports directly to the CEO or founder.
+
+Cross-Functional Equivalent Teams: Establish teams with diverse skill sets that can address any task within the initiative. Each team member, regardless of their primary expertise, reports to the same leader within the initiative.
+
+Embracing Diversity in Standardization
+
+Contrary to concerns about standardization and control, embracing diversity within initiatives is crucial. Over time, companies deteriorate as new endeavors become stifled by rigid company-wide constraints. Allowing initiatives to operate differently fosters innovation and adaptability.
+
+While it might seem counterintuitive, decentralizing support functions like IT, HR, and Finance for each initiative is essential. These functions should act as supporters, not enforcers. Shared resources are permissible, but their engagement and involvement should be at the discretion of the initiative, ensuring a flexible and adaptive approach.
+
+A Call to Action
+
+In the realm of organizational design, adopting a systems thinking perspective is transformative. By restructuring reporting lines and fostering cross-functional collaboration within initiatives, companies can break free from the shackles of politics and stagnation. The key lies in creating a fleet of nimble, adaptable units rather than a colossal vessel weighed down by internal conflicts.
+
+As you embark on the journey of building or reshaping your company, remember the two fundamental rules: "winter hats go with winter coats" and embrace supporters over jailers. These principles will not only enhance collaboration and productivity but will also create a workplace where individuals thrive and organizations evolve seamlessly.
