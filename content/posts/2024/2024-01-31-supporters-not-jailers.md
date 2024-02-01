@@ -118,21 +118,21 @@ The crux of the issue lies in the destruction of alignment. Human psychology pla
 
 Consider the scenario of a legal professional in a global legal function or a Cloud infrastructure expert in a global technology group. The clash of interests between different functions can result in internal conflicts, creating sworn enemies within the organization.
 
-The Solution: A Paradigm Shift in Organizational Design
+# The Solution: A Paradigm Shift in Organizational Design
 
 The remedy to these challenges lies in two fundamental organizational principles:
 
-Initiative-Based Structure: Instead of organizing people by function, group them by initiative. Whether launching a new product or entering a new market, individuals from various disciplines work together within the same initiative, reporting to a lead who, in turn, reports directly to the CEO or founder.
+1. **Initiative-Based Structure**: Instead of organizing people by function, group them by initiative. Whether launching a new product or entering a new market, individuals from various disciplines work together within the same initiative, reporting to a lead who, in turn, reports directly to the CEO or founder.
 
-Cross-Functional Equivalent Teams: Establish teams with diverse skill sets that can address any task within the initiative. Each team member, regardless of their primary expertise, reports to the same leader within the initiative.
+2. **Cross-Functional Equivalent Teams**: Establish teams with diverse skill sets that can address any task within the initiative. Each team member, regardless of their primary expertise, reports to the same leader within the initiative.
 
-Embracing Diversity in Standardization
+# Embracing Diversity in Standardization
 
 Contrary to concerns about standardization and control, embracing diversity within initiatives is crucial. Over time, companies deteriorate as new endeavors become stifled by rigid company-wide constraints. Allowing initiatives to operate differently fosters innovation and adaptability.
 
 While it might seem counterintuitive, decentralizing support functions like IT, HR, and Finance for each initiative is essential. These functions should act as supporters, not enforcers. Shared resources are permissible, but their engagement and involvement should be at the discretion of the initiative, ensuring a flexible and adaptive approach.
 
-A Call to Action
+# A Call to Action
 
 In the realm of organizational design, adopting a systems thinking perspective is transformative. By restructuring reporting lines and fostering cross-functional collaboration within initiatives, companies can break free from the shackles of politics and stagnation. The key lies in creating a fleet of nimble, adaptable units rather than a colossal vessel weighed down by internal conflicts.
 
