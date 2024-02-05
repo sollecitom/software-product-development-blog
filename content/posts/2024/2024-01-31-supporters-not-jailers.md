@@ -3,7 +3,7 @@ title: "'Winter hats go with winter coats', and 'supporters instead of jailers'.
 categories: [ "management" ]
 tags: [ "system-thinking", "system-design", "effectiveness", "company-structure", "management" ]
 date: 2024-02-04T05:00:00
-draft: true
+draft: false
 ---
 
 In my journey through various workplaces, I've noticed recurring problems that seem to plague most companies. Two issues stand out prominently: the pervasive presence of office politics and the diminishing capability of companies over time.
