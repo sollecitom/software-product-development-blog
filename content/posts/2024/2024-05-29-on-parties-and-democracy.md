@@ -14,3 +14,6 @@ TODO
 - Labour pushes this ideology where certain category of people should be de-facto allowed to do whatever they want, despite the laws in vigour.
 - The UK has collapsed over the past 10 years, both socially and economically.
 - What if these two options were two faces of the same medal? What if the medal was a morally corrupt political class equally unwilling and incapable of pursuing what's good for the citizens of the country they are called to administer?
+- Why do we need to put up with the greed, incompetence, dishonesty, and hypocrisy that are destroying our society?
+- There are changes we desperately need, but nobody is even discussing them, and even merely mentioning this would attract trouble.
+
