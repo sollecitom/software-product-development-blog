@@ -1,51 +1,61 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://sollecitom.github.io/software-product-development-blog/'
 languageCode = 'en-us'
 title = 'Michele on Software'
-copyright = "Copyright &copy; 2023 - Michele Sollecito"
-canonifyURLs = true
-paginate = 5
+copyright = "Copyright © 2023 - Michele Sollecito"
+canonifyURLs = true  # Review: Consider disabling if relative URLs are sufficient
 summaryLength = 30
 enableEmoji = true
 theme = 'hugo-kiera'
 
-# uncomment to enable the Tags link on the main toolbar
+# Menu configuration for main toolbar
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags"
 weight = 1
 
-# uncomment to enable the Categories link on the main toolbar
 [[menu.main]]
 identifier = "categories"
 name = "Categories"
 url = "/categories"
 weight = -1
 
-# Note: to disable a social network icon delete or comment out the corresponding line
+# Pagination configuration
+[pagination]
+pagerSize = 5
+
+# Taxonomies for author metadata
+[taxonomies]
+author = "author"
+
+# Author configuration (optional, for backward compatibility)
 [author]
 name = "Michele Sollecito"
-github = "sollecitom"
-#gitlab = "username"
-linkedin = "michelesollecito"
-#facebook = "username"
-twitter = "sollecitom"
-#instagram = "username"
-#stackoverflow = "username"
-#youtube = "user/username" # or channel/channelname
-#devto = "username"
 
+# Social media links
 [params]
 tagline = "My opinions about software product development"
-#images = [""] #This is used for opengraph/twitter cards.
-customCSS = []  #Optional Customised CSS
-#disqusShortname = "software-product-development-sollecitom"
-#favicon = ""
-#utterancesRepo = "username/repository"
-#utterancesIssueTerm = "pathname"
-#homepageLength = 10
-#commentAutoload = true  #This mean reader don't need click, disqus comment autoload
-#mathjax = true #Enable display of mathematics using mathjax (LaTeX syntax)
-#katex = true #Enable display of mathematics using katex (Faster LaTeX rendering)
-#google_fonts = ["Staatliches"] # Adds additional google fonts
-#disableDarkModeCSS = false # disables css style for users using dark-mode
+customCSS = []
+github = "sollecitom"
+linkedin = "michelesollecito"
+twitter = "sollecitom"
+# instagram = "username"
+# stackoverflow = "username"
+# youtube = "user/username"
+# devto = "username"
+# utterancesRepo = "username/repository"
+# utterancesIssueTerm = "pathname"
+# homepageLength = 10
+# commentAutoload = true
+# mathjax = true
+# katex = true
+# google_fonts = ["Staatliches"]
+# disableDarkModeCSS = false
+
+# Disqus configuration (uncomment if needed)
+[services.disqus]
+shortname = "software-product-development-sollecitom"
+
+# Google Analytics configuration (uncomment if needed)
+# [services.googleAnalytics]
+#   ID = "UA-XXXXX-Y"
