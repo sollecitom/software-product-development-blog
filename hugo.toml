@@ -26,11 +26,7 @@ pagerSize = 5
 
 # Taxonomies for author metadata
 [taxonomies]
-author = "author"
-
-# Author configuration (optional, for backward compatibility)
-[author]
-name = "Michele Sollecito"
+author = "Michele Sollecito"
 
 # Social media links
 [params]
