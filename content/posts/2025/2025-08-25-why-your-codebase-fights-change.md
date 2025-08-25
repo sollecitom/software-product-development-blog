@@ -6,8 +6,6 @@ date: 2025-08-25T10:35:00
 draft: false
 ---
 
-# Why Your Codebase Fights Change (And How to Fix It)
-
 If you’ve worked with software for any length of time, you’ve seen it: a codebase that starts as a lean, focused system can morph into a costly, resistant beast without careful stewardship. I recently led a workshop on this topic, and it sharpened my perspective on what drives long-term success in development. What's difficult isn't implementing algorithms or optimizing data structures. It’s about ensuring that ongoing changes remain affordable, low-risk, and efficient. For those steering teams through the pressures of tight deadlines, growing systems, and collaborative demands, managing complexity is what keeps projects on track, budgets in check, and teams productive.
 
 ## What Development Really Entails
