@@ -27,7 +27,7 @@ In reality, these issues usually emerge unintentionally and undetected, from evo
 
 Unlike a loan with predictable interest, these issues create unpredictable risks and costs.
 
-## The Appeal of Technical Debt (and Its Limits)
+## In Defence of Technical Debt
 
 In its defence, the term "technical debt" was never meant to be used the way people frequently use it these days. 
 
@@ -45,11 +45,27 @@ So, what is Abstraction Deviation Impedance? Let’s break it down.
 
 ### Abstraction: The Core of Software Design
 
-"Abstraction" refers to the simplifications we create to manage complexity—think domain models, APIs, or data structures. These are the mental and architectural frameworks that make our systems understandable and adaptable. When done right, abstractions enable smooth delivery and evolution, aligning closely with what the business needs.
+"Abstraction" refers to the simplifications we create to manage complexity, including domain models, APIs, and data structures.
+
+These are the mental and architectural frameworks that make our systems understandable and adaptable.
+
+When done right, abstractions enable smooth delivery and evolution, aligning closely with what the business needs while remaining capable of reacting to changes.
 
 ### Deviation: The Gap Between Ideal and Actual
 
-"Deviation" captures the difference between the ideal and the actual. The ideal is a set of abstractions that perfectly reflect the problem domain—clean, consistent, and easy to extend. In practice, deviations show up in many ways. Sometimes, it’s incorrect modeling from the start, like a payment system that assumes fixed transaction types and chokes on new ones. Other times, it’s a gradual drift, where quick fixes or patches pile up, twisting abstractions into something convoluted. Or it could be moving operating conditions—new user patterns or compliance rules—that leave once-fit models outdated. This gap isn’t about pointing fingers; it emerges through iterations, team changes, or shifting priorities. It’s the distance between what we envisioned and what we have, and that distance creates problems.
+"Deviation" captures the difference between the ideal and the actual.
+
+The ideal is a set of abstractions that perfectly reflect the problem domain: clean, consistent, and easy to extend.
+
+In practice, deviations show up in many ways. Sometimes, it’s incorrect modeling from the start, like a payment system that assumes fixed transaction types and chokes on new ones.
+
+Other times, it’s a gradual drift, where quick fixes or patches pile up, twisting abstractions into something convoluted.
+
+Or it could be moving operating conditions, like a new user patterns or compliance rules, that leave once-fit models outdated.
+
+This gap isn’t about pointing fingers; it emerges through iterations, team changes, or shifting priorities.
+
+It’s the distance between what we envisioned and what we have, and this distance creates problems.
 
 ### Impedance: Resistance to Flow
 
