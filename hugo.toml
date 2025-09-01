@@ -27,6 +27,8 @@ pagerSize = 5
 # Taxonomies for author metadata
 [taxonomies]
 author = "Michele Sollecito"
+tag = "tags"
+category = "categories"
 
 # Social media links
 [params]
