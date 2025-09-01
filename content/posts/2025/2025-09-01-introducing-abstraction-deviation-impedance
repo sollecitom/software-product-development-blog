@@ -29,9 +29,15 @@ Unlike a loan with predictable interest, these issues create unpredictable risks
 
 ## The Appeal of Technical Debt (and Its Limits)
 
-Despite its flaws, technical debt appeals to some because it makes messy systems sound manageable. It frames issues as strategic trade-offs, like financial debt that fuels growth if you plan to repay. In fast-moving projects, this can feel empowering, letting teams justify prioritizing speed to hit a deadline or capture a market. I’ve seen it used to explain deferring cleanup for a sprint or two, and that perspective has its place when the trade-off is truly intentional.
+In its defence, the term "technical debt" was never meant to be used the way people frequently use it these days. 
 
-But Abstraction Deviation Impedance isn’t here to replace technical debt entirely. That term still works for deliberate, short-term trade-offs where you knowingly take on a cost. My new term addresses a broader, often unintentional situation where the system’s abstractions have drifted, creating persistent friction no matter how we got there. It’s about describing the state of a system when the challenge isn’t just repaying a loan but navigating an ongoing, systemic drag that no one signed up for.
+However, the damage it causes is real. 
+
+With its analogy with financial debt, which fuels growth and can be a solid decision if you plan to repay it, people use "technical debt" to justify a perpetual state of short-term thinking and tactical solutions.
+
+Abstraction Deviation Impedance isn’t here to replace Technical Debt entirely. That term still works for deliberate, short-term trade-offs where you knowingly take on a cost.
+
+The new term addresses a broader, often unintentional situation where the system’s abstractions have drifted, creating persistent friction no matter how we got there. It’s about describing the state of a system when the challenge isn’t just repaying a loan but navigating an ongoing, systemic drag that no one signed up for.
 
 ## Defining Abstraction Deviation Impedance
 
