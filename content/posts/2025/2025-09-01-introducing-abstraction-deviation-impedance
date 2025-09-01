@@ -3,7 +3,7 @@ title: " Introducing Abstraction Deviation Impedance"
 categories: [ "software-development" ]
 tags: [ "technical-debt", "Agile", "startups", "programming","management" ]
 date: 2025-09-01T09:00:00
-draft: true
+draft: false
 ---
 
 
@@ -79,8 +79,14 @@ When abstractions deviate from the ideal, every change meets more resistance: de
 
 This isn’t a one-time hit but a constant drag that raises costs, increases risks, and can frustrate teams as their efforts feel stuck.
 
-## Putting It Into Practice
+## Nothing is Perfect
 
-In my work, this term has been a game-changer for discussing project health. During a recent system overhaul, framing issues as Abstraction Deviation Impedance shifted the focus from past decisions to the current state and its impact on flow. It sparked questions like: How much are these deviations—whether from bad initial models or shifting conditions—slowing our ability to adapt? Or, what can we do to reduce impedance and improve delivery? The term invites measurement and action without letting teams hide behind the excuse of a "strategic" debt ledger.
+Abstraction Deviation Impedance not only describes the problem well, but invites people to ask the right questions and discuss interventions.
 
-It’s not a perfect term, but it captures the nuances I’ve grappled with over years of building and maintaining software. It sidesteps the trap of dressing up messy systems as smart borrowing and focuses on the structural reality we face. If you’re wrestling with similar challenges, try it in your next roadmap discussion or retrospective. Let me know how it resonates—I’m curious to hear your take.
+It’s not a perfect term, but it captures the nuances I’ve grappled with over years of building and maintaining software.
+
+It sidesteps the trap of dressing up messy systems as smart borrowing and focuses on the structural reality we face.
+
+If you’re wrestling with similar challenges and struggle to convey the danger of the situation, try it in your next roadmap discussion or retrospective.
+
+Let me know how it resonates, I’m curious to hear your take.
