@@ -69,7 +69,15 @@ It’s the distance between what we envisioned and what we have, and this distan
 
 ### Impedance: Resistance to Flow
 
-"Impedance" is what I find most compelling. In electrical engineering, impedance measures how a circuit resists the flow of current. In software, it describes resistance to the flow of value—whether that’s delivering features, incorporating feedback, or scaling operations. When abstractions deviate from the ideal, every change meets more resistance: debugging takes longer, onboarding new people gets harder, and small updates risk unexpected side effects. This isn’t a one-time hit; it’s a constant drag that raises costs, increases risks, and can frustrate teams as their efforts feel stuck.
+"Impedance" is what I find most compelling.
+
+In electrical engineering, impedance measures how a circuit resists the flow of current.
+
+In software, it describes resistance to the flow of value, whether that’s delivering features, incorporating feedback, or scaling operations.
+
+When abstractions deviate from the ideal, every change meets more resistance: debugging takes longer, onboarding new people gets harder, and small updates risk unexpected side effects.
+
+This isn’t a one-time hit but a constant drag that raises costs, increases risks, and can frustrate teams as their efforts feel stuck.
 
 ## Putting It Into Practice
 
