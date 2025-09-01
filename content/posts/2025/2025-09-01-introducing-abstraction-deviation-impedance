@@ -21,7 +21,11 @@ Let me explain why "technical debt" doesn’t work well.
 
 The word "technical" suggests the problems are rooted in the technology itself, be it the code, our tools, or the way the infrastructure works. In my experience, though, the real issues often lie in our models and abstractions: how we’ve conceptualized the domain, structured components, and managed complexity. These aren’t just tech issues; they’re about how well our conceptual models align with business needs and their operating environment.
 
-The "debt" part is even more troubling. It implies something borrowed deliberately, like a loan to gain speed now with a plan to repay later. That metaphor sounds strategic, which is why it’s appealing, but it lets teams off the hook too easily. I’ve seen developers use "technical debt" to justify any mess they’ve made or dire system state, framing it as a considered business strategy or calculated risk when, often, it was just neglect, rushed work, or a lack of clarity. The reality is, these issues usually emerge unintentionally—from evolving requirements or small oversights that snowball—not from a calculated trade-off. Unlike a loan with predictable interest, these problems compound nonlinearly, creating unpredictable risks and costs.
+The "debt" part is even more problematic. It implies something borrowed deliberately, like a loan to gain speed now with a plan to repay later. That metaphor sounds strategic, which is why it’s appealing, but it lets teams off the hook too easily. I’ve seen developers use "technical debt" to justify any mess they’ve made or dire state the system is in, framing it as a considered business strategy or calculated risk when, often, it was just neglect, rushed work, a lack of clarity, or a failure to adjust to moving needs. 
+
+In reality, these issues usually emerge unintentionally and undetected, from evolving requirements and small oversights that snowby. It's rarely a calculated trade-off, and the business is often unaware.
+
+Unlike a loan with predictable interest, these issues create unpredictable risks and costs.
 
 ## The Appeal of Technical Debt (and Its Limits)
 
