@@ -13,7 +13,7 @@ Over the years, leading teams and advising executives, I've often used "technica
 
 I loved the analogy at first, and it felt like an effective way to flag problems in our codebases or designs. But after countless discussions with developers and stakeholders from all backgrounds, I realised the term creates more problems than it solves.
 
-The term carried assumptions that clouded the conversation, especially when explaining the impact to those focused on delivery and outcomes. Worse, it gave teams an easy out to justify messy systems. That’s why I’ve been working on a different way to frame these situations: Abstraction Deviation Impedance.
+That’s why I’ve been working on a different way to frame these situations: Abstraction Deviation Impedance.
 
 ## Why "Technical Debt" Falls Short
 
