@@ -5,3 +5,42 @@ tags: [ "technical-debt", "Agile", "startups", "programming","management" ]
 date: 2025-09-01T09:00:00
 draft: true
 ---
+
+
+## The Search for a Better Term
+
+Over the years, leading teams through complex software projects, I’ve often reached for "technical debt" to describe those persistent issues that slow us down or make systems riskier. At first, it felt like a handy way to flag problems in our codebases or designs. But after countless discussions with stakeholders, I noticed it kept missing the mark. The term carried assumptions that clouded the conversation, especially when explaining the impact to those focused on delivery and outcomes. Worse, it gave teams an easy out to justify messy systems. That’s why I’ve been working on a different way to frame these situations: Abstraction Deviation Impedance.
+
+## Why "Technical Debt" Falls Short
+
+Let me explain why "technical debt" doesn’t work. The word "technical" suggests the problems are rooted in the technology itself—code, tools, or infrastructure. In my experience, though, the real issues often lie in our models and abstractions: how we’ve conceptualized the domain, structured components, or simplified complexity. These aren’t just tech issues; they’re about how well our conceptual models align with business needs.
+
+The "debt" part is even more troubling. It implies something borrowed deliberately, like a loan to gain speed now with a plan to repay later. That metaphor sounds strategic, which is why it’s appealing, but it lets teams off the hook too easily. I’ve seen developers use "technical debt" to justify any mess they’ve made or dire system state, framing it as a considered business strategy or calculated risk when, often, it was just neglect, rushed work, or a lack of clarity. The reality is, these issues usually emerge unintentionally—from evolving requirements or small oversights that snowball—not from a calculated trade-off. Unlike a loan with predictable interest, these problems compound nonlinearly, creating unpredictable risks and costs.
+
+## The Appeal of Technical Debt (and Its Limits)
+
+Despite its flaws, technical debt appeals to some because it makes messy systems sound manageable. It frames issues as strategic trade-offs, like financial debt that fuels growth if you plan to repay. In fast-moving projects, this can feel empowering, letting teams justify prioritizing speed to hit a deadline or capture a market. I’ve seen it used to explain deferring cleanup for a sprint or two, and that perspective has its place when the trade-off is truly intentional.
+
+But Abstraction Deviation Impedance isn’t here to replace technical debt entirely. That term still works for deliberate, short-term trade-offs where you knowingly take on a cost. My new term addresses a broader, often unintentional situation where the system’s abstractions have drifted, creating persistent friction no matter how we got there. It’s about describing the state of a system when the challenge isn’t just repaying a loan but navigating an ongoing, systemic drag that no one signed up for.
+
+## Defining Abstraction Deviation Impedance
+
+So, what is Abstraction Deviation Impedance? Let’s break it down.
+
+### Abstraction: The Core of Software Design
+
+"Abstraction" refers to the simplifications we create to manage complexity—think domain models, APIs, or data structures. These are the mental and architectural frameworks that make our systems understandable and adaptable. When done right, abstractions enable smooth delivery and evolution, aligning closely with what the business needs.
+
+### Deviation: The Gap Between Ideal and Actual
+
+"Deviation" captures the difference between the ideal and the actual. The ideal is a set of abstractions that perfectly reflect the problem domain—clean, consistent, and easy to extend. In practice, deviations show up in many ways. Sometimes, it’s incorrect modeling from the start, like a payment system that assumes fixed transaction types and chokes on new ones. Other times, it’s a gradual drift, where quick fixes or patches pile up, twisting abstractions into something convoluted. Or it could be moving operating conditions—new user patterns or compliance rules—that leave once-fit models outdated. This gap isn’t about pointing fingers; it emerges through iterations, team changes, or shifting priorities. It’s the distance between what we envisioned and what we have, and that distance creates problems.
+
+### Impedance: Resistance to Flow
+
+"Impedance" is what I find most compelling. In electrical engineering, impedance measures how a circuit resists the flow of current. In software, it describes resistance to the flow of value—whether that’s delivering features, incorporating feedback, or scaling operations. When abstractions deviate from the ideal, every change meets more resistance: debugging takes longer, onboarding new people gets harder, and small updates risk unexpected side effects. This isn’t a one-time hit; it’s a constant drag that raises costs, increases risks, and can frustrate teams as their efforts feel stuck.
+
+## Putting It Into Practice
+
+In my work, this term has been a game-changer for discussing project health. During a recent system overhaul, framing issues as Abstraction Deviation Impedance shifted the focus from past decisions to the current state and its impact on flow. It sparked questions like: How much are these deviations—whether from bad initial models or shifting conditions—slowing our ability to adapt? Or, what can we do to reduce impedance and improve delivery? The term invites measurement and action without letting teams hide behind the excuse of a "strategic" debt ledger.
+
+It’s not a perfect term, but it captures the nuances I’ve grappled with over years of building and maintaining software. It sidesteps the trap of dressing up messy systems as smart borrowing and focuses on the structural reality we face. If you’re wrestling with similar challenges, try it in your next roadmap discussion or retrospective. Let me know how it resonates—I’m curious to hear your take.
