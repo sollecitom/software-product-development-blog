@@ -1,5 +1,5 @@
 ---
-title: " Introducing Abstraction Deviation Impedance"
+title: "Introducing Abstraction Deviation Impedance"
 categories: [ "software-development" ]
 tags: [ "technical-debt", "Agile", "startups", "programming","management" ]
 date: 2025-09-01T01:00:00
