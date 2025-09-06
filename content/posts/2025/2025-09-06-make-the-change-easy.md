@@ -1,5 +1,5 @@
 ---
-title: "Mastering Software Craftsmanship: Making Change Easy, Then Making the Easy Change"
+title: "Mastering Software Craftsmanship: Making the Change Easy, Then Making the Easy Change"
 categories: [ "software-development" ]
 tags: [ "technical-debt", "Agile", "startups", "programming","management" ]
 date: 2025-09-06T01:00:00
