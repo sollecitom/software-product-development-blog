@@ -1,4 +1,10 @@
-
+---
+title: "Make the Change Easy"
+categories: [ "software-development" ]
+tags: [ "technical-debt", "Agile", "startups", "programming","management" ]
+date: 2025-09-06T01:00:00
+draft: true
+---
 
 
 Kent Beck famously stated that you should make the change easy, and then make the easy change. 
