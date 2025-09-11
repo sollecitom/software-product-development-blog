@@ -14,7 +14,7 @@ Here’s why I prefer this approach, based on what I’ve learned from working w
 
 ## Why Early Agreement Sucks
 
-I’ve been in meetings where ideas are discussed early and consensus drives that options are further explored.
+I’ve been in meetings where ideas are discussed early and consensus drives what options are further explored, and which aren't.
 
 The intent is good, and everyone wants to feel heard, but it smooths out the bold edges that make ideas stand out. It’s like mixing everything together before the pieces have a chance to take shape. You end up with something vague and hard to build on.
 
