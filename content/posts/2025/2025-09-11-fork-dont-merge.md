@@ -1,7 +1,7 @@
 ---
 title: "Don't Merge, Fork: Why I Prefer A Variety of Options Over Early Agreement"
-categories: [ "software-development" ]
-tags: [ "technical-debt", "Agile", "startups", "programming","management" ]
+categories: [ "leadership" ]
+tags: [ "psychology", "Agile", "startups", "leadership","management" ]
 date: 2025-09-11T01:00:00
 draft: false
 ---
