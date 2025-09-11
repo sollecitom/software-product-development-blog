@@ -1,5 +1,5 @@
 ---
-title: "Don't Merge, Fork: Why I Prefer A Variety of Options Over Early Agreement"
+title: "Fork, Don't Merge: Why I Prefer A Variety of Options Over Early Agreement"
 categories: [ "leadership" ]
 tags: [ "psychology", "Agile", "startups", "leadership","management" ]
 date: 2025-09-11T01:00:00
