@@ -6,7 +6,7 @@ date: 2025-09-15T01:00:00
 draft: false
 ---
 
-Every morning, I drag myself to the sink, razor in hand, steam curling like a ghost around the fogged glass.The water burns, the blade stings, and for those raw seconds, it’s just me and the truth staring back.
+Every morning, I drag myself to the sink, razor in hand, steam curling like a ghost around the fogged glass. The water burns, the blade stings, and for those raw seconds, it’s just me and the truth staring back.
 
 No likes, no clout, no roles, and no polished mask to hide behind. Just my soul and one question: Who are you when no one’s watching?
 
