@@ -3,7 +3,7 @@ title: "Nobody Feels Responsible Without Autonomy"
 categories: [ "management" ]
 tags: [ "agile", "management", "startup", "leadership", "psychology" ]
 date: 2025-09-19T01:00:00
-draft: true
+draft: false
 ---
 
 Hey there, reader. If you've ever felt like you're carrying the weight of the world on your shoulders but your hands are tied behind your back, this one's for you. I've been in the trenches of tech and leadership long enough to see patterns that break people and companies over and over.
