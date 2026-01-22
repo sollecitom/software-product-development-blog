@@ -1,3 +1,11 @@
+---
+title: "From Products to Obstacles Wrapped in Subscriptions: the Decline of Craftsmanship and of an Industry"
+categories: ["software development"]
+tags: [ "system-thinking", "Agile", "effectiveness", "management", "quality" ]
+date: 2026-01-22T08:00:00
+draft: false
+---
+
 We used to build products. Now all we build is obstacles wrapped in subscriptions.
 
 Companies sell their products with an implicit promise. That they did their best to make the customer's life better. That things will work well for the foreseeable future. That no additional unexpected costs will pop up at some point.
