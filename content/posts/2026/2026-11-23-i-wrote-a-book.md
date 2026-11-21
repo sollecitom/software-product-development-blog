@@ -2,8 +2,8 @@
 title: "I Wrote a Book: Software Product Development Without Stupidity"
 categories: ["software development"]
 tags: [ "system-thinking", "management", "leadership", "architecture", "book" ]
-date: 2026-11-23T12:00:00
-draft: true
+date: 2026-11-21T17:27:00
+draft: false
 ---
 
 My book is out. It's called *Software Product Development Without Stupidity: How Not to Sabotage Your Odds in an Already Hard Game*. It's on Amazon in paperback, hardcover, and Kindle ([UK](https://www.amazon.co.uk/dp/B0HSJWYBP2), [US](https://www.amazon.com/dp/B0HSJWYBP2)), and on [Leanpub](https://leanpub.com/without-stupidity) as a DRM-free PDF and EPUB.
