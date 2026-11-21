@@ -2,7 +2,7 @@
 title: "I Wrote a Book: Software Product Development Without Stupidity"
 categories: ["software development"]
 tags: [ "system-thinking", "management", "leadership", "architecture", "book" ]
-date: 2026-11-21T08:00:00
+date: 2026-11-23T12:00:00
 draft: true
 ---
 
