@@ -33,7 +33,7 @@ Most software companies are full of smart, dedicated people. So why do the produ
 
 My answer is the system they work in. Competent, well-intentioned people make choices that end up harming the company, the product, and themselves, because they misunderstand the system they're standing in. That's what I mean by stupidity.
 
-The book follows it from the top down: what a company is for, how people are hired, paid, and organized, the capability to change that makes a product worth anything, and then the architecture, the code, and the practices that decide whether a product can keep changing. There's also an interlude on AI, and on why speeding up a broken system only gets you its bad results sooner.
+The book follows it from the top down: what a company is for, how people are hired, paid, and organized, how a company keeps its capability to change, and then the architecture, the code, and the practices that decide whether a product can keep changing. There's also an interlude on AI, and on why speeding up a broken system only gets you its bad results sooner.
 
 It's written for founders and leaders, and it stays technical enough to be worth a developer's time.
 
